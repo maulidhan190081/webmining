@@ -1,0 +1,3315 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>&lt;no title&gt; &#8212; My sample book</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Notebooks with MyST Markdown" href="markdown-notebooks.html" />
+    <link rel="prev" title="Markdown Files" href="markdown.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">My sample book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="markdown.html">
+   Markdown Files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="markdown-notebooks.html">
+   Notebooks with MyST Markdown
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/notebooks.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/notebooks.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1><no title></h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <p>#Crawling Data</p>
+<p>Crawling data adalah sebuah proses pengambilan data dari suatu sumber internet. Dalam hal ini saya mencrawling data dari twitter menggunakan twint. Data yang saya peroleh adalah sebanyak 180 data. Data tersebut saya saring sehingga menjadi 101 data karena terdapat beberapa data yang tidak penting. Data tersebut merupakan tweet dari tanggal 19-09-2022 sampai 27-09-2022.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>%%capture
+!git clone --depth=1 https://github.com/twintproject/twint.git
+%cd twint
+!pip3 install . -r requirements.txt
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>%%capture
+!pip install nest-asyncio
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>%%capture
+!pip install aiohttp==3.7.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nest_asyncio</span>
+<span class="n">nest_asyncio</span><span class="o">.</span><span class="n">apply</span><span class="p">()</span> <span class="c1">#digunakan sekali untuk mengaktifkan tindakan serentak dalam notebook jupyter.</span>
+<span class="kn">import</span> <span class="nn">twint</span> <span class="c1">#untuk import twint</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">twint</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">c</span><span class="o">.</span><span class="n">Search</span> <span class="o">=</span> <span class="s1">&#39;#prabowo&#39;</span>
+<span class="n">c</span><span class="o">.</span><span class="n">Pandas</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">c</span><span class="o">.</span><span class="n">Limit</span> <span class="o">=</span> <span class="mi">500</span>
+<span class="n">twint</span><span class="o">.</span><span class="n">run</span><span class="o">.</span><span class="n">Search</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1577226387068375040 2022-10-04 09:17:28 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
+1577224525241991168 2022-10-04 09:10:04 +0000 &lt;PrasetyoHadi28&gt; secara gotong royong dgn memberdayakan warga sekitar. Sehingga, anggaran yg diberikan berputar pd wilayah desa tersebut.  #prabowo #prabowosubianto #aksinyata #gerindra #gerindrabersamarakyat #purworejo #infopurworejo #explorepurworejo #purworejoinfo #prasetyohadi #bhaktimaspras  https://t.co/ApOa4GgJbX
+1577167962422726658 2022-10-04 05:25:19 +0000 &lt;papandu08&gt; Prabowo mengajarkan kita untuk selalu berfikir, berbuat, bertindak, dan berkata baik #prabowo #gerindra #prabowopresiden  https://t.co/qXhiVHqUbT
+1577151800091717632 2022-10-04 04:21:05 +0000 &lt;Jiung1973&gt; Prabowo,Puan,Anies, Ganjar atau siapapun yang layak maju di 2024, janganlah saling menjatuhkan, adu gagasan dan pencapaian saja demi warisan kebaikan untuk anak cucu kita #AniesBaswedan #GanjarPranowo #prabowo #PuanMaharani
+1577139371496833025 2022-10-04 03:31:42 +0000 &lt;KoncoErick&gt; Nah iki Pak Menteri BUMN RI Erick Thohir cawapres sing cocok disandingke karo sopo ae. Dipasangke karo Pak Ganjar Pranowo yo iso, karo Pak Prabowo Subianto yo iso. Sing penting Pak Erick Thohir maju Pilpres 2024, Indonesia bakal aman rek.   #ganjarpranowo #prabowo #erickthohir  https://t.co/TebpqZN28u
+1577134951140507650 2022-10-04 03:14:08 +0000 &lt;pasti_2024&gt; Prabowo-Erick Thohir pilihan pasti  Bekerja nyata melayani dengan hati Berkomitmen menghadirkan berbagai inovasi Mendorong kemajuan menghadirkan kesejahteraan di negeri ini  #prabowo #erickthohir #capres #cawapres #indonesia #pasti2024  https://t.co/2Su75c4wrK
+1577086095967166464 2022-10-04 00:00:00 +0000 &lt;holopiscom&gt; Gubernur Jawa Barat, Mochammad Ridwan Kamil mengaku mendapatkan banyak sekali wejangan yang baik dari Prabowo Subianto. @prabowo @ridwankamil #Prabowo #RidwanKamil @Gerindra  https://t.co/8jnggvqPkz
+1577037630742544384 2022-10-03 20:47:25 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
+1576968177200009216 2022-10-03 16:11:26 +0000 &lt;paperaprabowo&gt; Komunitas Pedagang Yang Tergabung dalam #pedagangpejuangindonesiaraya (PAPERA) wilayah tanah abang siap memenangkan Bapak @prabowo sebagai presiden....   #Politik #pilpres2024 #prabowo #pedagang  https://t.co/epWiq2gV8r
+1576907437931581440 2022-10-03 12:10:05 +0000 &lt;sfsimatupang&gt; Kick off persiapan #Pilpres2024 sudah dimulai. Gerindra mencalonkan #Prabowo, Nasdem mengajukan #AniesBaswedan &amp;amp; PSI mengajukan #GanjarPranowo. Siapa menyusul?  https://t.co/auV9KQ8aUO
+1576848908806148096 2022-10-03 08:17:30 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
+1576820172152721413 2022-10-03 06:23:19 +0000 &lt;99_muntasir&gt; #SuryaPaloh sebagai Ketua Umum #Nasdem Pilih #AniesBaswedan sebagai #calonpresiden, kita tunggu #PDIPerjuangan pilih #PuanMaharani atau #Ganjarpranowo dan #gerindra pilih #Prabowo Anda pilih siapa?  https://t.co/3vQDkLfS6j
+1576811650564620288 2022-10-03 05:49:27 +0000 &lt;SukirSaksono&gt; @Metro_TV Aku yakin #ganjar. #prabowo..#andhika_perkasa..putra2 terbaik Indonesia
+1576805784536481794 2022-10-03 05:26:09 +0000 &lt;DpcTanjabbar&gt; Gerindra - PKB Berkoalisi di Pemilu 2024  #gusmuhaimin #muhaiminiskandar #prabowo #prabowosubianto #pkbmenang #gerindramenang  https://t.co/Q2GvmhkWc2
+1576802437251284992 2022-10-03 05:12:51 +0000 &lt;papandu08&gt; Jawaban Prabowo saat ditanya soal Jokowi jadi cawapres di 2024 #prabowo #jokowi #capres #cawapres #politik  https://t.co/aJdIBv9XHR
+1576782031903547392 2022-10-03 03:51:46 +0000 &lt;yasser_nh&gt; SIAPA YANG COCOK MENJADI PRESIDEN REPUBLIK INDONESIA TAHUN 2024 - 2029 ?  Berikan suara anda, klik link  https://t.co/xOVwyHnZB8  #AniesBaswedan #GanjarKita #pollingpilpres #Prabowo #nasdem #pks #demokrat #capres #goblok  #polling #capres
+1576771221676470273 2022-10-03 03:08:48 +0000 &lt;HabibGhufron78&gt; @gibran_tweet Kulo Tugiman Pranowo mas wali 🙏 Shollualamuhammad  #GanjarTheNextJokowi  #Prabowo
+1576756533706518530 2022-10-03 02:10:27 +0000 &lt;paperaprabowo&gt; Rapat Konsolidasi Pedagang Pejuang Indonesia Raya (PAPERA) Se Jabodetabek di Kantor DPP Partai @gerindra , untuk kemenangan Bapak @prabowo Sebagai Presiden.   #pedagangpejuangindonesiaraya #gerindra #prabowo #politik #pilpres  https://t.co/bRmH7Gotf7
+1576742491016990720 2022-10-03 01:14:38 +0000 &lt;RidNgemil&gt; Emang apa sik yang kalian takutkan kalau @aniesbaswedan berkuasa? Kasih jawaban yang masuk akal dong... #AniesBaswedan #prabowo #ganjarpranowo #PuanMaharani #capres2024
+1576667707159683072 2022-10-02 20:17:29 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1576602918505304064 2022-10-02 16:00:02 +0000 &lt;Genpi_Co&gt; Menteri Pertahanan Prabowo Subianto mengatakan lahan kosong telantar bisa dimanfaatkan untuk pertanian. #prabowo  https://t.co/YuXcfvpvqk
+1576524657922301955 2022-10-02 10:49:03 +0000 &lt;jpnncom&gt; Prabowo mengatakan Tragedi Kanjuruhan pada 1 Oktober 2022 menjadi peristiwa yang mengagetkan bagi semua pihak. #Prabowo  https://t.co/DnsfKodYVC
+1576505647977447425 2022-10-02 09:33:31 +0000 &lt;Martina_inaaa&gt; Selamat Hari Batik Nasional 2022  Batik yang menjadi warisan kebanggaan budaya Indonesia patut kita jaga kelestariannya.  Batik identitas kita, kebanggaan kita dan budaya kita.  #prabowo #presiden #2024  https://t.co/WizgGHdNwA
+1576498029435109377 2022-10-02 09:03:14 +0000 &lt;edorahmanta&gt; Semoga tidak terulang lagi Negeriku Ibu Pertiwi #PrayForKanjuruhan #prabowo #Indonesia  https://t.co/t7vbKg1T5m
+1576485549460049920 2022-10-02 08:13:39 +0000 &lt;serambinews&gt; #Prabowo #Respons #Jokowi   Menteri Pertahanan Prabowo Subianto merespons dukungan sejumlah relawan untuk mencalonkan diri bersama Presiden Joko Widodo pada Pilpres 2024    https://t.co/PapPDcrofk lewat @serambinews
+1576485511631626240 2022-10-02 08:13:30 +0000 &lt;sharenewsaceh&gt; #Prabowo #Respons #Jokowi   Menteri Pertahanan Prabowo Subianto merespons dukungan sejumlah relawan untuk mencalonkan diri bersama Presiden Joko Widodo pada Pilpres 2024    https://t.co/XGc0WwyyVK lewat @serambinews
+1576478948997070848 2022-10-02 07:47:25 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
+1576446903310426112 2022-10-02 05:40:05 +0000 &lt;pasti_2024&gt; Enggak mengherankan kalau Pak Erick Thohir bisa bersaing ketat pada bursa Cawapres 2024.   Figur yang kaya talenta serta inovasi ini banyak dikenal dengan kerja nyatanya.   #jawabarat #petani #indonesia #prabowo #erickthohir #pasti2024  https://t.co/GIjJweicyP
+1576438868580003841 2022-10-02 05:08:09 +0000 &lt;gerindra_la&gt; Selamat Hari BATIK NASIONAL  2 Oktober 2022  ___  #gerindra #prabowo #gerindramenang #prabowopresiden #gerindralamongan #lamonganmegilan #politisisantri  https://t.co/jUUS4msLBU
+1576438612723257345 2022-10-02 05:07:08 +0000 &lt;gerindra_la&gt; Duka Mendalam untuk Sepakbola Indonesia  @PSSI @KEMENPORA_RI @AremafcOfficial @persebayaupdate  ____  #gerindra #prabowo #gerindramenang #prabowopresiden #gerindralamongan #lamonganmegilan #politisisantri #arema #malangberduka #tragedikanjuruhan #prayforkanjuruhan  https://t.co/0Rhf2iOWkU
+1576419215292403712 2022-10-02 03:50:04 +0000 &lt;nusabalicom&gt; Papera Dukung Prabowo Subianto jadi Capres 2024  https://t.co/4XI4v2KbmQ #berita #nusabali #Prabowo #Capres #Gerindra #Pemilu2024
+1576417779862888449 2022-10-02 03:44:21 +0000 &lt;AsikDung&gt; JeJeBa... . . Jenderal Jenderal Bahagia😎 #PanglimaTNI #DudungAbdurachman #Prabowo #AndikaPerkasa #RakyatSejahtera #KSAD #angkatandaratdihatirakyat #asikdung  https://t.co/Bf2R4Kr4Za
+1576407770374369280 2022-10-02 03:04:35 +0000 &lt;papandu08&gt; Pesan Prabowo di hari peringatan Kesaktian Pancasila #prabowo #kesaktianpancasila #indonesiamerdeka  https://t.co/IoeWV8RcHh
+1576297751989534721 2022-10-01 19:47:24 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
+1576224811449450497 2022-10-01 14:57:34 +0000 &lt;papera_raya&gt; Pedagang pejuang Indonesia Raya #prabowosubianto #prabowo #Pilpres2024 #presiden #PemiluSerentak2024 #relawanprabowo #papera #pedagang  https://t.co/010tNZqLyo
+1576198373366894592 2022-10-01 13:12:31 +0000 &lt;IDefenseMagz&gt; “Saya kira ini yang paling utama. Pancasila kita yakini sebagai pemersatu bangsa, ideologi dan falsafah bangsa yang operasional, yang harus kita jaga ke depan,” tutup Menhan @prabowo.   https://t.co/r6wiLaBQaY  @Kemhan_RI   #IDM #MenhanPrabowo #PrabowoSubianto #Prabowo #KemhanRI
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1576174345461764096 2022-10-01 11:37:02 +0000 &lt;RAFIDA750&gt; Terus barisan pendukungnya gimana?  Misalnya,  #Anies-Ganjar #Prabowo-Imin #Puan-Airlangga  Jika PDI-P Usung Puan pada Pilpres, Ganjar Diprediksi Tak Akan Bermanuver ke Partai Lain Klik untuk baca:  https://t.co/eE5e9bwg2y
+1576159775401705472 2022-10-01 10:39:08 +0000 &lt;NabilaR10141827&gt; FERDY SAMBO RESMI DI BERHENTIKAN SECARA TIDAK HORMAT, SURAT KEPUTUSAN RESMI SUDAH DITANDATANGANI JOKOWI.  The Script  1Oktober WWII Putri Candrawathi Reyhan #FerdySambo #Polri#capres #prabowo #kdrt #lesti #u23  https://t.co/zPMfpyHKOb
+1576159285477871618 2022-10-01 10:37:11 +0000 &lt;SwanteSH&gt; #Kemhan #KemhanRI #KementerianPertahanan @Kemhan_RI: &#39;“Pancasila kita yakini pemersatu bangsa, ideologi dan falsafah bangsa  yang harus kita jaga ke depan,” lanjutnya.  #Kemhan #KemhanRI #Prabowo #PrabowoSubianto #Menha…  https://t.co/E9kpZBN2i1, see more  https://t.co/dg4KElkq8N
+1576157523844820992 2022-10-01 10:30:11 +0000 &lt;tvrinewscom&gt; Peringatan Kesaktian Pancasila, Prabowo: Hanya Dengan Persatuan Kita Bisa Berhasil Sebagai Negara  https://t.co/O5T22AHLaw #Presidenjokowi #kesaktianpancasila2022 #Prabowo
+1576148025185271808 2022-10-01 09:52:27 +0000 &lt;Kemhan_RI&gt; “Pancasila kita yakini pemersatu bangsa, ideologi dan falsafah bangsa  yang harus kita jaga ke depan,” lanjutnya.  #Kemhan #KemhanRI #Prabowo #PrabowoSubianto #MenhanPrabowo #Jokowi #JokoWidodo #PresidenJokowi #HariKesaktianPancasila  https://t.co/tSwnKA0wcG
+1576145635803529216 2022-10-01 09:42:57 +0000 &lt;MohamadFuad2&gt; @kang___L Peran Prabowo Cak Imin sangat besar dalam membangun harmonisasi kehidupan berbangsa dan bernegara.  #Prabowo #CakImin  https://t.co/89zsGXWIoO
+1576121652982661120 2022-10-01 08:07:39 +0000 &lt;faktualid_com&gt; Usai Upacara Peringatan Kesaktian Pancasila, Prabowo Kejar Jokowi #Jokowi #kesaktianpancasila #prabowo  https://t.co/05GSLwW3kP
+1576116879579435008 2022-10-01 07:48:41 +0000 &lt;pasti_2024&gt; Napaknya Majalengka menjadi kota yang sulit untuk dilupakan Pak @erickthohir. Banyak kenangan di sana, lantaran merupakan kota kelahiran ibunda tercinta, Edna Thohir.  #prabowo #erickthohir #capres #cawapres #pilpres2024 #jawabarat #relawanpasti #pasti2024  https://t.co/iUq3OPTN2l
+1576109024503734272 2022-10-01 07:17:28 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1576094871655366657 2022-10-01 06:21:14 +0000 &lt;DpdKalbar&gt; Zaman boleh berubah, gaya hidup berganti, arus globalisasi menderas, tapi bangsa Indonesia akan tetap berpegang teguh pada Pancasila dan segenap nilai-nilai yang dikandungnya. #kesaktianpancasila #gerindra #gerindramenang #gerindrakalbar #prabowo #prabowopresiden #kalbarinformasi  https://t.co/OoFRW17omr
+1576070320506576902 2022-10-01 04:43:41 +0000 &lt;papandu08&gt; Bersatu untuk merah putih #prabowo #merahputih #bersatu  https://t.co/mUBXmXsDHC
+1576038458510176256 2022-10-01 02:37:04 +0000 &lt;Kemhan_RI&gt; &quot;Kita perlu TNI yang kuat Polri yang kuat. Saya juga akan mendukung pembangunan kepolisian yang kuat,” ujar Menhan Prabowo.   #Kemhan #KemhanRI #Prabowo #PrabowoSubianto #MenhanPrabowo #ListyoSigitPrabowo #Kapolri #MabesPolri
+1576032847478915073 2022-10-01 02:14:46 +0000 &lt;BadungGerindra&gt; Tangguhkan semangat kebhinekaan. Jaga kesatuan dan persatuan NKRI. Selamat Hari Kesaktian Pancasila.  #salamindonesiaraya #gerindra #menang #prabowo #prabowosubianto #presiden #prabowoforindonesia2024  #ahmadmuzani #sumfidasco #fadilzon #gerindrabali #degadjah #relawandegadjah  https://t.co/ms9tx2vHZq
+1575993201114066945 2022-09-30 23:37:14 +0000 &lt;wartakotalive&gt; HARI Kesaktian Pancasila, Ini Cara Penulisan Nama Lengkap Pahlawan Revolusi Versi Prabowo Subianto    https://t.co/zyf9Frn6gD via @wartakotalive   CARA PENULISAN NAMA PAHLAWAN REVOLUSI  #harikesaktianpancasila #pancasila #prabowo
+1575927820232306688 2022-09-30 19:17:26 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
+1575809775144603648 2022-09-30 11:28:22 +0000 &lt;matakepri_&gt; prabowo beri kapolri pistol g2 elite  #matakepri  #berita #prabowo  #kapolri  #polri  #beritaterkini  #beritaviral  https://t.co/1gABH8Qf38
+1575800621353304065 2022-09-30 10:51:59 +0000 &lt;Kilat_com&gt; Besok, Presiden Jokowi dan Menhan Prabowo Upacara Kesaktian Pancasila di Lubang Buaya   #Jokowi #Prabowo #kesaktianpancasila   https://t.co/FLnPdKxKBE
+1575774048172134402 2022-09-30 09:06:24 +0000 &lt;gerindrajatim_&gt; 5. Mayor Jenderal TNI Anumerta Donald Isaac Panjaitan 6. Mayor Jenderal TNI Anumerta Sutoyo Siswomiharjo 7. Kapten TNI Anumerta Pierre Andreas Tendean __ #Gerindra #Prabowo #AnwarSadad #PolitisiSantri #GerindraJatim #PrabowoPresiden #GerindraMenang #G30S #PahlawanRevolusi
+1575751570435633152 2022-09-30 07:37:05 +0000 &lt;papandu08&gt; Negarawan sejati selalu ingat dengan pengorbanan para pejuang #prabowo #negarawan #pejuang #pahlawan  https://t.co/ZWeCh0pk3k
+1575739070721839105 2022-09-30 06:47:24 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
+1575716728046133248 2022-09-30 05:18:38 +0000 &lt;BadungGerindra&gt; ULURKAN TANGAN UNTUK MALUKU😇❤️  sumber: @dpdgerindrabali  #infogerindra #Infoberita #gerindra #gerindrabali #prabowo #prabowosubianto #prabowopresiden #ahmadmuzani #sumfidasco #fadlizon #degadjah #relawandegadjah #wayanmuntra #semetonmuntra #nugrahitapendit  https://t.co/9v4Vy943QZ
+1575710129978122240 2022-09-30 04:52:24 +0000 &lt;Kilat_com&gt; Panglima TNI dan Menteri Pertahanan Menerima Bintang Yudha Dharma Utama  Cek Video Selengkapnya Hanya di Youtube Kilat TV    https://t.co/UJfUDljpRH  #Kilat #JadiCepatPaham #Prabowo #AndikaPerkasa #MenteriPertahanan #PanglimaTNI  https://t.co/nEXgyZD5G0
+1575696943556472833 2022-09-30 04:00:01 +0000 &lt;ThePhraseID&gt; Mengulik perjalanan karier Prabowo Subianto, dari militer, bisnis, hingga politik. #ThePhraseID #Prabowo #PrabowoSubianto #Gerindra #Menhan #MenteriPertahanan #SosokInspiratif  @prabowo   https://t.co/ENk0234Y58
+1575669407774232579 2022-09-30 02:10:35 +0000 &lt;pasti_2024&gt; Pak Menteri Pertahanan @prabowo dan Menteri BUMN @erickthohir dalam sinerginya mengembangkan ekonomi dan pertahanan di pemerintahan sudah baik.  Apa lagi kalau mereka jadi presiden dan wakilpresiden di 2024 nanti. Pasti Indonesia akan tambah maju &amp;amp; kokoh.   #prabowo #erickthohir  https://t.co/V8oCbPB4s3
+1575663836215902209 2022-09-30 01:48:27 +0000 &lt;pasti_2024&gt; Duet @prabowo - @erickthohir dapat menjadi pasangan alternatif masyarakat untuk Pilpres 2024.   #erickthohir #prabowo #bumn #menhan #indonesia #indonesiamaju #pasti2024  https://t.co/akKmsQIqPv
+1575635005975322624 2022-09-29 23:53:53 +0000 &lt;Ricky_Tamba&gt; Layanan Ambulance DPP Gerindra @Gerindra Gelar Khitanan Massal Dan Gerakan Bebas Cacingan Di Kota Depok #prabowo #prabowosubianto #2024prabowopresiden #gerindramenang #indonesiamaju #adilmakmur #indonesiaraya  https://t.co/D5kkLHhOpe
+1575632856251977728 2022-09-29 23:45:21 +0000 &lt;Ricky_Tamba&gt; Layanan Ambulance DPP Gerindra @Gerindra Gelar Khitanan Massal Dan Gerakan Bebas Cacingan Di Kota Depok #prabowo #prabowosubianto #2024prabowopresiden #gerindramenang #indonesiamaju #adilmakmur #indonesiaraya  https://t.co/BNYC4wib9o
+1575622826563813376 2022-09-29 23:05:30 +0000 &lt;Ricky_Tamba&gt; Wagub DKI Jakarta A. Riza Patria @ArizaPatria : Pilihan saya ya Pak Prabowo Subianto @prabowo @Gerindra @Fraksi_Gerindra  #prabowo #ariza #prabowosubianto #arizapatria #2024prabowopresiden #gerindramenang #indonesiamaju #adilmakmur #indonesiaraya 🇮🇩  https://t.co/B6VGFmJ1bY
+1575606352684404736 2022-09-29 22:00:02 +0000 &lt;Genpi_Co&gt; Menteri Pertahanan Prabowo Subianto memberi tanggapan soal syarat tinggi badan untuk penerimaan calon prajurit. #prabowo  https://t.co/KNwMlQaoZK
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1575557874687741952 2022-09-29 18:47:24 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
+1575538526665383936 2022-09-29 17:30:31 +0000 &lt;Ricky_Tamba&gt; &quot;Meski berbeda-beda, kita tetap satu keluarga: Indonesia,&quot; - Letjen (Purn.) H. Prabowo Subianto Djojohadikusumo @prabowo @Gerindra @Fraksi_Gerindra  #prabowo #prabowosubianto #2024prabowopresiden #gerindramenang #indonesiamaju #adilmakmur #indonesiaraya  https://t.co/pRpHDYg9xc
+1575490312558247938 2022-09-29 14:18:56 +0000 &lt;c9ec25df479441b&gt; #Prabowo + Tuan Guru Bajang# ...patut dipertimbangkan utk &#39;24 - &#39;29
+1575457422952439809 2022-09-29 12:08:14 +0000 &lt;gerindra_la&gt; Menuju Sukses PEMILU 2024, Gerindra Jatim Gelar Konsolidasi  @Gerindra @gerindrajatim_ @ansadad ____  #gerindra #prabowo #gerindramenang #prabowopresiden #gerindralamongan #lamonganmegilan #politisisantri  https://t.co/Rd6Abu1npZ
+1575419842005377024 2022-09-29 09:38:54 +0000 &lt;moreshare&gt; #Anies Jadi Korban Polling ILC, Dulu #Prabowo #Sandiaga Juga Menang  https://t.co/t2DquSCTcb #moreshareforum #beritaterkini
+1575403304301268992 2022-09-29 08:33:11 +0000 &lt;cokro_tv&gt; PRABOWO-MUHAIMIN PASANGAN PENGGEMBIRA DI PINGGIR GELANGGANG | OPINI TERKINI #cokrotv #prabowo #cakimin   Full Video Youtube:  https://t.co/6Scnru4STf  https://t.co/rY8rwMalAt
+1575396815251574790 2022-09-29 08:07:24 +0000 &lt;korantempo&gt; Hal ini diduga sebagai bagian dari gerakan penyokong &quot;Jokowi 3 Periode&quot;.  Bagaimana wacana ini semakin dikumandangkan? #KoranTempo #Prabowo   https://t.co/9IBlW0SrXe
+1575396812160368641 2022-09-29 08:07:24 +0000 &lt;korantempo&gt; Wacana duet Prabowo-Jokowi menggelinding dari Mahkamah Konstitusi hingga Senayan. #KoranTempo #Prabowo  https://t.co/QCxEiIKVJf
+1575393399406198790 2022-09-29 07:53:50 +0000 &lt;Berjasa_&gt; Menteri Pertahanan, Prabowo Subianto mengatakan bahwa keputusannya bergabung dengan pemerintahan Presiden Joko Widodo sangatlah tepat.  #presidenjokowi #prabowo #indonesiamaju #berjasa #viral #fyp  https://t.co/xN7dmFd3A6
+1575385153496498176 2022-09-29 07:21:04 +0000 &lt;jpnncom&gt; Pengamat intelijen Susaningtyas Nefo Handayani Kertopati manilai narasi disharmoni menjadi gugur usai Prabowo Subianto, Jenderal Andika Perkasa, dan KSAD Dudung #Prabowo  https://t.co/bpvVnraxDN
+1575378794202144768 2022-09-29 06:55:48 +0000 &lt;nusabalicom&gt; Nol Persen, Peluang Duet Prabowo-Jokowi di 2024  https://t.co/dOzQR0b1I3 #berita #nusabali #Pilpres2024 #Prabowo #Jokowi  #Pemilu2024
+1575371413745127424 2022-09-29 06:26:28 +0000 &lt;kompastv_jabar&gt; Prabowo Berikan Cenderamata Pistol G2 Elite Ke Listyo Sigit  https://t.co/rXN5FgbUIV  #prabowo #menhan #kapolri #listyosigit #pertemuan #kompastvjabar  https://t.co/5S4GdZfLxS
+1575369150142111744 2022-09-29 06:17:28 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
+1575351808590958592 2022-09-29 05:08:34 +0000 &lt;papandu08&gt; Setiap pemimpin pasti punya kekurangan, tapi jangan lupa akan perjuangannya #prabowo #jokowi #soekarno #soeharto #politik  https://t.co/FdCqhJHnqu
+1575342102296363009 2022-09-29 04:30:00 +0000 &lt;poskotaofficial&gt; Sekjen Partai Gerindra Ahmad Muzani, mengatakan pihaknya masih mencari tahu kebenaran wacana duet Prabowo-Jokowi di Pilpres 2024. #Gerindra #Prabowo #Jokowi #Pilpres2024   https://t.co/8bVUccJKMP
+1575333188620394497 2022-09-29 03:54:35 +0000 &lt;Muezzakit&gt; Hadiri Rapat Komisi I DPR, Menhan Pak Bowo Ucapkan Terima Kasih ke DPR  https://t.co/3CDK5e0eQ1 #Prabowo #menhan
+1575320166254014464 2022-09-29 03:02:50 +0000 &lt;BadungGerindra&gt; Rangkul Panglima dan KSAD, Prabowo Kembali Tunjukan Sikap Negarawan.😍💪🏻  sumber: @dpdgerindrabali   #infogerindra  #gerindra #gerindrabali #prabowo #prabowosubianto #prabowopresiden #ahmadmuzani #sumfidasco #fadlizon #degadjah #relawandegadjah  #semetonmuntra #nugrahitapendit  https://t.co/ElzTrQAfAU
+1575306823195758592 2022-09-29 02:09:49 +0000 &lt;gerindra_la&gt; Menuju Sukses PEMILU 2024, Gerindra Jatim Gelar Konsolidasi  @Gerindra @gerindrajatim_  ____  #gerindra #prabowo #gerindramenang #prabowopresiden #gerindralamongan #lamonganmegilan #politisisantri  https://t.co/c4p9YxQcvS
+1575187947296784384 2022-09-28 18:17:26 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
+1575145317464317952 2022-09-28 15:28:03 +0000 &lt;jpnncom&gt; Prabowo bertemu Kapolri, Rabu (28/9). Prabowo juga memberi cendera mata kepada Kapolri berupa pistol G2 Elite buatan PT Pindad. #Prabowo  https://t.co/0JDDCoU7eR
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1575133525489197058 2022-09-28 14:41:11 +0000 &lt;AsikDung&gt; JeJeBa... . . Jenderal Jenderal Bahagia😎 #PanglimaTNI #DudungAbdurachman #Prabowo #AndikaPerkasa #RakyatSejahtera #KSAD #angkatandaratdihatirakyat #asikdung  https://t.co/VrVjglW8GV
+1575126336883945472 2022-09-28 14:12:37 +0000 &lt;gerindra_la&gt; Selamat Dikukuhkan sebagai Guru Besar @Don_dasco  Barokah ilmunya   Hormat kami @gerindra_la  @Gerindra @Fraksi_Gerindra @gerindrajatim_  #gerindra #prabowo #gerindramenang #prabowopresiden #gerindralamongan #lamonganmegilan #politisisantri  https://t.co/69hubm27G3
+1575111897052872704 2022-09-28 13:15:15 +0000 &lt;sevenleo7&gt; &quot;Kalau kata Gusdur orang yang paling ikhlas dan tulus itu Prabowo, The Real Pejuang Negarawan&quot;  #prabowo  https://t.co/J0phMg6ucn
+1575111896792850432 2022-09-28 13:15:15 +0000 &lt;MilenialSamaAH&gt; Survei CSIS: Golkar Terpopuler Dibanding PDIP, Gerindra, dan Demokrat di Pemilih Muda  #airlanggahartarto #fyp #foryoupage #foryou #golkar #pilpres #capres #jokowi #pemilu #indonesia #prabowo #politik #pileg #aniesbaswedan #Nordstream ari lasso taehyung taehyung  https://t.co/BF78NYy2vr
+1575109851747094529 2022-09-28 13:07:07 +0000 &lt;Kemhan_RI&gt; Pelaksanaan dari pusat kontrol ini dapat langsung dikoordinasikan dan diintegrasikan dengan Bakamla dan Kementerian Pertahanan menjadi salah satu alat pertahanan laut dan keamanan maritim.  #Kemhan #KemhanRI #Prabowo #PrabowoSubianto #MenhanPrabowo #KKP  https://t.co/YaWxUgfqEu
+1575080120628322305 2022-09-28 11:08:58 +0000 &lt;Husainaziz96&gt; @cakimiNOW @prabowo @EmHasanuddin @Gerindra @DPP_PKB  #gusmuhaimin #prabowo #thenext2024 #pkbmilenial  https://t.co/aaEENovOEP
+1575074663344242688 2022-09-28 10:47:17 +0000 &lt;GerindraLPG_&gt; Saya Gerindra 🇮🇩  #gerindra #gerindralampung #prabowo #prabowosubianto #sayagerindra #rahmatmirzanidjausal #dpdgerindralampung  https://t.co/OaKkjVWPz9
+1575034421270708224 2022-09-28 08:07:23 +0000 &lt;SeputariNews&gt; Momen ini terjadi di tengah adanya isu terkait kekompakan di dalam TNI.  #Prabowo #PrabowoSubianto #DPR #PanglimaTNI #AndikaPerkasa #KSAD #DudungAbdurachman #KSAL #YudoMargono #PSJanganLupaGembira
+1575034269335834624 2022-09-28 08:06:47 +0000 &lt;GTVID_News&gt; Momen ini terjadi di tengah adanya isu terkait kekompakan di dalam TNI.  #Prabowo #PrabowoSubianto #DPR #PanglimaTNI #AndikaPerkasa #KSAD #DudungAbdurachman #KSAL #YudoMargono #PSJanganLupaGembira
+1575034127467716608 2022-09-28 08:06:13 +0000 &lt;OfficialiNewsTV&gt; Momen ini terjadi di tengah adanya isu terkait kekompakan di dalam TNI.  #Prabowo #PrabowoSubianto #DPR #PanglimaTNI #AndikaPerkasa #KSAD #DudungAbdurachman #KSAL #YudoMargono #PSJanganLupaGembira
+1575033997872095232 2022-09-28 08:05:42 +0000 &lt;Lintas_MNCTV&gt; Momen ini terjadi di tengah adanya isu terkait kekompakan di dalam TNI.  #Prabowo #PrabowoSubianto #DPR #PanglimaTNI #AndikaPerkasa #KSAD #DudungAbdurachman #KSAL #YudoMargono #PSJanganLupaGembira
+1574999195882123264 2022-09-28 05:47:25 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
+1574989299220905984 2022-09-28 05:08:05 +0000 &lt;Politik_HariIni&gt; Relawan Ganjar menilai Prabowo Subianto sebagai sosok yang sudah teruji dan berkomitmen untuk meneruskan kepemimpinan Presiden Jokowi.  .  .  #phi #politikhariini #politikindonesia #viral #prabowo #jokowidodo #jokowi #prabowosubianto #ganjarpranowo #PDIPerjuangan  https://t.co/QieobJFrlE
+1574983083170091008 2022-09-28 04:43:23 +0000 &lt;Korantalknews&gt; &quot; Drama Sambo &quot; Diduga Tak Profesional di Kasus Kematian Brigadir J,Kombes Murbani Budi Pitono Jalani Sidang Etik,  #jokowi #indonesia #prabowo #jokowidodo #indonesiamaju #jakarta #covid #aniesbaswedan #jokowilagi   https://t.co/SCayf0eATU  https://t.co/Py89FVvIWD
+1574980160486805504 2022-09-28 04:31:46 +0000 &lt;PatarNatanael&gt; #salam3jari #jokpro2024 #rakyatbutuhjokowi #salam3jari #JokowiMendunia #jokowi #Indonesia #prabowo #Viral #viralTiktok #viralindo #viral2022 #2024 @puanmaharani_ri @PDI_Perjuangan @jokowi @gibran_tweet @psi_id  https://t.co/7m21Le5uLX
+1574979174498209793 2022-09-28 04:27:51 +0000 &lt;PatarNatanael&gt; @jokowi @gibran_tweet #rakyatbutuhjokowi #Indonesia #salam3jari #dukungjokpro2024 #jokowi #JokowiMendunia #prabowo  https://t.co/GEPP71v7DE
+1574978442822848513 2022-09-28 04:24:57 +0000 &lt;PatarNatanael&gt; #rakyatbutuhjokowi #Indonesia #prabowo #JokowiMendunia #salam3jari @jokowi @gibran_tweet  https://t.co/d7ktiOPVZx
+1574976299772190720 2022-09-28 04:16:26 +0000 &lt;papandu08&gt; Prabowo tinjau korban bencana tanah bergerak di Bogor #prabowo #bogor #gerindra #politik  https://t.co/IJmBLBudcR
+1574972559535153152 2022-09-28 04:01:34 +0000 &lt;kompascom&gt; Komisi I DPR RI menyetujui anggaran Kementerian Pertahanan  untuk tahun anggaran 2023 sebesar RP 134 triliun. Namun, Prabowo Subianto disebut merasa anggaran itu kurang. ^ #Prabowo #Menhan  https://t.co/3T5V9hoZs0
+1574817998749110273 2022-09-27 17:47:24 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1574734945100173315 2022-09-27 12:17:22 +0000 &lt;heraldindo&gt; Fadli Zon memberikan bocoran mengenai kriteria calon wakil presiden (cawapres) Prabowo Subianto pada Pemilu Presiden (Pilpres) 2024. #FadliZon #Prabowo  https://t.co/lKBBHUZblj
+1574729817483722752 2022-09-27 11:57:00 +0000 &lt;RADARSOLO_&gt; Ketua DPP PDIP Said Abdullah menanggapi isu Joko Widodo (Jokowi) yang akan diduetkan dengan Ketua Umum Partai Gerindra Prabowo Subianto sebagai calon wakil presiden (cawapres) pada Pilpres 2024 mendatang.  #Jokowi #prabowo #Pilpres2024   https://t.co/D1zyiacXxr
+1574704369429540864 2022-09-27 10:15:52 +0000 &lt;matakepri_&gt; 3 capres indonesia sampai ke surat kabar negeri matahari terbit  #matakepri  #berita #ganjarpranowo  #prabowo  #aniesbaswedan  #jepang  #koran  #indonesia  #beritaterkini  #beritaviral  https://t.co/d1rWSQxNQh
+1574698737267781632 2022-09-27 09:53:30 +0000 &lt;rmp_officials&gt; Doa para kiai sepuh untuk Cak Imin dan Prabowo  Amin ya Allah ya rabb alamin!!  #CakImin #GusMuhaimin #Muhaimin #MuhaiminIskandar #Capres2024 #Pilpres2024 #Prabowo  https://t.co/2yVDXqV29b
+1574677642443620352 2022-09-27 08:29:40 +0000 &lt;serambinews&gt; #Prabowo #Tertawa #Jokowi #Cawapres  Menteri Pertahanan RI (Menhan) Prabowo Subianto menyikapi soal adanya wacana menduetkan dirinya dengan Joko Widodo (Jokowi) dalam pemilihan presiden     https://t.co/olQEmPRHG8 lewat @serambinews
+1574677622579429378 2022-09-27 08:29:35 +0000 &lt;sharenewsaceh&gt; #Prabowo #Tertawa #Jokowi #Cawapres  Menteri Pertahanan RI (Menhan) Prabowo Subianto menyikapi soal adanya wacana menduetkan dirinya dengan Joko Widodo (Jokowi) dalam pemilihan presiden     https://t.co/SkybXInB3r lewat @serambinews
+1574663283088687104 2022-09-27 07:32:37 +0000 &lt;jokowiID_&gt; Menteri Pertahanan (Menhan) Prabowo Subianto menyampaikan pujiannya kepada Presiden Joko Widodo (Jokowi). Dalam pujiannya itu, Prabowo mengakui bahwa kepemimpinan dan kenegarawanan Presiden Jokowi.   #presidenjokowi #indonesiamaju #prabowo #jokowiid #fyp #viral  https://t.co/6ygTolclDL
+1574654579983011842 2022-09-27 06:58:02 +0000 &lt;tribunkaltim&gt; Cak Imin Belum Tentu jadi Cawapres Prabowo, Puan - Muhaimin Makin Mesra, PDIP Paling Siap Pilpres?    https://t.co/ksd22aBNOW lewat @tribunkaltim   #CakImin #Prabowo #Puan #CakImin #PDIP
+1574633537453846528 2022-09-27 05:34:25 +0000 &lt;matakepri_&gt; muhaimin jadi cawapres puan, bagaimana dengan prabowo?  #matakepri  #berita #muhaiminiskandar  #prabowo  #puanmaharani  #capres  #beritaterkini  #beritaviral  https://t.co/FQaHhsCs8L
+1574629277777399810 2022-09-27 05:17:29 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
+1574628821759799296 2022-09-27 05:15:40 +0000 &lt;papandu08&gt; Negarawan sejati yang selalu ingin membawa kedamaian #prabowo #panglimatnijenderalandikaperkasa #kasaddudung #indonesiabersatu #indonesiadamai  https://t.co/4XHx5mgMAM
+1574628220753698816 2022-09-27 05:13:17 +0000 &lt;gerindra_la&gt; SELAMAT DATANG BULAN MAULID  @Gerindra @prabowo @gerindrajatim_  1 Rabiul Awal 1444 H ___  #gerindra #prabowo #gerindramenang #prabowopresiden #gerindralamongan #lamonganmegilan #politisisantri  https://t.co/h1Th3CESIy
+1574616922968436736 2022-09-27 04:28:24 +0000 &lt;polsight&gt; &quot;Zulfan Lindan bicara soal kepentingan negara besar di Pilpres 2024 Indonesia. Menurutnya, ada capres yang figurnya akan menguntungkan AS dan ada yang akan menguntungkan China dan Rusia.&quot; . . . #anisbaswedan #prabowo #ganjarpranowo #pilpres2024 #survei #nasdem  https://t.co/Vy71ERDuBn
+1574609520872984578 2022-09-27 03:58:59 +0000 &lt;kompastv_jabar&gt; Panglima TNI dan KSAD Kompak Berikan Salam Komando  https://t.co/fqX9YI8sxJ  #panglimatni #ksad #prabowo #menhan #andikaperkasa #dudung #salamkomando #kompastvjabar  https://t.co/rv3vbwgl6U
+1574572064652275712 2022-09-27 01:30:09 +0000 &lt;rbgid_&gt; Muhaimin Iskandar Dekati Puan, Prabowo Ingatkan Piagam Koalisi  #MuhaiminIskandar #PuanMaharani #Prabowo #BeritaPolitik  https://t.co/b2nzUzWLvA lewat @rbg.id | Semua Fakta dan Berita Terbaru Ada di Sini
+1574538316694724608 2022-09-26 23:16:02 +0000 &lt;jpnncom&gt; Yan Permenas Mandenas menyebut rapat kerja antara pihaknya dengan Menhan RI Prabowo Subianto dan petinggi TNI fokus membahas penambahan anggaran. #Prabowo  https://t.co/Y3kaTEUcov
+1574477399382982656 2022-09-26 19:13:59 +0000 &lt;Cembok1&gt; #AniesPresiden 2054 #Prabowo presiden 2024 Prabowo yes Yang lain no no no
+1574448078815342592 2022-09-26 17:17:28 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
+1574421342535155713 2022-09-26 15:31:14 +0000 &lt;GerindraLPG_&gt; Ketua DPD Gerindra Lampung Mirza: Rapatkan Barisan Menangkan Hati Rakyat untuk Prabowo Presiden 2024  #gerindra #gerindralampung #prabowo #rahmatmirzanidjausal #dpdgerindralampung  https://t.co/PnkAIvqkgp
+1574413400301801477 2022-09-26 14:59:40 +0000 &lt;tribunkaltim&gt; SIAPA MAU JEGAL PRABOWO SUBIANTO? BALIHO CAPRES GERINDRA BARENG PRESIDEN JOKOWI BERMUNCULAN  #TribunKaltim #Prabowo #Jokowi #Pilpres2024    https://t.co/a4lAjc5kqR lewat @tribunkaltim
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1574406835003887617 2022-09-26 14:33:35 +0000 &lt;IDbelasting&gt; SURVEI CSIS: Anies Ungguli Prabowo dan Ganjar #surveiCSIS #anies #aniespresiden #ganjar #ganjarpresiden #prabowo #prabowopresiden  https://t.co/vZrkVc8k2z
+1574389017306492928 2022-09-26 13:22:47 +0000 &lt;sevenleo7&gt; &quot;Prabowo Subianto dan Anies Baswedan adalah calon kandidat capres 2024 yang bagus mereka berdua adalah sosok 2 orang anak bangsa yang pintar dan cerdas, jadi kita harus damai dan tidak ada perpecahan sesuai demokrasi kedepan untuk negeri&quot; #prabowo #AniesBaswedan
+1574381351901728774 2022-09-26 12:52:19 +0000 &lt;mhara_lising&gt; demikian argumen Sekber yang dilansir website MK, Senin (26/9/2022).  &quot;Terkait hal ini, membuat pemohon membutuhkan kepastian apakah presiden yang telah menjabat dua periode dapat maju lagi tetapi sebagai wakil presiden,&quot; tegas pemohon.  #prabowo #prabowojokowi #capres2024
+1574381090516897797 2022-09-26 12:51:17 +0000 &lt;trahmangkunega1&gt; Dua sahabat sedang bertemu. Kira-kira bahas apa ya? @airlangga_hrt @golkar_id @Golkar2024  #prabowo #menhan #menteripertahanan  #AirlanggaHartarto #PartaiGolkar  #GolkarIndonesia #Golkar2024  #GolkarMenang #kerjauntukindonesiaraya  https://t.co/lCqN9tqY03
+1574363304877002752 2022-09-26 11:40:36 +0000 &lt;Beritabaruco&gt; Pengamat Menilai Prabowo Mulai Lirik Ridwan Kamil  https://t.co/BGTtzkceXr #Nasional #BeritaBaruJatim #Beritabaruco #jatimberitabaruco #Prabowo  https://t.co/bVNJ93NxEF
+1574355746200129538 2022-09-26 11:10:34 +0000 &lt;Beritabaruco&gt; Begini Hasil Survei POLSTAT: Elektabilitas Prabowo Meningkat  https://t.co/OOZ6aRFgSW #Nasional #BeritaBaru #BeritaBaruJatim #jatimberitabaruco #Prabowo  https://t.co/XuthpyvDkh
+1574352598848585728 2022-09-26 10:58:04 +0000 &lt;jpnncom&gt; Andika dan Dudung mengenakan pakaian dinas lapangan, masing-masing mengapit Prabowo. #Prabowo  https://t.co/yZd9RrfN95
+1574349939605671936 2022-09-26 10:47:30 +0000 &lt;Kemhan_RI&gt; Kemhan dan TNI pun berkomitmen untuk mengutamakan produk dalam negeri sesuai dengan kebijakan pemerintah.  #Kemhan #KemhanRI #Prabowo #PrabowoSubianto #DPR #PanglimaTNI #AndikaPerkasa #KSAD #DudungAbdurachman #KSAL #YudoMargono  https://t.co/4aYKTtPE77
+1574349462616608768 2022-09-26 10:45:36 +0000 &lt;pandangan_jogja&gt; Selengkapnya, klik link kumparan berikut.  https://t.co/9Yle9Cjk2w  #berita #prabowo #prabowosubianto #jokowi #baretmerah #jenderal #pjnews #pandanganjogja  https://t.co/YzSvof74AB
+1574349154725535744 2022-09-26 10:44:23 +0000 &lt;VideoTRIBUN&gt; Momen Panglima TNI dan KSAD Hadiri Rapat di DPR, Duduk Berdampingan Dipisahkan Menhan Prabowo.  #Menhan #Prabowo #TNI #AndikaPerkasa #BeritaTerkini   Selengkapnya&amp;gt;  https://t.co/1He2qpr2Ik  https://t.co/vlLzslfvu2
+1574347236829704192 2022-09-26 10:36:45 +0000 &lt;KoncoAirlangga&gt; Pascapertemuan antara Airlangga Hartarto dengan Prabowo, beredar wacana koalisi antara Golkar dan Gerindra. Semoga hal-hal baik selalu menyertai kita #airlanggahartarto #prabowo #Golkar #gerindra #pilpres2024  https://t.co/ROR7x58HNx
+1574340851563909122 2022-09-26 10:11:23 +0000 &lt;BisnisdanJasa&gt; Kiat sukses. Bikin Toko Online. Kami melayani jasa pembuatan website dan toko online, kunjungi web kami &amp;gt;&amp;gt; https://t.co/1IK2oOA7Gd &amp;lt;&amp;lt; wa 085711119998   #JasaPembuatanWebsite #TokoOnline #JasaPembuatanTokoOnline #DPR #Jokowi #AniesBaswedan #Prabowo #GanjarPranowo #PDIP #Golkar  https://t.co/o8n1bXR4q8
+1574318383000342530 2022-09-26 08:42:06 +0000 &lt;IDefenseMagz&gt; Beberapa hal menjadi sorotan utama @prabowo dalam tinjauan tersebut. Salah satunya adalah keamanan dan kenyamanan warga terdampak selama tinggal di pengungsian.   https://t.co/eqcYgGCDDd  #IndonesiaDefenseMagazine #IDM #MenhanPrabowo #PrabowoSubianto #Prabowo
+1574304187424583681 2022-09-26 07:45:42 +0000 &lt;AgusMughni1&gt; Jenderal Andika dan Kasad Dudung kompak dampingi Prabowo rapat di DPR #panglimatni #kasaddudung #prabowo #dpr #audioleak #ZeeNuNew #GegarVaganza Lihat video Pekadotco! #TikTok  https://t.co/1CGr4PZLHe
+1574268004556472320 2022-09-26 05:21:55 +0000 &lt;VideoTRIBUN&gt; Prabowo Mengakui Kehebatan Jokowi Pimpin Negara: Saya Mantan Jenderal tapi Ilmu Dia di Atas Saya #BeritaTerkini #UPDATE #tribunnews #jokowi #prabowo #jenderal #menhan  Klik selengkapnya&amp;gt;&amp;gt; https://t.co/CrCdA2NVZm  https://t.co/xYlwdSFGI7
+1574267557753733121 2022-09-26 05:20:08 +0000 &lt;papandu08&gt; Catatan dari seorang simpatisan untuk Bapak Prabowo yang tak pernah mengenal lelah #prabowo #simpatisan #relawan #pendukung #prabowopresiden  https://t.co/q1l2luvj50
+1574259320237469697 2022-09-26 04:47:24 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1574215800436977664 2022-09-26 01:54:28 +0000 &lt;sebrangLoor&gt; GENTLE, JUARA.!! ❤️ #Prabowo, Sory dulu nyinyir😅 . .
+1574202611112083456 2022-09-26 01:02:04 +0000 &lt;PrasetyoHadi28&gt; Semoga silaturahmi dapat terus terjaga dan membawa kebaikan dalam kehidupan berbangsa dan bernegara.  #prabowo #prabowosubianto #gerindra #silaturahmi #khyusufchudlori #ponpes #ponpesapitegalrejo #pondokpesantren #pondokpesantrenapiasritegalrejo #kyai #kyainu #nu #nahdlatululama  https://t.co/42BnWzm7Ar
+1574156799112249344 2022-09-25 22:00:01 +0000 &lt;Genpi_Co&gt; Ketua Umum Partai Gerindra Prabowo Subianto melakukan silaturahmi atau sowan ke 9 kiai sepuh Nahdlatul Ulama (NU) #prabowo  https://t.co/vkG7IlAwxS
+1574141327612452864 2022-09-25 20:58:33 +0000 &lt;kerjabersama_AH&gt; Airlangga Hartarto, Prabowo dan Suharso bahas food estate  #foodestate #airlanggahartarto #prabowo  https://t.co/DOhQYpNokA
+1574078125021220864 2022-09-25 16:47:24 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
+1574060786850598912 2022-09-25 15:38:30 +0000 &lt;Hans_prayoga70&gt; @wahyudi72020 @D_N4bil5 @SBYudhoyono @AgusYudhoyono @aniesbaswedan @Lembayung071 @sherpa701 @WagimanDeep212_ @Ritafauzh @puanmaharani_ri @bobby_risakotta Kebesaran Jiwa dan Kerendahan Hati Pak #PRABOWO Sangat luar biasa. Lbh mementingkan Bangsa Dan Negara . Dr pd Diri,kelompok dan Golongan nya. Tp Sangat di Sayangkan, Para Pemilih dan Relawan nya tk dpt berfikir spt Pak #Prabowo. Atau mmang kwalitas nya spt itu.
+1573982130891210752 2022-09-25 10:25:57 +0000 &lt;AirlanggaUpdate&gt; Upaya pemerintah dalam pembangunan Food Estate yang merupakan program peningkatan penyediaan pangan nasional, mellui peningkatan produksi dalam negeri #airlanggahartarto #prabowo #suharsomonoarfa #foodestate #indonesia @airlangga_hrt  https://t.co/RAqu1eHmWU
+1573975606248841216 2022-09-25 10:00:02 +0000 &lt;matamilenialID&gt; Prabowo Sebut Ridwan Kamil Harus Diperhitungkan, Ini Penjelasannya  Baca selengkapnya disini   https://t.co/UH9DdXphrj  #mataindonesia #prabowo #ridwankamil #gubernurjabar
+1573975333849530368 2022-09-25 09:58:57 +0000 &lt;AirlanggaUmkm&gt; Airlangga Hartarto, Prabowo Subianto, dan Suharso Monoarfa berdiskusi untuk meningkatkan penyediaan pangan nasional sebagai upaya menjaga ketahanan pangan. @airlangga_hrt @golkar_id @Golkar2024  #ketahananpangan #cadanganpangan #prabowo  #AirlanggaHartarto #PartaiGolkar  https://t.co/LRCIfMhgep
+1573970451037966336 2022-09-25 09:39:33 +0000 &lt;MenujuIndJaya&gt; Tiga tokoh mendiskusikan penguatan ketahanan nasional.  #ketahananpangan #cadanganpangan #pangan #foodestate #prabowo #AirlanggaHartarto #PartaiGolkar #GolkarIndonesia #Golkar2024 #GolkarMenang #kerjauntukindonesiaraya  https://t.co/4M8F42k5ZW
+1573889402173915143 2022-09-25 04:17:29 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
+1573885006077956098 2022-09-25 04:00:01 +0000 &lt;poskotaofficial&gt; Gantikan Jokowi, Prabowo ajak keluarga Persis lanjutkan dakwah bijak dan damai sesuai dengan tuntunan Al Quran.   #prabowo #alquran #jokowi #poskota #dakwah #bijak #persis   https://t.co/Yb3OiDLl50
+1573841019392892929 2022-09-25 01:05:14 +0000 &lt;Kemhan_RI&gt; “Hanya dengan perdamaian suatu bangsa dapat kemakmuran,” ucapnya.  #Kemhan #KemhanRI #Prabowo #PrabowoSubianto #MenhanPrabowo #Persis #Jokowi #JokoWidodo #PresidenJokowi  https://t.co/EwoIVP4sOu
+1573828467623284736 2022-09-25 00:15:21 +0000 &lt;papandu08&gt; Relawan Ganjar Pranowo Mania (GP MANIA) akan dukung Prabowo jika Ganjar tidak dipilih PDIP jadi capres di 2024 #prabowo #ganjarpranowo #gerindra #pdip #relawanganjar #relawanprabowo #gpmania #projo #politik  https://t.co/sL3ZdWDMaK
+1573790894234693632 2022-09-24 21:46:03 +0000 &lt;jpnncom&gt; Prabowo Subianto berulang kali menyebut nama Ridwan Kamil di depan sejumlah tokoh. #Prabowo  https://t.co/bQTOgdNdv5
+1573708201110872065 2022-09-24 16:17:27 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
+1573704630680240129 2022-09-24 16:03:16 +0000 &lt;Ricky_Tamba&gt; @Gerindra @helmlevel2 @esteh_indonesia @Gandhoyy Buat Broque Mindra @Gerindra , br ngeh dpt notif di Fb. Mohon bantuan hadiah lomba pantun disumbangin aza ke anak2 yatim di seputaran kantor DPP Gerindra. Tks banget ya. Cemungudh! #PSJanganLupaGembira #Prabowo #PrabowoSubianto #Gerindra #2024PrabowoPresiden #GerindraMenang 🇮🇩  https://t.co/IGvHJ6FESr
+1573703571039657984 2022-09-24 15:59:03 +0000 &lt;Ricky_Tamba&gt; Buat Broque Mindra @Gerindra , br ngeh dpt notif di Fb. Mohon bantuan hadiah lomba pantun disumbangin aza ke anak2 yatim di seputaran kantor DPP Gerindra. Tks banget ya. Cemungudh! #PSJanganLupaGembira #Prabowo #PrabowoSubianto #Gerindra #2024PrabowoPresiden #GerindraMenang 🇮🇩  https://t.co/ciKsMTzipN
+1573694769691168768 2022-09-24 15:24:05 +0000 &lt;tribunkaltim&gt; Prabowo Subianto Kembali Bertemu Ridwan Kamil, Kali Ini di Muktamar Persis XVI di Soreang   #Persis #MuktamaPersis #PersatuanIslam #RidwanKamil #Prabowo #PrabowoSubianto #KangEmil   https://t.co/xCqdnmJx69 lewat @tribunkaltim
+1573660332328771584 2022-09-24 13:07:15 +0000 &lt;pikiran_rakyat&gt; Rival 10 Tahun, Prabowo Sebut Pengganti Jokowi Punya Tugas Berat: Saya Lihat Komitmen Beliau #Jokowi #Prabowo #Presiden  Selengkapnya:  https://t.co/MSdWvODqnT via @YouTube
+[!] No more data! Scraping will stop now.
+found 0 deleted tweets in this search.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Tweets_df</span> <span class="o">=</span> <span class="n">twint</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">panda</span><span class="o">.</span><span class="n">Tweets_df</span>
+<span class="n">Tweets_df</span><span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;prabowo.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>#Preposesing</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>%%capture
+!pip install numpy
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>%%capture
+!pip install pandas
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>%%capture
+!pip install nltk
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>%%capture
+!pip install scikit-learn
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="c1">#Library untuk mengelola data dalam Dataframe</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1">#Lbrary untuk Preprocessing</span>
+<span class="kn">import</span> <span class="nn">nltk</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;punkt&#39;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>  <span class="c1">#stopwords</span>
+<span class="kn">from</span> <span class="nn">nltk</span> <span class="kn">import</span> <span class="n">word_tokenize</span> <span class="c1"># tokenizing</span>
+
+<span class="c1">#Untuk membuat vektor dan TFIDF</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfTransformer</span><span class="p">,</span> <span class="n">TfidfVectorizer</span><span class="p">,</span> <span class="n">CountVectorizer</span>
+
+<span class="c1">#Untuk melakukan proses SVD</span>
+<span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">TruncatedSVD</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package punkt to /root/nltk_data...
+[nltk_data]   Unzipping tokenizers/punkt.zip.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Tweets_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/maulidhan190081/file/main/prabowo2.csv&quot;</span><span class="p">)</span>
+
+<span class="n">Tweets_df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-aabe55c3-4dd4-47b5-9f08-07f6e5009d86">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>tweet</th>
+      <th>label</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Doa para kiai sepuh untuk Cak Imin dan Prabowo...</td>
+      <td>pro</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Menteri Pertahanan (Menhan) Prabowo Subianto m...</td>
+      <td>pro</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Semangat Juang #Ir_soekarno Ada Pada diri #pra...</td>
+      <td>pro</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Negarawan sejati yang selalu ingin membawa ked...</td>
+      <td>pro</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>"Zulfan Lindan bicara soal kepentingan negara ...</td>
+      <td>kontra</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>96</th>
+      <td>Masyarakat antusias menyambut kedatangan mente...</td>
+      <td>pro</td>
+    </tr>
+    <tr>
+      <th>97</th>
+      <td>Anies Siap Maju di Pilpres 2024, Wagub Tak aka...</td>
+      <td>pro</td>
+    </tr>
+    <tr>
+      <th>98</th>
+      <td>Adian Napitupulu Sebut Presiden Jokowi Tidak A...</td>
+      <td>kontra</td>
+    </tr>
+    <tr>
+      <th>99</th>
+      <td>Elit Gerindra Desak Sandiaga Uno Mundur dari P...</td>
+      <td>kontra</td>
+    </tr>
+    <tr>
+      <th>100</th>
+      <td>Buah duku buah kedondong 2024 gue prabowo dong...</td>
+      <td>pro</td>
+    </tr>
+  </tbody>
+</table>
+<p>101 rows × 2 columns</p>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-aabe55c3-4dd4-47b5-9f08-07f6e5009d86')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-aabe55c3-4dd4-47b5-9f08-07f6e5009d86 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-aabe55c3-4dd4-47b5-9f08-07f6e5009d86');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      doa para kiai sepuh untuk cak imin dan prabowo...
+1      menteri pertahanan (menhan) prabowo subianto m...
+2      semangat juang #ir_soekarno ada pada diri #pra...
+3      negarawan sejati yang selalu ingin membawa ked...
+4      &quot;zulfan lindan bicara soal kepentingan negara ...
+                             ...                        
+96     masyarakat antusias menyambut kedatangan mente...
+97     anies siap maju di pilpres 2024 wagub tak akan...
+98     adian napitupulu sebut presiden jokowi tidak a...
+99     elit gerindra desak sandiaga uno mundur dari p...
+100    buah duku buah kedondong 2024 gue prabowo dong...
+Name: tweet, Length: 101, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Untuk menghapus angka</span>
+<span class="kn">import</span> <span class="nn">re</span>
+
+<span class="c1">#Untuk menghilangkan Punctuation</span>
+<span class="kn">import</span> <span class="nn">string</span>
+
+<span class="k">def</span> <span class="nf">remove_PTA_special</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="c1"># remove tab, new line, ans back slice</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">t&#39;</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">n&#39;</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">u&#39;</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&#39;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="c1"># remove non ASCII (emoticon, chinese word, .etc)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">,</span> <span class="s1">&#39;replace&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">)</span>
+    <span class="c1"># remove mention, link, hashtag</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;([@#][A-Za-z0-9]+)|(\w+:\/\/\S+)&quot;</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+    <span class="c1"># remove incomplete URL</span>
+    <span class="k">return</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;http://&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;https://&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span>
+                
+<span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span> <span class="o">=</span><span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_PTA_special</span><span class="p">)</span>
+
+<span class="c1">#remove number</span>
+<span class="k">def</span> <span class="nf">remove_number</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span>  <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\d+&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+
+<span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_number</span><span class="p">)</span>
+
+<span class="c1">#remove punctuation</span>
+<span class="k">def</span> <span class="nf">remove_punctuation</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">text</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">maketrans</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="n">string</span><span class="o">.</span><span class="n">punctuation</span><span class="p">))</span>
+
+<span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_punctuation</span><span class="p">)</span>
+
+<span class="c1">#remove whitespace leading &amp; trailing</span>
+<span class="k">def</span> <span class="nf">remove_whitespace_LT</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+<span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_whitespace_LT</span><span class="p">)</span>
+
+<span class="c1">#remove multiple whitespace into single whitespace</span>
+<span class="k">def</span> <span class="nf">remove_whitespace_multiple</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="n">text</span><span class="p">)</span>
+
+<span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_whitespace_multiple</span><span class="p">)</span>
+
+<span class="c1"># remove single char</span>
+<span class="k">def</span> <span class="nf">remove_singl_char</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\b[a-zA-Z]\b&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+
+<span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_singl_char</span><span class="p">)</span>
+
+<span class="c1"># NLTK word tokenize </span>
+<span class="k">def</span> <span class="nf">word_tokenize_wrapper</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">word_tokenize</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+
+<span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">word_tokenize_wrapper</span><span class="p">)</span>
+<span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      [doa, para, kiai, sepuh, untuk, cak, imin, dan...
+1      [menteri, pertahanan, menhan, prabowo, subiant...
+2           [semangat, juang, soekarno, ada, pada, diri]
+3      [negarawan, sejati, yang, selalu, ingin, memba...
+4      [zulfan, lindan, bicara, soal, kepentingan, ne...
+                             ...                        
+96     [masyarakat, antusias, menyambut, kedatangan, ...
+97     [anies, siap, maju, di, pilpres, wagub, tak, a...
+98     [adian, napitupulu, sebut, presiden, jokowi, t...
+99     [elit, gerindra, desak, sandiaga, uno, mundur,...
+100    [buah, duku, buah, kedondong, gue, prabowo, do...
+Name: tweet, Length: 101, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;stopwords&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package stopwords to /root/nltk_data...
+[nltk_data]   Unzipping corpora/stopwords.zip.
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Mendapatkan stopword indonesia</span>
+<span class="n">list_stopwords</span> <span class="o">=</span> <span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;indonesian&#39;</span><span class="p">)</span>
+
+<span class="c1">#Menghapus Stopword dari list token</span>
+<span class="k">def</span> <span class="nf">stopwords_removal</span><span class="p">(</span><span class="n">words</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">word</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span> <span class="k">if</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">list_stopwords</span><span class="p">]</span>
+<span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">stopwords_removal</span><span class="p">)</span>
+
+<span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      [doa, kiai, sepuh, cak, imin, prabowo, amin, y...
+1      [menteri, pertahanan, menhan, prabowo, subiant...
+2                            [semangat, juang, soekarno]
+3                [negarawan, sejati, membawa, kedamaian]
+4      [zulfan, lindan, bicara, kepentingan, negara, ...
+                             ...                        
+96     [masyarakat, antusias, menyambut, kedatangan, ...
+97     [anies, maju, pilpres, wagub, dukung, riza, pa...
+98     [adian, napitupulu, presiden, jokowi, maju, pe...
+99     [elit, gerindra, desak, sandiaga, uno, mundur,...
+100    [buah, duku, buah, kedondong, gue, prabowo, ge...
+Name: tweet, Length: 101, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Tweets_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;TextPreprocessing.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataTextPre</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;TextPreprocessing.csv&#39;</span><span class="p">)</span>
+<span class="n">vectorizer</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">(</span><span class="n">min_df</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">bag</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">dataTextPre</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>#TF</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">vectorizer</span><span class="o">.</span><span class="n">vocabulary_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;doa&#39;: 124, &#39;kiai&#39;: 263, &#39;sepuh&#39;: 516, &#39;cak&#39;: 75, &#39;imin&#39;: 198, &#39;prabowo&#39;: 459, &#39;amin&#39;: 10, &#39;ya&#39;: 597, &#39;allah&#39;: 9, &#39;rabb&#39;: 473, &#39;alamin&#39;: 8, &#39;menteri&#39;: 346, &#39;pertahanan&#39;: 438, &#39;menhan&#39;: 339, &#39;subianto&#39;: 537, &#39;pujiannya&#39;: 471, &#39;presiden&#39;: 464, &#39;joko&#39;: 213, &#39;widodo&#39;: 594, &#39;jokowi&#39;: 214, &#39;mengakui&#39;: 327, &#39;kepemimpinan&#39;: 252, &#39;kenegarawanan&#39;: 249, &#39;semangat&#39;: 509, &#39;juang&#39;: 215, &#39;soekarno&#39;: 529, &#39;negarawan&#39;: 374, &#39;sejati&#39;: 502, &#39;membawa&#39;: 309, &#39;kedamaian&#39;: 233, &#39;zulfan&#39;: 603, &#39;lindan&#39;: 289, &#39;bicara&#39;: 65, &#39;kepentingan&#39;: 253, &#39;negara&#39;: 373, &#39;pilpres&#39;: 447, &#39;indonesia&#39;: 200, &#39;menurutnya&#39;: 347, &#39;capres&#39;: 78, &#39;figurnya&#39;: 153, &#39;menguntungkan&#39;: 336, &#39;as&#39;: 24, &#39;china&#39;: 85, &#39;rusia&#39;: 492, &#39;panglima&#39;: 391, &#39;tni&#39;: 564, &#39;ksad&#39;: 276, &#39;kompak&#39;: 271, &#39;salam&#39;: 497, &#39;komando&#39;: 268, &#39;muhaimin&#39;: 365, &#39;iskandar&#39;: 205, &#39;dekati&#39;: 97, &#39;puan&#39;: 468, &#39;ingatkan&#39;: 203, &#39;piagam&#39;: 445, &#39;koalisi&#39;: 265, &#39;id&#39;: 194, &#39;fakta&#39;: 150, &#39;berita&#39;: 55, &#39;terbaru&#39;: 549, &#39;yan&#39;: 598, &#39;permenas&#39;: 432, &#39;mandenas&#39;: 298, &#39;menyebut&#39;: 349, &#39;rapat&#39;: 477, &#39;kerja&#39;: 256, &#39;ri&#39;: 487, &#39;petinggi&#39;: 444, &#39;fokus&#39;: 154, &#39;membahas&#39;: 308, &#39;penambahan&#39;: 415, &#39;anggaran&#39;: 14, &#39;ketua&#39;: 261, &#39;dpd&#39;: 126, &#39;gerindra&#39;: 167, &#39;lampung&#39;: 282, &#39;mirza&#39;: 358, &#39;rapatkan&#39;: 478, &#39;barisan&#39;: 39, &#39;menangkan&#39;: 317, &#39;hati&#39;: 188, &#39;rakyat&#39;: 475, &#39;survei&#39;: 542, &#39;csis&#39;: 88, &#39;anies&#39;: 18, &#39;ungguli&#39;: 575, &#39;ganjar&#39;: 160, &#39;baswedan&#39;: 40, &#39;calon&#39;: 77, &#39;kandidat&#39;: 225, &#39;bagus&#39;: 30, &#39;berdua&#39;: 51, &#39;sosok&#39;: 533, &#39;orang&#39;: 386, &#39;anak&#39;: 11, &#39;bangsa&#39;: 35, &#39;pintar&#39;: 449, &#39;cerdas&#39;: 82, &#39;damai&#39;: 90, &#39;perpecahan&#39;: 433, &#39;sesuai&#39;: 518, &#39;demokrasi&#39;: 99, &#39;kedepan&#39;: 235, &#39;negeri&#39;: 375, &#39;argumen&#39;: 22, &#39;sekber&#39;: 503, &#39;dilansir&#39;: 111, &#39;website&#39;: 593, &#39;mk&#39;: 359, &#39;senin&#39;: 514, &#39;terkait&#39;: 555, &#39;pemohon&#39;: 413, &#39;membutuhkan&#39;: 311, &#39;kepastian&#39;: 251, &#39;menjabat&#39;: 343, &#39;periode&#39;: 429, &#39;maju&#39;: 295, &#39;wakil&#39;: 588, &#39;pengamat&#39;: 418, &#39;menilai&#39;: 340, &#39;lirik&#39;: 290, &#39;ridwan&#39;: 488, &#39;kamil&#39;: 223, &#39;hasil&#39;: 187, &#39;polstat&#39;: 454, &#39;elektabilitas&#39;: 142, &#39;meningkat&#39;: 341, &#39;andika&#39;: 13, &#39;dudung&#39;: 134, &#39;mengenakan&#39;: 330, &#39;pakaian&#39;: 389, &#39;dinas&#39;: 113, &#39;lapangan&#39;: 284, &#39;masingmasing&#39;: 301, &#39;mengapit&#39;: 328, &#39;kemhan&#39;: 248, &#39;berkomitmen&#39;: 57, &#39;mengutamakan&#39;: 338, &#39;produk&#39;: 465, &#39;kebijakan&#39;: 232, &#39;pemerintah&#39;: 408, &#39;momen&#39;: 362, &#39;hadiri&#39;: 182, &#39;dpr&#39;: 129, &#39;duduk&#39;: 133, &#39;berdampingan&#39;: 48, &#39;dipisahkan&#39;: 118, &#39;selengkapnyagt&#39;: 506, &#39;pascapertemuan&#39;: 396, &#39;airlangga&#39;: 2, &#39;hartarto&#39;: 186, &#39;beredar&#39;: 52, &#39;wacana&#39;: 586, &#39;golkar&#39;: 172, &#39;semoga&#39;: 512, &#39;halhal&#39;: 183, &#39;menyertai&#39;: 352, &#39;sorotan&#39;: 531, &#39;utama&#39;: 579, &#39;tinjauan&#39;: 560, &#39;salah&#39;: 495, &#39;satunya&#39;: 500, &#39;keamanan&#39;: 229, &#39;kenyamanan&#39;: 250, &#39;warga&#39;: 590, &#39;terdampak&#39;: 551, &#39;tinggal&#39;: 558, &#39;pengungsian&#39;: 421, &#39;jenderal&#39;: 211, &#39;kasad&#39;: 227, &#39;dampingi&#39;: 91, &#39;lihat&#39;: 288, &#39;video&#39;: 583, &#39;pekadotco&#39;: 404, &#39;kehebatan&#39;: 237, &#39;pimpin&#39;: 448, &#39;mantan&#39;: 300, &#39;ilmu&#39;: 197, &#39;klik&#39;: 264, &#39;selengkapnyagtgt&#39;: 507, &#39;catatan&#39;: 79, &#39;simpatisan&#39;: 523, &#39;mengenal&#39;: 331, &#39;lelah&#39;: 287, &#39;gentle&#39;: 165, &#39;juara&#39;: 216, &#39;sory&#39;: 532, &#39;nyinyir&#39;: 382, &#39;silaturahmi&#39;: 522, &#39;terjaga&#39;: 554, &#39;kebaikan&#39;: 230, &#39;kehidupan&#39;: 238, &#39;berbangsa&#39;: 45, &#39;bernegara&#39;: 58, &#39;nbil&#39;: 372, &#39;risakotta&#39;: 489, &#39;kebesaran&#39;: 231, &#39;jiwa&#39;: 212, &#39;kerendahan&#39;: 255, &#39;lbh&#39;: 285, &#39;mementingkan&#39;: 312, &#39;dr&#39;: 131, &#39;pd&#39;: 400, &#39;dirikelompok&#39;: 120, &#39;golongan&#39;: 173, &#39;nya&#39;: 380, &#39;tp&#39;: 566, &#39;sayangkan&#39;: 501, &#39;pemilih&#39;: 409, &#39;relawan&#39;: 482, &#39;tk&#39;: 562, &#39;dpt&#39;: 130, &#39;berfikir&#39;: 53, &#39;spt&#39;: 535, &#39;mmang&#39;: 360, &#39;kwalitas&#39;: 281, &#39;upaya&#39;: 578, &#39;pembangunan&#39;: 405, &#39;food&#39;: 155, &#39;estate&#39;: 147, &#39;program&#39;: 467, &#39;peningkatan&#39;: 422, &#39;penyediaan&#39;: 424, &#39;pangan&#39;: 390, &#39;nasional&#39;: 370, &#39;mellui&#39;: 307, &#39;produksi&#39;: 466, &#39;hrt&#39;: 191, &#39;diperhitungkan&#39;: 114, &#39;penjelasannya&#39;: 423, &#39;baca&#39;: 29, &#39;selengkapnya&#39;: 505, &#39;suharso&#39;: 538, &#39;monoarfa&#39;: 364, &#39;berdiskusi&#39;: 49, &#39;meningkatkan&#39;: 342, &#39;menjaga&#39;: 344, &#39;ketahanan&#39;: 259, &#39;tokoh&#39;: 565, &#39;mendiskusikan&#39;: 322, &#39;penguatan&#39;: 420, &#39;gantikan&#39;: 161, &#39;ajak&#39;: 5, &#39;keluarga&#39;: 240, &#39;persis&#39;: 436, &#39;lanjutkan&#39;: 283, &#39;dakwah&#39;: 89, &#39;bijak&#39;: 67, &#39;tuntunan&#39;: 572, &#39;al&#39;: 7, &#39;quran&#39;: 472, &#39;perdamaian&#39;: 426, &#39;kemakmuran&#39;: 241, &#39;pranowo&#39;: 463, &#39;mania&#39;: 299, &#39;gp&#39;: 176, &#39;dukung&#39;: 137, &#39;dipilih&#39;: 116, &#39;pdip&#39;: 401, &#39;broque&#39;: 72, &#39;mindra&#39;: 357, &#39;br&#39;: 71, &#39;ngeh&#39;: 377, &#39;notif&#39;: 379, &#39;fb&#39;: 151, &#39;mohon&#39;: 361, &#39;bantuan&#39;: 36, &#39;hadiah&#39;: 181, &#39;lomba&#39;: 291, &#39;pantun&#39;: 392, &#39;disumbangin&#39;: 122, &#39;aza&#39;: 28, &#39;yatim&#39;: 599, &#39;seputaran&#39;: 517, &#39;kantor&#39;: 226, &#39;dpp&#39;: 128, &#39;tks&#39;: 563, &#39;banget&#39;: 34, &#39;cemungudh&#39;: 81, &#39;rival&#39;: 490, &#39;pengganti&#39;: 419, &#39;tugas&#39;: 569, &#39;berat&#39;: 44, &#39;komitmen&#39;: 270, &#39;beliau&#39;: 41, &#39;via&#39;: 582, &#39;mengaku&#39;: 326, &#39;dunia&#39;: 139, &#39;pesantren&#39;: 442, &#39;ceritanya&#39;: 83, &#39;dekatnya&#39;: 98, &#39;berbisnis&#39;: 46, &#39;kementeriannya&#39;: 246, &#39;sumber&#39;: 540, &#39;facebook&#39;: 148, &#39;naniek&#39;: 368, &#39;deyang&#39;: 106, &#39;komentari&#39;: 269, &#39;dewan&#39;: 105, &#39;kolonel&#39;: 267, &#39;vs&#39;: 585, &#39;kopral&#39;: 274, &#39;ferdinand&#39;: 152, &#39;mending&#39;: 321, &#39;prabowoganjar&#39;: 460, &#39;aja&#39;: 4, &#39;deh&#39;: 96, &#39;sembilan&#39;: 510, &#39;masukanmasukan&#39;: 302, &#39;gus&#39;: 179, &#39;muhaiminagar&#39;: 366, &#39;senantiasadiberikan&#39;: 513, &#39;kelancaran&#39;: 239, &#39;keselamatan&#39;: 258, &#39;menghadapi&#39;: 333, &#39;tantangan&#39;: 547, &#39;yusuf&#39;: 600, &#39;bersatu&#39;: 61, &#39;berani&#39;: 43, &#39;gembira&#39;: 164, &#39;gagah&#39;: 158, &#39;sumringah&#39;: 541, &#39;pesan&#39;: 441, &#39;dpdgerindrabali&#39;: 127, &#39;kemampuan&#39;: 242, &#39;operasi&#39;: 385, &#39;sustain&#39;: 543, &#39;melaksanakan&#39;: 306, &#39;pembinaan&#39;: 407, &#39;teritorial&#39;: 553, &#39;terliht&#39;: 556, &#39;mesra&#39;: 356, &#39;hubungan&#39;: 192, &#39;harmonis&#39;: 185, &#39;sinyal&#39;: 525, &#39;pasangan&#39;: 395, &#39;istana&#39;: 206, &#39;diajarkan&#39;: 107, &#39;ayahnya&#39;: 27, &#39;partai&#39;: 394, &#39;fadli&#39;: 149, &#39;zon&#39;: 601, &#39;girang&#39;: 170, &#39;mendengar&#39;: 320, &#39;kabar&#39;: 217, &#39;kalo&#39;: 222, &#39;airlanggaprabowo&#39;: 3, &#39;duet&#39;: 135, &#39;gimana&#39;: 169, &#39;tasyi&#39;: 548, &#39;wanita&#39;: 589, &#39;emas&#39;: 146, &#39;gak&#39;: 159, &#39;akhlak&#39;: 6, &#39;rating&#39;: 479, &#39;turun&#39;: 573, &#39;salahkan&#39;: 496, &#39;baliho&#39;: 33, &#39;berdosa&#39;: 50, &#39;gerindrafadli&#39;: 168, &#39;zonmenilai&#39;: 602, &#39;positif&#39;: 455, &#39;dukungan&#39;: 138, &#39;ketum&#39;: 262, &#39;pembina&#39;: 406, &#39;desmond&#39;: 104, &#39;mahesa&#39;: 294, &#39;mengendorse&#39;: 332, &#39;tancap&#39;: 544, &#39;gas&#39;: 162, &#39;goyah&#39;: 175, &#39;charta&#39;: 84, &#39;politika&#39;: 452, &#39;citilink&#39;: 87, &#39;selingkuh&#39;: 508, &#39;reza&#39;: 486, &#39;arap&#39;: 20, &#39;kamis&#39;: 224, &#39;data&#39;: 95, &#39;valid&#39;: 581, &#39;tulus&#39;: 571, &#39;utamakan&#39;: 580, &#39;sepakat&#39;: 515, &#39;cakep&#39;: 76, &#39;infinite&#39;: 202, &#39;tua&#39;: 567, &#39;anaknya&#39;: 12, &#39;sukses&#39;: 539, &#39;darinya&#39;: 93, &#39;duo&#39;: 140, &#39;wonderwoman&#39;: 596, &#39;perempuan&#39;: 428, &#39;tangguh&#39;: 546, &#39;pesiden&#39;: 443, &#39;mengindari&#39;: 334, &#39;politik&#39;: 451, &#39;praktis&#39;: 462, &#39;mendukung&#39;: 323, &#39;diberitakan&#39;: 109, &#39;denny&#39;: 100, &#39;darko&#39;: 94, &#39;meramal&#39;: 354, &#39;berpasangan&#39;: 59, &#39;tandatanda&#39;: 545, &#39;bunga&#39;: 74, &#39;asmara&#39;: 25, &#39;parpol&#39;: 393, &#39;bertemu&#39;: 63, &#39;mata&#39;: 304, &#39;global&#39;: 171, &#39;sahabat&#39;: 494, &#39;mencari&#39;: 318, &#39;solusi&#39;: 530, &#39;kompleksitas&#39;: 272, &#39;permasalahan&#39;: 431, &#39;domestik&#39;: 125, &#39;berdampak&#39;: 47, &#39;koordinator&#39;: 273, &#39;bidang&#39;: 66, &#39;perekonomian&#39;: 427, &#39;menerima&#39;: 325, &#39;kunjungan&#39;: 279, &#39;pertemuan&#39;: 439, &#39;menko&#39;: 345, &#39;prabowk&#39;: 458, &#39;bikin&#39;: 68, &#39;polling&#39;: 453, &#39;twitter&#39;: 574, &#39;menang&#39;: 316, &#39;hadapi&#39;: 180, &#39;dinamika&#39;: 112, &#39;geopolitik&#39;: 166, &#39;formulasikan&#39;: 156, &#39;wawancarai&#39;: 592, &#39;mahasiswi&#39;: 293, &#39;tukang&#39;: 570, &#39;bakso&#39;: 32, &#39;hebat&#39;: 189, &#39;bapakmu&#39;: 37, &#39;pahlawannya&#39;: 388, &#39;media&#39;: 305, &#39;singapura&#39;: 524, &#39;pemilihan&#39;: 410, &#39;geer&#39;: 163, &#39;posting&#39;: 456, &#39;foto&#39;: 157, &#39;ibunya&#39;: 193, &#39;ketemu&#39;: 260, &#39;ratu&#39;: 480, &#39;elizabeth&#39;: 145, &#39;ii&#39;: 195, &#39;mahasiswa&#39;: 292, &#39;unhan&#39;: 576, &#39;dibina&#39;: 110, &#39;kementerian&#39;: 245, &#39;gratis&#39;: 177, &#39;biaya&#39;: 64, &#39;kuliah&#39;: 278, &#39;pendaftaran&#39;: 416, &#39;semester&#39;: 511, &#39;hidup&#39;: 190, &#39;asrama&#39;: 26, &#39;makan&#39;: 297, &#39;sandiaga&#39;: 498, &#39;uno&#39;: 577, &#39;merespons&#39;: 355, &#39;santai&#39;: 499, &#39;desakan&#39;: 103, &#39;kalangan&#39;: 220, &#39;mengundurkan&#39;: 335, &#39;menyusul&#39;: 353, &#39;keputusannya&#39;: 254, &#39;obrolan&#39;: 383, &#39;zuperrr&#39;: 604, &#39;menyambut&#39;: 348, &#39;isu&#39;: 207, &#39;strategis&#39;: 536, &#39;tingkat&#39;: 559, &#39;siapsiap&#39;: 520, &#39;kolaborasi&#39;: 266, &#39;indah&#39;: 199, &#39;potongan&#39;: 457, &#39;kalimat&#39;: 221, &#39;smoga&#39;: 528, &#39;berpihak&#39;: 60, &#39;pejabat&#39;: 402, &#39;pilihan&#39;: 446, &#39;angkatan&#39;: 17, &#39;darat&#39;: 92, &#39;ikhlas&#39;: 196, &#39;moment&#39;: 363, &#39;sigap&#39;: 521, &#39;tuai&#39;: 568, &#39;pujian&#39;: 470, &#39;membicarakan&#39;: 310, &#39;kemenko&#39;: 244, &#39;persamaan&#39;: 434, &#39;mengurangi&#39;: 337, &#39;perbedaan&#39;: 425, &#39;harap&#39;: 184, &#39;indonesiaspanyol&#39;: 201, &#39;kuat&#39;: 277, &#39;setia&#39;: 519, &#39;sisi&#39;: 526, &#39;viral&#39;: 584, &#39;warganet&#39;: 591, &#39;dur&#39;: 141, &#39;jatim&#39;: 209, &#39;angka&#39;: 15, &#39;perlahan&#39;: 430, &#39;angkanya&#39;: 16, &#39;dipimpin&#39;: 117, &#39;menyentuh&#39;: 351, &#39;baihaki&#39;: 31, &#39;direktur&#39;: 119, &#39;arci&#39;: 21, &#39;legowo&#39;: 286, &#39;bergabung&#39;: 54, &#39;krn&#39;: 275, &#39;elektabilitasx&#39;: 143, &#39;rendahdan&#39;: 484, &#39;terhormat&#39;: 552, &#39;menyelamatkan&#39;: 350, &#39;negri&#39;: 376, &#39;dri&#39;: 132, &#39;oligarki&#39;: 384, &#39;selamat&#39;: 504, &#39;pagi&#39;: 387, &#39;pejuangselamat&#39;: 403, &#39;beraktifitas&#39;: 42, &#39;raya&#39;: 481, &#39;ciamis&#39;: 86, &#39;pastikan&#39;: 398, &#39;skenario&#39;: 527, &#39;prabowojokowi&#39;: 461, &#39;kader&#39;: 219, &#39;ruwet&#39;: 493, &#39;diteruskan&#39;: 123, &#39;bissmillah&#39;: 69, &#39;pkb&#39;: 450, &#39;mendekat&#39;: 319, &#39;kemerdekaan&#39;: 247, &#39;jelek&#39;: 210, &#39;kematian&#39;: 243, &#39;diperkuat&#39;: 115, &#39;ingatlah&#39;: 204, &#39;pemuda&#39;: 414, &#39;kau&#39;: 228, &#39;penerus&#39;: 417, &#39;mempertahankan&#39;: 314, &#39;menekankan&#39;: 324, &#39;desain&#39;: 101, &#39;titiktitik&#39;: 561, &#39;terluar&#39;: 557, &#39;kesatuan&#39;: 257, &#39;republik&#39;: 485, &#39;kunjungi&#39;: 280, &#39;artikel&#39;: 23, &#39;dibawah&#39;: 108, &#39;berjuang&#39;: 56, &#39;tercinta&#39;: 550, &#39;raga&#39;: 474, &#39;persembahkan&#39;: 435, &#39;pertiwi&#39;: 440, &#39;ramalan&#39;: 476, &#39;persugihan&#39;: 437, &#39;natalie&#39;: 371, &#39;niki&#39;: 378, &#39;cctv&#39;: 80, &#39;pemimpin&#39;: 412, &#39;memikirkan&#39;: 313, &#39;memprediksi&#39;: 315, &#39;paslon&#39;: 397, &#39;wilayah&#39;: 595, &#39;bogor&#39;: 70, &#39;barat&#39;: 38, &#39;kabupaten&#39;: 218, &#39;bertebaran&#39;: 62, &#39;spanduk&#39;: 534, &#39;pemilu&#39;: 411, &#39;mengemuka&#39;: 329, &#39;publik&#39;: 469, &#39;nyalon&#39;: 381, &#39;golput&#39;: 174, &#39;majuuuuu&#39;: 296, &#39;rencana&#39;: 483, &#39;jangka&#39;: 208, &#39;abdurachman&#39;: 0, &#39;diskusikan&#39;: 121, &#39;masyarakat&#39;: 303, &#39;antusias&#39;: 19, &#39;kedatangan&#39;: 234, &#39;wagub&#39;: 587, &#39;riza&#39;: 491, &#39;patria&#39;: 399, &#39;adian&#39;: 1, &#39;napitupulu&#39;: 369, &#39;elit&#39;: 144, &#39;desak&#39;: 102, &#39;mundur&#39;: 367, &#39;buah&#39;: 73, &#39;duku&#39;: 136, &#39;kedondong&#39;: 236, &#39;gue&#39;: 178}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">matrik_vsm</span><span class="o">=</span><span class="n">bag</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+<span class="c1">#print(matrik_vsm)</span>
+<span class="n">matrik_vsm</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(101, 605)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">matrik_vsm</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">vectorizer</span><span class="o">.</span><span class="n">get_feature_names</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/sklearn/utils/deprecation.py:87: FutureWarning: Function get_feature_names is deprecated; get_feature_names is deprecated in 1.0 and will be removed in 1.2. Please use get_feature_names_out instead.
+  warnings.warn(msg, category=FutureWarning)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">matrik_vsm</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]))</span>
+<span class="c1">#dfb =pd.DataFrame(data=matrik_vsm,index=df,columns=[a])</span>
+<span class="n">dataTF</span> <span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">matrik_vsm</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">matrik_vsm</span><span class="p">[:,</span><span class="mi">1</span><span class="p">])</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="p">)),</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="n">a</span><span class="p">])</span>
+<span class="n">dataTF</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>101
+</pre></div>
+</div>
+<div class="output text_html">
+  <div id="df-cddb75b8-5545-4435-ae8d-4e3d5a0fcadb">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th>abdurachman</th>
+      <th>adian</th>
+      <th>airlangga</th>
+      <th>airlanggaprabowo</th>
+      <th>aja</th>
+      <th>ajak</th>
+      <th>akhlak</th>
+      <th>al</th>
+      <th>alamin</th>
+      <th>allah</th>
+      <th>...</th>
+      <th>wilayah</th>
+      <th>wonderwoman</th>
+      <th>ya</th>
+      <th>yan</th>
+      <th>yatim</th>
+      <th>yusuf</th>
+      <th>zon</th>
+      <th>zonmenilai</th>
+      <th>zulfan</th>
+      <th>zuperrr</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>97</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>98</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>99</th>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>100</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>101</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>101 rows × 605 columns</p>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-cddb75b8-5545-4435-ae8d-4e3d5a0fcadb')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-cddb75b8-5545-4435-ae8d-4e3d5a0fcadb button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-cddb75b8-5545-4435-ae8d-4e3d5a0fcadb');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datalabel</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/maulidhan190081/file/main/prabowo2.csv&#39;</span><span class="p">)</span>
+<span class="n">datatwett</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">dataTF</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(),</span> <span class="n">datalabel</span><span class="p">[</span><span class="s2">&quot;label&quot;</span><span class="p">]],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">datatwett</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-46dcf6af-e6fa-4a92-aeb1-514aaddf0b8a">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>(index,)</th>
+      <th>(abdurachman,)</th>
+      <th>(adian,)</th>
+      <th>(airlangga,)</th>
+      <th>(airlanggaprabowo,)</th>
+      <th>(aja,)</th>
+      <th>(ajak,)</th>
+      <th>(akhlak,)</th>
+      <th>(al,)</th>
+      <th>(alamin,)</th>
+      <th>...</th>
+      <th>(wonderwoman,)</th>
+      <th>(ya,)</th>
+      <th>(yan,)</th>
+      <th>(yatim,)</th>
+      <th>(yusuf,)</th>
+      <th>(zon,)</th>
+      <th>(zonmenilai,)</th>
+      <th>(zulfan,)</th>
+      <th>(zuperrr,)</th>
+      <th>label</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>pro</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>pro</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>pro</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>pro</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>kontra</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>96</th>
+      <td>97</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>pro</td>
+    </tr>
+    <tr>
+      <th>97</th>
+      <td>98</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>pro</td>
+    </tr>
+    <tr>
+      <th>98</th>
+      <td>99</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>kontra</td>
+    </tr>
+    <tr>
+      <th>99</th>
+      <td>100</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>kontra</td>
+    </tr>
+    <tr>
+      <th>100</th>
+      <td>101</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>pro</td>
+    </tr>
+  </tbody>
+</table>
+<p>101 rows × 607 columns</p>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-46dcf6af-e6fa-4a92-aeb1-514aaddf0b8a')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-46dcf6af-e6fa-4a92-aeb1-514aaddf0b8a button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-46dcf6af-e6fa-4a92-aeb1-514aaddf0b8a');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datatwett</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;pro&#39;, &#39;kontra&#39;], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datatwett</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 101 entries, 0 to 100
+Columns: 607 entries, (&#39;index&#39;,) to label
+dtypes: int64(606), object(1)
+memory usage: 479.1+ KB
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Train test split to avoid overfitting</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="n">X_train</span><span class="p">,</span><span class="n">X_test</span><span class="p">,</span><span class="n">y_train</span><span class="p">,</span><span class="n">y_test</span><span class="o">=</span><span class="n">train_test_split</span><span class="p">(</span><span class="n">datatwett</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
+    <span class="n">datatwett</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">],</span>
+    <span class="n">test_size</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span>
+    <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_train</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-31059f0b-cadf-414f-951e-ec7f4e24ae08">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>(index,)</th>
+      <th>(abdurachman,)</th>
+      <th>(adian,)</th>
+      <th>(airlangga,)</th>
+      <th>(airlanggaprabowo,)</th>
+      <th>(aja,)</th>
+      <th>(ajak,)</th>
+      <th>(akhlak,)</th>
+      <th>(al,)</th>
+      <th>(alamin,)</th>
+      <th>...</th>
+      <th>(wilayah,)</th>
+      <th>(wonderwoman,)</th>
+      <th>(ya,)</th>
+      <th>(yan,)</th>
+      <th>(yatim,)</th>
+      <th>(yusuf,)</th>
+      <th>(zon,)</th>
+      <th>(zonmenilai,)</th>
+      <th>(zulfan,)</th>
+      <th>(zuperrr,)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>80</th>
+      <td>81</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>91</th>
+      <td>92</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>68</th>
+      <td>69</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>51</th>
+      <td>52</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>28</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>97</th>
+      <td>98</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>67</th>
+      <td>68</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>64</th>
+      <td>65</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>48</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>45</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>70 rows × 606 columns</p>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-31059f0b-cadf-414f-951e-ec7f4e24ae08')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-31059f0b-cadf-414f-951e-ec7f4e24ae08 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-31059f0b-cadf-414f-951e-ec7f4e24ae08');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_selection</span> <span class="kn">import</span> <span class="n">mutual_info_classif</span>
+<span class="c1"># determine the mutual information</span>
+<span class="n">mutual_info</span> <span class="o">=</span> <span class="n">mutual_info_classif</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">mutual_info</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.1240736 , 0.        , 0.        , 0.        , 0.        ,
+       0.11345309, 0.05368316, 0.        , 0.        , 0.        ,
+       0.        , 0.08465649, 0.04650596, 0.03766755, 0.01916022,
+       0.00732565, 0.00957949, 0.        , 0.02603081, 0.02555128,
+       0.07912764, 0.02634034, 0.01258148, 0.03396145, 0.01035904,
+       0.        , 0.08725222, 0.0236541 , 0.        , 0.15753905,
+       0.00855138, 0.0490146 , 0.01197408, 0.0394093 , 0.11537129,
+       0.        , 0.01142549, 0.02920808, 0.        , 0.        ,
+       0.        , 0.        , 0.17812128, 0.00714471, 0.        ,
+       0.        , 0.        , 0.        , 0.04533066, 0.        ,
+       0.01278293, 0.        , 0.        , 0.01802861, 0.0127498 ,
+       0.        , 0.00269553, 0.        , 0.        , 0.13844847,
+       0.        , 0.        , 0.00236142, 0.        , 0.        ,
+       0.        , 0.05217074, 0.11373411, 0.02881858, 0.        ,
+       0.07251201, 0.06583303, 0.09342399, 0.        , 0.        ,
+       0.08397408, 0.        , 0.0806997 , 0.        , 0.0075824 ,
+       0.        , 0.        , 0.        , 0.        , 0.        ,
+       0.        , 0.03939929, 0.04619775, 0.02936715, 0.05426725,
+       0.03347107, 0.        , 0.01376078, 0.00269069, 0.        ,
+       0.        , 0.        , 0.03512822, 0.        , 0.02652209,
+       0.18538312, 0.07034204, 0.0276529 , 0.        , 0.02741799,
+       0.03934111, 0.00341229, 0.052127  , 0.        , 0.        ,
+       0.03187541, 0.03722382, 0.05104451, 0.05305981, 0.        ,
+       0.        , 0.        , 0.        , 0.        , 0.03278665,
+       0.01734977, 0.        , 0.        , 0.0008672 , 0.        ,
+       0.        , 0.        , 0.        , 0.17525928, 0.        ,
+       0.        , 0.        , 0.        , 0.05728289, 0.        ,
+       0.        , 0.05530461, 0.        , 0.        , 0.07073591,
+       0.01398809, 0.        , 0.09882367, 0.        , 0.        ,
+       0.        , 0.13278676, 0.        , 0.09629378, 0.02343765,
+       0.        , 0.02860009, 0.        , 0.        , 0.05849422,
+       0.07670346, 0.07551129, 0.10293105, 0.06354502, 0.06956025,
+       0.00331789, 0.01874464, 0.        , 0.        , 0.04331436,
+       0.00364116, 0.06207976, 0.        , 0.05854566, 0.04474067,
+       0.        , 0.03856927, 0.        , 0.02367219, 0.05455427,
+       0.        , 0.02815119, 0.03273433, 0.11963912, 0.        ,
+       0.        , 0.00933021, 0.09017779, 0.        , 0.        ,
+       0.        , 0.        , 0.        , 0.        , 0.12737718,
+       0.        , 0.        , 0.02903077, 0.        , 0.01377022,
+       0.        , 0.00272712, 0.01064387, 0.        , 0.        ,
+       0.        , 0.        , 0.        , 0.00576894, 0.        ,
+       0.14218852, 0.        , 0.07136668, 0.0483249 , 0.14541299,
+       0.00270887, 0.        , 0.        , 0.        , 0.02389945,
+       0.08820524, 0.        , 0.12667566, 0.01704361, 0.        ,
+       0.09332822, 0.        , 0.        , 0.        , 0.        ,
+       0.09927322, 0.        , 0.02496406, 0.        , 0.        ,
+       0.04660585, 0.        , 0.        , 0.        , 0.06893243,
+       0.        , 0.        , 0.        , 0.07390752, 0.18363781,
+       0.        , 0.00216515, 0.        , 0.        , 0.03730994,
+       0.02140033, 0.        , 0.        , 0.        , 0.0470907 ,
+       0.11590132, 0.        , 0.        , 0.        , 0.        ,
+       0.02294647, 0.        , 0.00356034, 0.062133  , 0.        ,
+       0.        , 0.00536748, 0.        , 0.03482748, 0.        ,
+       0.        , 0.        , 0.        , 0.00244027, 0.        ,
+       0.        , 0.        , 0.04804612, 0.        , 0.        ,
+       0.02121259, 0.        , 0.        , 0.05693094, 0.        ,
+       0.04250433, 0.        , 0.01455298, 0.        , 0.03830794,
+       0.        , 0.        , 0.        , 0.        , 0.0073092 ,
+       0.        , 0.0043321 , 0.        , 0.        , 0.        ,
+       0.        , 0.00594751, 0.00504442, 0.0152382 , 0.        ,
+       0.        , 0.06149289, 0.        , 0.        , 0.01136302,
+       0.05007696, 0.        , 0.        , 0.        , 0.        ,
+       0.17738642, 0.06260519, 0.        , 0.00666802, 0.        ,
+       0.        , 0.00157911, 0.01245025, 0.        , 0.        ,
+       0.        , 0.        , 0.        , 0.        , 0.10685208,
+       0.        , 0.        , 0.01630716, 0.0178321 , 0.08800804,
+       0.01739233, 0.        , 0.03107514, 0.        , 0.0112758 ,
+       0.0205129 , 0.        , 0.        , 0.        , 0.        ,
+       0.00117491, 0.        , 0.        , 0.04716063, 0.        ,
+       0.        , 0.        , 0.        , 0.04729453, 0.07902372,
+       0.01377743, 0.02781974, 0.        , 0.09902151, 0.23918676,
+       0.06684914, 0.        , 0.        , 0.06728336, 0.02131317,
+       0.00108467, 0.        , 0.        , 0.        , 0.        ,
+       0.        , 0.01967605, 0.        , 0.        , 0.03093275,
+       0.10329917, 0.04292469, 0.05466135, 0.        , 0.        ,
+       0.02151319, 0.02540971, 0.        , 0.03034298, 0.        ,
+       0.03758071, 0.01262626, 0.        , 0.06520567, 0.        ,
+       0.        , 0.04640624, 0.04093079, 0.06207128, 0.        ,
+       0.        , 0.00647588, 0.        , 0.0264126 , 0.06638253,
+       0.04419724, 0.03654193, 0.        , 0.01681355, 0.        ,
+       0.        , 0.        , 0.04621458, 0.        , 0.04954664,
+       0.00877449, 0.        , 0.10039298, 0.        , 0.08637961,
+       0.05040529, 0.0029548 , 0.        , 0.07221031, 0.        ,
+       0.        , 0.06862418, 0.        , 0.04865941, 0.036385  ,
+       0.        , 0.1127531 , 0.0016534 , 0.00974701, 0.01777123,
+       0.07963574, 0.        , 0.10416251, 0.11835065, 0.01486004,
+       0.05420853, 0.        , 0.05827871, 0.04817202, 0.0371262 ,
+       0.047067  , 0.03767807, 0.        , 0.07972367, 0.        ,
+       0.        , 0.03317759, 0.        , 0.01397615, 0.        ,
+       0.0074476 , 0.08400522, 0.        , 0.04745925, 0.03908973,
+       0.05710854, 0.        , 0.00252611, 0.09586633, 0.00833074,
+       0.        , 0.        , 0.0459389 , 0.06137416, 0.        ,
+       0.        , 0.        , 0.05859513, 0.        , 0.13007691,
+       0.11630183, 0.        , 0.        , 0.04123489, 0.05334489,
+       0.04620749, 0.        , 0.04863075, 0.00242671, 0.        ,
+       0.        , 0.        , 0.        , 0.0374835 , 0.        ,
+       0.02640953, 0.        , 0.        , 0.        , 0.        ,
+       0.        , 0.        , 0.        , 0.        , 0.00074859,
+       0.04342027, 0.08740023, 0.        , 0.        , 0.0729704 ,
+       0.        , 0.        , 0.0539395 , 0.        , 0.02619137,
+       0.        , 0.03059792, 0.        , 0.08759622, 0.08025137,
+       0.        , 0.06222589, 0.        , 0.        , 0.        ,
+       0.        , 0.04193874, 0.03407715, 0.        , 0.05684555,
+       0.        , 0.02182129, 0.        , 0.00147408, 0.        ,
+       0.        , 0.        , 0.        , 0.00519445, 0.03739273,
+       0.04385717, 0.06015657, 0.        , 0.04955705, 0.        ,
+       0.        , 0.01963647, 0.        , 0.        , 0.03392087,
+       0.04410004, 0.        , 0.05078458, 0.08227849, 0.05008095,
+       0.        , 0.        , 0.        , 0.        , 0.        ,
+       0.        , 0.        , 0.        , 0.05464787, 0.        ,
+       0.01940208, 0.        , 0.        , 0.        , 0.        ,
+       0.03337549, 0.        , 0.        , 0.03717837, 0.        ,
+       0.        , 0.        , 0.01628226, 0.        , 0.07909081,
+       0.14517435, 0.        , 0.        , 0.15224341, 0.        ,
+       0.        , 0.        , 0.01727112, 0.        , 0.        ,
+       0.        , 0.        , 0.        , 0.00516584, 0.        ,
+       0.        , 0.        , 0.06253684, 0.02562559, 0.02063276,
+       0.        , 0.07011606, 0.        , 0.06649217, 0.0239578 ,
+       0.06484507, 0.02170298, 0.02685854, 0.        , 0.06437251,
+       0.        , 0.        , 0.06486207, 0.        , 0.00754186,
+       0.        , 0.        , 0.07910498, 0.00492481, 0.10821476,
+       0.        ])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mutual_info</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">mutual_info</span><span class="p">)</span>
+<span class="n">mutual_info</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">X_train</span><span class="o">.</span><span class="n">columns</span>
+<span class="n">mutual_info</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(menyusul,)     0.239187
+(demokrasi,)    0.185383
+(kehidupan,)    0.183638
+(beliau,)       0.178121
+(membawa,)      0.177386
+                  ...   
+(klik,)         0.000000
+(kiai,)         0.000000
+(ketua,)        0.000000
+(ketahanan,)    0.000000
+(zuperrr,)      0.000000
+Length: 606, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>#KNN</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+<span class="n">testing</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">21</span><span class="p">):</span>
+  <span class="n">neigh</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="n">i</span><span class="p">)</span>
+  <span class="n">neigh</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+  <span class="n">Y_pred</span> <span class="o">=</span> <span class="n">neigh</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span> 
+  <span class="n">testing</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Y_pred</span><span class="p">)</span>
+<span class="n">testing</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[array([&#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;,
+        &#39;pro&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;,
+        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;kontra&#39;,
+        &#39;pro&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;kontra&#39;], dtype=object),
+ array([&#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;pro&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;pro&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;kontra&#39;,
+        &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;], dtype=object),
+ array([&#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;,
+        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;],
+       dtype=object),
+ array([&#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;pro&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;], dtype=object),
+ array([&#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;,
+        &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;,
+        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;],
+       dtype=object),
+ array([&#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;pro&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;], dtype=object),
+ array([&#39;pro&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;,
+        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;,
+        &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;],
+       dtype=object),
+ array([&#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;kontra&#39;,
+        &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;], dtype=object),
+ array([&#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;,
+        &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;kontra&#39;,
+        &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;], dtype=object),
+ array([&#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;], dtype=object),
+ array([&#39;pro&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;pro&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;], dtype=object),
+ array([&#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;], dtype=object),
+ array([&#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;], dtype=object),
+ array([&#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;], dtype=object),
+ array([&#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;], dtype=object),
+ array([&#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;], dtype=object),
+ array([&#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;], dtype=object),
+ array([&#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;], dtype=object),
+ array([&#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;], dtype=object)]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">neigh</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">neigh</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">Y_pred</span> <span class="o">=</span> <span class="n">neigh</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span> 
+<span class="n">Y_pred</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
+       &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
+       &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
+       &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_test</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>26     kontra
+86        pro
+2         pro
+55     kontra
+75        pro
+94     kontra
+16     kontra
+73        pro
+54     kontra
+96        pro
+53     kontra
+93     kontra
+78     kontra
+13        pro
+7      kontra
+30        pro
+22     kontra
+24        pro
+33     kontra
+8         pro
+43        pro
+62        pro
+3         pro
+71        pro
+45     kontra
+48        pro
+6      kontra
+100       pro
+82     kontra
+76        pro
+60        pro
+Name: label, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">make_scorer</span><span class="p">,</span> <span class="n">accuracy_score</span><span class="p">,</span><span class="n">precision_score</span>
+<span class="n">Y_pred</span> <span class="o">=</span> <span class="n">neigh</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span> 
+<span class="n">accuracy_neigh</span><span class="o">=</span><span class="nb">round</span><span class="p">(</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">Y_pred</span><span class="p">)</span><span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">acc_neigh</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">neigh</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">accuracy_neigh</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>61.29
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arre</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">testing</span><span class="p">)):</span>
+  <span class="n">testing</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">neigh</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span> 
+  <span class="n">accuracy_neigh</span><span class="o">=</span><span class="nb">round</span><span class="p">(</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">testing</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span><span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+  <span class="n">acc_neigh</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">neigh</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+  <span class="n">arre</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">accuracy_neigh</span><span class="p">)</span>
+<span class="n">arre</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[61.29,
+ 61.29,
+ 61.29,
+ 61.29,
+ 61.29,
+ 61.29,
+ 61.29,
+ 61.29,
+ 61.29,
+ 61.29,
+ 61.29,
+ 61.29,
+ 61.29,
+ 61.29,
+ 61.29,
+ 61.29,
+ 61.29,
+ 61.29,
+ 61.29]
+</pre></div>
+</div>
+</div>
+</div>
+<p>#KMeans</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
+
+<span class="n">kmeans</span> <span class="o">=</span><span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">kmeans</span><span class="o">=</span><span class="n">kmeans</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">dataTF</span><span class="p">)</span>
+<span class="n">prediksi</span><span class="o">=</span><span class="n">kmeans</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">dataTF</span><span class="p">)</span>
+<span class="n">centroids</span> <span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">cluster_centers_</span>
+<span class="n">centroids</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 1.08695652e-02,  1.08695652e-02,  9.78260870e-02, ...,
+        -5.20417043e-18,  1.08695652e-02,  1.08695652e-02],
+       [ 1.73472348e-18,  1.73472348e-18,  1.38777878e-17, ...,
+         1.11111111e-01,  1.73472348e-18,  1.73472348e-18]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">prediksi</span><span class="p">)</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-3057589d-c988-4cdc-95a3-cfa5b2dbaa83">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>96</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>97</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>98</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>99</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>100</th>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>101 rows × 1 columns</p>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-3057589d-c988-4cdc-95a3-cfa5b2dbaa83')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-3057589d-c988-4cdc-95a3-cfa5b2dbaa83 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-3057589d-c988-4cdc-95a3-cfa5b2dbaa83');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">centroid</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">centroids</span><span class="p">)</span>
+<span class="n">centroid</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-0f927787-be45-40d6-a800-265b1a27fad3">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+      <th>7</th>
+      <th>8</th>
+      <th>9</th>
+      <th>...</th>
+      <th>595</th>
+      <th>596</th>
+      <th>597</th>
+      <th>598</th>
+      <th>599</th>
+      <th>600</th>
+      <th>601</th>
+      <th>602</th>
+      <th>603</th>
+      <th>604</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1.086957e-02</td>
+      <td>1.086957e-02</td>
+      <td>9.782609e-02</td>
+      <td>1.086957e-02</td>
+      <td>1.086957e-02</td>
+      <td>1.086957e-02</td>
+      <td>1.086957e-02</td>
+      <td>1.086957e-02</td>
+      <td>1.086957e-02</td>
+      <td>1.086957e-02</td>
+      <td>...</td>
+      <td>1.086957e-02</td>
+      <td>1.086957e-02</td>
+      <td>0.032609</td>
+      <td>1.086957e-02</td>
+      <td>1.086957e-02</td>
+      <td>1.086957e-02</td>
+      <td>-5.204170e-18</td>
+      <td>-5.204170e-18</td>
+      <td>1.086957e-02</td>
+      <td>1.086957e-02</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1.734723e-18</td>
+      <td>1.734723e-18</td>
+      <td>1.387779e-17</td>
+      <td>1.734723e-18</td>
+      <td>1.734723e-18</td>
+      <td>1.734723e-18</td>
+      <td>1.734723e-18</td>
+      <td>1.734723e-18</td>
+      <td>1.734723e-18</td>
+      <td>1.734723e-18</td>
+      <td>...</td>
+      <td>1.734723e-18</td>
+      <td>1.734723e-18</td>
+      <td>0.000000</td>
+      <td>1.734723e-18</td>
+      <td>1.734723e-18</td>
+      <td>1.734723e-18</td>
+      <td>1.111111e-01</td>
+      <td>1.111111e-01</td>
+      <td>1.734723e-18</td>
+      <td>1.734723e-18</td>
+    </tr>
+  </tbody>
+</table>
+<p>2 rows × 605 columns</p>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-0f927787-be45-40d6-a800-265b1a27fad3')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-0f927787-be45-40d6-a800-265b1a27fad3 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-0f927787-be45-40d6-a800-265b1a27fad3');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="markdown.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Markdown Files</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="markdown-notebooks.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Notebooks with MyST Markdown</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By The Jupyter Book Community<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
