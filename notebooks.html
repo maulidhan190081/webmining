@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>&lt;no title&gt; &#8212; My sample book</title>
+    <title>Crawling Data &#8212; My sample book</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -113,10 +113,15 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="markdown.html">
    Markdown Files
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Crawling Data
   </a>
  </li>
  <li class="toctree-l1">
@@ -329,7 +334,52 @@ title="Print to PDF"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="simple visible nav section-nav flex-column">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mengecilkan-semua-huruf">
+   Mengecilkan Semua Huruf
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#menghilangkan-karakter-spesial">
+   Menghilangkan karakter spesial
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#menghilangkan-angka">
+   Menghilangkan Angka
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#menghilangkan-tanda-baca">
+   Menghilangkan Tanda Baca
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#menghilangkan-spasi-di-awal-dan-akhir">
+   Menghilangkan Spasi Di Awal dan Akhir
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#menjadikan-1-spasi">
+   Menjadikan 1 spasi
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#menghapus-char">
+   Menghapus Char
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#word-tokenize">
+   Word Tokenize
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stopwords">
+   Stopwords
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -339,7 +389,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1><no title></h1>
+                <h1>Crawling Data</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -348,7 +398,52 @@ title="Print to PDF"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="simple visible nav section-nav flex-column">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mengecilkan-semua-huruf">
+   Mengecilkan Semua Huruf
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#menghilangkan-karakter-spesial">
+   Menghilangkan karakter spesial
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#menghilangkan-angka">
+   Menghilangkan Angka
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#menghilangkan-tanda-baca">
+   Menghilangkan Tanda Baca
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#menghilangkan-spasi-di-awal-dan-akhir">
+   Menghilangkan Spasi Di Awal dan Akhir
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#menjadikan-1-spasi">
+   Menjadikan 1 spasi
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#menghapus-char">
+   Menghapus Char
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#word-tokenize">
+   Word Tokenize
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stopwords">
+   Stopwords
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -359,7 +454,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <p>#Crawling Data</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="crawling-data">
+<h1>Crawling Data<a class="headerlink" href="#crawling-data" title="Permalink to this headline">#</a></h1>
 <p>Crawling data adalah sebuah proses pengambilan data dari suatu sumber internet. Dalam hal ini saya mencrawling data dari twitter menggunakan twint. Data yang saya peroleh adalah sebanyak 180 data. Data tersebut saya saring sehingga menjadi 101 data karena terdapat beberapa data yang tidak penting. Data tersebut merupakan tweet dari tanggal 19-09-2022 sampai 27-09-2022.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -374,7 +470,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>%%capture
-!pip install nest-asyncio
+!pip install nest-asyncio #install library nest-asyncio
 </pre></div>
 </div>
 </div>
@@ -382,156 +478,42 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>%%capture
-!pip install aiohttp==3.7.0
+!pip install aiohttp==3.7.0 #install aiohttp
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nest_asyncio</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nest_asyncio</span> <span class="c1"># import nest_asyncio</span>
 <span class="n">nest_asyncio</span><span class="o">.</span><span class="n">apply</span><span class="p">()</span> <span class="c1">#digunakan sekali untuk mengaktifkan tindakan serentak dalam notebook jupyter.</span>
 <span class="kn">import</span> <span class="nn">twint</span> <span class="c1">#untuk import twint</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>##Hasil Crawling Data Twitter</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">twint</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
-<span class="n">c</span><span class="o">.</span><span class="n">Search</span> <span class="o">=</span> <span class="s1">&#39;#prabowo&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">twint</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span> <span class="c1">#membuat variable c</span>
+<span class="n">c</span><span class="o">.</span><span class="n">Search</span> <span class="o">=</span> <span class="s1">&#39;#prabowo&#39;</span> <span class="c1">#key word untuk data</span>
 <span class="n">c</span><span class="o">.</span><span class="n">Pandas</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="n">c</span><span class="o">.</span><span class="n">Limit</span> <span class="o">=</span> <span class="mi">500</span>
-<span class="n">twint</span><span class="o">.</span><span class="n">run</span><span class="o">.</span><span class="n">Search</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="n">c</span><span class="o">.</span><span class="n">Limit</span> <span class="o">=</span> <span class="mi">500</span> <span class="c1">#mencrawl 500 data</span>
+<span class="n">twint</span><span class="o">.</span><span class="n">run</span><span class="o">.</span><span class="n">Search</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="c1">#run</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1577226387068375040 2022-10-04 09:17:28 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
-1577224525241991168 2022-10-04 09:10:04 +0000 &lt;PrasetyoHadi28&gt; secara gotong royong dgn memberdayakan warga sekitar. Sehingga, anggaran yg diberikan berputar pd wilayah desa tersebut.  #prabowo #prabowosubianto #aksinyata #gerindra #gerindrabersamarakyat #purworejo #infopurworejo #explorepurworejo #purworejoinfo #prasetyohadi #bhaktimaspras  https://t.co/ApOa4GgJbX
-1577167962422726658 2022-10-04 05:25:19 +0000 &lt;papandu08&gt; Prabowo mengajarkan kita untuk selalu berfikir, berbuat, bertindak, dan berkata baik #prabowo #gerindra #prabowopresiden  https://t.co/qXhiVHqUbT
-1577151800091717632 2022-10-04 04:21:05 +0000 &lt;Jiung1973&gt; Prabowo,Puan,Anies, Ganjar atau siapapun yang layak maju di 2024, janganlah saling menjatuhkan, adu gagasan dan pencapaian saja demi warisan kebaikan untuk anak cucu kita #AniesBaswedan #GanjarPranowo #prabowo #PuanMaharani
-1577139371496833025 2022-10-04 03:31:42 +0000 &lt;KoncoErick&gt; Nah iki Pak Menteri BUMN RI Erick Thohir cawapres sing cocok disandingke karo sopo ae. Dipasangke karo Pak Ganjar Pranowo yo iso, karo Pak Prabowo Subianto yo iso. Sing penting Pak Erick Thohir maju Pilpres 2024, Indonesia bakal aman rek.   #ganjarpranowo #prabowo #erickthohir  https://t.co/TebpqZN28u
-1577134951140507650 2022-10-04 03:14:08 +0000 &lt;pasti_2024&gt; Prabowo-Erick Thohir pilihan pasti  Bekerja nyata melayani dengan hati Berkomitmen menghadirkan berbagai inovasi Mendorong kemajuan menghadirkan kesejahteraan di negeri ini  #prabowo #erickthohir #capres #cawapres #indonesia #pasti2024  https://t.co/2Su75c4wrK
-1577086095967166464 2022-10-04 00:00:00 +0000 &lt;holopiscom&gt; Gubernur Jawa Barat, Mochammad Ridwan Kamil mengaku mendapatkan banyak sekali wejangan yang baik dari Prabowo Subianto. @prabowo @ridwankamil #Prabowo #RidwanKamil @Gerindra  https://t.co/8jnggvqPkz
-1577037630742544384 2022-10-03 20:47:25 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
-1576968177200009216 2022-10-03 16:11:26 +0000 &lt;paperaprabowo&gt; Komunitas Pedagang Yang Tergabung dalam #pedagangpejuangindonesiaraya (PAPERA) wilayah tanah abang siap memenangkan Bapak @prabowo sebagai presiden....   #Politik #pilpres2024 #prabowo #pedagang  https://t.co/epWiq2gV8r
-1576907437931581440 2022-10-03 12:10:05 +0000 &lt;sfsimatupang&gt; Kick off persiapan #Pilpres2024 sudah dimulai. Gerindra mencalonkan #Prabowo, Nasdem mengajukan #AniesBaswedan &amp;amp; PSI mengajukan #GanjarPranowo. Siapa menyusul?  https://t.co/auV9KQ8aUO
-1576848908806148096 2022-10-03 08:17:30 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
-1576820172152721413 2022-10-03 06:23:19 +0000 &lt;99_muntasir&gt; #SuryaPaloh sebagai Ketua Umum #Nasdem Pilih #AniesBaswedan sebagai #calonpresiden, kita tunggu #PDIPerjuangan pilih #PuanMaharani atau #Ganjarpranowo dan #gerindra pilih #Prabowo Anda pilih siapa?  https://t.co/3vQDkLfS6j
-1576811650564620288 2022-10-03 05:49:27 +0000 &lt;SukirSaksono&gt; @Metro_TV Aku yakin #ganjar. #prabowo..#andhika_perkasa..putra2 terbaik Indonesia
-1576805784536481794 2022-10-03 05:26:09 +0000 &lt;DpcTanjabbar&gt; Gerindra - PKB Berkoalisi di Pemilu 2024  #gusmuhaimin #muhaiminiskandar #prabowo #prabowosubianto #pkbmenang #gerindramenang  https://t.co/Q2GvmhkWc2
-1576802437251284992 2022-10-03 05:12:51 +0000 &lt;papandu08&gt; Jawaban Prabowo saat ditanya soal Jokowi jadi cawapres di 2024 #prabowo #jokowi #capres #cawapres #politik  https://t.co/aJdIBv9XHR
-1576782031903547392 2022-10-03 03:51:46 +0000 &lt;yasser_nh&gt; SIAPA YANG COCOK MENJADI PRESIDEN REPUBLIK INDONESIA TAHUN 2024 - 2029 ?  Berikan suara anda, klik link  https://t.co/xOVwyHnZB8  #AniesBaswedan #GanjarKita #pollingpilpres #Prabowo #nasdem #pks #demokrat #capres #goblok  #polling #capres
-1576771221676470273 2022-10-03 03:08:48 +0000 &lt;HabibGhufron78&gt; @gibran_tweet Kulo Tugiman Pranowo mas wali 🙏 Shollualamuhammad  #GanjarTheNextJokowi  #Prabowo
-1576756533706518530 2022-10-03 02:10:27 +0000 &lt;paperaprabowo&gt; Rapat Konsolidasi Pedagang Pejuang Indonesia Raya (PAPERA) Se Jabodetabek di Kantor DPP Partai @gerindra , untuk kemenangan Bapak @prabowo Sebagai Presiden.   #pedagangpejuangindonesiaraya #gerindra #prabowo #politik #pilpres  https://t.co/bRmH7Gotf7
-1576742491016990720 2022-10-03 01:14:38 +0000 &lt;RidNgemil&gt; Emang apa sik yang kalian takutkan kalau @aniesbaswedan berkuasa? Kasih jawaban yang masuk akal dong... #AniesBaswedan #prabowo #ganjarpranowo #PuanMaharani #capres2024
-1576667707159683072 2022-10-02 20:17:29 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1576602918505304064 2022-10-02 16:00:02 +0000 &lt;Genpi_Co&gt; Menteri Pertahanan Prabowo Subianto mengatakan lahan kosong telantar bisa dimanfaatkan untuk pertanian. #prabowo  https://t.co/YuXcfvpvqk
-1576524657922301955 2022-10-02 10:49:03 +0000 &lt;jpnncom&gt; Prabowo mengatakan Tragedi Kanjuruhan pada 1 Oktober 2022 menjadi peristiwa yang mengagetkan bagi semua pihak. #Prabowo  https://t.co/DnsfKodYVC
-1576505647977447425 2022-10-02 09:33:31 +0000 &lt;Martina_inaaa&gt; Selamat Hari Batik Nasional 2022  Batik yang menjadi warisan kebanggaan budaya Indonesia patut kita jaga kelestariannya.  Batik identitas kita, kebanggaan kita dan budaya kita.  #prabowo #presiden #2024  https://t.co/WizgGHdNwA
-1576498029435109377 2022-10-02 09:03:14 +0000 &lt;edorahmanta&gt; Semoga tidak terulang lagi Negeriku Ibu Pertiwi #PrayForKanjuruhan #prabowo #Indonesia  https://t.co/t7vbKg1T5m
-1576485549460049920 2022-10-02 08:13:39 +0000 &lt;serambinews&gt; #Prabowo #Respons #Jokowi   Menteri Pertahanan Prabowo Subianto merespons dukungan sejumlah relawan untuk mencalonkan diri bersama Presiden Joko Widodo pada Pilpres 2024    https://t.co/PapPDcrofk lewat @serambinews
-1576485511631626240 2022-10-02 08:13:30 +0000 &lt;sharenewsaceh&gt; #Prabowo #Respons #Jokowi   Menteri Pertahanan Prabowo Subianto merespons dukungan sejumlah relawan untuk mencalonkan diri bersama Presiden Joko Widodo pada Pilpres 2024    https://t.co/XGc0WwyyVK lewat @serambinews
-1576478948997070848 2022-10-02 07:47:25 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
-1576446903310426112 2022-10-02 05:40:05 +0000 &lt;pasti_2024&gt; Enggak mengherankan kalau Pak Erick Thohir bisa bersaing ketat pada bursa Cawapres 2024.   Figur yang kaya talenta serta inovasi ini banyak dikenal dengan kerja nyatanya.   #jawabarat #petani #indonesia #prabowo #erickthohir #pasti2024  https://t.co/GIjJweicyP
-1576438868580003841 2022-10-02 05:08:09 +0000 &lt;gerindra_la&gt; Selamat Hari BATIK NASIONAL  2 Oktober 2022  ___  #gerindra #prabowo #gerindramenang #prabowopresiden #gerindralamongan #lamonganmegilan #politisisantri  https://t.co/jUUS4msLBU
-1576438612723257345 2022-10-02 05:07:08 +0000 &lt;gerindra_la&gt; Duka Mendalam untuk Sepakbola Indonesia  @PSSI @KEMENPORA_RI @AremafcOfficial @persebayaupdate  ____  #gerindra #prabowo #gerindramenang #prabowopresiden #gerindralamongan #lamonganmegilan #politisisantri #arema #malangberduka #tragedikanjuruhan #prayforkanjuruhan  https://t.co/0Rhf2iOWkU
-1576419215292403712 2022-10-02 03:50:04 +0000 &lt;nusabalicom&gt; Papera Dukung Prabowo Subianto jadi Capres 2024  https://t.co/4XI4v2KbmQ #berita #nusabali #Prabowo #Capres #Gerindra #Pemilu2024
-1576417779862888449 2022-10-02 03:44:21 +0000 &lt;AsikDung&gt; JeJeBa... . . Jenderal Jenderal Bahagia😎 #PanglimaTNI #DudungAbdurachman #Prabowo #AndikaPerkasa #RakyatSejahtera #KSAD #angkatandaratdihatirakyat #asikdung  https://t.co/Bf2R4Kr4Za
-1576407770374369280 2022-10-02 03:04:35 +0000 &lt;papandu08&gt; Pesan Prabowo di hari peringatan Kesaktian Pancasila #prabowo #kesaktianpancasila #indonesiamerdeka  https://t.co/IoeWV8RcHh
-1576297751989534721 2022-10-01 19:47:24 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
-1576224811449450497 2022-10-01 14:57:34 +0000 &lt;papera_raya&gt; Pedagang pejuang Indonesia Raya #prabowosubianto #prabowo #Pilpres2024 #presiden #PemiluSerentak2024 #relawanprabowo #papera #pedagang  https://t.co/010tNZqLyo
-1576198373366894592 2022-10-01 13:12:31 +0000 &lt;IDefenseMagz&gt; “Saya kira ini yang paling utama. Pancasila kita yakini sebagai pemersatu bangsa, ideologi dan falsafah bangsa yang operasional, yang harus kita jaga ke depan,” tutup Menhan @prabowo.   https://t.co/r6wiLaBQaY  @Kemhan_RI   #IDM #MenhanPrabowo #PrabowoSubianto #Prabowo #KemhanRI
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1576174345461764096 2022-10-01 11:37:02 +0000 &lt;RAFIDA750&gt; Terus barisan pendukungnya gimana?  Misalnya,  #Anies-Ganjar #Prabowo-Imin #Puan-Airlangga  Jika PDI-P Usung Puan pada Pilpres, Ganjar Diprediksi Tak Akan Bermanuver ke Partai Lain Klik untuk baca:  https://t.co/eE5e9bwg2y
-1576159775401705472 2022-10-01 10:39:08 +0000 &lt;NabilaR10141827&gt; FERDY SAMBO RESMI DI BERHENTIKAN SECARA TIDAK HORMAT, SURAT KEPUTUSAN RESMI SUDAH DITANDATANGANI JOKOWI.  The Script  1Oktober WWII Putri Candrawathi Reyhan #FerdySambo #Polri#capres #prabowo #kdrt #lesti #u23  https://t.co/zPMfpyHKOb
-1576159285477871618 2022-10-01 10:37:11 +0000 &lt;SwanteSH&gt; #Kemhan #KemhanRI #KementerianPertahanan @Kemhan_RI: &#39;“Pancasila kita yakini pemersatu bangsa, ideologi dan falsafah bangsa  yang harus kita jaga ke depan,” lanjutnya.  #Kemhan #KemhanRI #Prabowo #PrabowoSubianto #Menha…  https://t.co/E9kpZBN2i1, see more  https://t.co/dg4KElkq8N
-1576157523844820992 2022-10-01 10:30:11 +0000 &lt;tvrinewscom&gt; Peringatan Kesaktian Pancasila, Prabowo: Hanya Dengan Persatuan Kita Bisa Berhasil Sebagai Negara  https://t.co/O5T22AHLaw #Presidenjokowi #kesaktianpancasila2022 #Prabowo
-1576148025185271808 2022-10-01 09:52:27 +0000 &lt;Kemhan_RI&gt; “Pancasila kita yakini pemersatu bangsa, ideologi dan falsafah bangsa  yang harus kita jaga ke depan,” lanjutnya.  #Kemhan #KemhanRI #Prabowo #PrabowoSubianto #MenhanPrabowo #Jokowi #JokoWidodo #PresidenJokowi #HariKesaktianPancasila  https://t.co/tSwnKA0wcG
-1576145635803529216 2022-10-01 09:42:57 +0000 &lt;MohamadFuad2&gt; @kang___L Peran Prabowo Cak Imin sangat besar dalam membangun harmonisasi kehidupan berbangsa dan bernegara.  #Prabowo #CakImin  https://t.co/89zsGXWIoO
-1576121652982661120 2022-10-01 08:07:39 +0000 &lt;faktualid_com&gt; Usai Upacara Peringatan Kesaktian Pancasila, Prabowo Kejar Jokowi #Jokowi #kesaktianpancasila #prabowo  https://t.co/05GSLwW3kP
-1576116879579435008 2022-10-01 07:48:41 +0000 &lt;pasti_2024&gt; Napaknya Majalengka menjadi kota yang sulit untuk dilupakan Pak @erickthohir. Banyak kenangan di sana, lantaran merupakan kota kelahiran ibunda tercinta, Edna Thohir.  #prabowo #erickthohir #capres #cawapres #pilpres2024 #jawabarat #relawanpasti #pasti2024  https://t.co/iUq3OPTN2l
-1576109024503734272 2022-10-01 07:17:28 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1576094871655366657 2022-10-01 06:21:14 +0000 &lt;DpdKalbar&gt; Zaman boleh berubah, gaya hidup berganti, arus globalisasi menderas, tapi bangsa Indonesia akan tetap berpegang teguh pada Pancasila dan segenap nilai-nilai yang dikandungnya. #kesaktianpancasila #gerindra #gerindramenang #gerindrakalbar #prabowo #prabowopresiden #kalbarinformasi  https://t.co/OoFRW17omr
-1576070320506576902 2022-10-01 04:43:41 +0000 &lt;papandu08&gt; Bersatu untuk merah putih #prabowo #merahputih #bersatu  https://t.co/mUBXmXsDHC
-1576038458510176256 2022-10-01 02:37:04 +0000 &lt;Kemhan_RI&gt; &quot;Kita perlu TNI yang kuat Polri yang kuat. Saya juga akan mendukung pembangunan kepolisian yang kuat,” ujar Menhan Prabowo.   #Kemhan #KemhanRI #Prabowo #PrabowoSubianto #MenhanPrabowo #ListyoSigitPrabowo #Kapolri #MabesPolri
-1576032847478915073 2022-10-01 02:14:46 +0000 &lt;BadungGerindra&gt; Tangguhkan semangat kebhinekaan. Jaga kesatuan dan persatuan NKRI. Selamat Hari Kesaktian Pancasila.  #salamindonesiaraya #gerindra #menang #prabowo #prabowosubianto #presiden #prabowoforindonesia2024  #ahmadmuzani #sumfidasco #fadilzon #gerindrabali #degadjah #relawandegadjah  https://t.co/ms9tx2vHZq
-1575993201114066945 2022-09-30 23:37:14 +0000 &lt;wartakotalive&gt; HARI Kesaktian Pancasila, Ini Cara Penulisan Nama Lengkap Pahlawan Revolusi Versi Prabowo Subianto    https://t.co/zyf9Frn6gD via @wartakotalive   CARA PENULISAN NAMA PAHLAWAN REVOLUSI  #harikesaktianpancasila #pancasila #prabowo
-1575927820232306688 2022-09-30 19:17:26 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
-1575809775144603648 2022-09-30 11:28:22 +0000 &lt;matakepri_&gt; prabowo beri kapolri pistol g2 elite  #matakepri  #berita #prabowo  #kapolri  #polri  #beritaterkini  #beritaviral  https://t.co/1gABH8Qf38
-1575800621353304065 2022-09-30 10:51:59 +0000 &lt;Kilat_com&gt; Besok, Presiden Jokowi dan Menhan Prabowo Upacara Kesaktian Pancasila di Lubang Buaya   #Jokowi #Prabowo #kesaktianpancasila   https://t.co/FLnPdKxKBE
-1575774048172134402 2022-09-30 09:06:24 +0000 &lt;gerindrajatim_&gt; 5. Mayor Jenderal TNI Anumerta Donald Isaac Panjaitan 6. Mayor Jenderal TNI Anumerta Sutoyo Siswomiharjo 7. Kapten TNI Anumerta Pierre Andreas Tendean __ #Gerindra #Prabowo #AnwarSadad #PolitisiSantri #GerindraJatim #PrabowoPresiden #GerindraMenang #G30S #PahlawanRevolusi
-1575751570435633152 2022-09-30 07:37:05 +0000 &lt;papandu08&gt; Negarawan sejati selalu ingat dengan pengorbanan para pejuang #prabowo #negarawan #pejuang #pahlawan  https://t.co/ZWeCh0pk3k
-1575739070721839105 2022-09-30 06:47:24 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
-1575716728046133248 2022-09-30 05:18:38 +0000 &lt;BadungGerindra&gt; ULURKAN TANGAN UNTUK MALUKU😇❤️  sumber: @dpdgerindrabali  #infogerindra #Infoberita #gerindra #gerindrabali #prabowo #prabowosubianto #prabowopresiden #ahmadmuzani #sumfidasco #fadlizon #degadjah #relawandegadjah #wayanmuntra #semetonmuntra #nugrahitapendit  https://t.co/9v4Vy943QZ
-1575710129978122240 2022-09-30 04:52:24 +0000 &lt;Kilat_com&gt; Panglima TNI dan Menteri Pertahanan Menerima Bintang Yudha Dharma Utama  Cek Video Selengkapnya Hanya di Youtube Kilat TV    https://t.co/UJfUDljpRH  #Kilat #JadiCepatPaham #Prabowo #AndikaPerkasa #MenteriPertahanan #PanglimaTNI  https://t.co/nEXgyZD5G0
-1575696943556472833 2022-09-30 04:00:01 +0000 &lt;ThePhraseID&gt; Mengulik perjalanan karier Prabowo Subianto, dari militer, bisnis, hingga politik. #ThePhraseID #Prabowo #PrabowoSubianto #Gerindra #Menhan #MenteriPertahanan #SosokInspiratif  @prabowo   https://t.co/ENk0234Y58
-1575669407774232579 2022-09-30 02:10:35 +0000 &lt;pasti_2024&gt; Pak Menteri Pertahanan @prabowo dan Menteri BUMN @erickthohir dalam sinerginya mengembangkan ekonomi dan pertahanan di pemerintahan sudah baik.  Apa lagi kalau mereka jadi presiden dan wakilpresiden di 2024 nanti. Pasti Indonesia akan tambah maju &amp;amp; kokoh.   #prabowo #erickthohir  https://t.co/V8oCbPB4s3
-1575663836215902209 2022-09-30 01:48:27 +0000 &lt;pasti_2024&gt; Duet @prabowo - @erickthohir dapat menjadi pasangan alternatif masyarakat untuk Pilpres 2024.   #erickthohir #prabowo #bumn #menhan #indonesia #indonesiamaju #pasti2024  https://t.co/akKmsQIqPv
-1575635005975322624 2022-09-29 23:53:53 +0000 &lt;Ricky_Tamba&gt; Layanan Ambulance DPP Gerindra @Gerindra Gelar Khitanan Massal Dan Gerakan Bebas Cacingan Di Kota Depok #prabowo #prabowosubianto #2024prabowopresiden #gerindramenang #indonesiamaju #adilmakmur #indonesiaraya  https://t.co/D5kkLHhOpe
-1575632856251977728 2022-09-29 23:45:21 +0000 &lt;Ricky_Tamba&gt; Layanan Ambulance DPP Gerindra @Gerindra Gelar Khitanan Massal Dan Gerakan Bebas Cacingan Di Kota Depok #prabowo #prabowosubianto #2024prabowopresiden #gerindramenang #indonesiamaju #adilmakmur #indonesiaraya  https://t.co/BNYC4wib9o
-1575622826563813376 2022-09-29 23:05:30 +0000 &lt;Ricky_Tamba&gt; Wagub DKI Jakarta A. Riza Patria @ArizaPatria : Pilihan saya ya Pak Prabowo Subianto @prabowo @Gerindra @Fraksi_Gerindra  #prabowo #ariza #prabowosubianto #arizapatria #2024prabowopresiden #gerindramenang #indonesiamaju #adilmakmur #indonesiaraya 🇮🇩  https://t.co/B6VGFmJ1bY
-1575606352684404736 2022-09-29 22:00:02 +0000 &lt;Genpi_Co&gt; Menteri Pertahanan Prabowo Subianto memberi tanggapan soal syarat tinggi badan untuk penerimaan calon prajurit. #prabowo  https://t.co/KNwMlQaoZK
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1575557874687741952 2022-09-29 18:47:24 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
-1575538526665383936 2022-09-29 17:30:31 +0000 &lt;Ricky_Tamba&gt; &quot;Meski berbeda-beda, kita tetap satu keluarga: Indonesia,&quot; - Letjen (Purn.) H. Prabowo Subianto Djojohadikusumo @prabowo @Gerindra @Fraksi_Gerindra  #prabowo #prabowosubianto #2024prabowopresiden #gerindramenang #indonesiamaju #adilmakmur #indonesiaraya  https://t.co/pRpHDYg9xc
-1575490312558247938 2022-09-29 14:18:56 +0000 &lt;c9ec25df479441b&gt; #Prabowo + Tuan Guru Bajang# ...patut dipertimbangkan utk &#39;24 - &#39;29
-1575457422952439809 2022-09-29 12:08:14 +0000 &lt;gerindra_la&gt; Menuju Sukses PEMILU 2024, Gerindra Jatim Gelar Konsolidasi  @Gerindra @gerindrajatim_ @ansadad ____  #gerindra #prabowo #gerindramenang #prabowopresiden #gerindralamongan #lamonganmegilan #politisisantri  https://t.co/Rd6Abu1npZ
-1575419842005377024 2022-09-29 09:38:54 +0000 &lt;moreshare&gt; #Anies Jadi Korban Polling ILC, Dulu #Prabowo #Sandiaga Juga Menang  https://t.co/t2DquSCTcb #moreshareforum #beritaterkini
-1575403304301268992 2022-09-29 08:33:11 +0000 &lt;cokro_tv&gt; PRABOWO-MUHAIMIN PASANGAN PENGGEMBIRA DI PINGGIR GELANGGANG | OPINI TERKINI #cokrotv #prabowo #cakimin   Full Video Youtube:  https://t.co/6Scnru4STf  https://t.co/rY8rwMalAt
-1575396815251574790 2022-09-29 08:07:24 +0000 &lt;korantempo&gt; Hal ini diduga sebagai bagian dari gerakan penyokong &quot;Jokowi 3 Periode&quot;.  Bagaimana wacana ini semakin dikumandangkan? #KoranTempo #Prabowo   https://t.co/9IBlW0SrXe
-1575396812160368641 2022-09-29 08:07:24 +0000 &lt;korantempo&gt; Wacana duet Prabowo-Jokowi menggelinding dari Mahkamah Konstitusi hingga Senayan. #KoranTempo #Prabowo  https://t.co/QCxEiIKVJf
-1575393399406198790 2022-09-29 07:53:50 +0000 &lt;Berjasa_&gt; Menteri Pertahanan, Prabowo Subianto mengatakan bahwa keputusannya bergabung dengan pemerintahan Presiden Joko Widodo sangatlah tepat.  #presidenjokowi #prabowo #indonesiamaju #berjasa #viral #fyp  https://t.co/xN7dmFd3A6
-1575385153496498176 2022-09-29 07:21:04 +0000 &lt;jpnncom&gt; Pengamat intelijen Susaningtyas Nefo Handayani Kertopati manilai narasi disharmoni menjadi gugur usai Prabowo Subianto, Jenderal Andika Perkasa, dan KSAD Dudung #Prabowo  https://t.co/bpvVnraxDN
-1575378794202144768 2022-09-29 06:55:48 +0000 &lt;nusabalicom&gt; Nol Persen, Peluang Duet Prabowo-Jokowi di 2024  https://t.co/dOzQR0b1I3 #berita #nusabali #Pilpres2024 #Prabowo #Jokowi  #Pemilu2024
-1575371413745127424 2022-09-29 06:26:28 +0000 &lt;kompastv_jabar&gt; Prabowo Berikan Cenderamata Pistol G2 Elite Ke Listyo Sigit  https://t.co/rXN5FgbUIV  #prabowo #menhan #kapolri #listyosigit #pertemuan #kompastvjabar  https://t.co/5S4GdZfLxS
-1575369150142111744 2022-09-29 06:17:28 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
-1575351808590958592 2022-09-29 05:08:34 +0000 &lt;papandu08&gt; Setiap pemimpin pasti punya kekurangan, tapi jangan lupa akan perjuangannya #prabowo #jokowi #soekarno #soeharto #politik  https://t.co/FdCqhJHnqu
-1575342102296363009 2022-09-29 04:30:00 +0000 &lt;poskotaofficial&gt; Sekjen Partai Gerindra Ahmad Muzani, mengatakan pihaknya masih mencari tahu kebenaran wacana duet Prabowo-Jokowi di Pilpres 2024. #Gerindra #Prabowo #Jokowi #Pilpres2024   https://t.co/8bVUccJKMP
-1575333188620394497 2022-09-29 03:54:35 +0000 &lt;Muezzakit&gt; Hadiri Rapat Komisi I DPR, Menhan Pak Bowo Ucapkan Terima Kasih ke DPR  https://t.co/3CDK5e0eQ1 #Prabowo #menhan
-1575320166254014464 2022-09-29 03:02:50 +0000 &lt;BadungGerindra&gt; Rangkul Panglima dan KSAD, Prabowo Kembali Tunjukan Sikap Negarawan.😍💪🏻  sumber: @dpdgerindrabali   #infogerindra  #gerindra #gerindrabali #prabowo #prabowosubianto #prabowopresiden #ahmadmuzani #sumfidasco #fadlizon #degadjah #relawandegadjah  #semetonmuntra #nugrahitapendit  https://t.co/ElzTrQAfAU
-1575306823195758592 2022-09-29 02:09:49 +0000 &lt;gerindra_la&gt; Menuju Sukses PEMILU 2024, Gerindra Jatim Gelar Konsolidasi  @Gerindra @gerindrajatim_  ____  #gerindra #prabowo #gerindramenang #prabowopresiden #gerindralamongan #lamonganmegilan #politisisantri  https://t.co/c4p9YxQcvS
-1575187947296784384 2022-09-28 18:17:26 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
-1575145317464317952 2022-09-28 15:28:03 +0000 &lt;jpnncom&gt; Prabowo bertemu Kapolri, Rabu (28/9). Prabowo juga memberi cendera mata kepada Kapolri berupa pistol G2 Elite buatan PT Pindad. #Prabowo  https://t.co/0JDDCoU7eR
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1575133525489197058 2022-09-28 14:41:11 +0000 &lt;AsikDung&gt; JeJeBa... . . Jenderal Jenderal Bahagia😎 #PanglimaTNI #DudungAbdurachman #Prabowo #AndikaPerkasa #RakyatSejahtera #KSAD #angkatandaratdihatirakyat #asikdung  https://t.co/VrVjglW8GV
-1575126336883945472 2022-09-28 14:12:37 +0000 &lt;gerindra_la&gt; Selamat Dikukuhkan sebagai Guru Besar @Don_dasco  Barokah ilmunya   Hormat kami @gerindra_la  @Gerindra @Fraksi_Gerindra @gerindrajatim_  #gerindra #prabowo #gerindramenang #prabowopresiden #gerindralamongan #lamonganmegilan #politisisantri  https://t.co/69hubm27G3
-1575111897052872704 2022-09-28 13:15:15 +0000 &lt;sevenleo7&gt; &quot;Kalau kata Gusdur orang yang paling ikhlas dan tulus itu Prabowo, The Real Pejuang Negarawan&quot;  #prabowo  https://t.co/J0phMg6ucn
-1575111896792850432 2022-09-28 13:15:15 +0000 &lt;MilenialSamaAH&gt; Survei CSIS: Golkar Terpopuler Dibanding PDIP, Gerindra, dan Demokrat di Pemilih Muda  #airlanggahartarto #fyp #foryoupage #foryou #golkar #pilpres #capres #jokowi #pemilu #indonesia #prabowo #politik #pileg #aniesbaswedan #Nordstream ari lasso taehyung taehyung  https://t.co/BF78NYy2vr
-1575109851747094529 2022-09-28 13:07:07 +0000 &lt;Kemhan_RI&gt; Pelaksanaan dari pusat kontrol ini dapat langsung dikoordinasikan dan diintegrasikan dengan Bakamla dan Kementerian Pertahanan menjadi salah satu alat pertahanan laut dan keamanan maritim.  #Kemhan #KemhanRI #Prabowo #PrabowoSubianto #MenhanPrabowo #KKP  https://t.co/YaWxUgfqEu
-1575080120628322305 2022-09-28 11:08:58 +0000 &lt;Husainaziz96&gt; @cakimiNOW @prabowo @EmHasanuddin @Gerindra @DPP_PKB  #gusmuhaimin #prabowo #thenext2024 #pkbmilenial  https://t.co/aaEENovOEP
-1575074663344242688 2022-09-28 10:47:17 +0000 &lt;GerindraLPG_&gt; Saya Gerindra 🇮🇩  #gerindra #gerindralampung #prabowo #prabowosubianto #sayagerindra #rahmatmirzanidjausal #dpdgerindralampung  https://t.co/OaKkjVWPz9
-1575034421270708224 2022-09-28 08:07:23 +0000 &lt;SeputariNews&gt; Momen ini terjadi di tengah adanya isu terkait kekompakan di dalam TNI.  #Prabowo #PrabowoSubianto #DPR #PanglimaTNI #AndikaPerkasa #KSAD #DudungAbdurachman #KSAL #YudoMargono #PSJanganLupaGembira
-1575034269335834624 2022-09-28 08:06:47 +0000 &lt;GTVID_News&gt; Momen ini terjadi di tengah adanya isu terkait kekompakan di dalam TNI.  #Prabowo #PrabowoSubianto #DPR #PanglimaTNI #AndikaPerkasa #KSAD #DudungAbdurachman #KSAL #YudoMargono #PSJanganLupaGembira
-1575034127467716608 2022-09-28 08:06:13 +0000 &lt;OfficialiNewsTV&gt; Momen ini terjadi di tengah adanya isu terkait kekompakan di dalam TNI.  #Prabowo #PrabowoSubianto #DPR #PanglimaTNI #AndikaPerkasa #KSAD #DudungAbdurachman #KSAL #YudoMargono #PSJanganLupaGembira
-1575033997872095232 2022-09-28 08:05:42 +0000 &lt;Lintas_MNCTV&gt; Momen ini terjadi di tengah adanya isu terkait kekompakan di dalam TNI.  #Prabowo #PrabowoSubianto #DPR #PanglimaTNI #AndikaPerkasa #KSAD #DudungAbdurachman #KSAL #YudoMargono #PSJanganLupaGembira
-1574999195882123264 2022-09-28 05:47:25 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
-1574989299220905984 2022-09-28 05:08:05 +0000 &lt;Politik_HariIni&gt; Relawan Ganjar menilai Prabowo Subianto sebagai sosok yang sudah teruji dan berkomitmen untuk meneruskan kepemimpinan Presiden Jokowi.  .  .  #phi #politikhariini #politikindonesia #viral #prabowo #jokowidodo #jokowi #prabowosubianto #ganjarpranowo #PDIPerjuangan  https://t.co/QieobJFrlE
-1574983083170091008 2022-09-28 04:43:23 +0000 &lt;Korantalknews&gt; &quot; Drama Sambo &quot; Diduga Tak Profesional di Kasus Kematian Brigadir J,Kombes Murbani Budi Pitono Jalani Sidang Etik,  #jokowi #indonesia #prabowo #jokowidodo #indonesiamaju #jakarta #covid #aniesbaswedan #jokowilagi   https://t.co/SCayf0eATU  https://t.co/Py89FVvIWD
-1574980160486805504 2022-09-28 04:31:46 +0000 &lt;PatarNatanael&gt; #salam3jari #jokpro2024 #rakyatbutuhjokowi #salam3jari #JokowiMendunia #jokowi #Indonesia #prabowo #Viral #viralTiktok #viralindo #viral2022 #2024 @puanmaharani_ri @PDI_Perjuangan @jokowi @gibran_tweet @psi_id  https://t.co/7m21Le5uLX
-1574979174498209793 2022-09-28 04:27:51 +0000 &lt;PatarNatanael&gt; @jokowi @gibran_tweet #rakyatbutuhjokowi #Indonesia #salam3jari #dukungjokpro2024 #jokowi #JokowiMendunia #prabowo  https://t.co/GEPP71v7DE
-1574978442822848513 2022-09-28 04:24:57 +0000 &lt;PatarNatanael&gt; #rakyatbutuhjokowi #Indonesia #prabowo #JokowiMendunia #salam3jari @jokowi @gibran_tweet  https://t.co/d7ktiOPVZx
-1574976299772190720 2022-09-28 04:16:26 +0000 &lt;papandu08&gt; Prabowo tinjau korban bencana tanah bergerak di Bogor #prabowo #bogor #gerindra #politik  https://t.co/IJmBLBudcR
-1574972559535153152 2022-09-28 04:01:34 +0000 &lt;kompascom&gt; Komisi I DPR RI menyetujui anggaran Kementerian Pertahanan  untuk tahun anggaran 2023 sebesar RP 134 triliun. Namun, Prabowo Subianto disebut merasa anggaran itu kurang. ^ #Prabowo #Menhan  https://t.co/3T5V9hoZs0
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1574837985727590400 2022-09-27 19:06:49 +0000 &lt;guest_2024&gt;  https://t.co/0KKdp6y1gK  #PemiluSerentak2024 #Jakarta #jawatengah #PuanMaharani #prabowo #indonesia2024 #NCTDREAM #budget2023ireland #JISOOxDiorPFW #ด้วยรักและหักหลังตอนจบ #audioleak #  https://t.co/xNmqP44MJB
+1574829687570059264 2022-09-27 18:33:51 +0000 &lt;guest_2024&gt; Pada tahun 2024 akan di adakan pemilihan Presiden, diantara nama dibawah siapa yang akan anda pilih? #AniesBaswedan #Prabowo #Ganjar #PuanMaharani #PemiluSerentak2024
 1574817998749110273 2022-09-27 17:47:24 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1574734945100173315 2022-09-27 12:17:22 +0000 &lt;heraldindo&gt; Fadli Zon memberikan bocoran mengenai kriteria calon wakil presiden (cawapres) Prabowo Subianto pada Pemilu Presiden (Pilpres) 2024. #FadliZon #Prabowo  https://t.co/lKBBHUZblj
+1574734945100173315 2022-09-27 12:17:22 +0000 &lt;heraldindo&gt; Fadli Zon memberikan bocoran mengenai kriteria calon wakil presiden (cawapres) Prabowo Subianto pada Pemilu Presiden (Pilpres) 2024. #FadliZon #Prabowo  https://t.co/lKBBHUZblj
 1574729817483722752 2022-09-27 11:57:00 +0000 &lt;RADARSOLO_&gt; Ketua DPP PDIP Said Abdullah menanggapi isu Joko Widodo (Jokowi) yang akan diduetkan dengan Ketua Umum Partai Gerindra Prabowo Subianto sebagai calon wakil presiden (cawapres) pada Pilpres 2024 mendatang.  #Jokowi #prabowo #Pilpres2024   https://t.co/D1zyiacXxr
 1574704369429540864 2022-09-27 10:15:52 +0000 &lt;matakepri_&gt; 3 capres indonesia sampai ke surat kabar negeri matahari terbit  #matakepri  #berita #ganjarpranowo  #prabowo  #aniesbaswedan  #jepang  #koran  #indonesia  #beritaterkini  #beritaviral  https://t.co/d1rWSQxNQh
 1574698737267781632 2022-09-27 09:53:30 +0000 &lt;rmp_officials&gt; Doa para kiai sepuh untuk Cak Imin dan Prabowo  Amin ya Allah ya rabb alamin!!  #CakImin #GusMuhaimin #Muhaimin #MuhaiminIskandar #Capres2024 #Pilpres2024 #Prabowo  https://t.co/2yVDXqV29b
 1574677642443620352 2022-09-27 08:29:40 +0000 &lt;serambinews&gt; #Prabowo #Tertawa #Jokowi #Cawapres  Menteri Pertahanan RI (Menhan) Prabowo Subianto menyikapi soal adanya wacana menduetkan dirinya dengan Joko Widodo (Jokowi) dalam pemilihan presiden     https://t.co/olQEmPRHG8 lewat @serambinews
 1574677622579429378 2022-09-27 08:29:35 +0000 &lt;sharenewsaceh&gt; #Prabowo #Tertawa #Jokowi #Cawapres  Menteri Pertahanan RI (Menhan) Prabowo Subianto menyikapi soal adanya wacana menduetkan dirinya dengan Joko Widodo (Jokowi) dalam pemilihan presiden     https://t.co/SkybXInB3r lewat @serambinews
 1574663283088687104 2022-09-27 07:32:37 +0000 &lt;jokowiID_&gt; Menteri Pertahanan (Menhan) Prabowo Subianto menyampaikan pujiannya kepada Presiden Joko Widodo (Jokowi). Dalam pujiannya itu, Prabowo mengakui bahwa kepemimpinan dan kenegarawanan Presiden Jokowi.   #presidenjokowi #indonesiamaju #prabowo #jokowiid #fyp #viral  https://t.co/6ygTolclDL
-1574654579983011842 2022-09-27 06:58:02 +0000 &lt;tribunkaltim&gt; Cak Imin Belum Tentu jadi Cawapres Prabowo, Puan - Muhaimin Makin Mesra, PDIP Paling Siap Pilpres?    https://t.co/ksd22aBNOW lewat @tribunkaltim   #CakImin #Prabowo #Puan #CakImin #PDIP
 1574633537453846528 2022-09-27 05:34:25 +0000 &lt;matakepri_&gt; muhaimin jadi cawapres puan, bagaimana dengan prabowo?  #matakepri  #berita #muhaiminiskandar  #prabowo  #puanmaharani  #capres  #beritaterkini  #beritaviral  https://t.co/FQaHhsCs8L
 1574629277777399810 2022-09-27 05:17:29 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
 1574628821759799296 2022-09-27 05:15:40 +0000 &lt;papandu08&gt; Negarawan sejati yang selalu ingin membawa kedamaian #prabowo #panglimatnijenderalandikaperkasa #kasaddudung #indonesiabersatu #indonesiadamai  https://t.co/4XHx5mgMAM
@@ -543,10 +525,7 @@ title="Print to PDF"
 1574477399382982656 2022-09-26 19:13:59 +0000 &lt;Cembok1&gt; #AniesPresiden 2054 #Prabowo presiden 2024 Prabowo yes Yang lain no no no
 1574448078815342592 2022-09-26 17:17:28 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
 1574421342535155713 2022-09-26 15:31:14 +0000 &lt;GerindraLPG_&gt; Ketua DPD Gerindra Lampung Mirza: Rapatkan Barisan Menangkan Hati Rakyat untuk Prabowo Presiden 2024  #gerindra #gerindralampung #prabowo #rahmatmirzanidjausal #dpdgerindralampung  https://t.co/PnkAIvqkgp
-1574413400301801477 2022-09-26 14:59:40 +0000 &lt;tribunkaltim&gt; SIAPA MAU JEGAL PRABOWO SUBIANTO? BALIHO CAPRES GERINDRA BARENG PRESIDEN JOKOWI BERMUNCULAN  #TribunKaltim #Prabowo #Jokowi #Pilpres2024    https://t.co/a4lAjc5kqR lewat @tribunkaltim
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1574406835003887617 2022-09-26 14:33:35 +0000 &lt;IDbelasting&gt; SURVEI CSIS: Anies Ungguli Prabowo dan Ganjar #surveiCSIS #anies #aniespresiden #ganjar #ganjarpresiden #prabowo #prabowopresiden  https://t.co/vZrkVc8k2z
+1574406835003887617 2022-09-26 14:33:35 +0000 &lt;IDbelasting&gt; SURVEI CSIS: Anies Ungguli Prabowo dan Ganjar #surveiCSIS #anies #aniespresiden #ganjar #ganjarpresiden #prabowo #prabowopresiden  https://t.co/vZrkVc8k2z
 1574389017306492928 2022-09-26 13:22:47 +0000 &lt;sevenleo7&gt; &quot;Prabowo Subianto dan Anies Baswedan adalah calon kandidat capres 2024 yang bagus mereka berdua adalah sosok 2 orang anak bangsa yang pintar dan cerdas, jadi kita harus damai dan tidak ada perpecahan sesuai demokrasi kedepan untuk negeri&quot; #prabowo #AniesBaswedan
 1574381351901728774 2022-09-26 12:52:19 +0000 &lt;mhara_lising&gt; demikian argumen Sekber yang dilansir website MK, Senin (26/9/2022).  &quot;Terkait hal ini, membuat pemohon membutuhkan kepastian apakah presiden yang telah menjabat dua periode dapat maju lagi tetapi sebagai wakil presiden,&quot; tegas pemohon.  #prabowo #prabowojokowi #capres2024
 1574381090516897797 2022-09-26 12:51:17 +0000 &lt;trahmangkunega1&gt; Dua sahabat sedang bertemu. Kira-kira bahas apa ya? @airlangga_hrt @golkar_id @Golkar2024  #prabowo #menhan #menteripertahanan  #AirlanggaHartarto #PartaiGolkar  #GolkarIndonesia #Golkar2024  #GolkarMenang #kerjauntukindonesiaraya  https://t.co/lCqN9tqY03
@@ -554,7 +533,6 @@ title="Print to PDF"
 1574355746200129538 2022-09-26 11:10:34 +0000 &lt;Beritabaruco&gt; Begini Hasil Survei POLSTAT: Elektabilitas Prabowo Meningkat  https://t.co/OOZ6aRFgSW #Nasional #BeritaBaru #BeritaBaruJatim #jatimberitabaruco #Prabowo  https://t.co/XuthpyvDkh
 1574352598848585728 2022-09-26 10:58:04 +0000 &lt;jpnncom&gt; Andika dan Dudung mengenakan pakaian dinas lapangan, masing-masing mengapit Prabowo. #Prabowo  https://t.co/yZd9RrfN95
 1574349939605671936 2022-09-26 10:47:30 +0000 &lt;Kemhan_RI&gt; Kemhan dan TNI pun berkomitmen untuk mengutamakan produk dalam negeri sesuai dengan kebijakan pemerintah.  #Kemhan #KemhanRI #Prabowo #PrabowoSubianto #DPR #PanglimaTNI #AndikaPerkasa #KSAD #DudungAbdurachman #KSAL #YudoMargono  https://t.co/4aYKTtPE77
-1574349462616608768 2022-09-26 10:45:36 +0000 &lt;pandangan_jogja&gt; Selengkapnya, klik link kumparan berikut.  https://t.co/9Yle9Cjk2w  #berita #prabowo #prabowosubianto #jokowi #baretmerah #jenderal #pjnews #pandanganjogja  https://t.co/YzSvof74AB
 1574349154725535744 2022-09-26 10:44:23 +0000 &lt;VideoTRIBUN&gt; Momen Panglima TNI dan KSAD Hadiri Rapat di DPR, Duduk Berdampingan Dipisahkan Menhan Prabowo.  #Menhan #Prabowo #TNI #AndikaPerkasa #BeritaTerkini   Selengkapnya&amp;gt;  https://t.co/1He2qpr2Ik  https://t.co/vlLzslfvu2
 1574347236829704192 2022-09-26 10:36:45 +0000 &lt;KoncoAirlangga&gt; Pascapertemuan antara Airlangga Hartarto dengan Prabowo, beredar wacana koalisi antara Golkar dan Gerindra. Semoga hal-hal baik selalu menyertai kita #airlanggahartarto #prabowo #Golkar #gerindra #pilpres2024  https://t.co/ROR7x58HNx
 1574340851563909122 2022-09-26 10:11:23 +0000 &lt;BisnisdanJasa&gt; Kiat sukses. Bikin Toko Online. Kami melayani jasa pembuatan website dan toko online, kunjungi web kami &amp;gt;&amp;gt; https://t.co/1IK2oOA7Gd &amp;lt;&amp;lt; wa 085711119998   #JasaPembuatanWebsite #TokoOnline #JasaPembuatanTokoOnline #DPR #Jokowi #AniesBaswedan #Prabowo #GanjarPranowo #PDIP #Golkar  https://t.co/o8n1bXR4q8
@@ -563,9 +541,7 @@ title="Print to PDF"
 1574268004556472320 2022-09-26 05:21:55 +0000 &lt;VideoTRIBUN&gt; Prabowo Mengakui Kehebatan Jokowi Pimpin Negara: Saya Mantan Jenderal tapi Ilmu Dia di Atas Saya #BeritaTerkini #UPDATE #tribunnews #jokowi #prabowo #jenderal #menhan  Klik selengkapnya&amp;gt;&amp;gt; https://t.co/CrCdA2NVZm  https://t.co/xYlwdSFGI7
 1574267557753733121 2022-09-26 05:20:08 +0000 &lt;papandu08&gt; Catatan dari seorang simpatisan untuk Bapak Prabowo yang tak pernah mengenal lelah #prabowo #simpatisan #relawan #pendukung #prabowopresiden  https://t.co/q1l2luvj50
 1574259320237469697 2022-09-26 04:47:24 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1574215800436977664 2022-09-26 01:54:28 +0000 &lt;sebrangLoor&gt; GENTLE, JUARA.!! ❤️ #Prabowo, Sory dulu nyinyir😅 . .
+1574215800436977664 2022-09-26 01:54:28 +0000 &lt;sebrangLoor&gt; GENTLE, JUARA.!! ❤️ #Prabowo, Sory dulu nyinyir😅 . .
 1574202611112083456 2022-09-26 01:02:04 +0000 &lt;PrasetyoHadi28&gt; Semoga silaturahmi dapat terus terjaga dan membawa kebaikan dalam kehidupan berbangsa dan bernegara.  #prabowo #prabowosubianto #gerindra #silaturahmi #khyusufchudlori #ponpes #ponpesapitegalrejo #pondokpesantren #pondokpesantrenapiasritegalrejo #kyai #kyainu #nu #nahdlatululama  https://t.co/42BnWzm7Ar
 1574156799112249344 2022-09-25 22:00:01 +0000 &lt;Genpi_Co&gt; Ketua Umum Partai Gerindra Prabowo Subianto melakukan silaturahmi atau sowan ke 9 kiai sepuh Nahdlatul Ulama (NU) #prabowo  https://t.co/vkG7IlAwxS
 1574141327612452864 2022-09-25 20:58:33 +0000 &lt;kerjabersama_AH&gt; Airlangga Hartarto, Prabowo dan Suharso bahas food estate  #foodestate #airlanggahartarto #prabowo  https://t.co/DOhQYpNokA
@@ -583,8 +559,108 @@ title="Print to PDF"
 1573708201110872065 2022-09-24 16:17:27 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
 1573704630680240129 2022-09-24 16:03:16 +0000 &lt;Ricky_Tamba&gt; @Gerindra @helmlevel2 @esteh_indonesia @Gandhoyy Buat Broque Mindra @Gerindra , br ngeh dpt notif di Fb. Mohon bantuan hadiah lomba pantun disumbangin aza ke anak2 yatim di seputaran kantor DPP Gerindra. Tks banget ya. Cemungudh! #PSJanganLupaGembira #Prabowo #PrabowoSubianto #Gerindra #2024PrabowoPresiden #GerindraMenang 🇮🇩  https://t.co/IGvHJ6FESr
 1573703571039657984 2022-09-24 15:59:03 +0000 &lt;Ricky_Tamba&gt; Buat Broque Mindra @Gerindra , br ngeh dpt notif di Fb. Mohon bantuan hadiah lomba pantun disumbangin aza ke anak2 yatim di seputaran kantor DPP Gerindra. Tks banget ya. Cemungudh! #PSJanganLupaGembira #Prabowo #PrabowoSubianto #Gerindra #2024PrabowoPresiden #GerindraMenang 🇮🇩  https://t.co/ciKsMTzipN
-1573694769691168768 2022-09-24 15:24:05 +0000 &lt;tribunkaltim&gt; Prabowo Subianto Kembali Bertemu Ridwan Kamil, Kali Ini di Muktamar Persis XVI di Soreang   #Persis #MuktamaPersis #PersatuanIslam #RidwanKamil #Prabowo #PrabowoSubianto #KangEmil   https://t.co/xCqdnmJx69 lewat @tribunkaltim
 1573660332328771584 2022-09-24 13:07:15 +0000 &lt;pikiran_rakyat&gt; Rival 10 Tahun, Prabowo Sebut Pengganti Jokowi Punya Tugas Berat: Saya Lihat Komitmen Beliau #Jokowi #Prabowo #Presiden  Selengkapnya:  https://t.co/MSdWvODqnT via @YouTube
+1573635621494857729 2022-09-24 11:29:03 +0000 &lt;gerindrajatim_&gt; Selamat Hari Tani Nasional 2022. Kami Partai Gerindra Jawa Timur selalu ada dibelakang para petani, sebab partai ini lahir dari perjuangan dan semangat mereka semua.  #Gerindra #Prabowo #AnwarSadad #PolitisiSantri #GerindraJatim #PrabowoPresiden #GerindraMenang  #HariTaniNasional  https://t.co/Hp368hHc81
+1573635366287908864 2022-09-24 11:28:02 +0000 &lt;jpnncom&gt; Prabowo Subianto mengaku sejak dahulu dekat dengan dunia pesantren. Begini ceritanya. #Prabowo  https://t.co/D6mDREkgwD
+1573602040869265411 2022-09-24 09:15:37 +0000 &lt;google_foto&gt; #Prabowo Kunjungi Ponpes Tegalrejo Magelang - Okezone #foto #fotogoogle  https://t.co/pfUwEoAUet
+1573601341548933121 2022-09-24 09:12:50 +0000 &lt;sinarjabar_com&gt; Hadiri Muktamar, Ini Harapan Menhan Prabowo kepada Persis ⬇️  https://t.co/9wgs8zZzHs  #sinarjabar #sinarjabardotcom #faktual #kritis #infojabar #jabar #jawabarat #beritajabar #news #muktamar #menhan #prabowo #persis   @prabowo @Kemhan_RI
+1573590745964953601 2022-09-24 08:30:44 +0000 &lt;papandu08&gt; PRABOWO TIDAK INGIN ORANG DEKATNYA BERBISNIS DI KEMENTERIANNYA.  Sumber: Facebook Naniek S Deyang #prabowo #prabowosubianto #prabowopresiden #prabowo2024  https://t.co/elPMwDq84z
+1573586578613555200 2022-09-24 08:14:10 +0000 &lt;OptikaId&gt; Komentari Dewan Kolonel Vs Dewan Kopral, Ferdinand: Mending Prabowo-Ganjar Aja Deh  #DewanKolonel #DewanKopral #FerdinandHutahaean #Prabowo #GanjarPranowo  https://t.co/ktYO4VufcO
+1573527705965895680 2022-09-24 04:20:14 +0000 &lt;nahdiyinbersatu&gt; &quot;Ada sembilan kiai sepuh yang memberikan masukan-masukan dan doa kepada Pak Prabowo dan Gus Muhaimin, agar senantiasa diberikan kelancaran, keselamatan dalam menghadapi tantangan ke depan yang berat,” Gus Yusuf  #santri #kiai #pesantren #nahdliyyin #gusmuhaimin #prabowo #gnb  https://t.co/RE9JLXi30G
+1573527546146459648 2022-09-24 04:19:36 +0000 &lt;detikcom&gt; #Thread Ada gerakan bawah tanah dari sejumlah kader Partai Gerindra dan PDI Perjuangan untuk menduetkan Prabowo-Jokowi pada Pilpres 2024. Prabowo disebut setuju atas usulan ini.   Simak ulasan lengkapnya dalam utas #detikx berikut 👇  #pilpres2024 #Prabowo #Jokowi  https://t.co/LLlUYgis7a
+1573519450103750657 2022-09-24 03:47:26 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
+1573503105903181824 2022-09-24 02:42:29 +0000 &lt;BadungGerindra&gt; GERINDRA KOMPAK.. GERINDRA BERSATU.. GERINDRA BERANI.. GERINDRA GEMBIRA..  GAGAH.. BERANI.. SUMRINGAH..  Pesan Pak Prabowo Untuk Kita Semua.😍❤️  Sumber : dpdgerindrabali  #infogerindra #Infoberita #gerindra #gerindrabali #prabowo #prabowosubianto #prabowopresiden #ahmadmuzani  https://t.co/84Hkzz9sNO
+1573482048865521664 2022-09-24 01:18:48 +0000 &lt;yantanu08&gt; @Fahrihamzah Banyak putra bangsa non jawa yg hebat yg justru jauh lbh pintar dan bermoral.  #prabowo (manado) #ahok (Babel) #puan (Palembang) #ridwankamil (sunda) #fahrihamzah (NTB)   Mereka semua adalah PINTU MASUK agar Indonesia terbebas dari sikap primordial java Centris.
+1573477913336643584 2022-09-24 01:02:23 +0000 &lt;Kemhan_RI&gt; “Kemampuan di dalam operasi untuk sustain dirinya dan melaksanakan pembinaan teritorial itu penting,” ujar Menhan Prabowo.  #Kemhan #KemhanRI #Prabowo #PrabowoSubianto #MenhanPrabowo #TNIAD #PertahananTeritorial  https://t.co/xpBrurinFY
+1573363273331867649 2022-09-23 17:26:50 +0000 &lt;infopkbjogja&gt;  https://t.co/XtGUKb4gng #GusMuhaimin #prabowo
+1573338252618043392 2022-09-23 15:47:25 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
+1573330869229608963 2022-09-23 15:18:04 +0000 &lt;YellowdailyN_&gt; Terliht mesra😎 #airlanggahartarto #prabowo #golkarindonesia #Russia #capreskuat #presiden  https://t.co/ORQOVzbPpN
+1573328621523308544 2022-09-23 15:09:09 +0000 &lt;Zuli99346615&gt; Ready bibit alpukat pluang, red Vietnam ,Miki ,aligator minat wa 082199732138  #gibran #rezaarab #jokowi #sby #prabowo #erickthohir #bambangsoesatyo #PuanMaharani  #megawati #bansos #csr #penghijauan #sejutapohon #hotmanparis  https://t.co/E440If1E55
+1573256454668156930 2022-09-23 10:22:23 +0000 &lt;HeraldSulsel&gt; DPP Golkar Sebut Hubungan Prabowo dan Airlangga Harmonis, Sinyal Pasangan? #airlangga #prabowo  https://t.co/btPxLP18MM
+1573245959533903872 2022-09-23 09:40:40 +0000 &lt;heraldindo&gt; &#39;Mesra&#39; di Istana, DPP Golkar Sebut Hubungan Airlangga dan Prabowo Harmonis. #airlangga #prabowo #golkar  https://t.co/4CjCWfsnDP
+1573227470345883648 2022-09-23 08:27:12 +0000 &lt;BangQodier&gt; @OposisiCerdas #2024PRESIDENBARU #PRABOWO NO #ANIS YES
+1573189339726905344 2022-09-23 05:55:41 +0000 &lt;papandu08&gt; Prabowo diajarkan demokrasi oleh Ayahnya sejak dari kecil #prabowo #prabowosubianto #gerindra #relawanprabowo  https://t.co/8Y0948El82
+1573179099673026560 2022-09-23 05:15:00 +0000 &lt;poskotaofficial&gt; Wakil Ketua Umum Partai Gerindra Fadli Zon girang mendengar kabar bahwa Jokowi dukung Prabowo di Pilpres 2024 mendatang #Pilpres2024 #Jokowi #Prabowo   https://t.co/WQ1RFVhVCB
+1573176644625637376 2022-09-23 05:05:14 +0000 &lt;kuningemass&gt; Kalo Airlangga-Prabowo duet di 2024, gimana menurut kalian?   #airlanggahartarto #capres2024 #prabowo #golkarindonesia #gerindra tasyi Wanita Emas  https://t.co/ars9v8xwgW
+1573149521110241280 2022-09-23 03:17:28 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
+1573128813579358208 2022-09-23 01:55:11 +0000 &lt;moreshare&gt; Gak Ada Akhlak! Rating #Prabowo Turun, #Gerindra Salahkan Baliho Yang Tidak Berdosa  https://t.co/CQfe06nMsJ #moreshareforum #beritaterkini
+1573125069941133313 2022-09-23 01:40:18 +0000 &lt;PrasetyoHadi28&gt; Pelantikan &amp;amp; Konsolidasi Pengurus Dewan Pimpinan Cabang (DPC) Partai @Gerindra Kabupaten Cianjur  #prabowo #prabowosubianto #prabowopresiden #gerindramenang #gerindra #gerindratemanrakyat #kadergerindra #gerindracianjur #indonesiaraya #prasetyohadi #ketuaokkgerindra #anggotadprri  https://t.co/CDS6BInxOk
+1572961404239622146 2022-09-22 14:49:57 +0000 &lt;inewsdotid&gt; Momen Menhan Berdialog dengan Mahasiswa Unhan  #Prabowo #PrabowoSubianto #MenhanPrabowo #PSJanganMenyerah #PrabowoPalingLayak #Unhan #Kemhan  https://t.co/ldfHsAsEJz
+1572960765455527936 2022-09-22 14:47:25 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
+1572946077443301383 2022-09-22 13:49:03 +0000 &lt;inewsdotid&gt; Momen Menhan Berdialog dengan Mahasiswa Unhan  #Prabowo #PrabowoSubianto #MenhanPrabowo #PSJanganMenyerah #PrabowoPalingLayak #Unhan #Kemhan  https://t.co/hscpPHBwH1
+1572914941933522944 2022-09-22 11:45:20 +0000 &lt;holopiscom&gt; Wakil Ketua Umum DPP Partai Gerindra Fadli Zon menilai positif sinyal dukungan Presiden Joko Widodo kepada Ketum Gerindra Prabowo Subianto, sebagai calon presiden 2024. @fadlizon  #FadliZon  #Prabowo  #Jokowi   https://t.co/gchHkgPrrY
+1572909256869048324 2022-09-22 11:22:44 +0000 &lt;updatetempo&gt; Wakil Ketua Dewan Pembina Gerindra Desmond J Mahesa mengungkapkan, Presiden Joko Widodo mengendorse sejumlah tokoh untuk Pilpres 2024.   #bicarapolitik #politikindonesia #politik #infopolitik #tempoupdate #gerindra #prabowo  https://t.co/JFkGIVR15n
+1572900370208399360 2022-09-22 10:47:25 +0000 &lt;GanjarKu_&gt; TANCAP GAS, GANJAR TIDAK GOYAH  SUMBER: CHARTA POLITIKA INDONESIA #ganjarpranowo #GanjarKu #AniesBaswedan #Prabowo #Ahy  Dewan Jenderal Citilink #ONEPIECEFILMRED Selingkuh Reza Arap Kamis Data Valid Tulus Utamakan Rakyat  https://t.co/Cuz6Q9rqsb
+1572876047200026624 2022-09-22 09:10:46 +0000 &lt;dpwprimapapua&gt; Sepakat Bung Ketum! #Jokowi #PuanMaharani #Prabowo #AirlanggaHartarto #AniesBaswedan #AHYPemimpinPerubahan #GanjarPranowo
+1572837346130927618 2022-09-22 06:36:59 +0000 &lt;Solihin08082202&gt; #Deklarasi #Prabowo #Capres2024 Dinilai Bentuk #Dukungan #Jokowi  https://t.co/mTy7eS8ysa  https://t.co/DxaBlKTQwM
+1572829240273534982 2022-09-22 06:04:47 +0000 &lt;GerindraLPG_&gt; Kunjungan Dinas Perpustakaan dan Kearsipan Ke Partai Gerindra Lampung.  #gerindra #gerindralampung #asronipaslah #rahmatmirzanidjausal #prabowo #prabowosubianto  https://t.co/SB4PTHndW8
+1572822485229539329 2022-09-22 05:37:56 +0000 &lt;matakepri_&gt; prabowo jokowi capres 2024?? #matakepri  #berita #prabowo  #jokowi  #capres2024  #aceh  #beritaterkini  #beritaviral   kamis tasyi cakep banget reza arap citilink dewan jenderal selingkuh tulus utamakan rakyat infinite data valid  #MencuriRadenSaleh #bpip #THELINKTourManila  https://t.co/v9rbC2muKx
+1572817670952882176 2022-09-22 05:18:48 +0000 &lt;DpcTanjabbar&gt; Mengenai pertemuan dengan Prabowo Subianto, ini kata Gus Muhaimin (14/10/19).  #gusmuhaimin #muhaiminiskandar #cakimin #prabowo #prabowosubianto #pkb #gerindra  https://t.co/d83Uszvu34
+1572795757509242880 2022-09-22 03:51:44 +0000 &lt;papandu08&gt; Bagaimana juga orang tua ingin melihat anaknya sukses dan lebih baik darinya. #ayah #ibu #TNI #prabowo #prabowosubianto  https://t.co/Q3pDtdkWtu
+1572782126092947456 2022-09-22 02:57:34 +0000 &lt;Terarte623&gt; Duo wonderwoman.. perempuan tangguh.. #najwashihab #susipudjiastuti #wonderwoman #ArtistOnTwitter #jasalukis #seni #seniman #MataNajwa #bususi #oposisi #petahana #jokowi #prabowo #Indonesia  https://t.co/ayGLFx4tXp
+1572781870601089024 2022-09-22 02:56:33 +0000 &lt;Terarte623&gt; Duo wonderwoman.. perempuan tangguh.. #najwashihab #susipudjiastuti #wonderwoman #ArtistOnTwitter #jasalukis #seni #seniman #MataNajwa #bususi #oposisi #petahana #jokowi #prabowo #Indonesia  https://t.co/znghH1lxDO
+1572779569828204545 2022-09-22 02:47:24 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
+1572767759842541568 2022-09-22 02:00:29 +0000 &lt;MNCNewsroom&gt; Momen Menhan Berdialog dengan Mahasiswa Unhan  #Prabowo #PrabowoSubianto #MenhanPrabowo #PSJanganMenyerah #PrabowoPalingLayak #Unhan #Kemhan  https://t.co/6yzAGro90R
+1572747020645052416 2022-09-22 00:38:04 +0000 &lt;jpnncom&gt; Pesiden Jokowi mengindari politik praktis, seperti mendukung sosok tertentu pada Pilpres 2024, setelah diberitakan bakal mendukung Menhan Prabowo Subianto. #Prabowo  https://t.co/0x0bLZzGjd
+1572715807729389569 2022-09-21 22:34:02 +0000 &lt;jpnncom&gt; Denny Darko meramal kemungkinan Prabowo dan Jokowi berpasangan sebagai calon presiden dan calon wakil presiden pada Pilpres 2024. #Prabowo  https://t.co/o5pcA9Emup
+1572664960857284610 2022-09-21 19:12:00 +0000 &lt;kerjabersama_AH&gt; Tanda-tanda bunga asmara  #presiden2024 #prabowo #airlanggahartarto  https://t.co/nYodTZNHWj
+1572601540015427587 2022-09-21 14:59:59 +0000 &lt;presidenkami24&gt; Dua menteri dan ketum parpol ini bertemu secara empat mata, membahas sejumlah persoalan di dalam negeri maupun global. #airlanggahartarto #capres2024 #koalisiindonesiabersatu #golkar #prabowo @airlangga_hrt @golkar_id  https://t.co/96n7R6TdcB
+1572590849841844226 2022-09-21 14:17:30 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
+1572580694353911814 2022-09-21 13:37:09 +0000 &lt;MilenialSamaAH&gt; Prabowo Subianto dan Airlangga Hartarto bertemu empat mata. Kira-kira bahas apa aja ya?  #airlanggahartarto #fyp #foryou #prabowo #golkar #ONEPIECE #Russia  https://t.co/mxa8Mf0v8S
+1572573280271503360 2022-09-21 13:07:41 +0000 &lt;NicoAs_cahkalem&gt; Wanita Colombia ytta🤓  https://t.co/YzuJstWTpD  #VideoViral #Trending #bjorka #prabowo  https://t.co/DYnwFFfVa8
+1572557756288335873 2022-09-21 12:06:00 +0000 &lt;MenujuIndJaya&gt; Dua sahabat sedang mencari solusi atas segala kompleksitas permasalahan domestik dan global yang berdampak pada Indonesia.  #prabowo #menhan #menteripertahanan #mentripertahanan #gerindra #AirlanggaHartarto #PartaiGolkar #GolkarIndonesia #Golkar2024 #GolkarMenang  https://t.co/nLM3y5MDip
+1572530282443714562 2022-09-21 10:16:50 +0000 &lt;AirlanggaUmkm&gt; Menteri Koordinator Bidang Perekonomian Airlangga Hartarto, menerima kunjungan Menteri Pertahanan Prabowo Subianto. @airlangga_hrt @golkar_id @Golkar2024  #airlanggahartarto #partaigolkar  #golkarindonesia #prabowo #gerindra  https://t.co/JQQKJAMSh4
+1572529051025428480 2022-09-21 10:11:56 +0000 &lt;AirlanggaUpdate&gt; Pertemuan Menko Airlangga dan Menteri Pertahanan Prabowk membahas beberapa persoalan penting dalam negeri maupun global. #menteri #prabowo #airlanggahartarto #persahabatan #indonesia @airlangga_hrt  https://t.co/VcGFtNpj2k
+1572518165158178817 2022-09-21 09:28:41 +0000 &lt;OpsiMedia&gt; Ferdinand Bikin Polling Capres di Twitter, Anies Baswedan yang Menang.#ferdinandhutahaean #capresmumpuni #PemiluSerentak2024 #Anies #GanjarPranowo #prabowo #opsimediatv   https://t.co/4XpySltknN
+1572515731694292993 2022-09-21 09:19:01 +0000 &lt;CapresGolkar&gt; Hadapi Dinamika Geopolitik Dunia, Menko Airlangga dan Menhan Prabowo Formulasikan Kebijakan yang Mampu Meningkatkan Ketahanan Bangsa.  #airlanggahartarto #golkar #prabowo #capres2024 #indonesiamaju  https://t.co/fGLoDJOdNE
+1572495367073337345 2022-09-21 07:58:05 +0000 &lt;mnctrijaya&gt; Momen Menhan Berdialog dengan Mahasiswa Unhan  #Prabowo #PrabowoSubianto #MenhanPrabowo #PSJanganMenyerah #PrabowoPalingLayak #Unhan #Kemhan  https://t.co/HeDNpkqBw8
+1572495217961607169 2022-09-21 07:57:30 +0000 &lt;rdi971&gt; Momen Menhan Berdialog dengan Mahasiswa Unhan  #Prabowo #PrabowoSubianto #MenhanPrabowo #PSJanganMenyerah #PrabowoPalingLayak #Unhan #Kemhan  https://t.co/Hyc5dt9uEd
+1572473197940723712 2022-09-21 06:30:00 +0000 &lt;poskotaofficial&gt; Menko Airlangga terima Menhan Prabowo, guna bahas kemandirian ekonomi dan ketahanan nasional serta dinamika geopolitik dunia. #airlanggahartarto #prabowo  https://t.co/Io1nG84No7
+1572466906879217664 2022-09-21 06:05:00 +0000 &lt;okezonenews&gt; Momen Menhan Berdialog dengan Mahasiswa Unhan  #Prabowo #PrabowoSubianto #MenhanPrabowo #PSJanganMenyerah #PrabowoPalingLayak #Unhan #Kemhan  https://t.co/JRBn4iY9P2
+1572464537491894275 2022-09-21 05:55:35 +0000 &lt;MNCupdate&gt; Momen Menhan Berdialog dengan Mahasiswa Unhan  #Prabowo #PrabowoSubianto #MenhanPrabowo #PSJanganMenyerah #PrabowoPalingLayak #Unhan #Kemhan  https://t.co/Q4ufF465Ug
+1572456533971308544 2022-09-21 05:23:47 +0000 &lt;SeputariNews&gt; Momen Menhan Berdialog dengan Mahasiswa Unhan  #Prabowo #PrabowoSubianto #MenhanPrabowo #PSJanganMenyerah #PrabowoPalingLayak #Unhan #Kemhan  https://t.co/NwuomC1dAI
+1572456472340201476 2022-09-21 05:23:32 +0000 &lt;Lintas_MNCTV&gt; Momen Menhan Berdialog dengan Mahasiswa Unhan  #Prabowo #PrabowoSubianto #MenhanPrabowo #PSJanganMenyerah #PrabowoPalingLayak #Unhan #Kemhan  https://t.co/17VGwHoh6c
+1572456414085521408 2022-09-21 05:23:18 +0000 &lt;GTVID_News&gt; Momen Menhan Berdialog dengan Mahasiswa Unhan  #Prabowo #PrabowoSubianto #MenhanPrabowo #PSJanganMenyerah #PrabowoPalingLayak #Unhan #Kemhan  https://t.co/KKwKAL3R0J
+1572456320804200448 2022-09-21 05:22:56 +0000 &lt;OfficialiNewsTV&gt; Momen Menhan Berdialog dengan Mahasiswa Unhan  #Prabowo #PrabowoSubianto #MenhanPrabowo #PSJanganMenyerah #PrabowoPalingLayak #Unhan #Kemhan  https://t.co/o003YdnhfY
+1572448085795807232 2022-09-21 04:50:12 +0000 &lt;SINDOnews&gt; Momen Menhan Berdialog dengan Mahasiswa Unhan  #Prabowo #PrabowoSubianto #MenhanPrabowo #PSJanganMenyerah #PrabowoPalingLayak #Unhan #Kemhan  https://t.co/2D4UvNh314
+1572435840294617090 2022-09-21 04:01:33 +0000 &lt;DpdKalbar&gt; Kantor DPD GERINDRA Provinsi Kalimantan Barat. #gerindra #gerindrkalbar #prabowo #Pontianak #kalbar #informasi  https://t.co/AyMBoHE7yo
+1572416796183121924 2022-09-21 02:45:52 +0000 &lt;inilahbdgcom&gt; Wawancarai Mahasiswi Anak Tukang Bakso, Prabowo Subianto: Hebat Bapakmu Pahlawannya...  https://t.co/pNGHJ37XSg   #inilahbandung #prabowo #mahasiswi #pahlawan
+1572412605729501184 2022-09-21 02:29:13 +0000 &lt;Suluhmerdekaa&gt; Menhan Wawancara Mahasiswi Unhan, Prabowo Subianto : Bapakmu Tukang Bakso, Hebat! #prabowo #prabowosubianto #menhanri #bakso #suluhmerdeka  https://t.co/8H5PkGgElC
+1572408123641700353 2022-09-21 02:11:25 +0000 &lt;heraldindo&gt; Media asal Singapura menyebut Presiden Joko Widodo yang mengendorse Prabowo Subianto untuk maju pada Pemilihan Presiden (Pilpres) 2024.  Tapi Gerindra ternyata tak mau geer. #prabowo #jokowi    https://t.co/biI5d15Gcx
+1572402084632465409 2022-09-21 01:47:25 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
+1572399381692940290 2022-09-21 01:36:41 +0000 &lt;officialntv_&gt; Prabowo Posting Foto Ibunya  Ketemu Ratu Elizabeth II   https://t.co/emTSXlPpFj  #news #beritaterkini #Prabowo #QueenElizabeth
+1572387186330472448 2022-09-21 00:48:13 +0000 &lt;Kemhan_RI&gt; Seluruh mahasiswa Unhan yang dibina oleh Kementerian Pertahanan mendapatkan gratis biaya kuliah mulai dari biaya pendaftaran, biaya semester, hingga biaya hidup seperti tempat tinggal asrama dan makan.  #Kemhan #KemhanRI #Prabowo #PrabowoSubianto #MenhanPrabowo #UnhanRI #Unhan
+1572375137093308416 2022-09-21 00:00:20 +0000 &lt;VIVAcoid&gt; Wakil Ketua Dewan Pembina Partai Gerindra Sandiaga Uno merespons secara santai desakan sebagian kalangan kepadanya agar dia mengundurkan diri dari partai itu menyusul keputusannya maju sebagai calon presiden.  https://t.co/UozYKPD5sz  __ #vivacoid #sandiagauno #prabowo #gerindra  https://t.co/EFKzQLVJty
+1572220889634340864 2022-09-20 13:47:25 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
+1572216917825572867 2022-09-20 13:31:38 +0000 &lt;Penjelajah01&gt; Obrolan zuperrr ..😂  #jokowi #prabowo #bersatu #anies #gembel  #Zeemangat  https://t.co/xyODovyZ22
+1572178763512791042 2022-09-20 11:00:01 +0000 &lt;RADARSOLO_&gt; Menteri Koordinator Bidang Perekonomian Airlangga Hartarto menerima kunjungan dari Menteri Pertahanan Republik Indonesia Prabowo Subianto #prabowo #airlanggahartarto  @airlangga_hrt   https://t.co/M52h4vaTm6
+1572149770038431744 2022-09-20 09:04:48 +0000 &lt;kuningemass&gt; &quot;Saya menyambut baik kunjungan dari sahabat Saya, Bapak Prabowo Subianto, untuk membahas berbagai isu penting dan strategis di tingkat global yang berdampak pada kehidupan bangsa Indonesia,&quot; ujar Airlangga Hartarto.  #airlanggahartarto #capres2024 #prabowo #teman #sahabat  https://t.co/eLua5YDWIL
+1572144427237507073 2022-09-20 08:43:35 +0000 &lt;TeknokratJawa&gt; Siap-siap 2024?  #AirlanggaHartarto #prabowo  https://t.co/O9g9TRJ9fL
+1572137547257741313 2022-09-20 08:16:14 +0000 &lt;theprames&gt; Kolaborasi indah dari potongan kalimat mereka.... Smoga kedepan Kemakmuran berpihak kepada rakyat bukan hanya Wakil Rakyat dan Pejabat Pilihan Rakyat.  #Indonesiaku #Jokowi #Prabowo #SBY #CakImin #Airlangga #SuryaPaloh #Megawati  https://t.co/cbrb6jFwtX
+1572100379801976832 2022-09-20 05:48:33 +0000 &lt;SeputariNews&gt; namun Prabowo adalah sosok yang paling ikhlas kepada rakyat.  #Prabowo #PrabowoSubianto #PrabowoPalingLayak #GusDur #AbdurrahmanWahid
+1572095696094007297 2022-09-20 05:29:56 +0000 &lt;Lintas_MNCTV&gt; namun Prabowo adalah sosok yang paling ikhlas kepada rakyat.  #Prabowo #PrabowoSubianto #PrabowoPalingLayak #GusDur #AbdurrahmanWahid
+1572094982315737090 2022-09-20 05:27:06 +0000 &lt;OfficialiNewsTV&gt; namun Prabowo adalah sosok yang paling ikhlas kepada rakyat.  #Prabowo #PrabowoSubianto #PrabowoPalingLayak #GusDur #AbdurrahmanWahid
+1572094443880345600 2022-09-20 05:24:58 +0000 &lt;GTVID_News&gt; namun Prabowo adalah sosok yang paling ikhlas kepada rakyat.  #Prabowo #PrabowoSubianto #PrabowoPalingLayak #GusDur #AbdurrahmanWahid
+1572091084024713216 2022-09-20 05:11:37 +0000 &lt;papandu08&gt; Moment sigap Prabowo saat dampingi Jokowi banyak tuai pujian #prabowo #jokowi #gerindra #politik #indonesia  https://t.co/VAErX941jL
+1572090189518082048 2022-09-20 05:08:03 +0000 &lt;jpnncom&gt; Menhan Prabowo Subianto dan Menko Airlangga Hartarto membicarakan ini saat pertemuan empat mata di kantor kemenko Perekonomian, Senin (19/9). #Prabowo  https://t.co/05Cyr5T6Bo
+1572084889700413441 2022-09-20 04:47:00 +0000 &lt;Kemhan_RI&gt; “Kedua negara harus mampu meningkatkan persamaan dan mengurangi perbedaan” ujar Menhan Prabowo.  #Kemhan #KemhanRI #Prabowo #PrabowoSubianto #MenhanPrabowo  https://t.co/Hd8OBS3ScP
+1572084815800958977 2022-09-20 04:46:42 +0000 &lt;tvrinewscom&gt; Menhan Prabowo Harap Kerja Sama Pertahanan Indonesia-Spanyol Semakin Kuat  https://t.co/sV1UdQqx5W  #menhan #prabowo #indonesia #kerjasama
+1572084132389462017 2022-09-20 04:43:59 +0000 &lt;MNCNewsroom&gt; Video Prabowo Setia di Sisi Jokowi Viral, Tuai Pujian Warganet: Benar Kata Pak Gus Dur  #Prabowo #PrabowoSubianto #Jokowi #JokoWidodo #PSJanganLupaGembira  https://t.co/bFWSiQGaig
+1572080094986014721 2022-09-20 04:27:57 +0000 &lt;gerindrajatim_&gt; “Kita ingat awal 2021 elektabilitas Gerindra di Jatim itu di angka 10%. Perlahan naik angkanya saat dipimpin @ansadad , hampir menyentuh 14%,” ungkap Baihaki, Direktur ARCI  #Gerindra #GerindraJatim #Prabowo #PrabowoPresiden #AnwarSadad   https://t.co/87HMz3wREt
+1572039694078316546 2022-09-20 01:47:24 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
+1572028616564944896 2022-09-20 01:03:23 +0000 &lt;kxdftj1&gt; @panca66 Semoga pak #PRABOWO  legowo bergabung dengan orang2 baik ini krn elektabilitasx rendah.dan lebih terhormat menjadi bapak bangsa menyelamatkan negri dri oligarki...
+1572028265224900608 2022-09-20 01:01:59 +0000 &lt;Kemhan_RI&gt; Tim tersebut terdiri dari dosen-dosen Fakultas MIPA dan Teknik Militer. Program riset ini merupakan bagian dari wujud pengabdian Unhan RI kepada masyarakat.  #Kemhan #KemhanRI #Prabowo #MenhanPrabowo #Prabowo #PrabowoSubianto #UnhanRI #Unhan #KrisisAir #NTB  https://t.co/ZDJMIOGL9G
+1572021184610603008 2022-09-20 00:33:51 +0000 &lt;dpcgerindracms&gt; Selamat pagi para pejuang,selamat beraktifitas. Salam indonesia raya !   #Gerindra #Prabowo #kab_ciamis
+1572003102785671169 2022-09-19 23:22:00 +0000 &lt;fajaronline&gt; Pastikan Tidak Ada Skenario Prabowo-Jokowi, Kader Gerindra: Bisa Ruwet Bila Diteruskan  https://t.co/ppwLi1iMd5 #JokowiJadiCawapres #PartaiGerindra #PrabowoSubianto #prabowo-jokowi
+1571891261501743105 2022-09-19 15:57:35 +0000 &lt;milenialambon&gt; Bissmillah.  @cakimiNOW @prabowo @DPP_PKB @Gerindra  #gusmuhaimin #prabowo #pkbmilenial  https://t.co/I2mPCQuAzk
+1571858499851923456 2022-09-19 13:47:24 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
+1571838611527733249 2022-09-19 12:28:22 +0000 &lt;Setiawa20386657&gt; Tua yang bagus mendekat kepada kemerdekaan. Tua yang jelek artinya mendekat kepada kematian.   #sby #jokowi #prabowo #trending
+1571815123806986241 2022-09-19 10:55:03 +0000 &lt;SINDOnews&gt; Video Prabowo Setia di Sisi Jokowi Viral, Tuai Pujian Warganet: Benar Kata Pak Gus Dur  #Prabowo #PrabowoSubianto #Jokowi #JokoWidodo #PSJanganLupaGembira  https://t.co/uzcl2RKG4I
+1571813601748434944 2022-09-19 10:49:00 +0000 &lt;yosiesimaa&gt; Menhan #prabowo menegaskan bahwasanya pertahanan teritorial Indonesia harus lebih diperkuat  #PrabowoPerkuatPertahanan  https://t.co/3rb8TjLMda
+1571806112286134273 2022-09-19 10:19:14 +0000 &lt;dpcgerindracms&gt; Ingatlah ! para pemuda kau lah sebagai penerus mempertahankan bangsa. #gerindra #prabowo  https://t.co/8lSQq69vvN
+1571786722639486976 2022-09-19 09:02:11 +0000 &lt;HumassRI&gt; Presiden RI Joko Widodo menekankan pentingnya desain pertahanan dan keamanan negara di titik-titik terluar Negara Kesatuan Republik Indonesia.  Selengkapnya Kunjungi Artikel Dibawah Ini. 👇   https://t.co/cFqUPwodmc  #presidenjokowi #jokowi #menhan #prabowo #indonesia #humassri  https://t.co/7bIL8ubu9p
+1571785766329778176 2022-09-19 08:58:23 +0000 &lt;GerindraLPG_&gt; Pak Prabowo : Saya Siap Berjuang Untuk Bangsa, Negara dan Rakyat Indonesia Tercinta. Seluruh Jiwa Raga Akan Saya Persembahkan Untuk Ibu Pertiwi.  #gerindra #gerindralampung #prabowo #prabowopresidengerindramenang #gusdur  https://t.co/WfPQYH4ApE
+1571784140143591426 2022-09-19 08:51:56 +0000 &lt;stradafish&gt; Ramalan tentang Presiden RI #2024SingkirkanPDIP #ferdysambo  Persugihan Natalie Niki CCTV #Jokowi #prabowo #megawati  https://t.co/HlAAfGGv8X
 [!] No more data! Scraping will stop now.
 found 0 deleted tweets in this search.
 </pre></div>
@@ -594,16 +670,17 @@ found 0 deleted tweets in this search.
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Tweets_df</span> <span class="o">=</span> <span class="n">twint</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">panda</span><span class="o">.</span><span class="n">Tweets_df</span>
-<span class="n">Tweets_df</span><span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;prabowo.csv&quot;</span><span class="p">)</span>
+<span class="n">Tweets_df</span><span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;prabowo.csv&quot;</span><span class="p">)</span> <span class="c1">#menyimpan ke prabowo.csv</span>
 </pre></div>
 </div>
 </div>
 </div>
 <p>#Preposesing</p>
+<p>Preprocessing adalah tahap untuk “membersihkan data”. data - data tersebut dibersihkan sehingga menjadi data yang bagus untuk diolah.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>%%capture
-!pip install numpy
+!pip install numpy #untuk install numpy
 </pre></div>
 </div>
 </div>
@@ -611,7 +688,7 @@ found 0 deleted tweets in this search.
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>%%capture
-!pip install pandas
+!pip install pandas #untuk install pandas
 </pre></div>
 </div>
 </div>
@@ -619,7 +696,7 @@ found 0 deleted tweets in this search.
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>%%capture
-!pip install nltk
+!pip install nltk #untuk install nltk
 </pre></div>
 </div>
 </div>
@@ -627,14 +704,14 @@ found 0 deleted tweets in this search.
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>%%capture
-!pip install scikit-learn
+!pip install scikit-learn #untuk install scikit-learn
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> <span class="c1">#import numpy</span>
 <span class="c1">#Library untuk mengelola data dalam Dataframe</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
@@ -661,15 +738,15 @@ found 0 deleted tweets in this search.
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Tweets_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/maulidhan190081/file/main/prabowo2.csv&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Tweets_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/maulidhan190081/file/main/prabowo2.csv&quot;</span><span class="p">)</span> <span class="c1">#mengambil data dari link</span>
 
-<span class="n">Tweets_df</span>
+<span class="n">Tweets_df</span> <span class="c1">#print data</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-aabe55c3-4dd4-47b5-9f08-07f6e5009d86">
+  <div id="df-8f888fb3-34fe-4933-93ff-c9a40b7ccf9c">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -753,7 +830,7 @@ found 0 deleted tweets in this search.
 </table>
 <p>101 rows × 2 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-aabe55c3-4dd4-47b5-9f08-07f6e5009d86')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-8f888fb3-34fe-4933-93ff-c9a40b7ccf9c')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -804,12 +881,12 @@ found 0 deleted tweets in this search.
 
       <script>
         const buttonEl =
-          document.querySelector('#df-aabe55c3-4dd4-47b5-9f08-07f6e5009d86 button.colab-df-convert');
+          document.querySelector('#df-8f888fb3-34fe-4933-93ff-c9a40b7ccf9c button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-aabe55c3-4dd4-47b5-9f08-07f6e5009d86');
+          const element = document.querySelector('#df-8f888fb3-34fe-4933-93ff-c9a40b7ccf9c');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -830,11 +907,13 @@ found 0 deleted tweets in this search.
   </div>
 </div></div>
 </div>
+<section id="mengecilkan-semua-huruf">
+<h2>Mengecilkan Semua Huruf<a class="headerlink" href="#mengecilkan-semua-huruf" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
-<span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
-<span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="c1">#menghilangkan koma</span>
+<span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="c1">#mengecilkan huruf</span>
+<span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span> <span class="c1">#print data kolom tweet</span>
 </pre></div>
 </div>
 </div>
@@ -862,8 +941,16 @@ Name: tweet, Length: 101, dtype: object
 
 <span class="c1">#Untuk menghilangkan Punctuation</span>
 <span class="kn">import</span> <span class="nn">string</span>
-
-<span class="k">def</span> <span class="nf">remove_PTA_special</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="menghilangkan-karakter-spesial">
+<h2>Menghilangkan karakter spesial<a class="headerlink" href="#menghilangkan-karakter-spesial" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">remove_PTA_special</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
     <span class="c1"># remove tab, new line, ans back slice</span>
     <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">t&#39;</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">n&#39;</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">u&#39;</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&#39;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
     <span class="c1"># remove non ASCII (emoticon, chinese word, .etc)</span>
@@ -874,38 +961,86 @@ Name: tweet, Length: 101, dtype: object
     <span class="k">return</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;http://&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;https://&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span>
                 
 <span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span> <span class="o">=</span><span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_PTA_special</span><span class="p">)</span>
-
-<span class="c1">#remove number</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="menghilangkan-angka">
+<h2>Menghilangkan Angka<a class="headerlink" href="#menghilangkan-angka" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#remove number</span>
 <span class="k">def</span> <span class="nf">remove_number</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
     <span class="k">return</span>  <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\d+&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
 
 <span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_number</span><span class="p">)</span>
-
-<span class="c1">#remove punctuation</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="menghilangkan-tanda-baca">
+<h2>Menghilangkan Tanda Baca<a class="headerlink" href="#menghilangkan-tanda-baca" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#remove punctuation</span>
 <span class="k">def</span> <span class="nf">remove_punctuation</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">text</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">maketrans</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="n">string</span><span class="o">.</span><span class="n">punctuation</span><span class="p">))</span>
 
 <span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_punctuation</span><span class="p">)</span>
-
-<span class="c1">#remove whitespace leading &amp; trailing</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="menghilangkan-spasi-di-awal-dan-akhir">
+<h2>Menghilangkan Spasi Di Awal dan Akhir<a class="headerlink" href="#menghilangkan-spasi-di-awal-dan-akhir" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#remove whitespace leading &amp; trailing</span>
 <span class="k">def</span> <span class="nf">remove_whitespace_LT</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
 
 <span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_whitespace_LT</span><span class="p">)</span>
-
-<span class="c1">#remove multiple whitespace into single whitespace</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="menjadikan-1-spasi">
+<h2>Menjadikan 1 spasi<a class="headerlink" href="#menjadikan-1-spasi" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#remove multiple whitespace into single whitespace</span>
 <span class="k">def</span> <span class="nf">remove_whitespace_multiple</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="n">text</span><span class="p">)</span>
 
 <span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_whitespace_multiple</span><span class="p">)</span>
-
-<span class="c1"># remove single char</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="menghapus-char">
+<h2>Menghapus Char<a class="headerlink" href="#menghapus-char" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># remove single char</span>
 <span class="k">def</span> <span class="nf">remove_singl_char</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\b[a-zA-Z]\b&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
 
 <span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Tweets_df</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_singl_char</span><span class="p">)</span>
-
-<span class="c1"># NLTK word tokenize </span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="word-tokenize">
+<h2>Word Tokenize<a class="headerlink" href="#word-tokenize" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NLTK word tokenize </span>
 <span class="k">def</span> <span class="nf">word_tokenize_wrapper</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">word_tokenize</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
 
@@ -914,23 +1049,10 @@ Name: tweet, Length: 101, dtype: object
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      [doa, para, kiai, sepuh, untuk, cak, imin, dan...
-1      [menteri, pertahanan, menhan, prabowo, subiant...
-2           [semangat, juang, soekarno, ada, pada, diri]
-3      [negarawan, sejati, yang, selalu, ingin, memba...
-4      [zulfan, lindan, bicara, soal, kepentingan, ne...
-                             ...                        
-96     [masyarakat, antusias, menyambut, kedatangan, ...
-97     [anies, siap, maju, di, pilpres, wagub, tak, a...
-98     [adian, napitupulu, sebut, presiden, jokowi, t...
-99     [elit, gerindra, desak, sandiaga, uno, mundur,...
-100    [buah, duku, buah, kedondong, gue, prabowo, do...
-Name: tweet, Length: 101, dtype: object
-</pre></div>
 </div>
-</div>
-</div>
+</section>
+<section id="stopwords">
+<h2>Stopwords<a class="headerlink" href="#stopwords" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;stopwords&#39;</span><span class="p">)</span>
@@ -1087,7 +1209,7 @@ Name: tweet, Length: 101, dtype: object
 </pre></div>
 </div>
 <div class="output text_html">
-  <div id="df-cddb75b8-5545-4435-ae8d-4e3d5a0fcadb">
+  <div id="df-9ab21d66-8c2b-40c8-bafe-c98654c14c52">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1399,7 +1521,7 @@ Name: tweet, Length: 101, dtype: object
 </table>
 <p>101 rows × 605 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-cddb75b8-5545-4435-ae8d-4e3d5a0fcadb')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-9ab21d66-8c2b-40c8-bafe-c98654c14c52')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1450,12 +1572,12 @@ Name: tweet, Length: 101, dtype: object
 
       <script>
         const buttonEl =
-          document.querySelector('#df-cddb75b8-5545-4435-ae8d-4e3d5a0fcadb button.colab-df-convert');
+          document.querySelector('#df-9ab21d66-8c2b-40c8-bafe-c98654c14c52 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-cddb75b8-5545-4435-ae8d-4e3d5a0fcadb');
+          const element = document.querySelector('#df-9ab21d66-8c2b-40c8-bafe-c98654c14c52');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1486,7 +1608,7 @@ Name: tweet, Length: 101, dtype: object
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-46dcf6af-e6fa-4a92-aeb1-514aaddf0b8a">
+  <div id="df-11391bb8-eba8-4296-9687-19485535f586">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1798,7 +1920,7 @@ Name: tweet, Length: 101, dtype: object
 </table>
 <p>101 rows × 607 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-46dcf6af-e6fa-4a92-aeb1-514aaddf0b8a')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-11391bb8-eba8-4296-9687-19485535f586')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1849,12 +1971,12 @@ Name: tweet, Length: 101, dtype: object
 
       <script>
         const buttonEl =
-          document.querySelector('#df-46dcf6af-e6fa-4a92-aeb1-514aaddf0b8a button.colab-df-convert');
+          document.querySelector('#df-11391bb8-eba8-4296-9687-19485535f586 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-46dcf6af-e6fa-4a92-aeb1-514aaddf0b8a');
+          const element = document.querySelector('#df-11391bb8-eba8-4296-9687-19485535f586');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1923,7 +2045,7 @@ memory usage: 479.1+ KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-31059f0b-cadf-414f-951e-ec7f4e24ae08">
+  <div id="df-881e103e-2b0c-4dd1-9458-0c012b98e276">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2235,7 +2357,7 @@ memory usage: 479.1+ KB
 </table>
 <p>70 rows × 606 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-31059f0b-cadf-414f-951e-ec7f4e24ae08')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-881e103e-2b0c-4dd1-9458-0c012b98e276')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -2286,12 +2408,12 @@ memory usage: 479.1+ KB
 
       <script>
         const buttonEl =
-          document.querySelector('#df-31059f0b-cadf-414f-951e-ec7f4e24ae08 button.colab-df-convert');
+          document.querySelector('#df-881e103e-2b0c-4dd1-9458-0c012b98e276 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-31059f0b-cadf-414f-951e-ec7f4e24ae08');
+          const element = document.querySelector('#df-881e103e-2b0c-4dd1-9458-0c012b98e276');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2322,128 +2444,158 @@ memory usage: 479.1+ KB
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.1240736 , 0.        , 0.        , 0.        , 0.        ,
-       0.11345309, 0.05368316, 0.        , 0.        , 0.        ,
-       0.        , 0.08465649, 0.04650596, 0.03766755, 0.01916022,
-       0.00732565, 0.00957949, 0.        , 0.02603081, 0.02555128,
-       0.07912764, 0.02634034, 0.01258148, 0.03396145, 0.01035904,
-       0.        , 0.08725222, 0.0236541 , 0.        , 0.15753905,
-       0.00855138, 0.0490146 , 0.01197408, 0.0394093 , 0.11537129,
-       0.        , 0.01142549, 0.02920808, 0.        , 0.        ,
-       0.        , 0.        , 0.17812128, 0.00714471, 0.        ,
-       0.        , 0.        , 0.        , 0.04533066, 0.        ,
-       0.01278293, 0.        , 0.        , 0.01802861, 0.0127498 ,
-       0.        , 0.00269553, 0.        , 0.        , 0.13844847,
-       0.        , 0.        , 0.00236142, 0.        , 0.        ,
-       0.        , 0.05217074, 0.11373411, 0.02881858, 0.        ,
-       0.07251201, 0.06583303, 0.09342399, 0.        , 0.        ,
-       0.08397408, 0.        , 0.0806997 , 0.        , 0.0075824 ,
-       0.        , 0.        , 0.        , 0.        , 0.        ,
-       0.        , 0.03939929, 0.04619775, 0.02936715, 0.05426725,
-       0.03347107, 0.        , 0.01376078, 0.00269069, 0.        ,
-       0.        , 0.        , 0.03512822, 0.        , 0.02652209,
-       0.18538312, 0.07034204, 0.0276529 , 0.        , 0.02741799,
-       0.03934111, 0.00341229, 0.052127  , 0.        , 0.        ,
-       0.03187541, 0.03722382, 0.05104451, 0.05305981, 0.        ,
-       0.        , 0.        , 0.        , 0.        , 0.03278665,
-       0.01734977, 0.        , 0.        , 0.0008672 , 0.        ,
-       0.        , 0.        , 0.        , 0.17525928, 0.        ,
-       0.        , 0.        , 0.        , 0.05728289, 0.        ,
-       0.        , 0.05530461, 0.        , 0.        , 0.07073591,
-       0.01398809, 0.        , 0.09882367, 0.        , 0.        ,
-       0.        , 0.13278676, 0.        , 0.09629378, 0.02343765,
-       0.        , 0.02860009, 0.        , 0.        , 0.05849422,
-       0.07670346, 0.07551129, 0.10293105, 0.06354502, 0.06956025,
-       0.00331789, 0.01874464, 0.        , 0.        , 0.04331436,
-       0.00364116, 0.06207976, 0.        , 0.05854566, 0.04474067,
-       0.        , 0.03856927, 0.        , 0.02367219, 0.05455427,
-       0.        , 0.02815119, 0.03273433, 0.11963912, 0.        ,
-       0.        , 0.00933021, 0.09017779, 0.        , 0.        ,
-       0.        , 0.        , 0.        , 0.        , 0.12737718,
-       0.        , 0.        , 0.02903077, 0.        , 0.01377022,
-       0.        , 0.00272712, 0.01064387, 0.        , 0.        ,
-       0.        , 0.        , 0.        , 0.00576894, 0.        ,
-       0.14218852, 0.        , 0.07136668, 0.0483249 , 0.14541299,
-       0.00270887, 0.        , 0.        , 0.        , 0.02389945,
-       0.08820524, 0.        , 0.12667566, 0.01704361, 0.        ,
-       0.09332822, 0.        , 0.        , 0.        , 0.        ,
-       0.09927322, 0.        , 0.02496406, 0.        , 0.        ,
-       0.04660585, 0.        , 0.        , 0.        , 0.06893243,
-       0.        , 0.        , 0.        , 0.07390752, 0.18363781,
-       0.        , 0.00216515, 0.        , 0.        , 0.03730994,
-       0.02140033, 0.        , 0.        , 0.        , 0.0470907 ,
-       0.11590132, 0.        , 0.        , 0.        , 0.        ,
-       0.02294647, 0.        , 0.00356034, 0.062133  , 0.        ,
-       0.        , 0.00536748, 0.        , 0.03482748, 0.        ,
-       0.        , 0.        , 0.        , 0.00244027, 0.        ,
-       0.        , 0.        , 0.04804612, 0.        , 0.        ,
-       0.02121259, 0.        , 0.        , 0.05693094, 0.        ,
-       0.04250433, 0.        , 0.01455298, 0.        , 0.03830794,
-       0.        , 0.        , 0.        , 0.        , 0.0073092 ,
-       0.        , 0.0043321 , 0.        , 0.        , 0.        ,
-       0.        , 0.00594751, 0.00504442, 0.0152382 , 0.        ,
-       0.        , 0.06149289, 0.        , 0.        , 0.01136302,
-       0.05007696, 0.        , 0.        , 0.        , 0.        ,
-       0.17738642, 0.06260519, 0.        , 0.00666802, 0.        ,
-       0.        , 0.00157911, 0.01245025, 0.        , 0.        ,
-       0.        , 0.        , 0.        , 0.        , 0.10685208,
-       0.        , 0.        , 0.01630716, 0.0178321 , 0.08800804,
-       0.01739233, 0.        , 0.03107514, 0.        , 0.0112758 ,
-       0.0205129 , 0.        , 0.        , 0.        , 0.        ,
-       0.00117491, 0.        , 0.        , 0.04716063, 0.        ,
-       0.        , 0.        , 0.        , 0.04729453, 0.07902372,
-       0.01377743, 0.02781974, 0.        , 0.09902151, 0.23918676,
-       0.06684914, 0.        , 0.        , 0.06728336, 0.02131317,
-       0.00108467, 0.        , 0.        , 0.        , 0.        ,
-       0.        , 0.01967605, 0.        , 0.        , 0.03093275,
-       0.10329917, 0.04292469, 0.05466135, 0.        , 0.        ,
-       0.02151319, 0.02540971, 0.        , 0.03034298, 0.        ,
-       0.03758071, 0.01262626, 0.        , 0.06520567, 0.        ,
-       0.        , 0.04640624, 0.04093079, 0.06207128, 0.        ,
-       0.        , 0.00647588, 0.        , 0.0264126 , 0.06638253,
-       0.04419724, 0.03654193, 0.        , 0.01681355, 0.        ,
-       0.        , 0.        , 0.04621458, 0.        , 0.04954664,
-       0.00877449, 0.        , 0.10039298, 0.        , 0.08637961,
-       0.05040529, 0.0029548 , 0.        , 0.07221031, 0.        ,
-       0.        , 0.06862418, 0.        , 0.04865941, 0.036385  ,
-       0.        , 0.1127531 , 0.0016534 , 0.00974701, 0.01777123,
-       0.07963574, 0.        , 0.10416251, 0.11835065, 0.01486004,
-       0.05420853, 0.        , 0.05827871, 0.04817202, 0.0371262 ,
-       0.047067  , 0.03767807, 0.        , 0.07972367, 0.        ,
-       0.        , 0.03317759, 0.        , 0.01397615, 0.        ,
-       0.0074476 , 0.08400522, 0.        , 0.04745925, 0.03908973,
-       0.05710854, 0.        , 0.00252611, 0.09586633, 0.00833074,
-       0.        , 0.        , 0.0459389 , 0.06137416, 0.        ,
-       0.        , 0.        , 0.05859513, 0.        , 0.13007691,
-       0.11630183, 0.        , 0.        , 0.04123489, 0.05334489,
-       0.04620749, 0.        , 0.04863075, 0.00242671, 0.        ,
-       0.        , 0.        , 0.        , 0.0374835 , 0.        ,
-       0.02640953, 0.        , 0.        , 0.        , 0.        ,
-       0.        , 0.        , 0.        , 0.        , 0.00074859,
-       0.04342027, 0.08740023, 0.        , 0.        , 0.0729704 ,
-       0.        , 0.        , 0.0539395 , 0.        , 0.02619137,
-       0.        , 0.03059792, 0.        , 0.08759622, 0.08025137,
-       0.        , 0.06222589, 0.        , 0.        , 0.        ,
-       0.        , 0.04193874, 0.03407715, 0.        , 0.05684555,
-       0.        , 0.02182129, 0.        , 0.00147408, 0.        ,
-       0.        , 0.        , 0.        , 0.00519445, 0.03739273,
-       0.04385717, 0.06015657, 0.        , 0.04955705, 0.        ,
-       0.        , 0.01963647, 0.        , 0.        , 0.03392087,
-       0.04410004, 0.        , 0.05078458, 0.08227849, 0.05008095,
-       0.        , 0.        , 0.        , 0.        , 0.        ,
-       0.        , 0.        , 0.        , 0.05464787, 0.        ,
-       0.01940208, 0.        , 0.        , 0.        , 0.        ,
-       0.03337549, 0.        , 0.        , 0.03717837, 0.        ,
-       0.        , 0.        , 0.01628226, 0.        , 0.07909081,
-       0.14517435, 0.        , 0.        , 0.15224341, 0.        ,
-       0.        , 0.        , 0.01727112, 0.        , 0.        ,
-       0.        , 0.        , 0.        , 0.00516584, 0.        ,
-       0.        , 0.        , 0.06253684, 0.02562559, 0.02063276,
-       0.        , 0.07011606, 0.        , 0.06649217, 0.0239578 ,
-       0.06484507, 0.02170298, 0.02685854, 0.        , 0.06437251,
-       0.        , 0.        , 0.06486207, 0.        , 0.00754186,
-       0.        , 0.        , 0.07910498, 0.00492481, 0.10821476,
-       0.        ])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1.26120086e-01, 0.00000000e+00, 7.31279931e-02, 0.00000000e+00,
+       0.00000000e+00, 4.07808048e-03, 7.28394720e-02, 1.79334198e-02,
+       0.00000000e+00, 7.72211477e-02, 1.24418753e-01, 0.00000000e+00,
+       0.00000000e+00, 1.28147380e-03, 0.00000000e+00, 7.58395121e-02,
+       0.00000000e+00, 5.18239457e-02, 0.00000000e+00, 5.88389736e-04,
+       8.34147582e-03, 4.22145868e-02, 0.00000000e+00, 4.32077816e-02,
+       0.00000000e+00, 0.00000000e+00, 6.69704557e-02, 0.00000000e+00,
+       7.74395090e-02, 9.86351930e-02, 2.89320119e-02, 1.13172756e-01,
+       6.95042571e-02, 1.00392294e-01, 5.00720468e-02, 5.90536546e-02,
+       6.61250315e-02, 0.00000000e+00, 4.11165859e-02, 5.44128860e-02,
+       1.83028240e-02, 4.72700685e-02, 0.00000000e+00, 0.00000000e+00,
+       0.00000000e+00, 4.20953633e-03, 0.00000000e+00, 0.00000000e+00,
+       0.00000000e+00, 1.40058196e-02, 0.00000000e+00, 0.00000000e+00,
+       0.00000000e+00, 4.47581346e-02, 0.00000000e+00, 1.00337276e-02,
+       0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 3.62795144e-02,
+       6.31295829e-02, 1.04444522e-02, 4.26174602e-03, 6.54432999e-02,
+       3.10138035e-02, 0.00000000e+00, 2.50425129e-02, 2.54689342e-03,
+       5.46514318e-04, 3.54152750e-02, 4.43788666e-02, 7.04691116e-02,
+       0.00000000e+00, 0.00000000e+00, 3.96247446e-02, 0.00000000e+00,
+       6.81740977e-02, 0.00000000e+00, 0.00000000e+00, 7.95588819e-02,
+       4.54177014e-02, 0.00000000e+00, 5.20712991e-02, 7.76304041e-02,
+       0.00000000e+00, 0.00000000e+00, 1.19000573e-01, 4.82978326e-03,
+       0.00000000e+00, 2.14680869e-02, 0.00000000e+00, 0.00000000e+00,
+       0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 2.38206593e-02,
+       0.00000000e+00, 0.00000000e+00, 1.41095651e-02, 0.00000000e+00,
+       0.00000000e+00, 7.26715050e-02, 2.07269673e-02, 0.00000000e+00,
+       0.00000000e+00, 2.48048692e-02, 0.00000000e+00, 0.00000000e+00,
+       4.83153338e-03, 8.15771387e-02, 0.00000000e+00, 0.00000000e+00,
+       1.05606455e-02, 5.77076535e-02, 0.00000000e+00, 2.33349347e-02,
+       3.69610135e-03, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
+       0.00000000e+00, 0.00000000e+00, 5.74895838e-02, 2.24856253e-02,
+       7.24432552e-02, 5.45943103e-02, 0.00000000e+00, 0.00000000e+00,
+       6.35721395e-02, 1.00043345e-01, 0.00000000e+00, 0.00000000e+00,
+       2.59431598e-02, 2.51014558e-02, 0.00000000e+00, 0.00000000e+00,
+       0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
+       0.00000000e+00, 6.11905538e-03, 2.97884019e-02, 0.00000000e+00,
+       0.00000000e+00, 8.06955005e-02, 8.64236531e-02, 0.00000000e+00,
+       8.18714592e-02, 7.17323350e-02, 0.00000000e+00, 1.49276954e-02,
+       4.10947741e-02, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
+       0.00000000e+00, 5.70291925e-02, 0.00000000e+00, 0.00000000e+00,
+       0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 6.24356386e-02,
+       0.00000000e+00, 0.00000000e+00, 2.34171909e-02, 0.00000000e+00,
+       9.73366275e-02, 0.00000000e+00, 0.00000000e+00, 7.49119292e-02,
+       0.00000000e+00, 7.47734903e-02, 0.00000000e+00, 2.15031987e-03,
+       6.92630161e-02, 0.00000000e+00, 1.14966231e-01, 4.09187428e-02,
+       0.00000000e+00, 2.12110820e-02, 7.15000273e-03, 2.78267283e-02,
+       0.00000000e+00, 4.67580989e-02, 0.00000000e+00, 3.96860248e-02,
+       0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 1.09103752e-02,
+       5.83261737e-02, 1.52502434e-01, 5.99520462e-02, 8.97937114e-03,
+       0.00000000e+00, 1.30070623e-02, 1.10448943e-01, 3.28564788e-02,
+       5.15096452e-02, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
+       0.00000000e+00, 0.00000000e+00, 8.57432293e-02, 0.00000000e+00,
+       0.00000000e+00, 1.77695419e-02, 0.00000000e+00, 3.23945656e-02,
+       0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
+       3.31123032e-02, 0.00000000e+00, 3.06712096e-02, 0.00000000e+00,
+       1.84211580e-02, 2.23019936e-02, 0.00000000e+00, 1.17280254e-02,
+       1.41514808e-02, 3.54669694e-02, 0.00000000e+00, 1.01565655e-02,
+       4.87067058e-02, 0.00000000e+00, 4.24803213e-02, 0.00000000e+00,
+       2.14959433e-02, 0.00000000e+00, 0.00000000e+00, 2.95042662e-03,
+       0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
+       0.00000000e+00, 2.18635886e-02, 1.80421125e-02, 0.00000000e+00,
+       0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 6.13449406e-02,
+       1.27644420e-02, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
+       2.48303045e-02, 0.00000000e+00, 8.70274724e-02, 0.00000000e+00,
+       7.76395810e-03, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
+       1.82490228e-02, 3.05925581e-02, 0.00000000e+00, 1.33228635e-02,
+       0.00000000e+00, 4.12752117e-02, 5.54139866e-02, 3.11654023e-02,
+       0.00000000e+00, 0.00000000e+00, 2.11393158e-02, 0.00000000e+00,
+       1.01673014e-01, 0.00000000e+00, 0.00000000e+00, 8.96119910e-02,
+       2.21670293e-02, 0.00000000e+00, 3.97143886e-02, 0.00000000e+00,
+       0.00000000e+00, 0.00000000e+00, 1.36052202e-01, 0.00000000e+00,
+       6.08244690e-02, 2.18981572e-02, 2.07589819e-02, 8.08688914e-03,
+       0.00000000e+00, 8.00213282e-02, 0.00000000e+00, 0.00000000e+00,
+       9.05106827e-03, 4.57868479e-02, 4.47403504e-02, 3.61798676e-02,
+       7.84925645e-02, 6.56933700e-02, 0.00000000e+00, 4.28581223e-02,
+       0.00000000e+00, 1.20205628e-02, 0.00000000e+00, 5.92161963e-02,
+       0.00000000e+00, 1.75361700e-02, 8.86172627e-02, 2.86097195e-02,
+       0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
+       0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
+       0.00000000e+00, 1.41868447e-01, 0.00000000e+00, 0.00000000e+00,
+       0.00000000e+00, 4.64164538e-03, 9.74559739e-02, 0.00000000e+00,
+       2.38021006e-02, 1.09655705e-01, 0.00000000e+00, 6.90463265e-02,
+       9.32699823e-03, 0.00000000e+00, 8.24994622e-02, 0.00000000e+00,
+       0.00000000e+00, 0.00000000e+00, 2.61638989e-04, 0.00000000e+00,
+       2.12695428e-02, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
+       2.73140142e-02, 8.62644699e-02, 0.00000000e+00, 0.00000000e+00,
+       0.00000000e+00, 0.00000000e+00, 8.48111940e-03, 1.31370035e-01,
+       0.00000000e+00, 0.00000000e+00, 1.05230423e-01, 0.00000000e+00,
+       0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 4.65984584e-02,
+       0.00000000e+00, 8.42321806e-02, 4.96687423e-03, 1.67461518e-02,
+       9.56114574e-02, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
+       0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
+       0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
+       6.20319743e-03, 1.32437502e-02, 0.00000000e+00, 3.32328756e-02,
+       0.00000000e+00, 0.00000000e+00, 2.00413970e-02, 3.27675696e-02,
+       0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 9.80195117e-02,
+       3.76751580e-02, 0.00000000e+00, 9.08668414e-02, 0.00000000e+00,
+       0.00000000e+00, 1.58848674e-03, 0.00000000e+00, 0.00000000e+00,
+       0.00000000e+00, 4.40215339e-02, 0.00000000e+00, 1.98456955e-02,
+       3.86135450e-02, 0.00000000e+00, 0.00000000e+00, 1.19451142e-02,
+       0.00000000e+00, 9.58516655e-02, 0.00000000e+00, 2.23894517e-02,
+       9.02793367e-02, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
+       0.00000000e+00, 0.00000000e+00, 3.36611194e-02, 0.00000000e+00,
+       9.17456848e-02, 5.64381014e-02, 0.00000000e+00, 0.00000000e+00,
+       1.45054393e-02, 0.00000000e+00, 5.31611006e-02, 0.00000000e+00,
+       0.00000000e+00, 1.66278975e-01, 0.00000000e+00, 8.68391899e-02,
+       1.74461410e-02, 0.00000000e+00, 1.31554640e-01, 0.00000000e+00,
+       1.85840111e-02, 0.00000000e+00, 1.92488491e-03, 1.41257409e-02,
+       6.74376214e-03, 4.06157169e-04, 1.59124929e-05, 3.46678295e-02,
+       0.00000000e+00, 7.14123152e-02, 0.00000000e+00, 1.54973931e-01,
+       1.48994063e-01, 1.52640770e-02, 9.55108787e-03, 8.40574207e-02,
+       8.40628180e-02, 0.00000000e+00, 2.26856861e-02, 0.00000000e+00,
+       0.00000000e+00, 0.00000000e+00, 1.09484207e-02, 0.00000000e+00,
+       0.00000000e+00, 5.20033125e-03, 0.00000000e+00, 0.00000000e+00,
+       0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
+       2.55571057e-02, 0.00000000e+00, 8.27103029e-02, 2.52759119e-02,
+       0.00000000e+00, 5.54483527e-02, 0.00000000e+00, 0.00000000e+00,
+       0.00000000e+00, 9.99850926e-03, 0.00000000e+00, 8.76263716e-02,
+       0.00000000e+00, 0.00000000e+00, 3.05414738e-02, 4.81546113e-03,
+       0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
+       0.00000000e+00, 4.80482595e-02, 6.05140651e-02, 3.23085479e-04,
+       0.00000000e+00, 1.33863335e-01, 0.00000000e+00, 0.00000000e+00,
+       2.33943536e-02, 1.10187589e-02, 3.97152608e-02, 0.00000000e+00,
+       0.00000000e+00, 0.00000000e+00, 2.76273610e-02, 0.00000000e+00,
+       9.57420200e-02, 4.22998389e-02, 0.00000000e+00, 0.00000000e+00,
+       9.45984273e-02, 4.08239847e-03, 5.63748314e-02, 6.88595718e-02,
+       8.79622125e-04, 5.11616355e-03, 0.00000000e+00, 4.99761448e-02,
+       7.84171879e-02, 9.22531748e-02, 0.00000000e+00, 4.13574025e-02,
+       4.87834574e-02, 0.00000000e+00, 3.64296005e-03, 0.00000000e+00,
+       0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 7.71630114e-02,
+       0.00000000e+00, 5.60344238e-03, 5.42555617e-02, 4.81003832e-02,
+       1.34359265e-02, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
+       0.00000000e+00, 1.91822224e-02, 0.00000000e+00, 0.00000000e+00,
+       0.00000000e+00, 0.00000000e+00, 8.97181274e-02, 1.01560072e-01,
+       2.14291759e-02, 0.00000000e+00, 0.00000000e+00, 6.58689300e-02,
+       0.00000000e+00, 2.38796504e-03, 5.54623708e-02, 0.00000000e+00,
+       0.00000000e+00, 4.00360665e-02, 1.89710447e-02, 4.86617111e-02,
+       0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 4.80011289e-03,
+       0.00000000e+00, 7.16909438e-02, 8.04504779e-02, 0.00000000e+00,
+       0.00000000e+00, 1.86174498e-02, 0.00000000e+00, 0.00000000e+00,
+       0.00000000e+00, 7.65775138e-02, 0.00000000e+00, 1.48057200e-02,
+       0.00000000e+00, 0.00000000e+00, 5.78900844e-03, 0.00000000e+00,
+       2.85364338e-02, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
+       0.00000000e+00, 6.40277645e-02, 0.00000000e+00, 1.08111688e-02,
+       2.40912390e-02, 7.45893153e-02, 0.00000000e+00, 4.91249780e-02,
+       5.02853536e-02, 7.89640672e-02, 0.00000000e+00, 0.00000000e+00,
+       0.00000000e+00, 2.71329644e-02, 0.00000000e+00, 0.00000000e+00,
+       0.00000000e+00, 0.00000000e+00, 1.95589628e-02, 2.06619486e-02,
+       0.00000000e+00, 3.31505300e-02, 1.92283978e-03, 0.00000000e+00,
+       0.00000000e+00, 1.44455738e-03, 0.00000000e+00, 3.05363841e-02,
+       6.85439960e-02, 1.37531475e-02, 0.00000000e+00, 1.53243541e-02,
+       0.00000000e+00, 5.23272612e-02])
 </pre></div>
 </div>
 </div>
@@ -2457,17 +2609,17 @@ memory usage: 479.1+ KB
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(menyusul,)     0.239187
-(demokrasi,)    0.185383
-(kehidupan,)    0.183638
-(beliau,)       0.178121
-(membawa,)      0.177386
-                  ...   
-(klik,)         0.000000
-(kiai,)         0.000000
-(ketua,)        0.000000
-(ketahanan,)    0.000000
-(zuperrr,)      0.000000
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(penguatan,)     0.166279
+(pertahanan,)    0.154974
+(hubungan,)      0.152502
+(pertemuan,)     0.148994
+(menang,)        0.141868
+                   ...   
+(membawa,)       0.000000
+(membahas,)      0.000000
+(mellui,)        0.000000
+(berjuang,)      0.000000
+(menyambut,)     0.000000
 Length: 606, dtype: float64
 </pre></div>
 </div>
@@ -2522,10 +2674,6 @@ Length: 606, dtype: float64
   FutureWarning,
 /usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
   FutureWarning,
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
-  FutureWarning,
 /usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
   FutureWarning,
 /usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
@@ -2562,9 +2710,9 @@ Length: 606, dtype: float64
   FutureWarning,
 /usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
   FutureWarning,
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
   FutureWarning,
 /usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
   FutureWarning,
@@ -2762,17 +2910,11 @@ Name: label, dtype: object
   FutureWarning,
 /usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
   FutureWarning,
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
-  FutureWarning,
 /usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
   FutureWarning,
 /usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
   FutureWarning,
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
   FutureWarning,
 /usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
   FutureWarning,
@@ -2782,35 +2924,13 @@ Name: label, dtype: object
   FutureWarning,
 /usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
   FutureWarning,
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
-  FutureWarning,
-/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
-  FutureWarning,
-/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
-  FutureWarning,
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
-  FutureWarning,
-/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
-  FutureWarning,
-/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
-  FutureWarning,
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
-  FutureWarning,
 /usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
   FutureWarning,
 /usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
   FutureWarning,
 /usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
   FutureWarning,
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
   FutureWarning,
 /usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
   FutureWarning,
@@ -2820,21 +2940,11 @@ Name: label, dtype: object
   FutureWarning,
 /usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
   FutureWarning,
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
-  FutureWarning,
 /usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
   FutureWarning,
 /usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
   FutureWarning,
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
-  FutureWarning,
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
   FutureWarning,
 /usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
   FutureWarning,
@@ -2842,9 +2952,27 @@ Name: label, dtype: object
   FutureWarning,
 /usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
   FutureWarning,
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
   FutureWarning,
 /usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
   FutureWarning,
@@ -2897,10 +3025,10 @@ Name: label, dtype: object
   FutureWarning,
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 1.08695652e-02,  1.08695652e-02,  9.78260870e-02, ...,
-        -5.20417043e-18,  1.08695652e-02,  1.08695652e-02],
-       [ 1.73472348e-18,  1.73472348e-18,  1.38777878e-17, ...,
-         1.11111111e-01,  1.73472348e-18,  1.73472348e-18]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 0.00000000e+00,  0.00000000e+00,  1.38777878e-17, ...,
+         1.00000000e-01,  0.00000000e+00,  0.00000000e+00],
+       [ 1.09890110e-02,  1.09890110e-02,  9.89010989e-02, ...,
+        -6.93889390e-18,  1.09890110e-02,  1.09890110e-02]])
 </pre></div>
 </div>
 </div>
@@ -2914,7 +3042,7 @@ Name: label, dtype: object
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-3057589d-c988-4cdc-95a3-cfa5b2dbaa83">
+  <div id="df-f080618b-8b74-44dc-b75b-a970493dbb11">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2940,23 +3068,23 @@ Name: label, dtype: object
   <tbody>
     <tr>
       <th>0</th>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>1</th>
       <td>1</td>
     </tr>
     <tr>
-      <th>2</th>
+      <th>1</th>
       <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>...</th>
@@ -2964,29 +3092,29 @@ Name: label, dtype: object
     </tr>
     <tr>
       <th>96</th>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>97</th>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>98</th>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>99</th>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>100</th>
-      <td>0</td>
+      <td>1</td>
     </tr>
   </tbody>
 </table>
 <p>101 rows × 1 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-3057589d-c988-4cdc-95a3-cfa5b2dbaa83')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-f080618b-8b74-44dc-b75b-a970493dbb11')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -3037,12 +3165,12 @@ Name: label, dtype: object
 
       <script>
         const buttonEl =
-          document.querySelector('#df-3057589d-c988-4cdc-95a3-cfa5b2dbaa83 button.colab-df-convert');
+          document.querySelector('#df-f080618b-8b74-44dc-b75b-a970493dbb11 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-3057589d-c988-4cdc-95a3-cfa5b2dbaa83');
+          const element = document.querySelector('#df-f080618b-8b74-44dc-b75b-a970493dbb11');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -3072,7 +3200,7 @@ Name: label, dtype: object
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-0f927787-be45-40d6-a800-265b1a27fad3">
+  <div id="df-0ee72dfd-db52-4141-879b-d6216e842b32">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -3118,30 +3246,54 @@ Name: label, dtype: object
   <tbody>
     <tr>
       <th>0</th>
-      <td>1.086957e-02</td>
-      <td>1.086957e-02</td>
-      <td>9.782609e-02</td>
-      <td>1.086957e-02</td>
-      <td>1.086957e-02</td>
-      <td>1.086957e-02</td>
-      <td>1.086957e-02</td>
-      <td>1.086957e-02</td>
-      <td>1.086957e-02</td>
-      <td>1.086957e-02</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
       <td>...</td>
-      <td>1.086957e-02</td>
-      <td>1.086957e-02</td>
-      <td>0.032609</td>
-      <td>1.086957e-02</td>
-      <td>1.086957e-02</td>
-      <td>1.086957e-02</td>
-      <td>-5.204170e-18</td>
-      <td>-5.204170e-18</td>
-      <td>1.086957e-02</td>
-      <td>1.086957e-02</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
     </tr>
     <tr>
       <th>1</th>
+      <td>1.136364e-02</td>
+      <td>1.136364e-02</td>
+      <td>1.022727e-01</td>
+      <td>1.136364e-02</td>
+      <td>1.136364e-02</td>
+      <td>1.136364e-02</td>
+      <td>1.136364e-02</td>
+      <td>1.136364e-02</td>
+      <td>1.136364e-02</td>
+      <td>1.136364e-02</td>
+      <td>...</td>
+      <td>1.136364e-02</td>
+      <td>1.136364e-02</td>
+      <td>3.409091e-02</td>
+      <td>1.136364e-02</td>
+      <td>1.136364e-02</td>
+      <td>1.136364e-02</td>
+      <td>-6.938894e-18</td>
+      <td>-6.938894e-18</td>
+      <td>1.136364e-02</td>
+      <td>1.136364e-02</td>
+    </tr>
+    <tr>
+      <th>2</th>
       <td>1.734723e-18</td>
       <td>1.734723e-18</td>
       <td>1.387779e-17</td>
@@ -3155,20 +3307,20 @@ Name: label, dtype: object
       <td>...</td>
       <td>1.734723e-18</td>
       <td>1.734723e-18</td>
-      <td>0.000000</td>
+      <td>-6.938894e-18</td>
       <td>1.734723e-18</td>
       <td>1.734723e-18</td>
       <td>1.734723e-18</td>
-      <td>1.111111e-01</td>
-      <td>1.111111e-01</td>
+      <td>9.090909e-02</td>
+      <td>9.090909e-02</td>
       <td>1.734723e-18</td>
       <td>1.734723e-18</td>
     </tr>
   </tbody>
 </table>
-<p>2 rows × 605 columns</p>
+<p>3 rows × 605 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-0f927787-be45-40d6-a800-265b1a27fad3')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-0ee72dfd-db52-4141-879b-d6216e842b32')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -3219,12 +3371,12 @@ Name: label, dtype: object
 
       <script>
         const buttonEl =
-          document.querySelector('#df-0f927787-be45-40d6-a800-265b1a27fad3 button.colab-df-convert');
+          document.querySelector('#df-0ee72dfd-db52-4141-879b-d6216e842b32 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-0f927787-be45-40d6-a800-265b1a27fad3');
+          const element = document.querySelector('#df-0ee72dfd-db52-4141-879b-d6216e842b32');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -3245,6 +3397,8 @@ Name: label, dtype: object
   </div>
 </div></div>
 </div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
