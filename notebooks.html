@@ -345,6 +345,11 @@ title="Print to PDF"
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#twint">
+     Twint
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#hasil-crawling-data-twitter">
      Hasil Crawling Data Twitter
     </a>
@@ -436,6 +441,13 @@ title="Print to PDF"
     TF
    </strong>
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#untuk-klasifikasi">
+     untuk klasifikasi
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#knn">
@@ -450,6 +462,50 @@ title="Print to PDF"
     KMeans
    </strong>
   </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#crawling-berita">
+   <strong>
+    Crawling Berita
+   </strong>
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mengimport-numpy-pypdf2-docx2txt-sys">
+     Mengimport numpy, PyPDF2, docx2txt, sys
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parsing-dokumen-menjadi-kalimat">
+     Parsing dokumen menjadi kalimat
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     TF
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#matriks-similaritas">
+     Matriks Similaritas
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#graph">
+     Graph
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#page-rank">
+     Page Rank
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#top-10-kalimat">
+     Top 10 Kalimat
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -478,6 +534,11 @@ title="Print to PDF"
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#twint">
+     Twint
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#hasil-crawling-data-twitter">
      Hasil Crawling Data Twitter
     </a>
@@ -569,6 +630,13 @@ title="Print to PDF"
     TF
    </strong>
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#untuk-klasifikasi">
+     untuk klasifikasi
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#knn">
@@ -584,6 +652,50 @@ title="Print to PDF"
    </strong>
   </a>
  </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#crawling-berita">
+   <strong>
+    Crawling Berita
+   </strong>
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mengimport-numpy-pypdf2-docx2txt-sys">
+     Mengimport numpy, PyPDF2, docx2txt, sys
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parsing-dokumen-menjadi-kalimat">
+     Parsing dokumen menjadi kalimat
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     TF
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#matriks-similaritas">
+     Matriks Similaritas
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#graph">
+     Graph
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#page-rank">
+     Page Rank
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#top-10-kalimat">
+     Top 10 Kalimat
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
                         </nav>
@@ -596,7 +708,7 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="crawling-data">
 <h1><strong>Crawling Data</strong><a class="headerlink" href="#crawling-data" title="Permalink to this headline">#</a></h1>
-<p>Crawling data adalah sebuah proses pengambilan data dari suatu sumber internet. Dalam hal ini saya mencrawling data dari twitter menggunakan twint. Data yang saya peroleh adalah sebanyak 180 data. Data tersebut saya saring sehingga menjadi 101 data karena terdapat beberapa data yang tidak penting. Data tersebut merupakan tweet dari tanggal 19-09-2022 sampai 27-09-2022.</p>
+<p>Crawling data adalah sebuah proses pengambilan data dari suatu sumber internet. Dalam hal ini saya mencrawling data dari twitter menggunakan twint. Data yang saya peroleh adalah sebanyak 180 data. Data tersebut saya saring sehingga menjadi 101 data karena terdapat beberapa data yang tidak penting. Data tersebut merupakan tweet dari tanggal 12-10-2022 sampai 27-09-2022.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>%%capture
@@ -623,6 +735,9 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+<section id="twint">
+<h2>Twint<a class="headerlink" href="#twint" title="Permalink to this headline">#</a></h2>
+<p>Twint adalah alat scraping data Twitter yang canggih ditulis dengan Python yang memungkinkan untuk scrapping Tweet dari profil Twitter tanpa menggunakan API Twitter. Twint menggunakan operator pencarian Twitter untuk scrapping Tweet dari pengguna tertentu, scrapping Tweet yang berkaitan dengan topik tertentu, tagar &amp; tren, atau memilah informasi sensitif dari Tweet seperti email dan nomor telepon.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nest_asyncio</span> <span class="c1"># import nest_asyncio</span>
@@ -632,182 +747,100 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+</section>
 <section id="hasil-crawling-data-twitter">
 <h2>Hasil Crawling Data Twitter<a class="headerlink" href="#hasil-crawling-data-twitter" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">twint</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span> <span class="c1">#membuat variable c</span>
-<span class="n">c</span><span class="o">.</span><span class="n">Search</span> <span class="o">=</span> <span class="s1">&#39;#prabowo&#39;</span> <span class="c1">#key word untuk data</span>
+<span class="n">c</span><span class="o">.</span><span class="n">Search</span> <span class="o">=</span> <span class="s1">&#39;tragedi kanjuruhan&#39;</span> <span class="c1">#key word untuk data</span>
 <span class="n">c</span><span class="o">.</span><span class="n">Pandas</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="n">c</span><span class="o">.</span><span class="n">Limit</span> <span class="o">=</span> <span class="mi">500</span> <span class="c1">#mencrawl 500 data</span>
+<span class="n">c</span><span class="o">.</span><span class="n">Limit</span> <span class="o">=</span> <span class="mi">80</span> <span class="c1">#mencrawl 80 data</span>
 <span class="n">twint</span><span class="o">.</span><span class="n">run</span><span class="o">.</span><span class="n">Search</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="c1">#run</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1579369175763791872 2022-10-10 07:12:09 +0000 &lt;pasti_2024&gt; Langkah nyata dan kepedulian besar Pak Erick Thohir terhadap sepak bola Indonesia memang harus kita apresiasi bersama.  Komitmen beliau sangat besar dalam menjaga keberlangsungan hidup masyarakat. Seperti yang kali ini ditunjukkan langsung Pak @erickthohir.  #prabowo #erickthohir  https://t.co/9wYbD3G4wX
-1579345378239209473 2022-10-10 05:37:35 +0000 &lt;polsight&gt; &quot;NasDem mempertanyakan sikap Sekjen PDIP Hasto Kristiyanto yang tampak keras mengkritisi deklarasi Anies Baswedan sebagai calon presiden, tapi diam saja saat Prabowo Subianto.&quot; #aniesbaswedan #prabowo #pdiperjuangan #nasdem #capres2024 #Pemilu2024 #politik #beritaterkini #berita  https://t.co/weK0bPy94c
-1579333327890579456 2022-10-10 04:49:42 +0000 &lt;IdSinpo&gt; Prabowo Ajak Kadesnya Berakhir Pekan ke Desa Butuh untuk Kembangkan Bojong Koneng  #Prabowo #Kades #BojongKoneng  https://t.co/u7ZEPGKMg5
-1579321392331657217 2022-10-10 04:02:16 +0000 &lt;papandu08&gt; Pak Bowo lagi beli buku di Pasar Buku Taman Pintar Jogja, dan diajak 🤳 oleh emak-emak #prabowo #gerindra #jogja  https://t.co/LrnOhw8P87
-1579289225136332801 2022-10-10 01:54:27 +0000 &lt;BisnisdanJasa&gt; I like mOnday.Kami melayani jasa pembuatan website dan toko online, kunjungi web kami &amp;gt;&amp;gt; https://t.co/1IK2oOA7Gd &amp;lt;&amp;lt; wa 085711119998  #DPR #Jokowi #AniesBaswedan #Prabowo #GanjarPranowo #PDIP #Golkar #Nasdem #PKS #PPP #Demokrat #Gerindra #DPRD #PKB  https://t.co/JJVGTC9Wwk
-1579284511334223872 2022-10-10 01:35:43 +0000 &lt;BisnisdanJasa&gt; Bisnis yuk.Kami melayani jasa pembuatan website dan toko online, kunjungi web kami &amp;gt;&amp;gt; https://t.co/1IK2oOA7Gd &amp;lt;&amp;lt; wa 085711119998  #KaosKaki  #DPR #Jokowi #AniesBaswedan #Prabowo #GanjarPranowo #PDIP #Golkar   #Bisnis #Marketing #Toyota #honda  https://t.co/1HQLKkypv6
-1579272355716952064 2022-10-10 00:47:25 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
-1579132379771572225 2022-10-09 15:31:12 +0000 &lt;mbah_mijan&gt; Seiring berjalannya waktu, pak @prabowo akan terus mengumpulkan pundi dukungan.  Perolehan suara pada 2x kompetisi terakhir, pak #prabowo masih patut diperhitungkan.
-1579083629707526145 2022-10-09 12:17:29 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
-1579050950769405959 2022-10-09 10:07:38 +0000 &lt;BadungGerindra&gt; Dirgahayu PEREMPUAN INDONESIA RAYA ( PIRA ) yang ke-14 tahun PIRA DAN GERINDRA BERSATU BERSAMA MEMBANGUN BANGSA  #salamindonesiaraya #gerindra #menang #prabowo #prabowosubianto #presiden #prabowoforindonesia2024 #ahmadmuzani #sumfidasco #fadilzon #gerindrabali #degadjah  https://t.co/0lyHj7sq2e
-1579045734115991553 2022-10-09 09:46:54 +0000 &lt;pasti_2024&gt; Kekuatan jalinan internasional Pak Erick Thohri enggak perlu diragukan lagi. Pak Erick Thohir memang selalu total kalau urusan bangsa dan negara.  #sepakbola #sepakbolaindonesia #indonesia #fifa #prabowo #erickthohir #erickthohirsolusirakyat #relawanpasti #pasti2024  https://t.co/MbwkElvIVN
-1579028275237883905 2022-10-09 08:37:32 +0000 &lt;dekade_08&gt; Beliau peka terhadap geopolitik dunia. Krisis bisa datang kapan saja dan kita perlu bersiap-siap.  #PrabowoPresiden #prabowo #prabowosubianto #PrabowoPresiden2024 #pilpres2024 #MendingPrabowo #dekade08  https://t.co/2fE9ouEE5m
-1579014641073917952 2022-10-09 07:43:21 +0000 &lt;wisnumuhammad&gt; Dirgahayu PIRA ke 14th &quot;PrabowoPresiden&quot;  #prabowo #gerindra #fraksigerindra #gerindrakotamedan #ihwanritonga #mwa  https://t.co/sj3VjQpo65
-1578978104785383424 2022-10-09 05:18:10 +0000 &lt;Ricky_Tamba&gt; #MendingPrabowo #Prabowo #Indonesia  https://t.co/6npLHafiRD
-1578977992864210944 2022-10-09 05:17:44 +0000 &lt;Ricky_Tamba&gt; #MendingPrabowo #Prabowo #Indonesia  https://t.co/5YsyycgkS0
-1578975991413633025 2022-10-09 05:09:46 +0000 &lt;Ricky_Tamba&gt; Prabowo &amp;amp; Emak-Emak Pejuang Indonesia  #Prabowo #PrabowoSubianto #Pejuang #Perempuan #EmakEmak #Indonesia #2024PrabowoPresiden #GerindraMenang #KawalC1TPS #IndonesiaMaju #AdilMakmur #IndonesiaRaya 🇮🇩  https://t.co/mYBacqyDGz
-1578975875990958081 2022-10-09 05:09:19 +0000 &lt;Ricky_Tamba&gt; Prabowo &amp;amp; Emak-Emak Pejuang Indonesia  #Prabowo #PrabowoSubianto #Pejuang #Perempuan #EmakEmak #Indonesia #2024PrabowoPresiden #GerindraMenang #KawalC1TPS #IndonesiaMaju #AdilMakmur #IndonesiaRaya 🇮🇩  https://t.co/qh3kabcPGd
-1578972034855358464 2022-10-09 04:54:03 +0000 &lt;Ricky_Tamba&gt; Prabowo &amp;amp; Purnawirawan Pejuang Indonesia  #Prabowo #PrabowoSubianto #Pejuang #Purnawirawan #Indonesia #2024PrabowoPresiden #GerindraMenang #KawalC1TPS #IndonesiaMaju #AdilMakmur #IndonesiaRaya 🇮🇩  https://t.co/YzYoJrmldZ
-1578964437767069696 2022-10-09 04:23:52 +0000 &lt;Ricky_Tamba&gt; Prabowo &amp;amp; Perempuan Pejuang Indonesia  #Prabowo #PrabowoSubianto #Pejuang #Perempuan #Indonesia #2024PrabowoPresiden #GerindraMenang #KawalC1TPS #IndonesiaMaju #AdilMakmur #IndonesiaRaya 🇮🇩  https://t.co/wtWEqyhZcj
-1578956890012143617 2022-10-09 03:53:52 +0000 &lt;papandu08&gt; Lagi dan lagi ucapan Gus Dur tentang Prabowo sangat benar dan terbukti #prabowo #gusdur #prabowosubianto #ikhlas  https://t.co/33FoiqfkPu
-1578951856495419392 2022-10-09 03:33:52 +0000 &lt;Ricky_Tamba&gt; Prabowo &amp;amp; Kita Pejuang Indonesia  #Prabowo #PrabowoSubianto #Pejuang #Indonesia #2024PrabowoPresiden #GerindraMenang #KawalC1TPS #IndonesiaMaju #AdilMakmur #IndonesiaRaya 🇮🇩  https://t.co/Io6FIAfL6r
-1578937485605842944 2022-10-09 02:36:46 +0000 &lt;dekade_08&gt; Di pelantikan IPSI Jateng Pak Prabowo ingatkan Kita untuk terus menjaga dan melestarikan budaya bangsa.   #PrabowoPresiden #prabowo #prabowosubianto #PrabowoPresiden2024 #pilpres2024 #MendingPrabowo #Dekade08 #ipsi #pencaksilat #pencaksilatindonesia #silat #silatindonesia  https://t.co/TuoYg1v6iq
-1578902433690181633 2022-10-09 00:17:29 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
-1578794192121520130 2022-10-08 17:07:22 +0000 &lt;dekade_08&gt; Allahumma Shalli wa Sallim &#39;Alan Nabyy...  #maulidnabi #MaulidurRasul2022 #MaulidNabiSAW #Prabowo #Prabowosubianto #MendingPrabowo #PrabowoPresiden #Pilpres2024 #Dekade08
-1578791139171532800 2022-10-08 16:55:14 +0000 &lt;wisnumuhammad&gt; Selamat memperingati maulidnabi Muhammad SAW, semoga kita semua mendapat kan safaat di kemudian saat nanti  aminn YRA.. #gerindra #prabowo #gerindramedan #gerindramedanpolonia #ihwanritonga  https://t.co/lCjwVKkhti
-1578775290293415936 2022-10-08 15:52:16 +0000 &lt;MalauArman&gt; Akankah jadi pesaing atau menjadi tandem di kompetisi   https://t.co/4uUhmY7oUh #AniesNasdemOut #prabowo
-1578743957193752577 2022-10-08 13:47:45 +0000 &lt;lawjusticeco&gt; Cak Imin : PKB-Gerindra Segera Deklarasi Capres-Cawapres  https://t.co/csyJpaolC2 #prabowo #cakimin #gerindra #pkb #capres #viralindo  https://t.co/qU62scSlpi
-1578718611006365697 2022-10-08 12:07:02 +0000 &lt;jpnncom&gt; Pasangan Menteri Pertahanan Prabowo Subianto dan Menteri BUMN Erick Thohir kompak saling menguatkan untuk Pemilihan Presiden (Pilpres) 2024 #Prabowo-ErickThohir  https://t.co/6JApw4v8Iu
-1578713675434627074 2022-10-08 11:47:25 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
-1578696082069987328 2022-10-08 10:37:31 +0000 &lt;igor_dirgantara&gt; Kata Karl Marx : &quot;Sejarah memang cenderung berulang. Pertama sebagai tragedi, dan kedua sebagai lelucon.&quot;  #Prabowo #AniesBaswedan   https://t.co/woCmGiGvWq   https://t.co/aqE7pEClR7  https://t.co/YUomRU9Nlm
-1578648397707608064 2022-10-08 07:28:02 +0000 &lt;pasti_2024&gt; &quot;Alhamdulillah kembali dipertemukan dengan hari yang penuh cinta dan berkah, Maulid Nabi Muhammad SAW. Semoga saudaraku umat Islam semantiasa meneladani akhlakul kharimah kanjeng Nabi.&quot;  #maulidnabi #muhammad #12rabiulawal #prabowo #erickthohir #relawanpasti #pasti2024  https://t.co/Qd6sOnTn3l
-1578641341839544320 2022-10-08 07:00:00 +0000 &lt;matamilenialID&gt; Muhaimin Iskandar Yakin Dampingi Prabowo di Pilpres 2024, Segera Deklarasi  Baca selengkapnya disini  https://t.co/N65m8QLPfW  #MataIndonesia #pilpres2024 #muhaiminiskandar #prabowo
-1578634043511513088 2022-10-08 06:31:00 +0000 &lt;tribunkaltim&gt; Hasil Survei: Ridwan Kamil Disebut sebagai Capres Paling Kompeten dan Jujur, Ungguli Anies, Prabowo  #capres #Pilpres2024 #RidwanKamil #AniesBaswedan #Anies #Ganjar #GanjarPranowo #Prabowo #PrabowoSubianto #GubernurJawaBarat    https://t.co/d3bvAHaFXy lewat @tribunkaltim
-1578620584761896960 2022-10-08 05:37:31 +0000 &lt;poskotaofficial&gt; Waketum PKB mengklaim persentase pengusungan Prabowo Subianto dan Muhaimin Iskandar sebagai capres dan cawapres sudah 90 persen. Deklarasi tinggal menunggu hari baik saja. #PKB #prabowo #muhaiminiskandar #capres #cawapres   https://t.co/w693xmgx2d
-1578608123694043136 2022-10-08 04:48:00 +0000 &lt;papandu08&gt; Seribu kawan terlalu sedikit, satu musuh terlalu banyak #prabowo #gerindra #politik #menhan #kemenhan  https://t.co/09tcBmX9nP
-1578557105849520129 2022-10-08 01:25:16 +0000 &lt;tribunkaltim&gt; Hasil Survei: Ridwan Kamil Disebut sebagai Capres Paling Kompeten dan Jujur, Ungguli Anies, Prabowo  #capres #Pilpres2024 #RidwanKamil #AniesBaswedan #Anies #Ganjar #GanjarPranowo #Prabowo #PrabowoSubianto #GubernurJawaBarat    https://t.co/d3bvAGT4yY lewat @tribunkaltim
-1578524956425539584 2022-10-07 23:17:31 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
-1578458582370377728 2022-10-07 18:53:47 +0000 &lt;GerindraLPG_&gt; Sering Dibohongi, Sering Dikhianati….  Tidak Menjadi Masalah Bagi Saya… Yang Penting Saya Tidak Mau Bohong, Dan Tidak Mau Berkhianat !!  #gerindra #gerindralampung #AniesNasdemOut #prabowo #prabowopresdien2024  https://t.co/8BD6wHMq8l
-1578379699767586816 2022-10-07 13:40:19 +0000 &lt;antaranews&gt; Kabar baru! Cak Imin katakan kemungkinan besar duet Prabowo Subianto dan dirinya akan maju sebagai capres dan cawapres Pemilu 2024.  #Prabowo #CakImin   https://t.co/Ot4Am7RQGt
-1578378169073090561 2022-10-07 13:34:15 +0000 &lt;gerindrajatim_&gt; Dewan Pimpinan Daerah Partai Gerakan Indonesia Raya (GERINDRA) Jawa Timur mengucapkan:  Selamat memperingati Maulid Nabi Muhammad ﷺ  12 Rabiul Awal 1444 Hijriah  __ #Gerindra #Prabowo #AnwarSadad #PolitisiSantri #GerindraJatim #PrabowoPresiden #GerindraMenang #Maulid #MaulidNabi  https://t.co/GgqmLP1tOe
-1578366295489531905 2022-10-07 12:47:04 +0000 &lt;jpnncom&gt; Duet Prabowo Subianto-Erick Thohir dinilai mempunyai modal yang saling menguatkan. #Prabowo  https://t.co/SBgWa3Tjb2
-1578362005236260864 2022-10-07 12:30:01 +0000 &lt;Lintas_MNCTV&gt; Meskipun tidak begitu aktif bersolek di media sosial, namun nama Ketua Umum Partai Gerindra Prabowo Subianto tetap kokoh berada di puncak elektabilitas Capres 2024. MCP  #MNCTV #MNCTVNews #Prabowo #Elektabilitas #Survei  https://t.co/AvjMgSYABL
-1578350606963580928 2022-10-07 11:44:43 +0000 &lt;PUANnews&gt; #Prabowo Subianto Duet dengan Cak Imin, Mba Puan Sama Siapa? - VIVA Olret  #PuanMaharani   https://t.co/SF7jxybFi7
-1578336186242052096 2022-10-07 10:47:25 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
-1578324348670472192 2022-10-07 10:00:23 +0000 &lt;gaspoll2024&gt; Prabowo-Muhaimin Sudah Berkomitmen Maju di 2024  #gaspoll #GusMuhaiminAsikPoll #CakImin #MuhaiminIskandar #Prabowo #Koalisi #Pemilu2024  https://t.co/8ab0k67YvV
-1578323892799950849 2022-10-07 09:58:34 +0000 &lt;hdmuttaqin&gt; Kok ada ya menteri punya daya pikir segini?. Bukannya cari solusi biar beras gak mahal, malah disuruh makan sagu... Sumber Gambar:  https://t.co/ex5Izk1RQ6 #politik #nasdem #jokowi #akalsehat #syl #pemilu #2024 #prabowo #rakyat #obrolanpolitik #sudutpandang #jakarta  https://t.co/5Jr7l9XyfF
-1578311022414548992 2022-10-07 09:07:26 +0000 &lt;dekade_08&gt; Yang Tulus Mencintai Bangsa Cuma Pak Prabowo.  Nanti biar Allah yang membalas kebaikan-kebaikan kita. Itu pesan Pak Prabowo,&quot;  #PrabowoPresiden #prabowo #prabowosubianto #PrabowoPresiden2024 #pilpres2024 #MendingPrabowo #Dekade08  https://t.co/jfy0r7krsA
-1578298466862002177 2022-10-07 08:17:32 +0000 &lt;rmp_officials&gt; Sami&#39;na wa atha&#39;na Manut arahan poro kiai lan ulama  #CakImin #GusMuhaimin #Muhaimin #MuhaiminIskandar #Capres2024 #Pilpres2024 #Prabowo  https://t.co/acJZ8aflHb
-1578296318233034755 2022-10-07 08:09:00 +0000 &lt;tribunkaltim&gt; Kata Fadli Zon soal Kedekatan Ridwan Kamil dan Prabowo, Hubungan Gerindra dengan PKB Juga Disinggung  #RidwanKamil #Prabowo #FadliZon #Gerindra #PKB    https://t.co/42pHjL9R6o lewat @tribunkaltim
-1578296176905895936 2022-10-07 08:08:26 +0000 &lt;2024Pejuang&gt; Bagaimana Menurut kalian Netizen?  Mohon ijin tag pak @prabowo kang @ridwankamil  🙏 #prabowopresiden #prabowo #ridwankamil #Pilpres2024 #gerindra  https://t.co/rz6s2IcS21
-1578292649140051973 2022-10-07 07:54:25 +0000 &lt;IdSinpo&gt; Video Anies Tak Akan Tikung Prabowo, Ahmad Muzani: Pemimpin Yang Dipegang Omongannya  #Anies #Prabowo #AhmadMuzani  https://t.co/3TlyskZGFc
-1578250227500298240 2022-10-07 05:05:51 +0000 &lt;tribunkaltim&gt; Kata Fadli Zon soal Kedekatan Ridwan Kamil dan Prabowo, Hubungan Gerindra dengan PKB Juga Disinggung  #RidwanKamil #Prabowo #FadliZon #Gerindra #PKB    https://t.co/42pHjLrrXW lewat @tribunkaltim
-1578235323678568450 2022-10-07 04:06:38 +0000 &lt;papandu08&gt; Respon Prabowo saat ditanya nasdem usung Anies sebagai capres #prabowo #anies #nasdem  https://t.co/YuytHoRLvq
-1578219819916480513 2022-10-07 03:05:01 +0000 &lt;choncotani_mel&gt; @Mdy_Asmara1701 Sayang sekali saya belum dengar pernyataan presiden PKS #prabowo  #hebat
-1578214882050465793 2022-10-07 02:45:24 +0000 &lt;jokowikita_&gt; Bersama Menhan Prabowo Presiden Jokowi Bentuk Kesiapan TNI Hadapi Perubahan Geopolitik  #jokowi #prabowo #TNI #jokowikita  https://t.co/KtFtUFKQtX
-1578203860090249216 2022-10-07 02:01:36 +0000 &lt;Jokowi_Daily&gt; Momen Kebersamaan Jokowi dan Prabowo Parade Senja  #jokowi #prabowo #jokowidaily  https://t.co/duaYE1z6oT
-1578197242896187392 2022-10-07 01:35:18 +0000 &lt;lawjusticeco&gt; Prabowo Subianto: Jangan Berpikir Kebaikan pada Orang Akan Dapat Balasan yang Sama!  https://t.co/joPMPlUYg3  #prabowo #aniesbaswedan #jokowi #Luhur #calonpresiden #indonesia #fyp #viral  https://t.co/EipKVcNL8j
-1578165399065047041 2022-10-06 23:28:46 +0000 &lt;RaflesPStp&gt; Apa kita bisa berharap pada orang yg tidak memahami teritorial, falsafah dan kepedihan di berbagai Wilayah Negeri ini jika jadi Pemimpin? Adalah lebih baik mempercayakan pada orang2 yg sangat memahaminya.  #Prabowo #Anies
-1578154989901746176 2022-10-06 22:47:24 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
-1578054680738791425 2022-10-06 16:08:49 +0000 &lt;haramalik2&gt; @ruhutsitompul Bisa  (Anies) jadi wakil nya #prabowo..
-1578047142937382913 2022-10-06 15:38:52 +0000 &lt;AlfaneRizky&gt; Kinerja Prabowo Erick di sukai masyarakat. #ET #prabowo #pilpres2024  https://t.co/8PVf640sIE
-1578033868908597248 2022-10-06 14:46:07 +0000 &lt;lawjusticeco&gt; Gerindra Buka Peluang Duetkan Prabowo &amp;amp; Ridwan Kamil di Pilpres 2024  https://t.co/C2qtiRBhPI  #ridwankamil #prabowo #gerindra #calon #presiden #2024 #fyp  https://t.co/sAmruEJpS3
-1578027112069750785 2022-10-06 14:19:16 +0000 &lt;Mahdi_UmmateMoh&gt; #Prabowo mencetak Rekor Journal masa Depan indah Haq/bathil ?
-1578014461319090177 2022-10-06 13:29:00 +0000 &lt;MrX78684051&gt; IG Mempunyai Panduan Komunitas Sambo.. Semomunitas. #Tembakmatisambo  #thegodfatherindonesia #prabowo #jokowi #tito #satgasusmerahputih  https://t.co/odkj1WvICG
-1577966265188372481 2022-10-06 10:17:29 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
-1577913796001079296 2022-10-06 06:48:59 +0000 &lt;Lintas_MNCTV&gt; #Prabowo #PrabowoSubianto
-1577901951458549760 2022-10-06 06:01:55 +0000 &lt;SeputariNews&gt; #Prabowo #PrabowoSubianto
-1577900787367579649 2022-10-06 05:57:18 +0000 &lt;GTVID_News&gt; Ibu L.B. Moerdani.  #Prabowo #PrabowoSubianto
-1577891291123548160 2022-10-06 05:19:34 +0000 &lt;OfficialiNewsTV&gt; Letjen TNI (Purn) Johny Lumintang, dan Ibu L.B. Moerdani.  #Prabowo #PrabowoSubianto
-1577886882306101248 2022-10-06 05:02:03 +0000 &lt;Kemhan_RI&gt; “Kita berkumpul utk mengikat kembali jiwa korsa kita &amp;amp; kebanggaan kita sebagai bagian dari TNI, untuk mengenang komandan &amp;amp; senior kita yg sudah tidak bersama kita, menghormati pengorbanan para pendahulu kita,” kata #MenhanPrabowo .  #Kemhan #KemhanRI #Prabowo #PrabowoSubianto  https://t.co/jeM020UTdJ
-1577886050336534528 2022-10-06 04:58:44 +0000 &lt;Ucinokebgt&gt; Voted Jarwo 2024   gimana menurut kalean ?? @PDI_Perjuangan @fadlizon  @Dennysiregar7 @WagimanDeep212_ @Leonita_Lestari @__AnakKolong @JandaArya @GanjaarPR @PSubianto  #GanjarPilihanRakyat #prabowo #PemiluSerentak2024 #jarwo  https://t.co/HIomnZoBB1
-1577866488337158144 2022-10-06 03:41:00 +0000 &lt;pasti_2024&gt; Pak @prabowo dan Pak @erickthohir semakin menunjukkan kekompakkan dalam sisi kinerja. Sebagai menteri yang saat ini sedang bertugas kesuanya telah melakukan kerja yang nyata.  #prabowo #erickthohir #pilpres2024 #relawanpasti #pasti2024  https://t.co/Zq67VCAbjl
-1577861201320714240 2022-10-06 03:20:00 +0000 &lt;tvOneNews&gt; Wakil Ketua Umum Partai Gerindra Fadli Zon bicara soal peluang duet ketua umum partainya, Prabowo Subianto, dengan Gubernur Jawa Barat Ridwan Kamil di Pilpres 2024.   Simak berita selengkapnya di  https://t.co/miPgEftig0 #NewsOne #CariBeritaditvOne #prabowo #ridwankamil  https://t.co/pVNtYO2Hvb
-1577860790677184512 2022-10-06 03:18:22 +0000 &lt;portalmediaid&gt; Jokowi, Puan dan Prabowo Kompak Ogah Tanggapi Deklarasi Anies Capres NasDem  Baca Selengkapnya:  https://t.co/oBkgL7MbDW  #BeritaTerkini #media #Online #news #BreakingNews #Jokowi #puanmaharani #prabowo #DeklarasiAniesPresiden #AniesPresidenRI2024 #CapresNasDem #Politik #Indonesia
-1577854183788941316 2022-10-06 02:52:07 +0000 &lt;HastoSuprayogo&gt; Survei kecil #CapresCapres2024 di circle IG saya. Hasilnya sesuai dugaan saya sebelumnya, bahwa #GanjarPranowo tetap jadi pilihan utama.  #Prabowo pilihan kedua, sementara #AniesBaswedan tak ada yang memilih.  *sedikit typo di bagian pertanyaan.  https://t.co/OXmQEy8T4I
-1577847587738374144 2022-10-06 02:25:54 +0000 &lt;monitorindo&gt; Hadapi Prabowo dan Anies, PDIP Harus Pikir 2 Kali Jagokan Puan Maharani   https://t.co/5veqIdIcKr #Prabowo #AniesBaswedan #Puan #Pilpres2024
-1577839297075752960 2022-10-06 01:52:57 +0000 &lt;IDefenseMagz&gt; Momen Keakraban Menhan @prabowo, Presiden @jokowi dan Presiden ke-5 RI Megawati di HUT ke-77 TNI.   https://t.co/MNgcMgAeik  @Kemhan_RI   #IndonesiaDefenseMagazine #IDM #PresidenJokowi #MenhanPrabowo #PrabowoSubianto #Prabowo #HUT77TNI #TNI #Pertahanan #Militer
-1577837500311441408 2022-10-06 01:45:49 +0000 &lt;IDefenseMagz&gt; Menteri Pertahanan @prabowo Subianto menghadiri upacara peringatan ke-77 Tentara Nasional Indonesia yang digelar di halaman Istana Merdeka, Jakarta.   https://t.co/Y9bL4nT23n  @Kemhan_RI   #IDM #MenhanPrabowo #PrabowoSubianto #Prabowo #HUT77TNI #Pertahanan #Militer #TNI #KemhanRI
-1577833960666955776 2022-10-06 01:31:45 +0000 &lt;paperaprabowo&gt; Pedagang Pejuang Indonesia Raya (PAPERA) Kab. Cilacap Deklarasi Dukungan Ke @prabowo Sebagai Presiden 2024 , Dan Siap Menangkan Partai @Gerindra   #prabowosubianto #prabowo #gerindra #pedagangpejuangindonesiaraya #pedagang #politik #pilpres2024  https://t.co/bFJlfsHJvO
-1577818419545534465 2022-10-06 00:30:00 +0000 &lt;holopiscom&gt; Menteri Pertahanan Prabowo Subianto menyatakan bahwa dirinya akan berupaya semaksimal mungkin memperjuangkan kesejahteraan anggota TNI lebih baik lagi. @prabowo @Kemhan_RI #Prabowo  @Puspen_TNI #TNI  https://t.co/9NRIAiSMqC
-1577785066964410369 2022-10-05 22:17:28 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
-1577729667381235712 2022-10-05 18:37:20 +0000 &lt;SuryoBobby&gt; HUT ke-77 TNI, PDI Perjuangan: Selamat &amp;amp; Jayalah!   https://t.co/qN4Oxdg1Fj  #PDIPerjuangan #PDIPerjuanganJabar #PDIPerjuanganKabBandung  #Prabowo AgnezMo
-1577720078623461376 2022-10-05 17:59:14 +0000 &lt;arizka_amnda&gt; Prediksi Juventus Vs Maccabi Haifa di Liga Champions: Head To Head, Line Up, Prediksi Skor dan Link Nonton - Cerdik Indonesia  https://t.co/Q4uY252P9z #prabowo #suneo #1,5 M Guam Mamat Aldebaran Chandra JuvMac UCL Allegri Vlahovic Di Maria
-1577693848607764480 2022-10-05 16:15:00 +0000 &lt;newsmerahputih&gt; Ketua Umum Gerindra, Prabowo Subianto terkesan menanggapi langkah Partai Nasdem yang mendeklarasikan Anies Baswean sebagai capres.  #merahputihcom #Nasdem #AniesBaswedan #Prabowo #Gerindra   https://t.co/zBznGU0rii
-1577691372596830208 2022-10-05 16:05:09 +0000 &lt;jpnncom&gt; Anies Baswedan diusung NasDem sebagai capres. Sedangkan Prabowo ditetapkan calon presiden oleh Gerindra. #prabowo  https://t.co/NNsKS291hE
-1577683624299634690 2022-10-05 15:34:22 +0000 &lt;rdipriatomo&gt; Pak @aniesbaswedan apa tanggapannya terkait video ini? Apakah janji bapak bisa juga ditepati ? Jika pak @prabowo yg berjiwa besar ini dan telah support bapak menjadi gubernur masih diingkari, apalagi kami yang hanya rakyat jelata #prabowo #gerindra #kapolda #sambo #chandraliow
-1577663363718356994 2022-10-05 14:13:52 +0000 &lt;ketikacinta_97&gt; #prabowo aja menghiyanati  pendukungnya
-1577662273241219073 2022-10-05 14:09:32 +0000 &lt;amandacrlln&gt; Good night🥰 #Kasmaran #AgnezMoWaxFigure #aremania #Prabowo #AgnezMo #barugajian #Kompolnas #SANGE_AAAAAAAAAAH  https://t.co/Np1dFyv1P5
-1577654133124988930 2022-10-05 13:37:11 +0000 &lt;SwanteSH&gt; #Kemhan #KemhanRI #KementerianPertahanan @Kemhan_RI: &#39;… menjaga NKRI berdasarkan Pancasila dan Undang-Undang Dasar 1945 serta melindungi seluruh tumpah darah Indonesia,” ujar Presiden Jokowi.  #Kemhan #KemhanRI #Prabowo…  https://t.co/H51TiY1ith, see more  https://t.co/dg4KElkq8N
-1577651010876583936 2022-10-05 13:24:46 +0000 &lt;Joni_lamp&gt; Siap dukung #prabowo
-1577641904056868865 2022-10-05 12:48:35 +0000 &lt;TraderBorneo&gt;  https://t.co/J4KWls2WZH  #prabowo  #mamat
-1577640132504453120 2022-10-05 12:41:33 +0000 &lt;Isnayakhamidaz&gt; ✨ Buka Jastip AVO BRAND 1-8 Oct ✨ for PL bisa DM ya kaka @msbb_id  #habiskangajimu #mariglowingbersamaku #aremania #jastipjogja #jastip #ElonMusk #SepakatDamai #reza #Prabowo #mamat  https://t.co/FbzWVEArif
-1577638809902407681 2022-10-05 12:36:18 +0000 &lt;rahmadhdyt709&gt; MENTERI BUMN ERICK THOHIR RAIH SUARA TERTINGGI SEBAGAI CAWAPRES PALING POTENSIAL DI PILPRES 2024 #erickthohir #GanjarPranowo #prabowo #indonesiamaju #indonesiamerdeka #bumnuntuknegeri #bumnuntukindonesia #bumn  #erthoforwapres  #erickthohirwapres #erickthohirsolusirakyat  https://t.co/Euw9ifWSIq
-1577638050586595328 2022-10-05 12:33:17 +0000 &lt;wartakotalive&gt; Ferdy Sambo Bunuh Brigadir J karena Amat Mencintai Putri Candrawathi, Ungkit Tragedi di Magelang  #Polisi #ferdysambo #Prabowo    https://t.co/StGIvwFkeX via @wartakotalive
-1577633221965381632 2022-10-05 12:14:05 +0000 &lt;wartakotalive&gt; Deklarasikan Ganjar Pranowo secara Sepihak, PSI Dinilai Sembrono dan Turunkan Wibawa Pemerintah  #PSI #GanjarPranowo #Nasdem #AniesBaswedan #Prabowo #mamat     https://t.co/gAWnixRWxv via @wartakotalive
-1577631074955718658 2022-10-05 12:05:33 +0000 &lt;nagahokicom&gt; Nagahoki Link Alternatif Agen Sbobet 88  https://t.co/pd6D5ZpMSW  #nagahoki #prabowo #aremania #situsjudionline #judibola
-1577630002459602945 2022-10-05 12:01:18 +0000 &lt;Kemhan_RI&gt; … menjaga NKRI berdasarkan Pancasila dan Undang-Undang Dasar 1945 serta melindungi seluruh tumpah darah Indonesia,” ujar Presiden Jokowi.  #Kemhan #KemhanRI #Prabowo #PrabowoSubianto #MenhanPrabowo #Jokowi #JokoWidodo #PresidenJokowi #HUTTNI77  https://t.co/Qq4HiYalN7
-1577620882830217216 2022-10-05 11:25:03 +0000 &lt;pasti_2024&gt; Kenaikan elektabilitas duet Prabowo-Erick Thohir samakin kokoh. Hal itu semakin membuktikan bahwa keduanya sangat di cintai masyarakat, apalagi buat masyarakat Jawa Barat.   @prabowo - @erickthohir pilihan kita semua!  #indonesia #jawabarat #prabowo #erickthohir #pasti2024  https://t.co/nWeAnyKVxv
-1577607278026432514 2022-10-05 10:31:00 +0000 &lt;tribunkaltim&gt; Fakta Kedekatan Ridwan Kamil dan Prabowo Jelang Pilpres 2024, Gerindra Jelaskan Pertemuan Hambalang   #Gerindra #Pilpres2024 #Prabowo #RidwanKamil #KangEmil    https://t.co/3lbW3vmzI1 lewat @tribunkaltim
-1577596318368702465 2022-10-05 09:47:27 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
-1577560217814007809 2022-10-05 07:24:00 +0000 &lt;newsmerahputih&gt; Menhan Prabowo Subianto tegaskan, TNI adalah Tentara Rakyat.  #merahputihcom #HUTTNI77 #dirgahayutni #TNIADALAHKITA #Prabowo   https://t.co/2XEXmoewbp
-1577554717659791360 2022-10-05 07:02:08 +0000 &lt;dekade_08&gt; 6  #prabowo #prabowopresiden #prabowosubianto #dekade08 #mendingprabowo #DirgahayuTNI77  https://t.co/KqIRuEMPbB
-1577554633794686976 2022-10-05 07:01:48 +0000 &lt;dekade_08&gt; 5  #prabowo #prabowopresiden #prabowosubianto #dekade08 #mendingprabowo #DirgahayuTNI77  https://t.co/VlfdK2axm4
-1577554533785694209 2022-10-05 07:01:25 +0000 &lt;dekade_08&gt; 4  #prabowo #prabowopresiden #prabowosubianto #dekade08 #mendingprabowo #DirgahayuTNI77  https://t.co/nwrAvCLtGv
-1577554425547493377 2022-10-05 07:00:59 +0000 &lt;dekade_08&gt; 3  #prabowo #prabowopresiden #prabowosubianto #dekade08 #mendingprabowo #DirgahayuTNI77  https://t.co/DZnbo838t8
-1577554175034286080 2022-10-05 06:59:59 +0000 &lt;dekade_08&gt; Dikutip dr  Kemendikbud Ristek, cikal bakal TNI itu bernama BKR)l. BKR sendiri dibentuk oleh PPKI sebagai salah satu badan yg siaga mghadpi brbagai kemgknan konsekuensi dari Proklamasi 17/8/45.  #prabowo #prabowopresiden #prabowosubianto #dekade08 #mendingprabowo #DirgahayuTNI77  https://t.co/ohjZlhY34z
-1577552553747042304 2022-10-05 06:53:32 +0000 &lt;dekade_08&gt; Thread : Asal Mula 5 Oktober Ditetapkan Sebagai HUT TNI  TNI Diresmikan oleh Presiden Soekarno pada 3 Juni 1947. Bagaimana HUT TNI ditetapkan pada 5 Oktober?  Dirgahayu TNI  #prabowo #Prabowopresiden #MendingPrabowo #Dekade08 #DirgahayuTNI77  https://t.co/1UYWcE8pNA
-1577549820210053120 2022-10-05 06:42:41 +0000 &lt;kompascom&gt; Menteri Pertahanan Prabowo Subianto dan Presiden ke-5 RI Megawati Soekarnoputri tampak berbincang akrab saat menghadiri upacara peringatan HUT ke-77 TNI di Istana Merdeka, Rabu (5/10/2022). ^ #Prabowo #Megawati #HUTTNI  https://t.co/dBZYfMcglA
-1577539304506634240 2022-10-05 06:00:54 +0000 &lt;lawjusticeco&gt; NasDem Deklarasikan Anies, Begini Respons Ganjar dan Ridwan Kamil.   https://t.co/axnF0QL3dR #ganjar #anies #ridwankamil #ahy #puan #prabowo #nasdem #pdip #gerindra  https://t.co/k4Mdi7a0pU
-1577532078672969728 2022-10-05 05:32:11 +0000 &lt;SwanteSH&gt; #Kemhan #KemhanRI #KementerianPertahanan @Kemhan_RI: &#39;… Jenderal TNI (Purn) Wiranto, Jenderal TNI (Purn) Agum Gumelar, Letjen TNI (Purn) Johny Lumintang, dan Ibu L.B. Moerdani.  #Kemhan #KemhanRI #HUTTNI77 #Prabowo #Pra…  https://t.co/E4o3qOul7k, see more  https://t.co/dg4KElkq8N
-1577529856577146880 2022-10-05 05:23:21 +0000 &lt;tribunkaltim&gt; Fakta Kedekatan Ridwan Kamil dan Prabowo Jelang Pilpres 2024, Gerindra Jelaskan Pertemuan Hambalang   #Gerindra #Pilpres2024 #Prabowo #RidwanKamil #KangEmil    https://t.co/3lbW3vn7xz lewat @tribunkaltim
-1577526799759683584 2022-10-05 05:11:12 +0000 &lt;poskotaofficial&gt; Adu kekuatan Capres, Ade Armando: jika Anies pakai kekuatan politik identitas, Prabowo selesai.  @aniesbaswedan @prabowo  #AniesBaswedan #prabowo #adearmando  https://t.co/zzn63XI0kp
-1577525282184998912 2022-10-05 05:05:10 +0000 &lt;papandu08&gt; Upacara Parade Senja di Kementerian Pertahanan #prabowo #jokowi #kemenhan #menhan #presiden #huttni  https://t.co/4yRx3mcHUn
-1577522115284459520 2022-10-05 04:52:35 +0000 &lt;PrasetyoHadi28&gt; Dirgahayu Tentara Nasional Indonesia yang ke-77. Jayalah TNI, Jayalah Indonesiaku! 🇮🇩 @Puspen_TNI   #tniadalahkita #dirgahayutni77 #huttni77 #tni #tniad #tnial #tniau #tnikuatbersamarakyat #akmil #militerindonesia #prabowo #menhan #infomiliter #prasetyohadi #fraksigerindra #dprri  https://t.co/O9PXolqB01
-1577516896802328577 2022-10-05 04:31:51 +0000 &lt;tvrinewscom&gt; Peringati HUT Ke-77, TNI Parade Alutsista dari Istana Hingga Bundaran HI   https://t.co/TKFRcfyY5X #HUTTNI #Alutsista #Prabowo
-1577512001609560065 2022-10-05 04:12:24 +0000 &lt;Kemhan_RI&gt; … Jenderal TNI (Purn) Wiranto, Jenderal TNI (Purn) Agum Gumelar, Letjen TNI (Purn) Johny Lumintang, dan Ibu L.B. Moerdani.  #Kemhan #KemhanRI #HUTTNI77 #Prabowo #PrabowoSubianto #MenhanPrabowo #Jokowi #JokoWidodo #PresidenJokowi  https://t.co/SbbfYghmS0
-1577498080068657154 2022-10-05 03:17:05 +0000 &lt;gerindra_la&gt; Dirgahayu TNI KE 77  5 Oktober 1945-2022  @Puspen_TNI @tni_ad @_TNIAL_ @_TNIAU ___  #gerindra #prabowo #gerindramenang #prabowopresiden #gerindralamongan #lamonganmegilan #politisisantri  https://t.co/MRkVwDJK6x
-1577494249033334784 2022-10-05 03:01:52 +0000 &lt;IDefenseMagz&gt; “Dan yang terpenting untuk mengingatkan kembali kepada diri kita bahwa kita adalah tentara nasional, tentara rakyat &amp;amp; tentara pejuang, karena kemerdekaan kita bukan hadiah dari bangsa lain,” tegas Menhan @prabowo   https://t.co/wVpEQwvBwr  @Kemhan_RI  #IDM #MenhanPrabowo #Prabowo
-1577492804237897728 2022-10-05 02:56:07 +0000 &lt;BadungGerindra&gt; Dirgahayu TNI Semoga terus berjaya di darat, laut, dan udara. Terus mengawal NKRI sebagai tentara rakyat.  #huttni #salamindonesiaraya #gerindra #menang #prabowo #prabowosubianto #presiden #prabowoforindonesia2024 #ahmadmuzani #sumfidasco #fadilzon #gerindrabali #degadjah  https://t.co/JC26AEzJ8r
-1577479727824019456 2022-10-05 02:04:09 +0000 &lt;lawjusticeco&gt; Bukan Puan, Justru Ganjar yang Berpotensi Imbangi Prabowo dan Anies   https://t.co/w2AIjUnORT  #amies #ganjar #prabowo #puan  https://t.co/YUiB3mwVX7
-1577458458605268992 2022-10-05 00:39:38 +0000 &lt;HastoSuprayogo&gt; Peta kekuatan koalisi parpol dan peta kekuatan 3 capres utama—sementara ini—jelang #Pemilu2024.  Tentunya peta ini sangat bisa berubah. Khususnya soal koalisi partai. Capres saya prediksi tetap namun angka popularitasnya bisa fluktuatif.  #GanjarPranowo #Prabowo #AniesBaswedan  https://t.co/9jnT9HtuHh
-1577415118069313537 2022-10-04 21:47:25 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
-1577322314429259776 2022-10-04 15:38:39 +0000 &lt;antarafoto&gt; Pasukan mengikuti Upacara Parade Senja di Lapangan Bela Negara, Kementerian Pertahanan, Jakarta, Selasa (4/10/2022).  ANTARA FOTO/Akbar Nugroho Gumay  #parade #senja #jokowi #prabowo #army #navy #kementerian #pertahanan #bela #negara #tentara #pasukan  https://t.co/DcVZle9EfD
-1577322199509532673 2022-10-04 15:38:12 +0000 &lt;antarafoto&gt; Presiden Joko Widodo memimpin Upacara Parade Senja di Lapangan Bela Negara, Kementerian Pertahanan, Jakarta, Selasa (4/10/2022).   ANTARA FOTO/Akbar Nugroho Gumay  #parade #senja #jokowi #prabowo #army #navy #kementerian #pertahanan #bela #negara #tentara #pasukan  https://t.co/EdaxGYNbkq
-1577322075421048832 2022-10-04 15:37:42 +0000 &lt;antarafoto&gt; Menhan Prabowo Subianto (kiri) mempersilakan mantan Wakil Presiden Try Sutrisno (kanan) sebelum mengikuti Upacara Parade Senja di Lapangan Bela Negara, Kementerian Pertahanan, Jakarta, Selasa (4/10/2022).   ANTARA FOTO/Akbar Nugroho Gumay  #parade #senja #jokowi #prabowo #army  https://t.co/u1aEwVyn3n
-1577321929878687744 2022-10-04 15:37:07 +0000 &lt;antarafoto&gt; UPACARA PARADE SENJA  Pasukan mengikuti Upacara Parade Senja di Lapangan Bela Negara, Kementerian Pertahanan, Jakarta, Selasa (4/10/2022).   ANTARA FOTO/Akbar Nugroho Gumay  #parade #senja #jokowi #prabowo #army #navy #kementerian #pertahanan #bela #negara #tentara #pasukan  https://t.co/UcMAIPEKSm
-1577274095754170368 2022-10-04 12:27:03 +0000 &lt;jpnncom&gt; Duet Prabowo Subianto-Erick Thohir semakin menguatkan angka elektabilitas keduanya, kokoh berada di posisi teratas untuk pesta elektoral Pilpres 2024. #Prabowo  https://t.co/J3DbRoXB4T
-1577263384160272384 2022-10-04 11:44:29 +0000 &lt;mhara_lising&gt; dataran tinggi. Pengembangan KSPP di provinsi ini ditargetkan di lahan seluas 1.000 hektare. Saat ini realisasi capaian baru di lahan seluas 215 hektare.  #prabowo #suharsomanoarfa #foodestate
-1577237641804001281 2022-10-04 10:02:12 +0000 &lt;BPKHRI&gt; dataran tinggi. Pengembangan KSPP di provinsi ini ditargetkan di lahan seluas 1.000 hektare. Saat ini realisasi capaian baru di lahan seluas 215 hektare.  #prabowo #suharsomanoarfa #foodestate
-1577234237006090241 2022-10-04 09:48:40 +0000 &lt;HartantoNh&gt; Lihat video Nanang Hartanto! #TikTok  https://t.co/soEqTMhhjY #sby #anisbaswedan #SaveAniesBaswedan #prabowo #jokowi
-1577226387068375040 2022-10-04 09:17:28 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
-1577224525241991168 2022-10-04 09:10:04 +0000 &lt;PrasetyoHadi28&gt; secara gotong royong dgn memberdayakan warga sekitar. Sehingga, anggaran yg diberikan berputar pd wilayah desa tersebut.  #prabowo #prabowosubianto #aksinyata #gerindra #gerindrabersamarakyat #purworejo #infopurworejo #explorepurworejo #purworejoinfo #prasetyohadi #bhaktimaspras  https://t.co/ApOa4GgJbX
-1577167962422726658 2022-10-04 05:25:19 +0000 &lt;papandu08&gt; Prabowo mengajarkan kita untuk selalu berfikir, berbuat, bertindak, dan berkata baik #prabowo #gerindra #prabowopresiden  https://t.co/qXhiVHqUbT
-1577151800091717632 2022-10-04 04:21:05 +0000 &lt;Jiung1973&gt; Prabowo,Puan,Anies, Ganjar atau siapapun yang layak maju di 2024, janganlah saling menjatuhkan, adu gagasan dan pencapaian saja demi warisan kebaikan untuk anak cucu kita #AniesBaswedan #GanjarPranowo #prabowo #PuanMaharani
-1577139371496833025 2022-10-04 03:31:42 +0000 &lt;KoncoErick&gt; Nah iki Pak Menteri BUMN RI Erick Thohir cawapres sing cocok disandingke karo sopo ae. Dipasangke karo Pak Ganjar Pranowo yo iso, karo Pak Prabowo Subianto yo iso. Sing penting Pak Erick Thohir maju Pilpres 2024, Indonesia bakal aman rek.   #ganjarpranowo #prabowo #erickthohir  https://t.co/TebpqZN28u
-1577134951140507650 2022-10-04 03:14:08 +0000 &lt;pasti_2024&gt; Prabowo-Erick Thohir pilihan pasti  Bekerja nyata melayani dengan hati Berkomitmen menghadirkan berbagai inovasi Mendorong kemajuan menghadirkan kesejahteraan di negeri ini  #prabowo #erickthohir #capres #cawapres #indonesia #pasti2024  https://t.co/2Su75c4wrK
-1577086095967166464 2022-10-04 00:00:00 +0000 &lt;holopiscom&gt; Gubernur Jawa Barat, Mochammad Ridwan Kamil mengaku mendapatkan banyak sekali wejangan yang baik dari Prabowo Subianto. @prabowo @ridwankamil #Prabowo #RidwanKamil @Gerindra  https://t.co/8jnggvqPkz
-1577037630742544384 2022-10-03 20:47:25 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
-1576968177200009216 2022-10-03 16:11:26 +0000 &lt;paperaprabowo&gt; Komunitas Pedagang Yang Tergabung dalam #pedagangpejuangindonesiaraya (PAPERA) wilayah tanah abang siap memenangkan Bapak @prabowo sebagai presiden....   #Politik #pilpres2024 #prabowo #pedagang  https://t.co/epWiq2gV8r
-1576907437931581440 2022-10-03 12:10:05 +0000 &lt;sfsimatupang&gt; Kick off persiapan #Pilpres2024 sudah dimulai. Gerindra mencalonkan #Prabowo, Nasdem mengajukan #AniesBaswedan &amp;amp; PSI mengajukan #GanjarPranowo. Siapa menyusul?  https://t.co/auV9KQ8aUO
-1576848908806148096 2022-10-03 08:17:30 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
-1576811650564620288 2022-10-03 05:49:27 +0000 &lt;choncotani_mel&gt; @Metro_TV Aku yakin #ganjar. #prabowo..#andhika_perkasa..putra2 terbaik Indonesia
-1576805784536481794 2022-10-03 05:26:09 +0000 &lt;DpcTanjabbar&gt; Gerindra - PKB Berkoalisi di Pemilu 2024  #gusmuhaimin #muhaiminiskandar #prabowo #prabowosubianto #pkbmenang #gerindramenang  https://t.co/Q2GvmhkWc2
-1576802437251284992 2022-10-03 05:12:51 +0000 &lt;papandu08&gt; Jawaban Prabowo saat ditanya soal Jokowi jadi cawapres di 2024 #prabowo #jokowi #capres #cawapres #politik  https://t.co/aJdIBv9XHR
-1576771221676470273 2022-10-03 03:08:48 +0000 &lt;HabibGhufron78&gt; @gibran_tweet Kulo Tugiman Pranowo mas wali 🙏 Shollualamuhammad  #GanjarTheNextJokowi  #Prabowo
-1576756533706518530 2022-10-03 02:10:27 +0000 &lt;paperaprabowo&gt; Rapat Konsolidasi Pedagang Pejuang Indonesia Raya (PAPERA) Se Jabodetabek di Kantor DPP Partai @gerindra , untuk kemenangan Bapak @prabowo Sebagai Presiden.   #pedagangpejuangindonesiaraya #gerindra #prabowo #politik #pilpres  https://t.co/bRmH7Gotf7
-1576742491016990720 2022-10-03 01:14:38 +0000 &lt;RidNgemil&gt; Emang apa sik yang kalian takutkan kalau @aniesbaswedan berkuasa? Kasih jawaban yang masuk akal dong... #AniesBaswedan #prabowo #ganjarpranowo #PuanMaharani #capres2024
-1576667707159683072 2022-10-02 20:17:29 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
-1576602918505304064 2022-10-02 16:00:02 +0000 &lt;Genpi_Co&gt; Menteri Pertahanan Prabowo Subianto mengatakan lahan kosong telantar bisa dimanfaatkan untuk pertanian. #prabowo  https://t.co/YuXcfvpvqk
-1576524657922301955 2022-10-02 10:49:03 +0000 &lt;jpnncom&gt; Prabowo mengatakan Tragedi Kanjuruhan pada 1 Oktober 2022 menjadi peristiwa yang mengagetkan bagi semua pihak. #Prabowo  https://t.co/DnsfKodYVC
-1576505647977447425 2022-10-02 09:33:31 +0000 &lt;Martina_inaaa&gt; Selamat Hari Batik Nasional 2022  Batik yang menjadi warisan kebanggaan budaya Indonesia patut kita jaga kelestariannya.  Batik identitas kita, kebanggaan kita dan budaya kita.  #prabowo #presiden #2024  https://t.co/WizgGHdNwA
-1576498029435109377 2022-10-02 09:03:14 +0000 &lt;edorahmanta&gt; Semoga tidak terulang lagi Negeriku Ibu Pertiwi #PrayForKanjuruhan #prabowo #Indonesia  https://t.co/t7vbKg1T5m
-1576485549460049920 2022-10-02 08:13:39 +0000 &lt;serambinews&gt; #Prabowo #Respons #Jokowi   Menteri Pertahanan Prabowo Subianto merespons dukungan sejumlah relawan untuk mencalonkan diri bersama Presiden Joko Widodo pada Pilpres 2024    https://t.co/PapPDcrofk lewat @serambinews
-1576485511631626240 2022-10-02 08:13:30 +0000 &lt;sharenewsaceh&gt; #Prabowo #Respons #Jokowi   Menteri Pertahanan Prabowo Subianto merespons dukungan sejumlah relawan untuk mencalonkan diri bersama Presiden Joko Widodo pada Pilpres 2024    https://t.co/XGc0WwyyVK lewat @serambinews
-1576478948997070848 2022-10-02 07:47:25 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
-1576446903310426112 2022-10-02 05:40:05 +0000 &lt;pasti_2024&gt; Enggak mengherankan kalau Pak Erick Thohir bisa bersaing ketat pada bursa Cawapres 2024.   Figur yang kaya talenta serta inovasi ini banyak dikenal dengan kerja nyatanya.   #jawabarat #petani #indonesia #prabowo #erickthohir #pasti2024  https://t.co/GIjJweicyP
-1576438868580003841 2022-10-02 05:08:09 +0000 &lt;gerindra_la&gt; Selamat Hari BATIK NASIONAL  2 Oktober 2022  ___  #gerindra #prabowo #gerindramenang #prabowopresiden #gerindralamongan #lamonganmegilan #politisisantri  https://t.co/jUUS4msLBU
-1576438612723257345 2022-10-02 05:07:08 +0000 &lt;gerindra_la&gt; Duka Mendalam untuk Sepakbola Indonesia  @PSSI @KEMENPORA_RI @AremafcOfficial @persebayaupdate  ____  #gerindra #prabowo #gerindramenang #prabowopresiden #gerindralamongan #lamonganmegilan #politisisantri #arema #malangberduka #tragedikanjuruhan #prayforkanjuruhan  https://t.co/0Rhf2iOWkU
-1576419215292403712 2022-10-02 03:50:04 +0000 &lt;nusabalicom&gt; Papera Dukung Prabowo Subianto jadi Capres 2024  https://t.co/4XI4v2KbmQ #berita #nusabali #Prabowo #Capres #Gerindra #Pemilu2024
-1576417779862888449 2022-10-02 03:44:21 +0000 &lt;AsikDung&gt; JeJeBa... . . Jenderal Jenderal Bahagia😎 #PanglimaTNI #DudungAbdurachman #Prabowo #AndikaPerkasa #RakyatSejahtera #KSAD #angkatandaratdihatirakyat #asikdung  https://t.co/Bf2R4Kr4Za
-1576407770374369280 2022-10-02 03:04:35 +0000 &lt;papandu08&gt; Pesan Prabowo di hari peringatan Kesaktian Pancasila #prabowo #kesaktianpancasila #indonesiamerdeka  https://t.co/IoeWV8RcHh
-[!] No more data! Scraping will stop now.
-found 0 deleted tweets in this search.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1579994741818593281 2022-10-12 00:37:55 +0000 &lt;kaltenglima&gt; Polri Beberkan Penyebab Korban Tragedi Kanjuruhan Meninggal   https://t.co/BeVo2U0gvU
+1579994667944333312 2022-10-12 00:37:38 +0000 &lt;penjagadapur&gt; tuan jokowi, mengapa sampeyan tidak meminta maaf dan menystakan bertanggung jawab kepada ratusan korban mati dan atau luka luka dalam Tragedi Kanjuruhan?#dimanarasakemanusiaansampeyan?!
+1579994545395093505 2022-10-12 00:37:09 +0000 &lt;ZunanArfian&gt; Kapolres Malang AKBP Putu Kholis Aryana duduk bersimpuh di depan pintu masuk pemeriksaan tiket, memanjatkan doa bagi korban Tragedi Kanjuruhan, di Stadion Kanjuruhan, Kabupaten Malang, Selasa (11/10/2022) siang. Hal ini dilakukan di sela-sela kunjungannya ke Stadion Kanjuruhan  https://t.co/WAa03qGnNN
+1579994530660896768 2022-10-12 00:37:05 +0000 &lt;Athaya_Abida&gt; Kalangan industri komersialisasi olahraga nasional memuji hasil lobi @erickthohir ke FIFA yang membuat federasi sepak bola internasional itu urung memberikan sanksi berat kepada Indonesia paska tragedi Kanjuruhan  #BangkitBersamaET  https://t.co/9xCdQakEOe
+1579994526264877058 2022-10-12 00:37:04 +0000 &lt;adiovlad&gt; Klopun nanti liga jalan lagi dgn kapasitas 50%, ya pendapat pribadi sih ga usah datang ke stadion dulu klo kasus Kanjuruhan belum selesai. Percuma ngoceh sana sini, teriak asat usut, tragedi ini tragedi itu, klo msih pd menikmati liga diatas tragedi kemanusiaan yg belum selesai.
+1579994285604151296 2022-10-12 00:36:07 +0000 &lt;terkinidotid&gt; Tim Pencari Fakta Sebut Tragedi Kanjuruhan Pembunuhan Sistematis, Ini 12 Temuannya    https://t.co/YtddR1GqY9
+1579994279371587584 2022-10-12 00:36:05 +0000 &lt;bb_sports_id&gt; PSSI Sebut Kompetisi Liga 1 Menunggu Keputusan FIFA   https://t.co/nqe5boNNN9 baca juga berita dari media lainnya di Indonesia di  https://t.co/GkwQxScnBB   #liga1 #pssi #fifa #tragedikanjuruhan #ahmadriyadh #liga2 #afc #mochamadiriawan
+1579994246006079488 2022-10-12 00:35:57 +0000 &lt;holopiscom&gt; Kabid Humas Polda Jatim Kombes Polisi Dirmanto mengungkapkan, tiga tersangka yakni Kompol WS, AKP BS, dan AKP H, belum memiliki pengacara sehingga menolak untuk diperiksa. #TragediKanjuruhan #Kanjuruhan  https://t.co/SzQpuvAKiY
+1579994077432492032 2022-10-12 00:35:17 +0000 &lt;rahmadiheru88&gt; &quot;Tugasnya untuk cuci piring di #Malang akan jadi prioritas yg tidak bisa ditawar.  Terutama, menyembuhkan luka yg dalam.  • Polresta #Malang sudah memulai dgn Sangat Baik.  Anggota Polresta #Malang berSUJUD bersama di halaman Polres, menDOAkan korban tragedi #Kanjuruhan.&quot;  (D I)
+1579994013020876801 2022-10-12 00:35:02 +0000 &lt;WartaEkonomi&gt; Resmi Dilaporkan karena Buat Gaduh Terkait Tragedi Kanjuruhan, Ade Armando Mohon Siap-siap!  https://t.co/CadarCppbW
+1579993900969861121 2022-10-12 00:34:35 +0000 &lt;Tr3nd1n6&gt; DPR Geram Dengar Kadiv Humas Polri Sebut Korban Tewas Tragedi Kanjuruhan Akibat Kurang Oksigen  https://t.co/qJpMzcwplS #BeritaIslam  https://t.co/kMax8qDwvm
+1579993719859646464 2022-10-12 00:33:52 +0000 &lt;BUMNWAJOHADIR&gt; Erick mengatakan bahwa pertemuan itu turut membahas sejumlah hal dalam pengembangan sepak bola, termasuk Tragedi Kanjuruhan.  https://t.co/kPwh9WKcUB
+1579992828540698624 2022-10-12 00:30:19 +0000 &lt;terkinidotid&gt; Polisi Sujud Massal Minta Maaf untuk Tragedi Kanjuruhan, Pakar UB: Berlebihan    https://t.co/6wyeLUgYQU
+1579992476412039168 2022-10-12 00:28:55 +0000 &lt;MAreborn444&gt; @JamanEdan543123 JANGANKAN HUKUMAN BERAT, PEMECATAN AJA GAK ADA.  Nyawa tidak menjadi perhatian pejabat negara. Sungguh2 mengerikan.  BUNTUT Tragedi Kanjuruhan, Kapolda Jatim Irjen Nico Afinta Dimutasi Jadi SahliSosbud Kapolri   https://t.co/LoeS16evAP  #PolriPemecahBangsa  #PolriPemecahBangsa
+1579992166457565186 2022-10-12 00:27:41 +0000 &lt;pikiran_rakyat&gt; Mahfud MD: Hasil Investigasi Tragedi Kanjuruhan Diserahkan ke Jokowi Jumat Ini  https://t.co/Vl3xzu8Dhb  https://t.co/aVaQ7zJjpy
+1579992003626078210 2022-10-12 00:27:03 +0000 &lt;bb_sports_id&gt; Terkait Laga Malam Hari Arema FC Vs Persebaya, PT LIB: Itu Permintaan Indosiar  https://t.co/9rABoUQtuT baca juga berita dari media lainnya di Indonesia di  https://t.co/GkwQxScnBB   #tragedikanjuruhan #ptlib #ptligaindonesiabaru #indonesia #liga120222023
+1579991931219836928 2022-10-12 00:26:45 +0000 &lt;KakakLap&gt; Update Korban Tragedi Kanjuruhan, 132 Meninggal Dunia, 607 Luka-luka  https://t.co/LObMDAfVSI
+1579991926778085376 2022-10-12 00:26:44 +0000 &lt;joswito&gt; Update Korban Tragedi Kanjuruhan, 132 Meninggal Dunia, 607 Luka-luka  https://t.co/S2FLaJsH0K
+1579991377168855040 2022-10-12 00:24:33 +0000 &lt;TINTAHIJAUcom&gt; Viral di Medsos, Mata Merah Karena Gas Air Mata di Tragedi Kanjuruhan  https://t.co/LXJMhvlLOI
+1579991256058724352 2022-10-12 00:24:04 +0000 &lt;KompasTV&gt; Di Balik Aksi Sujud Polisi Malang, Ada Rasa Bersalah dan Harapan Tragedi Kanjuruhan Segera Tuntas  https://t.co/tMeDXKFW0i  https://t.co/TyBKKJ50I8
+1579991113389473792 2022-10-12 00:23:30 +0000 &lt;penjagadapur&gt; tuan jokowi, mengapa sampeyan tidak meminta maaf dan menyatakan bertanggung jawab kepada ratusan korban mati dan atau luka luka dalam Tragedi Kanjuruhan?#dimanarasakemanusiaansampeyan?!
+1579991037875032065 2022-10-12 00:23:12 +0000 &lt;detikcom&gt; Kematian Helen Pricela korban tragedi Kanjuruhan yang baru berusia 20 tahun menambah duka. Kematiannya pun membuat jumlah korban jiwa menjadi 132 orang.  https://t.co/OFdn35GUwY
+1579990837597020162 2022-10-12 00:22:25 +0000 &lt;BeritaDotMedia&gt; Ketua Tim Gabungan Independen Pencari Fakta (TGIPF) Tragedi Kanjuruhan, Mahfud MD menegaskan bakal m #berita #menarik  https://t.co/GB54Xi6zaL
+1579990750363648000 2022-10-12 00:22:04 +0000 &lt;AlFariqi&gt; Tragedi Kanjuruhan, Segera Benahi Sepakbola Indonesia dan Mendesak Ketua Umum dan Pengurus PSSI Untuk Mengundurkan Diri #IwanBuleOut @iriawan84 @pt_lib - Tandatangani Petisi!  https://t.co/M930gS7d8V lewat @ChangeOrg_ID
+1579990625071427584 2022-10-12 00:21:34 +0000 &lt;ZAEffendy&gt; Jangan tanya kenapa? 19 Saksi dan Korban tragedi #Kanjuruhan Malang minta perlindungan LPSK ... #Nalar!
+1579990618730037248 2022-10-12 00:21:32 +0000 &lt;kompascom&gt; Polisi di Kota Malang sujud minta maaf terkait Tragedi Kanjuruhan. Namun, mereka juga membela diri di Jakarta.  https://t.co/VE9RkueLum
+1579990244187074560 2022-10-12 00:20:03 +0000 &lt;tempodotco&gt; TGIPF Tragedi Kanjuruhan Serahkan Hasil Investigasi ke Jokowi pada Jumat  https://t.co/QuWd586kc4 #TempoNasional
+1579990136250830848 2022-10-12 00:19:37 +0000 &lt;beritajatimcom&gt; Polisi Tak Menahan Tersangka Tragedi Kanjuruhan Malang.  Dua Tersangka tragedi Kanjuruhan menjalani pemeriksaan    di Direktorat Reserse Kriminal Umumu (Ditreskrimum) Polda Jatim -- Ikuti kami di google berita…  https://t.co/5U9Zv7m29o #HukumKriminal #Arema via @beritajatimcom
+1579989806645653504 2022-10-12 00:18:19 +0000 &lt;pikiran_rakyat&gt; Korban Meninggal Tragedi Kanjuruhan Bertambah Satu Orang  https://t.co/rgduSl0f7E
+1579989638529581058 2022-10-12 00:17:39 +0000 &lt;AryaNoorAmarsya&gt; Menyusul Tragedi Kanjuruhan, Pemerintah Akan Mengaudit Kembali Stadion-stadion  https://t.co/kvTTDzVoSP
+1579989498431438848 2022-10-12 00:17:05 +0000 &lt;tauberitamedia&gt; Kematian Helen Pricela korban tragedi Kanjuruhan yang baru berusia 20 tahun menambah duka. Kematiannya pun membuat jumlah korban jiwa menjadi 132 orang.  https://t.co/JEdPVB4EI5
+1579989348442742784 2022-10-12 00:16:30 +0000 &lt;RadioElshinta&gt; Federasi Sepak Bola Dunia atau FIFA yg bermarkas di Zurich Swiss segera berkantor di Indonesia selama dua bulan untuk membantu pemerintah Indonesia membenahi sepak bola ditanah Air. Hal ini terjadi pasca Tragedi yg terjadi di stadion Kanjuruhan Malang Jawa Timur 1 Oktober lalu  https://t.co/iQdbkj4sn5
+1579989255182434305 2022-10-12 00:16:07 +0000 &lt;a_daud_ppnp&gt; Rocky Gerung Heran Jokowi Salahkan Pintu dan Tangga di Tragedi Kanjuruhan: Kan Kepanikan Datangnya dari Gas Air Mata..  https://t.co/hZOnXzZB3e
+1579988685805608963 2022-10-12 00:13:52 +0000 &lt;OfficialiNewsTV&gt; Menteri PUPR Audit Stadion Sepak Bola yang Banyak Suporternya  https://t.co/yfEEI7htC0  #Stadion #TragediKanjuruhan #Suporter #Jokowi #MenteriPUPR #Audit #iNews #IniBaruBerita  https://t.co/aT4Gsrg7CG
+1579988614116569092 2022-10-12 00:13:35 +0000 &lt;bisanewsid&gt; Tragedi Kanjuruhan Harus Jadi Pelajaran Berharga  https://t.co/9sdETnSgUs
+1579988132400807937 2022-10-12 00:11:40 +0000 &lt;Murai182&gt; @DivHumas_Polri Suruh nyoba sendiri aja, kondisikan sama seperti kondisi Aremania saat tragedi Kanjuruhan
+1579987422431305728 2022-10-12 00:08:50 +0000 &lt;sahalaharianj16&gt; Sampai saat ini tragedi kanjuruhan blm ada yg mengaku paling bertanggung jawab dlm peristiwa tsb, mungkin yg paling pantas dipersalahkan, BOLA, dan bola
+1579987369859510272 2022-10-12 00:08:38 +0000 &lt;ovrthnkrbelle_&gt; &quot;Duka kehilangan itu nggak akan pernah sembuh, jun. Kita cuma bisa menerima dan terus menerima kalau ia tidak akan pernah kembali&quot;   Sekian dari banyak tutur abang kami sejak kejadian Semeru sampai tragedi Kanjuruhan. Dan memang benar, duka kehilangan itu akan terus melekat.
+1579987355355607040 2022-10-12 00:08:34 +0000 &lt;KartumerahNews&gt; Mahfud MD Bicara Gas Air Mata Kedaluarsa Tragedi Kanjuruhan, Pengamat Cium Indikasi Korupsi  https://t.co/pelC79zL1a
+1579987252834603008 2022-10-12 00:08:10 +0000 &lt;detik_jatim&gt; Kematian Helen yang Menambah Duka Tragedi Kanjuruhan: Korban Jiwa 132 Orang  https://t.co/HMdgdOSS3B
+1579987240520151042 2022-10-12 00:08:07 +0000 &lt;BatamPos&gt; Lusa Kirim Laporan Tragedi Kanjuruhan ke Presiden  https://t.co/KIqX0e9gKA
+1579987171947479042 2022-10-12 00:07:51 +0000 &lt;NurulIm81316494&gt; Polresta Malang Kota Sambangi Korban Tragedi Kanjuruhan Alami Iritasi Mata  https://t.co/KcpArqn33M  https://t.co/Y9bL6yVFzX
+1579986986093645824 2022-10-12 00:07:06 +0000 &lt;tvOneNews&gt; Machfud MD Sebut TGIPF akan Serahkan Hasil Investigasi Tragedi Kanjuruhan Kepada Presiden Jokowi pada Jumat 14/10  https://t.co/AJoW0IYERt
+1579986946570715136 2022-10-12 00:06:57 +0000 &lt;boedyirh&gt; @detikcom Di luar tragedi Kanjuruhan, saya rasa kalau klub bisa mengedukasi supporter, pasti perannya sangat besar dalam memajukan kompetisi sepakbola di Indonesia yang sehat berbasis prestasi.
+1579986863762599936 2022-10-12 00:06:37 +0000 &lt;tempodotco&gt; Sejumlah Polisi Malang Sujud Massal Mohon Maaf Tragedi Kanjuruhan, Mirip Etiket Dogeza di Jepang?  https://t.co/PrvOvPCCcg #TempoNasional
+1579986726139080704 2022-10-12 00:06:04 +0000 &lt;tauberitamedia&gt; Gas air mata kedaluarsa dalam tragedi Kanjuruhan terus disorot, pengamat nilai ada indikasi korupsi hingga kandungannya diperiksa di Laboratorium. -    https://t.co/Sso6CRheuo
+1579986600549056512 2022-10-12 00:05:34 +0000 &lt;Furqanjurdi1&gt;  https://t.co/9KrwxhyDJT  Ade Armando dipolisikan lantaran menyebut Aremania sok jagoan. Ucapan itu dilontarkan Ade dalam video terkait tragedi kerusuhan di Stadion Kanjuruhan.
+1579986228119625728 2022-10-12 00:04:06 +0000 &lt;tauberitamedia&gt; Ade Armando dipolisikan lantaran menyebut Aremania sok jagoan. Ucapan itu dilontarkan Ade dalam video terkait tragedi kerusuhan di Stadion Kanjuruhan.  https://t.co/YeCanhkDiC
+1579986221517852672 2022-10-12 00:04:04 +0000 &lt;BongkahI&gt; Ini Sosok Pengganti dan Harta Kekayaannya Kapolda Jawa Timur Pengganti Irjen Nico Afinta yang Dicopot Buntut Tragedi Kanjuruhan #Kanjuruhan #kanjuruhanberduka #kapoldajatim   https://t.co/KZud4B0sRl
+1579986102781612032 2022-10-12 00:03:36 +0000 &lt;KompasTV&gt; Dua Tersangka Tragedi Kanjuruhan Ketua Panpel Arema dan Security Officer Diperiksa 12 Jam  https://t.co/RqGJJKKXcp  https://t.co/KGLQTu7oKg
+1579985726661603329 2022-10-12 00:02:06 +0000 &lt;lawjusticeco&gt; Gas Air Mata Sebab Tragedi Kanjuruhan, Said Didu Sebut Malaikat Maut   https://t.co/QkhlGYJd0O  https://t.co/VGvz1jsqbq
+1579985706457264128 2022-10-12 00:02:01 +0000 &lt;Popularitascom&gt; Ade Armando dipolisikan terkait Tragedi Kanjuruhan   #Arema #AdeArmando #Kanjuruhan #popularitascom  https://t.co/s73tHQEiRp
+1579985557081366529 2022-10-12 00:01:26 +0000 &lt;doelsmiths&gt; 11 HARI DALAM PERAWATAN. sebuah catatan buat teman teman penyintas tragedi kanjuruhan dan keluarga.  Ketika sampai dirumah pasien usahakan banyak di ajak ngobrol ,jangan biarkan sendirian. atur jadwal istirahatnya. bila ada yg besuk hindari obrolan kejadian .
+1579985355486347264 2022-10-12 00:00:38 +0000 &lt;MSNindonesia&gt; Polisi dalam Tragedi Kanjuruhan: Sujud Minta Maaf di Malang, Pembelaan di Jakarta  https://t.co/latV28ibqk
+1579985315401375744 2022-10-12 00:00:28 +0000 &lt;mochsirodjuddin&gt; Aamiin, Aamiin, aamiin ya Allah ya rabbal allamin... Usut tuntas tragedi Kanjuruhan
+1579985239929106433 2022-10-12 00:00:10 +0000 &lt;aksesdisini_com&gt; Tersangka Tragedi Kanjuruhan Berdalih Ada Penambahan Tiket  https://t.co/3TaMZKvmVK
+1579985230529978368 2022-10-12 00:00:08 +0000 &lt;tempodotco&gt; Korban Meninggal dalam Tragedi Kanjuruhan Bertambah Satu, Total 132 Orang  https://t.co/4Uqm8BJriJ #TempoNasional
+1579985151936765953 2022-10-11 23:59:49 +0000 &lt;NurbainiRatna&gt; @geloraco Ya Allah....... Pantesan.... Bny warga yg meninggal di Tragedi Kanjuruhan....😭😭😭
+1579984861624143877 2022-10-11 23:58:40 +0000 &lt;JakMasseur&gt; @CNNIndonesia Kenapa Kasus Sambo &amp;amp; Tragedi Kanjuruhan terjadi &amp;amp; Tuhan Izinkan ? Karena selain penguasa &amp;amp; Aparat yg Arogan,Rakyatnya pun memang sudah terpecah akibat fitnah yg sengaja disebarkan,demi kekuasaan agar tetap aman. Jika Kasus Sambo ibarat SP 1,&amp;amp; Kanjuruhan SP2,bersiaplah tuk Bahagia
+1579984825125318656 2022-10-11 23:58:31 +0000 &lt;officialntv_&gt; #TragediKanjuruhan  Sanksi FIFA Tahun 2015 Silam Tak Terulang Kembali   https://t.co/ul2pbbkxhq  #sepakbola #SanksiFIFA #Kanjuruhan #KanjuruhanStadium #rusuh #gasairmata #supporters #aremaniaberduka #UsutTuntasTragediKanjuruhan #UsutTuntas #Bola
+1579984811808038914 2022-10-11 23:58:28 +0000 &lt;Tribun_Bogor&gt; Bukti Penting Tragedi Kanjuruhan Kini Dipegang Komnas HAM, Ada Video Kunci Berisi Penyebab Kericuhan    https://t.co/wLpDzY3F2x lewat @tribunnews
+1579984451622166528 2022-10-11 23:57:02 +0000 &lt;bb_sports_id&gt; Sekjen PSSI: Pemberhentian Kompetisi Tidak Termasuk Level Grassroot  https://t.co/bUg1odqvMp baca juga berita dari media lainnya di Indonesia di  https://t.co/GkwQxRUMd1   #kompetisigrassroot #ligausiamuda #pssi #sekjenpssi #yunusnusi #tragedikanjuruhan
+1579984201281310721 2022-10-11 23:56:02 +0000 &lt;tauberitamedia&gt; Polisi di Kota Malang sujud minta maaf terkait Tragedi Kanjuruhan. Namun, mereka juga membela diri di Jakarta.   https://t.co/a94JsABY6g
+1579984100668362752 2022-10-11 23:55:38 +0000 &lt;floresterkini&gt; Tragedi Kanjuruhan: Pemerintah Indonesia Waspadai Sanksi FIFA, Memori 2015 Bakal Terulang?  https://t.co/G9YICatyns
+1579984092992790529 2022-10-11 23:55:37 +0000 &lt;floresterkini&gt; Imbas Tragedi Kanjuruhan, Piala Dunia U20 Tahun 2023 Batal Digelar di Indonesia?  https://t.co/X5xkSjOCeN
+1579983605282922496 2022-10-11 23:53:40 +0000 &lt;detikcom&gt; Ade Armando dipolisikan lantaran menyebut Aremania sok jagoan. Ucapan itu dilontarkan Ade dalam video terkait tragedi kerusuhan di Stadion Kanjuruhan.  https://t.co/vf7KZ1LQoN
+1579983325628092416 2022-10-11 23:52:34 +0000 &lt;OposisiCerdas&gt; Komnas HAM Klaim Punya Video Kunci Awal Mula dari Tragedi Kanjuruhan  https://t.co/4twheiOnmf
+1579983080655572992 2022-10-11 23:51:35 +0000 &lt;KulinoKepenak&gt; @detikcom Pengakuan Iwan Londo sebelum tragedi Kanjuruhan. Jelas ya karna cuan.  https://t.co/k4x1OrNQX0
+1579982883262865408 2022-10-11 23:50:48 +0000 &lt;KonradKun&gt; Tragedi Kanjuruhan: Indosiar Bantah Ada Kepentingan Iklan Rokok di Pertandingan Arema Vs Persebaya Malam Hari  https://t.co/WC4lp9937L
+1579982837893079040 2022-10-11 23:50:37 +0000 &lt;PRFMnews&gt; Korban Meninggal Tragedi Kanjuruhan Bertambah, Polri: Jumlah Total 132 Orang  https://t.co/jzCe9xI7RI
+1579982687628328960 2022-10-11 23:50:02 +0000 &lt;KompasBola&gt; Polisi dalam Tragedi Kanjuruhan: Sujud Minta Maaf di Malang, Pembelaan di Jakarta  https://t.co/VuWnGcRJxP
+1579982503468707841 2022-10-11 23:49:18 +0000 &lt;Monitorind_news&gt; Diperiksa 12 Jam, 2 Tersangka Tragedi Kanjuruhan Tak Ditahan, Ada Apa?  https://t.co/BkwPbHX3CB
+1579982412896825344 2022-10-11 23:48:56 +0000 &lt;WaspadaOnline&gt; Korban Meninggal Tragedi Kanjuruhan Bertambah, Total 132 Orang  https://t.co/M1BLElBRK8
+1579982240754577408 2022-10-11 23:48:15 +0000 &lt;eldidito&gt; @rskuntowiyoga Dalam Tragedi Kanjuruhan, FIFA datang layaknya &quot;penyelamat&quot;. Jadi penasaran aja apakah mereka sudah bersih2 setelah Sepp Blater ga disana.
+1579982171745685504 2022-10-11 23:47:59 +0000 &lt;JokoHar68301204&gt; Polresta Malang Gelar Sujud Massal atas Tragedi Kanjuruhan, Warganet Penasaran Tak sejak Awal Permintaan Maaf Dilakukan  https://t.co/yb7KbyZjJB
+1579981971513835520 2022-10-11 23:47:11 +0000 &lt;ikhwan2a&gt; Korban Meninggal dalam Tragedi Kanjuruhan Bertambah Satu Orang Total 132 Orang  https://t.co/VDb3q3zI70  https://t.co/1IFtO9UY57
+1579981940421447680 2022-10-11 23:47:03 +0000 &lt;tempodotco&gt; Korban Meninggal dalam Tragedi Kanjuruhan Bertambah Satu Orang Total 132 Orang  https://t.co/dpBYAq57Au #TempoNasional
+1579981794447085568 2022-10-11 23:46:29 +0000 &lt;most1058&gt; Presiden RI Joko Widodo akan membentuk tim khusus utk menindaklanjuti surat balasan FIFA yg mencantumkan sejumlah poin transformasi sepak bola Indonesia menyusul Tragedi Kanjuruhan. Tim tsb akan berbeda dengan TGIPF Tragedi Kanjuruhan yg saat ini sedang bekerja. #MostUpdate1058
+1579981613374373888 2022-10-11 23:45:45 +0000 &lt;RadioElshinta&gt; Kepala dinas kesehatan Kab. Malang Wiyanto : &quot; Santunan korban meninggal tragedi Kanjuruhan Malang mencapai 100 Juta lebih per orang, sumbangan diantaranya dari Presiden, Gubernur, Bupati dan Masyarakat&quot;  https://t.co/diCvWlAthi
+1579981430981287937 2022-10-11 23:45:02 +0000 &lt;bb_sports_id&gt; TGIPF Ungkap Pengakuan LIB : Laga Malam Hari Arema FC Vs Persebaya Permintaan Indosiar  https://t.co/y6hQMdWFqQ baca juga berita dari media lainnya di Indonesia di  https://t.co/GkwQxScVr9   #tragedikanjuruhan #aremafc #aremafcvspersebaya #tgipf #indosiar
 </pre></div>
 </div>
 </div>
@@ -815,7 +848,7 @@ found 0 deleted tweets in this search.
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Tweets_df</span> <span class="o">=</span> <span class="n">twint</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">panda</span><span class="o">.</span><span class="n">Tweets_df</span>
-<span class="n">Tweets_df</span><span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;prabowo.csv&quot;</span><span class="p">)</span> <span class="c1">#menyimpan ke prabowo.csv</span>
+<span class="n">Tweets_df</span><span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;kanjuruhann.csv&quot;</span><span class="p">)</span> <span class="c1">#menyimpan ke kanjuruhan.csv</span>
 </pre></div>
 </div>
 </div>
@@ -888,7 +921,7 @@ found 0 deleted tweets in this search.
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Tweets_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/maulidhan190081/file/main/prabowo2.csv&quot;</span><span class="p">)</span> <span class="c1">#mengambil data dari link</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Tweets_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/maulidhan190081/file/main/kanjuruhannn.csv&quot;</span><span class="p">)</span> <span class="c1">#mengambil data dari link</span>
 
 <span class="n">Tweets_df</span> <span class="c1">#print data</span>
 </pre></div>
@@ -896,7 +929,7 @@ found 0 deleted tweets in this search.
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-dd66ad65-34cb-4283-adc4-7b64c4c773a1">
+  <div id="df-7bc975d3-1357-4147-a5f2-b8641ac963c2">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -917,70 +950,58 @@ found 0 deleted tweets in this search.
     <tr style="text-align: right;">
       <th></th>
       <th>tweet</th>
-      <th>label</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>Doa para kiai sepuh untuk Cak Imin dan Prabowo...</td>
-      <td>pro</td>
+      <td>Polri Beberkan Penyebab Korban Tragedi Kanjuru...</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>Menteri Pertahanan (Menhan) Prabowo Subianto m...</td>
-      <td>pro</td>
+      <td>tuan jokowi, mengapa sampeyan tidak meminta ma...</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>Semangat Juang #Ir_soekarno Ada Pada diri #pra...</td>
-      <td>pro</td>
+      <td>Kapolres Malang AKBP Putu Kholis Aryana duduk ...</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>Negarawan sejati yang selalu ingin membawa ked...</td>
-      <td>pro</td>
+      <td>Kalangan industri komersialisasi olahraga nasi...</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>"Zulfan Lindan bicara soal kepentingan negara ...</td>
-      <td>kontra</td>
+      <td>Klopun nanti liga jalan lagi dgn kapasitas 50%...</td>
     </tr>
     <tr>
       <th>...</th>
       <td>...</td>
-      <td>...</td>
     </tr>
     <tr>
-      <th>96</th>
-      <td>Masyarakat antusias menyambut kedatangan mente...</td>
-      <td>pro</td>
+      <th>74</th>
+      <td>Korban Meninggal dalam Tragedi Kanjuruhan Bert...</td>
     </tr>
     <tr>
-      <th>97</th>
-      <td>Anies Siap Maju di Pilpres 2024, Wagub Tak aka...</td>
-      <td>pro</td>
+      <th>75</th>
+      <td>Korban Meninggal dalam Tragedi Kanjuruhan Bert...</td>
     </tr>
     <tr>
-      <th>98</th>
-      <td>Adian Napitupulu Sebut Presiden Jokowi Tidak A...</td>
-      <td>kontra</td>
+      <th>76</th>
+      <td>Presiden RI Joko Widodo akan membentuk tim khu...</td>
     </tr>
     <tr>
-      <th>99</th>
-      <td>Elit Gerindra Desak Sandiaga Uno Mundur dari P...</td>
-      <td>kontra</td>
+      <th>77</th>
+      <td>Kepala dinas kesehatan Kab. Malang Wiyanto : "...</td>
     </tr>
     <tr>
-      <th>100</th>
-      <td>Buah duku buah kedondong 2024 gue prabowo dong...</td>
-      <td>pro</td>
+      <th>78</th>
+      <td>TGIPF Ungkap Pengakuan LIB : Laga Malam Hari A...</td>
     </tr>
   </tbody>
 </table>
-<p>101 rows × 2 columns</p>
+<p>79 rows × 1 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-dd66ad65-34cb-4283-adc4-7b64c4c773a1')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-7bc975d3-1357-4147-a5f2-b8641ac963c2')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1031,12 +1052,12 @@ found 0 deleted tweets in this search.
 
       <script>
         const buttonEl =
-          document.querySelector('#df-dd66ad65-34cb-4283-adc4-7b64c4c773a1 button.colab-df-convert');
+          document.querySelector('#df-7bc975d3-1357-4147-a5f2-b8641ac963c2 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-dd66ad65-34cb-4283-adc4-7b64c4c773a1');
+          const element = document.querySelector('#df-7bc975d3-1357-4147-a5f2-b8641ac963c2');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1069,18 +1090,18 @@ found 0 deleted tweets in this search.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      doa para kiai sepuh untuk cak imin dan prabowo...
-1      menteri pertahanan (menhan) prabowo subianto m...
-2      semangat juang #ir_soekarno ada pada diri #pra...
-3      negarawan sejati yang selalu ingin membawa ked...
-4      &quot;zulfan lindan bicara soal kepentingan negara ...
-                             ...                        
-96     masyarakat antusias menyambut kedatangan mente...
-97     anies siap maju di pilpres 2024 wagub tak akan...
-98     adian napitupulu sebut presiden jokowi tidak a...
-99     elit gerindra desak sandiaga uno mundur dari p...
-100    buah duku buah kedondong 2024 gue prabowo dong...
-Name: tweet, Length: 101, dtype: object
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     polri beberkan penyebab korban tragedi kanjuru...
+1     tuan jokowi mengapa sampeyan tidak meminta maa...
+2     kapolres malang akbp putu kholis aryana duduk ...
+3     kalangan industri komersialisasi olahraga nasi...
+4     klopun nanti liga jalan lagi dgn kapasitas 50%...
+                            ...                        
+74    korban meninggal dalam tragedi kanjuruhan bert...
+75    korban meninggal dalam tragedi kanjuruhan bert...
+76    presiden ri joko widodo akan membentuk tim khu...
+77    kepala dinas kesehatan kab. malang wiyanto : &quot;...
+78    tgipf ungkap pengakuan lib : laga malam hari a...
+Name: tweet, Length: 79, dtype: object
 </pre></div>
 </div>
 </div>
@@ -1201,18 +1222,18 @@ Name: tweet, Length: 101, dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      [doa, para, kiai, sepuh, untuk, cak, imin, dan...
-1      [menteri, pertahanan, menhan, prabowo, subiant...
-2           [semangat, juang, soekarno, ada, pada, diri]
-3      [negarawan, sejati, yang, selalu, ingin, memba...
-4      [zulfan, lindan, bicara, soal, kepentingan, ne...
-                             ...                        
-96     [masyarakat, antusias, menyambut, kedatangan, ...
-97     [anies, siap, maju, di, pilpres, wagub, tak, a...
-98     [adian, napitupulu, sebut, presiden, jokowi, t...
-99     [elit, gerindra, desak, sandiaga, uno, mundur,...
-100    [buah, duku, buah, kedondong, gue, prabowo, do...
-Name: tweet, Length: 101, dtype: object
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     [polri, beberkan, penyebab, korban, tragedi, k...
+1     [tuan, jokowi, mengapa, sampeyan, tidak, memin...
+2     [kapolres, malang, akbp, putu, kholis, aryana,...
+3     [kalangan, industri, komersialisasi, olahraga,...
+4     [klopun, nanti, liga, jalan, lagi, dgn, kapasi...
+                            ...                        
+74    [korban, meninggal, dalam, tragedi, kanjuruhan...
+75    [korban, meninggal, dalam, tragedi, kanjuruhan...
+76    [presiden, ri, joko, widodo, akan, membentuk, ...
+77    [kepala, dinas, kesehatan, kab, malang, wiyant...
+78    [tgipf, ungkap, pengakuan, lib, laga, malam, h...
+Name: tweet, Length: 79, dtype: object
 </pre></div>
 </div>
 </div>
@@ -1251,18 +1272,18 @@ Name: tweet, Length: 101, dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      [doa, kiai, sepuh, cak, imin, prabowo, amin, y...
-1      [menteri, pertahanan, menhan, prabowo, subiant...
-2                            [semangat, juang, soekarno]
-3                [negarawan, sejati, membawa, kedamaian]
-4      [zulfan, lindan, bicara, kepentingan, negara, ...
-                             ...                        
-96     [masyarakat, antusias, menyambut, kedatangan, ...
-97     [anies, maju, pilpres, wagub, dukung, riza, pa...
-98     [adian, napitupulu, presiden, jokowi, maju, pe...
-99     [elit, gerindra, desak, sandiaga, uno, mundur,...
-100    [buah, duku, buah, kedondong, gue, prabowo, ge...
-Name: tweet, Length: 101, dtype: object
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     [polri, beberkan, penyebab, korban, tragedi, k...
+1     [tuan, jokowi, sampeyan, maaf, menystakan, ber...
+2     [kapolres, malang, akbp, putu, kholis, aryana,...
+3     [kalangan, industri, komersialisasi, olahraga,...
+4     [klopun, liga, jalan, dgn, kapasitas, ya, pend...
+                            ...                        
+74    [korban, meninggal, tragedi, kanjuruhan, berta...
+75    [korban, meninggal, tragedi, kanjuruhan, berta...
+76    [presiden, ri, joko, widodo, membentuk, tim, k...
+77    [kepala, dinas, kesehatan, kab, malang, wiyant...
+78    [tgipf, pengakuan, lib, laga, malam, arema, fc...
+Name: tweet, Length: 79, dtype: object
 </pre></div>
 </div>
 </div>
@@ -1294,7 +1315,7 @@ Name: tweet, Length: 101, dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;doa&#39;: 124, &#39;kiai&#39;: 263, &#39;sepuh&#39;: 516, &#39;cak&#39;: 75, &#39;imin&#39;: 198, &#39;prabowo&#39;: 459, &#39;amin&#39;: 10, &#39;ya&#39;: 597, &#39;allah&#39;: 9, &#39;rabb&#39;: 473, &#39;alamin&#39;: 8, &#39;menteri&#39;: 346, &#39;pertahanan&#39;: 438, &#39;menhan&#39;: 339, &#39;subianto&#39;: 537, &#39;pujiannya&#39;: 471, &#39;presiden&#39;: 464, &#39;joko&#39;: 213, &#39;widodo&#39;: 594, &#39;jokowi&#39;: 214, &#39;mengakui&#39;: 327, &#39;kepemimpinan&#39;: 252, &#39;kenegarawanan&#39;: 249, &#39;semangat&#39;: 509, &#39;juang&#39;: 215, &#39;soekarno&#39;: 529, &#39;negarawan&#39;: 374, &#39;sejati&#39;: 502, &#39;membawa&#39;: 309, &#39;kedamaian&#39;: 233, &#39;zulfan&#39;: 603, &#39;lindan&#39;: 289, &#39;bicara&#39;: 65, &#39;kepentingan&#39;: 253, &#39;negara&#39;: 373, &#39;pilpres&#39;: 447, &#39;indonesia&#39;: 200, &#39;menurutnya&#39;: 347, &#39;capres&#39;: 78, &#39;figurnya&#39;: 153, &#39;menguntungkan&#39;: 336, &#39;as&#39;: 24, &#39;china&#39;: 85, &#39;rusia&#39;: 492, &#39;panglima&#39;: 391, &#39;tni&#39;: 564, &#39;ksad&#39;: 276, &#39;kompak&#39;: 271, &#39;salam&#39;: 497, &#39;komando&#39;: 268, &#39;muhaimin&#39;: 365, &#39;iskandar&#39;: 205, &#39;dekati&#39;: 97, &#39;puan&#39;: 468, &#39;ingatkan&#39;: 203, &#39;piagam&#39;: 445, &#39;koalisi&#39;: 265, &#39;id&#39;: 194, &#39;fakta&#39;: 150, &#39;berita&#39;: 55, &#39;terbaru&#39;: 549, &#39;yan&#39;: 598, &#39;permenas&#39;: 432, &#39;mandenas&#39;: 298, &#39;menyebut&#39;: 349, &#39;rapat&#39;: 477, &#39;kerja&#39;: 256, &#39;ri&#39;: 487, &#39;petinggi&#39;: 444, &#39;fokus&#39;: 154, &#39;membahas&#39;: 308, &#39;penambahan&#39;: 415, &#39;anggaran&#39;: 14, &#39;ketua&#39;: 261, &#39;dpd&#39;: 126, &#39;gerindra&#39;: 167, &#39;lampung&#39;: 282, &#39;mirza&#39;: 358, &#39;rapatkan&#39;: 478, &#39;barisan&#39;: 39, &#39;menangkan&#39;: 317, &#39;hati&#39;: 188, &#39;rakyat&#39;: 475, &#39;survei&#39;: 542, &#39;csis&#39;: 88, &#39;anies&#39;: 18, &#39;ungguli&#39;: 575, &#39;ganjar&#39;: 160, &#39;baswedan&#39;: 40, &#39;calon&#39;: 77, &#39;kandidat&#39;: 225, &#39;bagus&#39;: 30, &#39;berdua&#39;: 51, &#39;sosok&#39;: 533, &#39;orang&#39;: 386, &#39;anak&#39;: 11, &#39;bangsa&#39;: 35, &#39;pintar&#39;: 449, &#39;cerdas&#39;: 82, &#39;damai&#39;: 90, &#39;perpecahan&#39;: 433, &#39;sesuai&#39;: 518, &#39;demokrasi&#39;: 99, &#39;kedepan&#39;: 235, &#39;negeri&#39;: 375, &#39;argumen&#39;: 22, &#39;sekber&#39;: 503, &#39;dilansir&#39;: 111, &#39;website&#39;: 593, &#39;mk&#39;: 359, &#39;senin&#39;: 514, &#39;terkait&#39;: 555, &#39;pemohon&#39;: 413, &#39;membutuhkan&#39;: 311, &#39;kepastian&#39;: 251, &#39;menjabat&#39;: 343, &#39;periode&#39;: 429, &#39;maju&#39;: 295, &#39;wakil&#39;: 588, &#39;pengamat&#39;: 418, &#39;menilai&#39;: 340, &#39;lirik&#39;: 290, &#39;ridwan&#39;: 488, &#39;kamil&#39;: 223, &#39;hasil&#39;: 187, &#39;polstat&#39;: 454, &#39;elektabilitas&#39;: 142, &#39;meningkat&#39;: 341, &#39;andika&#39;: 13, &#39;dudung&#39;: 134, &#39;mengenakan&#39;: 330, &#39;pakaian&#39;: 389, &#39;dinas&#39;: 113, &#39;lapangan&#39;: 284, &#39;masingmasing&#39;: 301, &#39;mengapit&#39;: 328, &#39;kemhan&#39;: 248, &#39;berkomitmen&#39;: 57, &#39;mengutamakan&#39;: 338, &#39;produk&#39;: 465, &#39;kebijakan&#39;: 232, &#39;pemerintah&#39;: 408, &#39;momen&#39;: 362, &#39;hadiri&#39;: 182, &#39;dpr&#39;: 129, &#39;duduk&#39;: 133, &#39;berdampingan&#39;: 48, &#39;dipisahkan&#39;: 118, &#39;selengkapnyagt&#39;: 506, &#39;pascapertemuan&#39;: 396, &#39;airlangga&#39;: 2, &#39;hartarto&#39;: 186, &#39;beredar&#39;: 52, &#39;wacana&#39;: 586, &#39;golkar&#39;: 172, &#39;semoga&#39;: 512, &#39;halhal&#39;: 183, &#39;menyertai&#39;: 352, &#39;sorotan&#39;: 531, &#39;utama&#39;: 579, &#39;tinjauan&#39;: 560, &#39;salah&#39;: 495, &#39;satunya&#39;: 500, &#39;keamanan&#39;: 229, &#39;kenyamanan&#39;: 250, &#39;warga&#39;: 590, &#39;terdampak&#39;: 551, &#39;tinggal&#39;: 558, &#39;pengungsian&#39;: 421, &#39;jenderal&#39;: 211, &#39;kasad&#39;: 227, &#39;dampingi&#39;: 91, &#39;lihat&#39;: 288, &#39;video&#39;: 583, &#39;pekadotco&#39;: 404, &#39;kehebatan&#39;: 237, &#39;pimpin&#39;: 448, &#39;mantan&#39;: 300, &#39;ilmu&#39;: 197, &#39;klik&#39;: 264, &#39;selengkapnyagtgt&#39;: 507, &#39;catatan&#39;: 79, &#39;simpatisan&#39;: 523, &#39;mengenal&#39;: 331, &#39;lelah&#39;: 287, &#39;gentle&#39;: 165, &#39;juara&#39;: 216, &#39;sory&#39;: 532, &#39;nyinyir&#39;: 382, &#39;silaturahmi&#39;: 522, &#39;terjaga&#39;: 554, &#39;kebaikan&#39;: 230, &#39;kehidupan&#39;: 238, &#39;berbangsa&#39;: 45, &#39;bernegara&#39;: 58, &#39;nbil&#39;: 372, &#39;risakotta&#39;: 489, &#39;kebesaran&#39;: 231, &#39;jiwa&#39;: 212, &#39;kerendahan&#39;: 255, &#39;lbh&#39;: 285, &#39;mementingkan&#39;: 312, &#39;dr&#39;: 131, &#39;pd&#39;: 400, &#39;dirikelompok&#39;: 120, &#39;golongan&#39;: 173, &#39;nya&#39;: 380, &#39;tp&#39;: 566, &#39;sayangkan&#39;: 501, &#39;pemilih&#39;: 409, &#39;relawan&#39;: 482, &#39;tk&#39;: 562, &#39;dpt&#39;: 130, &#39;berfikir&#39;: 53, &#39;spt&#39;: 535, &#39;mmang&#39;: 360, &#39;kwalitas&#39;: 281, &#39;upaya&#39;: 578, &#39;pembangunan&#39;: 405, &#39;food&#39;: 155, &#39;estate&#39;: 147, &#39;program&#39;: 467, &#39;peningkatan&#39;: 422, &#39;penyediaan&#39;: 424, &#39;pangan&#39;: 390, &#39;nasional&#39;: 370, &#39;mellui&#39;: 307, &#39;produksi&#39;: 466, &#39;hrt&#39;: 191, &#39;diperhitungkan&#39;: 114, &#39;penjelasannya&#39;: 423, &#39;baca&#39;: 29, &#39;selengkapnya&#39;: 505, &#39;suharso&#39;: 538, &#39;monoarfa&#39;: 364, &#39;berdiskusi&#39;: 49, &#39;meningkatkan&#39;: 342, &#39;menjaga&#39;: 344, &#39;ketahanan&#39;: 259, &#39;tokoh&#39;: 565, &#39;mendiskusikan&#39;: 322, &#39;penguatan&#39;: 420, &#39;gantikan&#39;: 161, &#39;ajak&#39;: 5, &#39;keluarga&#39;: 240, &#39;persis&#39;: 436, &#39;lanjutkan&#39;: 283, &#39;dakwah&#39;: 89, &#39;bijak&#39;: 67, &#39;tuntunan&#39;: 572, &#39;al&#39;: 7, &#39;quran&#39;: 472, &#39;perdamaian&#39;: 426, &#39;kemakmuran&#39;: 241, &#39;pranowo&#39;: 463, &#39;mania&#39;: 299, &#39;gp&#39;: 176, &#39;dukung&#39;: 137, &#39;dipilih&#39;: 116, &#39;pdip&#39;: 401, &#39;broque&#39;: 72, &#39;mindra&#39;: 357, &#39;br&#39;: 71, &#39;ngeh&#39;: 377, &#39;notif&#39;: 379, &#39;fb&#39;: 151, &#39;mohon&#39;: 361, &#39;bantuan&#39;: 36, &#39;hadiah&#39;: 181, &#39;lomba&#39;: 291, &#39;pantun&#39;: 392, &#39;disumbangin&#39;: 122, &#39;aza&#39;: 28, &#39;yatim&#39;: 599, &#39;seputaran&#39;: 517, &#39;kantor&#39;: 226, &#39;dpp&#39;: 128, &#39;tks&#39;: 563, &#39;banget&#39;: 34, &#39;cemungudh&#39;: 81, &#39;rival&#39;: 490, &#39;pengganti&#39;: 419, &#39;tugas&#39;: 569, &#39;berat&#39;: 44, &#39;komitmen&#39;: 270, &#39;beliau&#39;: 41, &#39;via&#39;: 582, &#39;mengaku&#39;: 326, &#39;dunia&#39;: 139, &#39;pesantren&#39;: 442, &#39;ceritanya&#39;: 83, &#39;dekatnya&#39;: 98, &#39;berbisnis&#39;: 46, &#39;kementeriannya&#39;: 246, &#39;sumber&#39;: 540, &#39;facebook&#39;: 148, &#39;naniek&#39;: 368, &#39;deyang&#39;: 106, &#39;komentari&#39;: 269, &#39;dewan&#39;: 105, &#39;kolonel&#39;: 267, &#39;vs&#39;: 585, &#39;kopral&#39;: 274, &#39;ferdinand&#39;: 152, &#39;mending&#39;: 321, &#39;prabowoganjar&#39;: 460, &#39;aja&#39;: 4, &#39;deh&#39;: 96, &#39;sembilan&#39;: 510, &#39;masukanmasukan&#39;: 302, &#39;gus&#39;: 179, &#39;muhaiminagar&#39;: 366, &#39;senantiasadiberikan&#39;: 513, &#39;kelancaran&#39;: 239, &#39;keselamatan&#39;: 258, &#39;menghadapi&#39;: 333, &#39;tantangan&#39;: 547, &#39;yusuf&#39;: 600, &#39;bersatu&#39;: 61, &#39;berani&#39;: 43, &#39;gembira&#39;: 164, &#39;gagah&#39;: 158, &#39;sumringah&#39;: 541, &#39;pesan&#39;: 441, &#39;dpdgerindrabali&#39;: 127, &#39;kemampuan&#39;: 242, &#39;operasi&#39;: 385, &#39;sustain&#39;: 543, &#39;melaksanakan&#39;: 306, &#39;pembinaan&#39;: 407, &#39;teritorial&#39;: 553, &#39;terliht&#39;: 556, &#39;mesra&#39;: 356, &#39;hubungan&#39;: 192, &#39;harmonis&#39;: 185, &#39;sinyal&#39;: 525, &#39;pasangan&#39;: 395, &#39;istana&#39;: 206, &#39;diajarkan&#39;: 107, &#39;ayahnya&#39;: 27, &#39;partai&#39;: 394, &#39;fadli&#39;: 149, &#39;zon&#39;: 601, &#39;girang&#39;: 170, &#39;mendengar&#39;: 320, &#39;kabar&#39;: 217, &#39;kalo&#39;: 222, &#39;airlanggaprabowo&#39;: 3, &#39;duet&#39;: 135, &#39;gimana&#39;: 169, &#39;tasyi&#39;: 548, &#39;wanita&#39;: 589, &#39;emas&#39;: 146, &#39;gak&#39;: 159, &#39;akhlak&#39;: 6, &#39;rating&#39;: 479, &#39;turun&#39;: 573, &#39;salahkan&#39;: 496, &#39;baliho&#39;: 33, &#39;berdosa&#39;: 50, &#39;gerindrafadli&#39;: 168, &#39;zonmenilai&#39;: 602, &#39;positif&#39;: 455, &#39;dukungan&#39;: 138, &#39;ketum&#39;: 262, &#39;pembina&#39;: 406, &#39;desmond&#39;: 104, &#39;mahesa&#39;: 294, &#39;mengendorse&#39;: 332, &#39;tancap&#39;: 544, &#39;gas&#39;: 162, &#39;goyah&#39;: 175, &#39;charta&#39;: 84, &#39;politika&#39;: 452, &#39;citilink&#39;: 87, &#39;selingkuh&#39;: 508, &#39;reza&#39;: 486, &#39;arap&#39;: 20, &#39;kamis&#39;: 224, &#39;data&#39;: 95, &#39;valid&#39;: 581, &#39;tulus&#39;: 571, &#39;utamakan&#39;: 580, &#39;sepakat&#39;: 515, &#39;cakep&#39;: 76, &#39;infinite&#39;: 202, &#39;tua&#39;: 567, &#39;anaknya&#39;: 12, &#39;sukses&#39;: 539, &#39;darinya&#39;: 93, &#39;duo&#39;: 140, &#39;wonderwoman&#39;: 596, &#39;perempuan&#39;: 428, &#39;tangguh&#39;: 546, &#39;pesiden&#39;: 443, &#39;mengindari&#39;: 334, &#39;politik&#39;: 451, &#39;praktis&#39;: 462, &#39;mendukung&#39;: 323, &#39;diberitakan&#39;: 109, &#39;denny&#39;: 100, &#39;darko&#39;: 94, &#39;meramal&#39;: 354, &#39;berpasangan&#39;: 59, &#39;tandatanda&#39;: 545, &#39;bunga&#39;: 74, &#39;asmara&#39;: 25, &#39;parpol&#39;: 393, &#39;bertemu&#39;: 63, &#39;mata&#39;: 304, &#39;global&#39;: 171, &#39;sahabat&#39;: 494, &#39;mencari&#39;: 318, &#39;solusi&#39;: 530, &#39;kompleksitas&#39;: 272, &#39;permasalahan&#39;: 431, &#39;domestik&#39;: 125, &#39;berdampak&#39;: 47, &#39;koordinator&#39;: 273, &#39;bidang&#39;: 66, &#39;perekonomian&#39;: 427, &#39;menerima&#39;: 325, &#39;kunjungan&#39;: 279, &#39;pertemuan&#39;: 439, &#39;menko&#39;: 345, &#39;prabowk&#39;: 458, &#39;bikin&#39;: 68, &#39;polling&#39;: 453, &#39;twitter&#39;: 574, &#39;menang&#39;: 316, &#39;hadapi&#39;: 180, &#39;dinamika&#39;: 112, &#39;geopolitik&#39;: 166, &#39;formulasikan&#39;: 156, &#39;wawancarai&#39;: 592, &#39;mahasiswi&#39;: 293, &#39;tukang&#39;: 570, &#39;bakso&#39;: 32, &#39;hebat&#39;: 189, &#39;bapakmu&#39;: 37, &#39;pahlawannya&#39;: 388, &#39;media&#39;: 305, &#39;singapura&#39;: 524, &#39;pemilihan&#39;: 410, &#39;geer&#39;: 163, &#39;posting&#39;: 456, &#39;foto&#39;: 157, &#39;ibunya&#39;: 193, &#39;ketemu&#39;: 260, &#39;ratu&#39;: 480, &#39;elizabeth&#39;: 145, &#39;ii&#39;: 195, &#39;mahasiswa&#39;: 292, &#39;unhan&#39;: 576, &#39;dibina&#39;: 110, &#39;kementerian&#39;: 245, &#39;gratis&#39;: 177, &#39;biaya&#39;: 64, &#39;kuliah&#39;: 278, &#39;pendaftaran&#39;: 416, &#39;semester&#39;: 511, &#39;hidup&#39;: 190, &#39;asrama&#39;: 26, &#39;makan&#39;: 297, &#39;sandiaga&#39;: 498, &#39;uno&#39;: 577, &#39;merespons&#39;: 355, &#39;santai&#39;: 499, &#39;desakan&#39;: 103, &#39;kalangan&#39;: 220, &#39;mengundurkan&#39;: 335, &#39;menyusul&#39;: 353, &#39;keputusannya&#39;: 254, &#39;obrolan&#39;: 383, &#39;zuperrr&#39;: 604, &#39;menyambut&#39;: 348, &#39;isu&#39;: 207, &#39;strategis&#39;: 536, &#39;tingkat&#39;: 559, &#39;siapsiap&#39;: 520, &#39;kolaborasi&#39;: 266, &#39;indah&#39;: 199, &#39;potongan&#39;: 457, &#39;kalimat&#39;: 221, &#39;smoga&#39;: 528, &#39;berpihak&#39;: 60, &#39;pejabat&#39;: 402, &#39;pilihan&#39;: 446, &#39;angkatan&#39;: 17, &#39;darat&#39;: 92, &#39;ikhlas&#39;: 196, &#39;moment&#39;: 363, &#39;sigap&#39;: 521, &#39;tuai&#39;: 568, &#39;pujian&#39;: 470, &#39;membicarakan&#39;: 310, &#39;kemenko&#39;: 244, &#39;persamaan&#39;: 434, &#39;mengurangi&#39;: 337, &#39;perbedaan&#39;: 425, &#39;harap&#39;: 184, &#39;indonesiaspanyol&#39;: 201, &#39;kuat&#39;: 277, &#39;setia&#39;: 519, &#39;sisi&#39;: 526, &#39;viral&#39;: 584, &#39;warganet&#39;: 591, &#39;dur&#39;: 141, &#39;jatim&#39;: 209, &#39;angka&#39;: 15, &#39;perlahan&#39;: 430, &#39;angkanya&#39;: 16, &#39;dipimpin&#39;: 117, &#39;menyentuh&#39;: 351, &#39;baihaki&#39;: 31, &#39;direktur&#39;: 119, &#39;arci&#39;: 21, &#39;legowo&#39;: 286, &#39;bergabung&#39;: 54, &#39;krn&#39;: 275, &#39;elektabilitasx&#39;: 143, &#39;rendahdan&#39;: 484, &#39;terhormat&#39;: 552, &#39;menyelamatkan&#39;: 350, &#39;negri&#39;: 376, &#39;dri&#39;: 132, &#39;oligarki&#39;: 384, &#39;selamat&#39;: 504, &#39;pagi&#39;: 387, &#39;pejuangselamat&#39;: 403, &#39;beraktifitas&#39;: 42, &#39;raya&#39;: 481, &#39;ciamis&#39;: 86, &#39;pastikan&#39;: 398, &#39;skenario&#39;: 527, &#39;prabowojokowi&#39;: 461, &#39;kader&#39;: 219, &#39;ruwet&#39;: 493, &#39;diteruskan&#39;: 123, &#39;bissmillah&#39;: 69, &#39;pkb&#39;: 450, &#39;mendekat&#39;: 319, &#39;kemerdekaan&#39;: 247, &#39;jelek&#39;: 210, &#39;kematian&#39;: 243, &#39;diperkuat&#39;: 115, &#39;ingatlah&#39;: 204, &#39;pemuda&#39;: 414, &#39;kau&#39;: 228, &#39;penerus&#39;: 417, &#39;mempertahankan&#39;: 314, &#39;menekankan&#39;: 324, &#39;desain&#39;: 101, &#39;titiktitik&#39;: 561, &#39;terluar&#39;: 557, &#39;kesatuan&#39;: 257, &#39;republik&#39;: 485, &#39;kunjungi&#39;: 280, &#39;artikel&#39;: 23, &#39;dibawah&#39;: 108, &#39;berjuang&#39;: 56, &#39;tercinta&#39;: 550, &#39;raga&#39;: 474, &#39;persembahkan&#39;: 435, &#39;pertiwi&#39;: 440, &#39;ramalan&#39;: 476, &#39;persugihan&#39;: 437, &#39;natalie&#39;: 371, &#39;niki&#39;: 378, &#39;cctv&#39;: 80, &#39;pemimpin&#39;: 412, &#39;memikirkan&#39;: 313, &#39;memprediksi&#39;: 315, &#39;paslon&#39;: 397, &#39;wilayah&#39;: 595, &#39;bogor&#39;: 70, &#39;barat&#39;: 38, &#39;kabupaten&#39;: 218, &#39;bertebaran&#39;: 62, &#39;spanduk&#39;: 534, &#39;pemilu&#39;: 411, &#39;mengemuka&#39;: 329, &#39;publik&#39;: 469, &#39;nyalon&#39;: 381, &#39;golput&#39;: 174, &#39;majuuuuu&#39;: 296, &#39;rencana&#39;: 483, &#39;jangka&#39;: 208, &#39;abdurachman&#39;: 0, &#39;diskusikan&#39;: 121, &#39;masyarakat&#39;: 303, &#39;antusias&#39;: 19, &#39;kedatangan&#39;: 234, &#39;wagub&#39;: 587, &#39;riza&#39;: 491, &#39;patria&#39;: 399, &#39;adian&#39;: 1, &#39;napitupulu&#39;: 369, &#39;elit&#39;: 144, &#39;desak&#39;: 102, &#39;mundur&#39;: 367, &#39;buah&#39;: 73, &#39;duku&#39;: 136, &#39;kedondong&#39;: 236, &#39;gue&#39;: 178}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;polri&#39;: 334, &#39;beberkan&#39;: 31, &#39;penyebab&#39;: 313, &#39;korban&#39;: 200, &#39;tragedi&#39;: 407, &#39;kanjuruhan&#39;: 162, &#39;meninggal&#39;: 260, &#39;tuan&#39;: 410, &#39;jokowi&#39;: 152, &#39;sampeyan&#39;: 357, &#39;maaf&#39;: 220, &#39;menystakan&#39;: 267, &#39;bertanggung&#39;: 47, &#39;ratusan&#39;: 345, &#39;mati&#39;: 230, &#39;luka&#39;: 217, &#39;kapolres&#39;: 165, &#39;malang&#39;: 225, &#39;akbp&#39;: 7, &#39;putu&#39;: 343, &#39;kholis&#39;: 186, &#39;aryana&#39;: 22, &#39;duduk&#39;: 94, &#39;bersimpuh&#39;: 44, &#39;pintu&#39;: 327, &#39;masuk&#39;: 227, &#39;pemeriksaan&#39;: 300, &#39;tiket&#39;: 403, &#39;memanjatkan&#39;: 237, &#39;doa&#39;: 91, &#39;stadion&#39;: 382, &#39;kabupaten&#39;: 158, &#39;selasa&#39;: 364, &#39;siang&#39;: 374, &#39;selasela&#39;: 365, &#39;kunjungannya&#39;: 205, &#39;kalangan&#39;: 160, &#39;industri&#39;: 134, &#39;komersialisasi&#39;: 194, &#39;olahraga&#39;: 285, &#39;nasional&#39;: 272, &#39;memuji&#39;: 245, &#39;hasil&#39;: 119, &#39;lobi&#39;: 214, &#39;fifa&#39;: 102, &#39;federasi&#39;: 101, &#39;sepak&#39;: 370, &#39;bola&#39;: 55, &#39;internasional&#39;: 135, &#39;urung&#39;: 419, &#39;sanksi&#39;: 358, &#39;berat&#39;: 33, &#39;indonesia&#39;: 132, &#39;paska&#39;: 292, &#39;klopun&#39;: 191, &#39;liga&#39;: 213, &#39;jalan&#39;: 145, &#39;dgn&#39;: 66, &#39;kapasitas&#39;: 163, &#39;ya&#39;: 433, &#39;pendapat&#39;: 305, &#39;pribadi&#39;: 337, &#39;sih&#39;: 376, &#39;ga&#39;: 104, &#39;klo&#39;: 190, &#39;selesai&#39;: 366, &#39;ngoceh&#39;: 276, &#39;teriak&#39;: 396, &#39;asat&#39;: 23, &#39;usut&#39;: 421, &#39;msih&#39;: 271, &#39;pd&#39;: 293, &#39;menikmati&#39;: 258, &#39;diatas&#39;: 67, &#39;kemanusiaan&#39;: 174, &#39;yg&#39;: 434, &#39;tim&#39;: 404, &#39;pencari&#39;: 304, &#39;fakta&#39;: 99, &#39;pembunuhan&#39;: 298, &#39;sistematis&#39;: 377, &#39;temuannya&#39;: 395, &#39;pssi&#39;: 340, &#39;kompetisi&#39;: 196, &#39;menunggu&#39;: 264, &#39;keputusan&#39;: 181, &#39;baca&#39;: 26, &#39;berita&#39;: 39, &#39;media&#39;: 233, &#39;kabid&#39;: 157, &#39;humas&#39;: 124, &#39;polda&#39;: 330, &#39;jatim&#39;: 147, &#39;kombes&#39;: 193, &#39;polisi&#39;: 331, &#39;dirmanto&#39;: 80, &#39;tersangka&#39;: 399, &#39;kompol&#39;: 197, &#39;ws&#39;: 432, &#39;akp&#39;: 9, &#39;bs&#39;: 56, &#39;memiliki&#39;: 243, &#39;pengacara&#39;: 306, &#39;menolak&#39;: 262, &#39;diperiksa&#39;: 76, &#39;tugasnya&#39;: 411, &#39;cuci&#39;: 63, &#39;piring&#39;: 328, &#39;prioritas&#39;: 339, &#39;ditawar&#39;: 88, &#39;menyembuhkan&#39;: 266, &#39;polresta&#39;: 333, &#39;anggota&#39;: 16, &#39;bersujud&#39;: 45, &#39;halaman&#39;: 115, &#39;polres&#39;: 332, &#39;mendoakan&#39;: 251, &#39;resmi&#39;: 347, &#39;dilaporkan&#39;: 71, &#39;gaduh&#39;: 106, &#39;terkait&#39;: 397, &#39;ade&#39;: 2, &#39;armando&#39;: 20, &#39;mohon&#39;: 270, &#39;siapsiap&#39;: 375, &#39;dpr&#39;: 93, &#39;geram&#39;: 110, &#39;dengar&#39;: 65, &#39;kadiv&#39;: 159, &#39;tewas&#39;: 401, &#39;akibat&#39;: 8, &#39;oksigen&#39;: 283, &#39;erick&#39;: 97, &#39;pertemuan&#39;: 324, &#39;membahas&#39;: 238, &#39;pengembangan&#39;: 309, &#39;sujud&#39;: 384, &#39;massal&#39;: 226, &#39;pakar&#39;: 287, &#39;ub&#39;: 415, &#39;hukuman&#39;: 123, &#39;pemecatan&#39;: 299, &#39;aja&#39;: 5, &#39;gak&#39;: 107, &#39;nyawa&#39;: 279, &#39;perhatian&#39;: 318, &#39;pejabat&#39;: 294, &#39;negara&#39;: 273, &#39;sungguh&#39;: 386, &#39;mengerikan&#39;: 256, &#39;buntut&#39;: 58, &#39;kapolda&#39;: 164, &#39;irjen&#39;: 138, &#39;nico&#39;: 277, &#39;afinta&#39;: 3, &#39;dimutasi&#39;: 73, &#39;sahlisosbud&#39;: 351, &#39;kapolri&#39;: 166, &#39;mahfud&#39;: 222, &#39;md&#39;: 232, &#39;investigasi&#39;: 136, &#39;diserahkan&#39;: 84, &#39;jumat&#39;: 153, &#39;laga&#39;: 207, &#39;malam&#39;: 224, &#39;arema&#39;: 18, &#39;fc&#39;: 100, &#39;vs&#39;: 426, &#39;persebaya&#39;: 322, &#39;pt&#39;: 341, &#39;lib&#39;: 212, &#39;permintaan&#39;: 321, &#39;indosiar&#39;: 133, &#39;update&#39;: 418, &#39;dunia&#39;: 96, &#39;lukaluka&#39;: 218, &#39;viral&#39;: 425, &#39;medsos&#39;: 234, &#39;mata&#39;: 229, &#39;merah&#39;: 269, &#39;gas&#39;: 108, &#39;air&#39;: 4, &#39;aksi&#39;: 10, &#39;bersalah&#39;: 42, &#39;harapan&#39;: 117, &#39;tuntas&#39;: 414, &#39;kematian&#39;: 175, &#39;helen&#39;: 120, &#39;pricela&#39;: 338, &#39;berusia&#39;: 48, &#39;menambah&#39;: 247, &#39;duka&#39;: 95, &#39;kematiannya&#39;: 176, &#39;jiwa&#39;: 150, &#39;orang&#39;: 286, &#39;ketua&#39;: 185, &#39;gabungan&#39;: 105, &#39;independen&#39;: 129, &#39;tgipf&#39;: 402, &#39;benahi&#39;: 32, &#39;sepakbola&#39;: 371, &#39;mendesak&#39;: 250, &#39;pengurus&#39;: 312, &#39;mengundurkan&#39;: 257, &#39;tandatangani&#39;: 392, &#39;petisi&#39;: 325, &#39;id&#39;: 125, &#39;saksi&#39;: 353, &#39;perlindungan&#39;: 320, &#39;lpsk&#39;: 216, &#39;kota&#39;: 202, &#39;membela&#39;: 240, &#39;jakarta&#39;: 144, &#39;serahkan&#39;: 373, &#39;menahan&#39;: 246, &#39;menjalani&#39;: 261, &#39;direktorat&#39;: 79, &#39;reserse&#39;: 346, &#39;kriminal&#39;: 203, &#39;umumu&#39;: 417, &#39;ditreskrimum&#39;: 89, &#39;ikuti&#39;: 127, &#39;google&#39;: 112, &#39;via&#39;: 423, &#39;bertambah&#39;: 46, &#39;menyusul&#39;: 268, &#39;pemerintah&#39;: 301, &#39;mengaudit&#39;: 254, &#39;stadionstadion&#39;: 383, &#39;bermarkas&#39;: 41, &#39;zurich&#39;: 435, &#39;swiss&#39;: 391, &#39;berkantor&#39;: 40, &#39;membantu&#39;: 239, &#39;membenahi&#39;: 241, &#39;ditanah&#39;: 87, &#39;pasca&#39;: 290, &#39;jawa&#39;: 148, &#39;timur&#39;: 405, &#39;oktober&#39;: 284, &#39;rocky&#39;: 349, &#39;gerung&#39;: 111, &#39;heran&#39;: 121, &#39;salahkan&#39;: 354, &#39;tangga&#39;: 393, &#39;kepanikan&#39;: 178, &#39;datangnya&#39;: 64, &#39;menteri&#39;: 263, &#39;pupr&#39;: 342, &#39;audit&#39;: 25, &#39;suporternya&#39;: 387, &#39;pelajaran&#39;: 295, &#39;berharga&#39;: 37, &#39;suruh&#39;: 390, &#39;nyoba&#39;: 280, &#39;kondisikan&#39;: 199, &#39;kondisi&#39;: 198, &#39;aremania&#39;: 19, &#39;blm&#39;: 53, &#39;mengaku&#39;: 253, &#39;dlm&#39;: 90, &#39;peristiwa&#39;: 319, &#39;tsb&#39;: 409, &#39;dipersalahkan&#39;: 77, &#39;kehilangan&#39;: 169, &#39;nggak&#39;: 274, &#39;sembuh&#39;: 367, &#39;jun&#39;: 154, &#39;menerima&#39;: 252, &#39;sekian&#39;: 362, &#39;abang&#39;: 1, &#39;kejadian&#39;: 170, &#39;semeru&#39;: 368, &#39;melekat&#39;: 235, &#39;bicara&#39;: 51, &#39;kedaluarsa&#39;: 168, &#39;pengamat&#39;: 308, &#39;cium&#39;: 61, &#39;indikasikorupsi&#39;: 131, &#39;lusa&#39;: 219, &#39;kirim&#39;: 188, &#39;laporan&#39;: 209, &#39;kepresiden&#39;: 180, &#39;sambangi&#39;: 355, &#39;alami&#39;: 11, &#39;iritasi&#39;: 137, &#39;machfud&#39;: 221, &#39;presiden&#39;: 335, &#39;klub&#39;: 192, &#39;mengedukasi&#39;: 255, &#39;supporter&#39;: 388, &#39;perannya&#39;: 316, &#39;memajukan&#39;: 236, &#39;sehat&#39;: 361, &#39;berbasis&#39;: 34, &#39;prestasi&#39;: 336, &#39;etiket&#39;: 98, &#39;dogeza&#39;: 92, &#39;jepang&#39;: 149, &#39;disorot&#39;: 85, &#39;nilai&#39;: 278, &#39;indikasi&#39;: 130, &#39;korupsi&#39;: 201, &#39;kandungannya&#39;: 161, &#39;laboratorium&#39;: 206, &#39;dipolisikan&#39;: 78, &#39;lantaran&#39;: 208, &#39;menyebut&#39;: 265, &#39;sok&#39;: 378, &#39;jagoan&#39;: 143, &#39;ucapan&#39;: 416, &#39;dilontarkan&#39;: 72, &#39;video&#39;: 424, &#39;kerusuhan&#39;: 183, &#39;sosok&#39;: 379, &#39;pengganti&#39;: 310, &#39;harta&#39;: 118, &#39;kekayaannya&#39;: 171, &#39;dicopot&#39;: 68, &#39;panpel&#39;: 288, &#39;security&#39;: 360, &#39;officer&#39;: 282, &#39;jam&#39;: 146, &#39;said&#39;: 352, &#39;didu&#39;: 69, &#39;malaikat&#39;: 223, &#39;maut&#39;: 231, &#39;perawatan&#39;: 317, &#39;catatan&#39;: 60, &#39;teman&#39;: 394, &#39;penyintas&#39;: 315, &#39;keluarga&#39;: 173, &#39;dirumah&#39;: 81, &#39;pasien&#39;: 291, &#39;usahakan&#39;: 420, &#39;ajak&#39;: 6, &#39;ngobrol&#39;: 275, &#39;biarkan&#39;: 50, &#39;atur&#39;: 24, &#39;jadwal&#39;: 142, &#39;istirahatnya&#39;: 139, &#39;besuk&#39;: 49, &#39;hindari&#39;: 122, &#39;obrolan&#39;: 281, &#39;pembelaan&#39;: 296, &#39;aamiin&#39;: 0, &#39;allah&#39;: 12, &#39;rabbal&#39;: 344, &#39;allamin&#39;: 13, &#39;berdalih&#39;: 36, &#39;penambahantiket&#39;: 302, &#39;total&#39;: 406, &#39;pantesan&#39;: 289, &#39;bny&#39;: 54, &#39;warga&#39;: 427, &#39;sambo&#39;: 356, &#39;amp&#39;: 15, &#39;tuhan&#39;: 412, &#39;izinkan&#39;: 141, &#39;penguasa&#39;: 311, &#39;aparat&#39;: 17, &#39;aroganrakyatnya&#39;: 21, &#39;terpecah&#39;: 398, &#39;fitnah&#39;: 103, &#39;sengaja&#39;: 369, &#39;disebarkandemi&#39;: 83, &#39;kekuasaan&#39;: 172, &#39;aman&#39;: 14, &#39;sp&#39;: 380, &#39;spbersiaplah&#39;: 381, &#39;tuk&#39;: 413, &#39;bahagia&#39;: 27, &#39;bukti&#39;: 57, &#39;dipegang&#39;: 75, &#39;komnas&#39;: 195, &#39;ham&#39;: 116, &#39;kunci&#39;: 204, &#39;berisi&#39;: 38, &#39;kericuhan&#39;: 182, &#39;sekjen&#39;: 363, &#39;pemberhentian&#39;: 297, &#39;level&#39;: 211, &#39;grassroot&#39;: 113, &#39;waspadai&#39;: 429, &#39;memori&#39;: 244, &#39;terulang&#39;: 400, &#39;imbas&#39;: 128, &#39;piala&#39;: 326, &#39;batal&#39;: 30, &#39;digelar&#39;: 70, &#39;klaim&#39;: 189, &#39;pengakuan&#39;: 307, &#39;iwan&#39;: 140, &#39;londo&#39;: 215, &#39;karna&#39;: 167, &#39;cuan&#39;: 62, &#39;bantah&#39;: 29, &#39;kepentingan&#39;: 179, &#39;iklan&#39;: 126, &#39;rokok&#39;: 350, &#39;pertandingan&#39;: 323, &#39;ditahan&#39;: 86, &#39;layaknya&#39;: 210, &#39;penyelamat&#39;: 314, &#39;penasaran&#39;: 303, &#39;bersih&#39;: 43, &#39;sepp&#39;: 372, &#39;blater&#39;: 52, &#39;disana&#39;: 82, &#39;gelar&#39;: 109, &#39;warganet&#39;: 428, &#39;ri&#39;: 348, &#39;joko&#39;: 151, &#39;widodo&#39;: 430, &#39;membentuk&#39;: 242, &#39;khusus&#39;: 187, &#39;utk&#39;: 422, &#39;menindaklanjuti&#39;: 259, &#39;surat&#39;: 389, &#39;balasanfifayg&#39;: 28, &#39;mencantumkan&#39;: 248, &#39;poin&#39;: 329, &#39;transformasi&#39;: 408, &#39;berbeda&#39;: 35, &#39;kepala&#39;: 177, &#39;dinas&#39;: 74, &#39;kesehatan&#39;: 184, &#39;kab&#39;: 156, &#39;wiyanto&#39;: 431, &#39;santunan&#39;: 359, &#39;mencapai&#39;: 249, &#39;juta&#39;: 155, &#39;sumbangan&#39;: 385, &#39;gubernur&#39;: 114, &#39;bupati&#39;: 59, &#39;masyarakat&#39;: 228}
 </pre></div>
 </div>
 </div>
@@ -1308,7 +1329,7 @@ Name: tweet, Length: 101, dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(101, 605)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(79, 436)
 </pre></div>
 </div>
 </div>
@@ -1320,34 +1341,26 @@ Name: tweet, Length: 101, dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
        0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0,
-       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-       1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0,
        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0,
        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-       0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0])
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
 </pre></div>
 </div>
 </div>
@@ -1375,11 +1388,11 @@ Name: tweet, Length: 101, dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>101
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>79
 </pre></div>
 </div>
 <div class="output text_html">
-  <div id="df-5e345dda-5162-4f1b-b674-fb9d749233fe">
+  <div id="df-6f6b1924-cf5e-4ac8-8678-ac169d02d608">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1399,27 +1412,27 @@ Name: tweet, Length: 101, dtype: object
   <thead>
     <tr>
       <th></th>
-      <th>abdurachman</th>
-      <th>adian</th>
-      <th>airlangga</th>
-      <th>airlanggaprabowo</th>
+      <th>aamiin</th>
+      <th>abang</th>
+      <th>ade</th>
+      <th>afinta</th>
+      <th>air</th>
       <th>aja</th>
       <th>ajak</th>
-      <th>akhlak</th>
-      <th>al</th>
-      <th>alamin</th>
-      <th>allah</th>
+      <th>akbp</th>
+      <th>akibat</th>
+      <th>akp</th>
       <th>...</th>
-      <th>wilayah</th>
-      <th>wonderwoman</th>
+      <th>vs</th>
+      <th>warga</th>
+      <th>warganet</th>
+      <th>waspadai</th>
+      <th>widodo</th>
+      <th>wiyanto</th>
+      <th>ws</th>
       <th>ya</th>
-      <th>yan</th>
-      <th>yatim</th>
-      <th>yusuf</th>
-      <th>zon</th>
-      <th>zonmenilai</th>
-      <th>zulfan</th>
-      <th>zuperrr</th>
+      <th>yg</th>
+      <th>zurich</th>
     </tr>
   </thead>
   <tbody>
@@ -1433,12 +1446,12 @@ Name: tweet, Length: 101, dtype: object
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
-      <td>1</td>
+      <td>0</td>
+      <td>0</td>
       <td>...</td>
       <td>0</td>
       <td>0</td>
-      <td>2</td>
+      <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -1480,7 +1493,7 @@ Name: tweet, Length: 101, dtype: object
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>...</td>
@@ -1539,7 +1552,7 @@ Name: tweet, Length: 101, dtype: object
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>1</td>
       <td>0</td>
     </tr>
@@ -1568,7 +1581,7 @@ Name: tweet, Length: 101, dtype: object
       <td>...</td>
     </tr>
     <tr>
-      <th>97</th>
+      <th>75</th>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -1592,7 +1605,7 @@ Name: tweet, Length: 101, dtype: object
       <td>0</td>
     </tr>
     <tr>
-      <th>98</th>
+      <th>76</th>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -1616,31 +1629,55 @@ Name: tweet, Length: 101, dtype: object
       <td>0</td>
     </tr>
     <tr>
-      <th>99</th>
+      <th>77</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>78</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
       <td>0</td>
       <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
     </tr>
     <tr>
-      <th>100</th>
+      <th>79</th>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -1652,31 +1689,7 @@ Name: tweet, Length: 101, dtype: object
       <td>0</td>
       <td>0</td>
       <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>101</th>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -1689,9 +1702,9 @@ Name: tweet, Length: 101, dtype: object
     </tr>
   </tbody>
 </table>
-<p>101 rows × 605 columns</p>
+<p>79 rows × 436 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-5e345dda-5162-4f1b-b674-fb9d749233fe')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-6f6b1924-cf5e-4ac8-8678-ac169d02d608')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1742,12 +1755,12 @@ Name: tweet, Length: 101, dtype: object
 
       <script>
         const buttonEl =
-          document.querySelector('#df-5e345dda-5162-4f1b-b674-fb9d749233fe button.colab-df-convert');
+          document.querySelector('#df-6f6b1924-cf5e-4ac8-8678-ac169d02d608 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-5e345dda-5162-4f1b-b674-fb9d749233fe');
+          const element = document.querySelector('#df-6f6b1924-cf5e-4ac8-8678-ac169d02d608');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1768,11 +1781,13 @@ Name: tweet, Length: 101, dtype: object
   </div>
 </div></div>
 </div>
+<section id="untuk-klasifikasi">
+<h2>untuk klasifikasi<a class="headerlink" href="#untuk-klasifikasi" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datalabel</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/maulidhan190081/file/main/prabowo2.csv&#39;</span><span class="p">)</span>
-<span class="n">datatwett</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">dataTF</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(),</span> <span class="n">datalabel</span><span class="p">[</span><span class="s2">&quot;label&quot;</span><span class="p">]],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">datatwett</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># datalabel = pd.read_csv(&#39;https://raw.githubusercontent.com/maulidhan190081/file/main/prabowo2.csv&#39;)</span>
+<span class="c1"># datatwett = pd.concat([dataTF.reset_index(), datalabel[&quot;label&quot;]], axis=1)</span>
+<span class="c1"># datatwett</span>
 </pre></div>
 </div>
 </div>
@@ -2796,6 +2811,7 @@ Length: 606, dtype: float64
 </div>
 </div>
 </section>
+</section>
 <section class="tex2jax_ignore mathjax_ignore" id="knn">
 <h1><strong>KNN</strong><a class="headerlink" href="#knn" title="Permalink to this headline">#</a></h1>
 <div class="cell docutils container">
@@ -3051,10 +3067,298 @@ Name: label, dtype: object
   FutureWarning,
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[-5.20417043e-18,  2.08333333e-02,  2.08333333e-02, ...,
-        -5.20417043e-18,  2.08333333e-02,  2.08333333e-02],
-       [ 1.88679245e-02, -3.46944695e-18,  1.50943396e-01, ...,
-         1.88679245e-02, -3.46944695e-18, -3.46944695e-18]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 4.05405405e-02,  1.35135135e-02,  1.11022302e-16,
+         2.70270270e-02,  8.10810811e-02,  4.05405405e-02,
+         1.35135135e-02,  1.35135135e-02,  2.70270270e-02,
+         2.70270270e-02,  1.35135135e-02,  1.35135135e-02,
+         2.70270270e-02,  1.35135135e-02,  1.35135135e-02,
+         5.40540541e-02,  1.35135135e-02,  1.35135135e-02,
+         5.40540541e-02,  1.35135135e-02,  2.77555756e-17,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  5.40540541e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         2.70270270e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         6.75675676e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  8.10810811e-02,  4.05405405e-02,
+         2.70270270e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  1.08108108e-01,  1.35135135e-02,
+         1.35135135e-02,  2.70270270e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         2.70270270e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  1.38777878e-17,
+        -4.85722573e-17,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  5.40540541e-02,  1.35135135e-02,
+         5.55111512e-17,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  6.75675676e-02,
+         5.40540541e-02,  1.35135135e-02,  1.35135135e-02,
+         2.70270270e-02,  2.70270270e-02,  2.70270270e-02,
+         6.75675676e-02,  1.35135135e-02,  2.70270270e-02,
+         1.35135135e-02,  1.38777878e-17,  1.35135135e-02,
+         6.75675676e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  2.70270270e-02,
+         1.35135135e-02,  1.35135135e-02,  5.40540541e-02,
+         4.05405405e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  2.70270270e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         1.62162162e-01,  4.05405405e-02,  1.35135135e-02,
+         1.35135135e-02,  4.05405405e-02,  1.35135135e-02,
+         2.70270270e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02, -4.85722573e-17,
+         5.40540541e-02,  1.35135135e-02,  2.70270270e-02,
+         4.05405405e-02,  2.70270270e-02,  1.35135135e-02,
+         4.05405405e-02,  1.35135135e-02,  8.10810811e-02,
+         4.05405405e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         9.59459459e-01,  1.35135135e-02,  2.70270270e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         2.70270270e-02,  2.70270270e-02,  2.70270270e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  4.05405405e-02,  2.70270270e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+        -4.85722573e-17,  1.35135135e-02,  4.05405405e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  2.70270270e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         2.70270270e-02,  4.05405405e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  2.97297297e-01,
+         1.35135135e-02,  4.05405405e-02,  1.35135135e-02,
+         2.70270270e-02,  1.35135135e-02,  1.35135135e-02,
+         2.70270270e-02, -4.85722573e-17,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  4.05405405e-02,
+         4.05405405e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  6.75675676e-02,  2.70270270e-02,
+         1.35135135e-02,  1.21621622e-01,  1.35135135e-02,
+         4.05405405e-02,  1.35135135e-02,  4.05405405e-02,
+         2.02702703e-01,  4.05405405e-02,  1.35135135e-02,
+         1.35135135e-02,  9.45945946e-02,  2.70270270e-02,
+         1.35135135e-02,  5.40540541e-02,  5.40540541e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         2.70270270e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  4.05405405e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         2.70270270e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  1.48648649e-01,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02, -4.85722573e-17,  1.35135135e-02,
+         1.35135135e-02,  2.70270270e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  2.70270270e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  1.62162162e-01,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  2.70270270e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         2.70270270e-02,  4.05405405e-02,  1.35135135e-02,
+         2.70270270e-02,  2.70270270e-02,  1.35135135e-02,
+         1.35135135e-02,  2.70270270e-02,  2.70270270e-02,
+         1.35135135e-02,  2.70270270e-02,  1.35135135e-02,
+         1.35135135e-02,  2.70270270e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         4.05405405e-02,  4.05405405e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         2.70270270e-02,  1.35135135e-02,  1.35135135e-02,
+         2.70270270e-02,  1.21621622e-01,  1.35135135e-02,
+         5.40540541e-02,  5.40540541e-02,  4.05405405e-02,
+         1.35135135e-02,  1.35135135e-02,  2.70270270e-02,
+         1.35135135e-02,  4.05405405e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         2.70270270e-02,  1.35135135e-02,  1.38777878e-17,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  2.70270270e-02,
+         2.70270270e-02,  2.70270270e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         2.70270270e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  8.10810811e-02,  2.70270270e-02,
+         1.35135135e-02,  2.70270270e-02,  1.35135135e-02,
+         1.38777878e-17,  1.35135135e-02,  1.35135135e-02,
+        -4.85722573e-17,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  6.75675676e-02,  1.35135135e-02,
+         1.08108108e-01,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  2.70270270e-02,  1.35135135e-02,
+         1.35135135e-02,  4.05405405e-02,  1.35135135e-02,
+         8.10810811e-02,  1.35135135e-02,  1.35135135e-02,
+         6.75675676e-02,  1.35135135e-02,  5.40540541e-02,
+         2.70270270e-02,  6.75675676e-02,  9.72972973e-01,
+         1.35135135e-02,  2.70270270e-02,  2.70270270e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         2.70270270e-02,  1.35135135e-02, -4.85722573e-17,
+         1.35135135e-02,  2.70270270e-02,  1.35135135e-02,
+         1.35135135e-02,  2.70270270e-02,  1.35135135e-02,
+         1.35135135e-02,  2.70270270e-02,  1.35135135e-02,
+         4.05405405e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  1.35135135e-02,  1.35135135e-02,
+         1.35135135e-02,  6.75675676e-02,  1.62162162e-01,
+         1.35135135e-02],
+       [-6.93889390e-18, -1.73472348e-18,  1.60000000e+00,
+        -3.46944695e-18, -1.38777878e-17, -6.93889390e-18,
+        -1.73472348e-18, -1.73472348e-18, -3.46944695e-18,
+        -3.46944695e-18, -1.73472348e-18, -1.73472348e-18,
+        -3.46944695e-18, -1.73472348e-18, -1.73472348e-18,
+        -6.93889390e-18, -1.73472348e-18, -1.73472348e-18,
+        -6.93889390e-18,  6.00000000e-01,  1.00000000e+00,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18, -6.93889390e-18,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+        -3.46944695e-18, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+         0.00000000e+00, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.38777878e-17, -6.93889390e-18,
+        -3.46944695e-18, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.38777878e-17, -1.73472348e-18,
+        -1.73472348e-18, -3.46944695e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+        -3.46944695e-18, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18,  2.00000000e-01,
+         6.00000000e-01, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -6.93889390e-18, -1.73472348e-18,
+         8.00000000e-01, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18,  0.00000000e+00,
+        -6.93889390e-18, -1.73472348e-18, -1.73472348e-18,
+        -3.46944695e-18, -3.46944695e-18, -3.46944695e-18,
+         0.00000000e+00, -1.73472348e-18, -3.46944695e-18,
+        -1.73472348e-18,  2.00000000e-01, -1.73472348e-18,
+         0.00000000e+00, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18, -3.46944695e-18,
+        -1.73472348e-18, -1.73472348e-18, -6.93889390e-18,
+        -6.93889390e-18, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -3.46944695e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+        -2.77555756e-17, -6.93889390e-18, -1.73472348e-18,
+        -1.73472348e-18, -6.93889390e-18, -1.73472348e-18,
+        -3.46944695e-18, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18,  6.00000000e-01,
+        -6.93889390e-18, -1.73472348e-18, -3.46944695e-18,
+        -6.93889390e-18, -3.46944695e-18, -1.73472348e-18,
+        -6.93889390e-18, -1.73472348e-18, -1.38777878e-17,
+        -6.93889390e-18, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+         1.00000000e+00, -1.73472348e-18, -3.46944695e-18,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+        -3.46944695e-18, -3.46944695e-18, -3.46944695e-18,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -6.93889390e-18, -3.46944695e-18,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+         6.00000000e-01, -1.73472348e-18, -6.93889390e-18,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -3.46944695e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+        -3.46944695e-18, -6.93889390e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18,  0.00000000e+00,
+        -1.73472348e-18, -6.93889390e-18, -1.73472348e-18,
+        -3.46944695e-18, -1.73472348e-18, -1.73472348e-18,
+        -3.46944695e-18,  6.00000000e-01, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18, -6.93889390e-18,
+        -6.93889390e-18, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18,  0.00000000e+00, -3.46944695e-18,
+        -1.73472348e-18,  0.00000000e+00, -1.73472348e-18,
+        -6.93889390e-18, -1.73472348e-18, -6.93889390e-18,
+         0.00000000e+00, -6.93889390e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.38777878e-17, -3.46944695e-18,
+        -1.73472348e-18, -6.93889390e-18, -6.93889390e-18,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+        -3.46944695e-18, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -6.93889390e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+        -3.46944695e-18, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18,  0.00000000e+00,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18,  6.00000000e-01, -1.73472348e-18,
+        -1.73472348e-18, -3.46944695e-18, -1.73472348e-18,
+         2.00000000e-01, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -3.46944695e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -2.77555756e-17, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18, -3.46944695e-18,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+        -3.46944695e-18, -6.93889390e-18, -1.73472348e-18,
+        -3.46944695e-18, -3.46944695e-18, -1.73472348e-18,
+        -1.73472348e-18, -3.46944695e-18, -3.46944695e-18,
+        -1.73472348e-18, -3.46944695e-18, -1.73472348e-18,
+        -1.73472348e-18, -3.46944695e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+        -6.93889390e-18, -6.93889390e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+        -3.46944695e-18, -1.73472348e-18, -1.73472348e-18,
+        -3.46944695e-18,  0.00000000e+00, -1.73472348e-18,
+        -6.93889390e-18, -6.93889390e-18, -6.93889390e-18,
+        -1.73472348e-18, -1.73472348e-18, -3.46944695e-18,
+        -1.73472348e-18, -6.93889390e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+        -3.46944695e-18, -1.73472348e-18,  2.00000000e-01,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18, -3.46944695e-18,
+        -3.46944695e-18, -3.46944695e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+        -3.46944695e-18, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.38777878e-17, -3.46944695e-18,
+        -1.73472348e-18, -3.46944695e-18, -1.73472348e-18,
+         2.00000000e-01, -1.73472348e-18, -1.73472348e-18,
+         6.00000000e-01, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18,  6.00000000e-01, -1.73472348e-18,
+        -1.38777878e-17, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -3.46944695e-18, -1.73472348e-18,
+        -1.73472348e-18,  1.00000000e+00, -1.73472348e-18,
+        -1.38777878e-17, -1.73472348e-18, -1.73472348e-18,
+         0.00000000e+00, -1.73472348e-18, -6.93889390e-18,
+        -3.46944695e-18,  0.00000000e+00,  1.00000000e+00,
+        -1.73472348e-18, -3.46944695e-18, -3.46944695e-18,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+        -3.46944695e-18, -1.73472348e-18,  6.00000000e-01,
+        -1.73472348e-18, -3.46944695e-18, -1.73472348e-18,
+        -1.73472348e-18, -3.46944695e-18, -1.73472348e-18,
+        -1.73472348e-18,  6.00000000e-01, -1.73472348e-18,
+        -6.93889390e-18, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18, -1.73472348e-18, -1.73472348e-18,
+        -1.73472348e-18,  0.00000000e+00, -2.77555756e-17,
+        -1.73472348e-18]])
 </pre></div>
 </div>
 </div>
@@ -3068,7 +3372,7 @@ Name: label, dtype: object
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-4061aa04-dac9-430c-8a6e-99204039a5c0">
+  <div id="df-dad6d849-ad44-4634-ac69-e08221ab5fdc">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -3094,11 +3398,11 @@ Name: label, dtype: object
   <tbody>
     <tr>
       <th>0</th>
-      <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>2</th>
@@ -3117,30 +3421,30 @@ Name: label, dtype: object
       <td>...</td>
     </tr>
     <tr>
-      <th>96</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>97</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>98</th>
+      <th>74</th>
       <td>0</td>
     </tr>
     <tr>
-      <th>99</th>
+      <th>75</th>
       <td>0</td>
     </tr>
     <tr>
-      <th>100</th>
-      <td>1</td>
+      <th>76</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>77</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>78</th>
+      <td>0</td>
     </tr>
   </tbody>
 </table>
-<p>101 rows × 1 columns</p>
+<p>79 rows × 1 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-4061aa04-dac9-430c-8a6e-99204039a5c0')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-dad6d849-ad44-4634-ac69-e08221ab5fdc')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -3191,12 +3495,12 @@ Name: label, dtype: object
 
       <script>
         const buttonEl =
-          document.querySelector('#df-4061aa04-dac9-430c-8a6e-99204039a5c0 button.colab-df-convert');
+          document.querySelector('#df-dad6d849-ad44-4634-ac69-e08221ab5fdc button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-4061aa04-dac9-430c-8a6e-99204039a5c0');
+          const element = document.querySelector('#df-dad6d849-ad44-4634-ac69-e08221ab5fdc');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -3226,7 +3530,7 @@ Name: label, dtype: object
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-9ac1bce8-db49-48f3-89e3-2f544d806673">
+  <div id="df-bc47e25b-1f4d-495d-9f84-2f04d99bda2f">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -3257,72 +3561,72 @@ Name: label, dtype: object
       <th>8</th>
       <th>9</th>
       <th>...</th>
-      <th>595</th>
-      <th>596</th>
-      <th>597</th>
-      <th>598</th>
-      <th>599</th>
-      <th>600</th>
-      <th>601</th>
-      <th>602</th>
-      <th>603</th>
-      <th>604</th>
+      <th>426</th>
+      <th>427</th>
+      <th>428</th>
+      <th>429</th>
+      <th>430</th>
+      <th>431</th>
+      <th>432</th>
+      <th>433</th>
+      <th>434</th>
+      <th>435</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>-5.204170e-18</td>
-      <td>2.083333e-02</td>
-      <td>0.020833</td>
-      <td>2.083333e-02</td>
-      <td>2.083333e-02</td>
-      <td>-5.204170e-18</td>
-      <td>2.083333e-02</td>
-      <td>-5.204170e-18</td>
-      <td>-5.204170e-18</td>
-      <td>-5.204170e-18</td>
+      <td>4.054054e-02</td>
+      <td>1.351351e-02</td>
+      <td>1.110223e-16</td>
+      <td>2.702703e-02</td>
+      <td>8.108108e-02</td>
+      <td>4.054054e-02</td>
+      <td>1.351351e-02</td>
+      <td>1.351351e-02</td>
+      <td>2.702703e-02</td>
+      <td>2.702703e-02</td>
       <td>...</td>
-      <td>-5.204170e-18</td>
-      <td>2.083333e-02</td>
-      <td>0.020833</td>
-      <td>-5.204170e-18</td>
-      <td>2.083333e-02</td>
-      <td>-5.204170e-18</td>
-      <td>-5.204170e-18</td>
-      <td>-5.204170e-18</td>
-      <td>2.083333e-02</td>
-      <td>2.083333e-02</td>
+      <td>4.054054e-02</td>
+      <td>1.351351e-02</td>
+      <td>1.351351e-02</td>
+      <td>1.351351e-02</td>
+      <td>1.351351e-02</td>
+      <td>1.351351e-02</td>
+      <td>1.351351e-02</td>
+      <td>0.067568</td>
+      <td>1.621622e-01</td>
+      <td>1.351351e-02</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>1.886792e-02</td>
+      <td>-6.938894e-18</td>
+      <td>-1.734723e-18</td>
+      <td>1.600000e+00</td>
       <td>-3.469447e-18</td>
-      <td>0.150943</td>
+      <td>-1.387779e-17</td>
+      <td>-6.938894e-18</td>
+      <td>-1.734723e-18</td>
+      <td>-1.734723e-18</td>
       <td>-3.469447e-18</td>
       <td>-3.469447e-18</td>
-      <td>1.886792e-02</td>
-      <td>-3.469447e-18</td>
-      <td>1.886792e-02</td>
-      <td>1.886792e-02</td>
-      <td>1.886792e-02</td>
       <td>...</td>
-      <td>1.886792e-02</td>
-      <td>-3.469447e-18</td>
-      <td>0.037736</td>
-      <td>1.886792e-02</td>
-      <td>-3.469447e-18</td>
-      <td>1.886792e-02</td>
-      <td>1.886792e-02</td>
-      <td>1.886792e-02</td>
-      <td>-3.469447e-18</td>
-      <td>-3.469447e-18</td>
+      <td>-6.938894e-18</td>
+      <td>-1.734723e-18</td>
+      <td>-1.734723e-18</td>
+      <td>-1.734723e-18</td>
+      <td>-1.734723e-18</td>
+      <td>-1.734723e-18</td>
+      <td>-1.734723e-18</td>
+      <td>0.000000</td>
+      <td>-2.775558e-17</td>
+      <td>-1.734723e-18</td>
     </tr>
   </tbody>
 </table>
-<p>2 rows × 605 columns</p>
+<p>2 rows × 436 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-9ac1bce8-db49-48f3-89e3-2f544d806673')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-bc47e25b-1f4d-495d-9f84-2f04d99bda2f')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -3373,12 +3677,12 @@ Name: label, dtype: object
 
       <script>
         const buttonEl =
-          document.querySelector('#df-9ac1bce8-db49-48f3-89e3-2f544d806673 button.colab-df-convert');
+          document.querySelector('#df-bc47e25b-1f4d-495d-9f84-2f04d99bda2f button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-9ac1bce8-db49-48f3-89e3-2f544d806673');
+          const element = document.querySelector('#df-bc47e25b-1f4d-495d-9f84-2f04d99bda2f');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -3399,6 +3703,454 @@ Name: label, dtype: object
   </div>
 </div></div>
 </div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="crawling-berita">
+<h1><strong>Crawling Berita</strong><a class="headerlink" href="#crawling-berita" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>%%capture
+!pip install PyPDF2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>%%capture
+!pip install docx2txt
+</pre></div>
+</div>
+</div>
+</div>
+<section id="mengimport-numpy-pypdf2-docx2txt-sys">
+<h2>Mengimport numpy, PyPDF2, docx2txt, sys<a class="headerlink" href="#mengimport-numpy-pypdf2-docx2txt-sys" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">PyPDF2</span>
+<span class="kn">import</span> <span class="nn">docx2txt</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pdfFileObj</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;Jakarta.pdf&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span>
+<span class="n">pdfReader</span> <span class="o">=</span> <span class="n">PyPDF2</span><span class="o">.</span><span class="n">PdfFileReader</span><span class="p">(</span><span class="n">pdfFileObj</span><span class="p">)</span>
+<span class="n">pageObj</span> <span class="o">=</span> <span class="n">pdfReader</span><span class="o">.</span><span class="n">getPage</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">document</span> <span class="o">=</span> <span class="n">pageObj</span><span class="o">.</span><span class="n">extractText</span><span class="p">()</span>
+<span class="n">document</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Jakarta, CNBC Indonesia - Seorang pejabat tinggi Rusia memperingatkan bahaya &quot;eskalasi \nyang tidak terkendali&quot; jika Barat terus mendukung Ukraina. Ini menjadi ancaman terbaru \nyang dikeluarkan Rusia ke sekutu internat ional Kyiv.  &quot;Rusia akan dipaksa untuk mengambil \ntindakan pencegahan yang memadai, termasuk yang bersifat asimetris,&quot; kata Wakil Menteri \nLuar Negeri Sergei Ryabkov mengatakan kepada kantor berita milik negara Rusia RIA \nNovosti, dikutip CNBC International, S elasa (11/10/2022).  Ia menyinggung bagaimana \nMoskow menyesali bantuan skala besar yang sedang berlangsung ke Kyiv dari Barat . Ia pun \nmenyebut bentrokan langsung dengan AS dan NATO, meski tak dijelaskan lebih lanjut.  \n&quot;Bentrokan langsung dengan AS dan NATO  bukan untuk kepentingan Rusia,&quot; tegasnya.  \n&quot;Bahwa Washington dan ibu kota Barat lainnya sadar akan bahaya eskalasi yang tidak \nterkendali,&quot; tambahnya lagi.  Sementara itu, dalam pernyataan berbeda, Rusia juga \nmengatakan mengharapkan lebih banyak &quot;konfrontasi &quot; dengan Barat. Pernyataan ini dibuat \nmenjelang pertemuan darurat G7 untuk membahas serangan Rusia terbaru di Ukraina.  \n&quot;Bentrokan langsung dengan AS dan NATO bukan untuk kepentingan Rusia,&quot; tegasnya.  \n&quot;Bahwa Washington dan ibu kota Barat lainnya sadar akan  bahaya eskalasi yang tidak \nterkendali,&quot; tambahnya lagi.  Sementara itu, dalam pernyataan berbeda, Rusia juga \nmengatakan mengharapkan lebih banyak &quot;konfrontasi&quot; dengan Barat. Pernyataan ini dibuat \nmenjelang pertemuan darurat G7 untuk membahas serangan Rusia  terbaru di Ukraina.  \n &#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="parsing-dokumen-menjadi-kalimat">
+<h2>Parsing dokumen menjadi kalimat<a class="headerlink" href="#parsing-dokumen-menjadi-kalimat" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nltk.tokenize.punkt</span> <span class="kn">import</span> <span class="n">PunktSentenceTokenizer</span>
+<span class="k">def</span> <span class="nf">tokenize</span><span class="p">(</span><span class="n">document</span><span class="p">):</span>
+    <span class="c1"># Kita memecahnya menggunakan  PunktSentenceTokenizer</span>
+    <span class="c1"># </span>
+    <span class="n">doc_tokenizer</span> <span class="o">=</span> <span class="n">PunktSentenceTokenizer</span><span class="p">()</span>
+    
+    <span class="c1"># metode tokenize() memanggil dokument kita</span>
+    <span class="c1"># sebagai input dan menghasilkan daftar kalimat dalam dokumen</span>
+    
+    <span class="c1"># sentences_list adalah daftar masing masing kalimat dari dokumen yang ada.</span>
+    <span class="n">sentences_list</span> <span class="o">=</span> <span class="n">doc_tokenizer</span><span class="o">.</span><span class="n">tokenize</span><span class="p">(</span><span class="n">document</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">sentences_list</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sentences_list</span> <span class="o">=</span> <span class="n">tokenize</span><span class="p">(</span><span class="n">document</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">sentences_list</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;------&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>------
+Jakarta, CNBC Indonesia - Seorang pejabat tinggi Rusia memperingatkan bahaya &quot;eskalasi 
+yang tidak terkendali&quot; jika Barat terus mendukung Ukraina.
+------
+Ini menjadi ancaman terbaru 
+yang dikeluarkan Rusia ke sekutu internat ional Kyiv.
+------
+&quot;Rusia akan dipaksa untuk mengambil 
+tindakan pencegahan yang memadai, termasuk yang bersifat asimetris,&quot; kata Wakil Menteri 
+Luar Negeri Sergei Ryabkov mengatakan kepada kantor berita milik negara Rusia RIA 
+Novosti, dikutip CNBC International, S elasa (11/10/2022).
+------
+Ia menyinggung bagaimana 
+Moskow menyesali bantuan skala besar yang sedang berlangsung ke Kyiv dari Barat .
+------
+Ia pun 
+menyebut bentrokan langsung dengan AS dan NATO, meski tak dijelaskan lebih lanjut.
+------
+&quot;Bentrokan langsung dengan AS dan NATO  bukan untuk kepentingan Rusia,&quot; tegasnya.
+------
+&quot;Bahwa Washington dan ibu kota Barat lainnya sadar akan bahaya eskalasi yang tidak 
+terkendali,&quot; tambahnya lagi.
+------
+Sementara itu, dalam pernyataan berbeda, Rusia juga 
+mengatakan mengharapkan lebih banyak &quot;konfrontasi &quot; dengan Barat.
+------
+Pernyataan ini dibuat 
+menjelang pertemuan darurat G7 untuk membahas serangan Rusia terbaru di Ukraina.
+------
+&quot;Bentrokan langsung dengan AS dan NATO bukan untuk kepentingan Rusia,&quot; tegasnya.
+------
+&quot;Bahwa Washington dan ibu kota Barat lainnya sadar akan  bahaya eskalasi yang tidak 
+terkendali,&quot; tambahnya lagi.
+------
+Sementara itu, dalam pernyataan berbeda, Rusia juga 
+mengatakan mengharapkan lebih banyak &quot;konfrontasi&quot; dengan Barat.
+------
+Pernyataan ini dibuat 
+menjelang pertemuan darurat G7 untuk membahas serangan Rusia  terbaru di Ukraina.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Banyaknya kalimat = &quot;</span><span class="p">,</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sentences_list</span><span class="p">)))</span>
+<span class="n">sentences_list</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Banyaknya kalimat =  13
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Jakarta, CNBC Indonesia - Seorang pejabat tinggi Rusia memperingatkan bahaya &quot;eskalasi \nyang tidak terkendali&quot; jika Barat terus mendukung Ukraina.&#39;,
+ &#39;Ini menjadi ancaman terbaru \nyang dikeluarkan Rusia ke sekutu internat ional Kyiv.&#39;,
+ &#39;&quot;Rusia akan dipaksa untuk mengambil \ntindakan pencegahan yang memadai, termasuk yang bersifat asimetris,&quot; kata Wakil Menteri \nLuar Negeri Sergei Ryabkov mengatakan kepada kantor berita milik negara Rusia RIA \nNovosti, dikutip CNBC International, S elasa (11/10/2022).&#39;,
+ &#39;Ia menyinggung bagaimana \nMoskow menyesali bantuan skala besar yang sedang berlangsung ke Kyiv dari Barat .&#39;,
+ &#39;Ia pun \nmenyebut bentrokan langsung dengan AS dan NATO, meski tak dijelaskan lebih lanjut.&#39;,
+ &#39;&quot;Bentrokan langsung dengan AS dan NATO  bukan untuk kepentingan Rusia,&quot; tegasnya.&#39;,
+ &#39;&quot;Bahwa Washington dan ibu kota Barat lainnya sadar akan bahaya eskalasi yang tidak \nterkendali,&quot; tambahnya lagi.&#39;,
+ &#39;Sementara itu, dalam pernyataan berbeda, Rusia juga \nmengatakan mengharapkan lebih banyak &quot;konfrontasi &quot; dengan Barat.&#39;,
+ &#39;Pernyataan ini dibuat \nmenjelang pertemuan darurat G7 untuk membahas serangan Rusia terbaru di Ukraina.&#39;,
+ &#39;&quot;Bentrokan langsung dengan AS dan NATO bukan untuk kepentingan Rusia,&quot; tegasnya.&#39;,
+ &#39;&quot;Bahwa Washington dan ibu kota Barat lainnya sadar akan  bahaya eskalasi yang tidak \nterkendali,&quot; tambahnya lagi.&#39;,
+ &#39;Sementara itu, dalam pernyataan berbeda, Rusia juga \nmengatakan mengharapkan lebih banyak &quot;konfrontasi&quot; dengan Barat.&#39;,
+ &#39;Pernyataan ini dibuat \nmenjelang pertemuan darurat G7 untuk membahas serangan Rusia  terbaru di Ukraina.&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfTransformer</span><span class="p">,</span> <span class="n">CountVectorizer</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id1">
+<h2>TF<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cv</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">()</span>
+<span class="n">cv_matrix</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">sentences_list</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cv_matrix</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  (0, 43)	1
+  (0, 20)	1
+  (0, 37)	1
+  (0, 92)	1
+  (0, 80)	1
+  (0, 105)	1
+  (0, 86)	1
+  (0, 62)	1
+  (0, 8)	1
+  (0, 33)	1
+  (0, 110)	1
+  (0, 103)	1
+  (0, 100)	1
+  (0, 44)	1
+  (0, 12)	1
+  (0, 102)	1
+  (0, 63)	1
+  (0, 106)	1
+  (1, 86)	1
+  (1, 110)	1
+  (1, 38)	1
+  (1, 67)	1
+  (1, 4)	1
+  (1, 99)	1
+  (1, 29)	1
+  :	:
+  (11, 25)	1
+  (11, 58)	1
+  (11, 91)	1
+  (11, 42)	1
+  (11, 21)	1
+  (11, 82)	1
+  (11, 14)	1
+  (11, 45)	1
+  (11, 66)	1
+  (11, 11)	1
+  (11, 51)	1
+  (12, 86)	1
+  (12, 106)	1
+  (12, 38)	1
+  (12, 99)	1
+  (12, 107)	1
+  (12, 82)	1
+  (12, 27)	1
+  (12, 68)	1
+  (12, 83)	1
+  (12, 24)	1
+  (12, 34)	1
+  (12, 61)	1
+  (12, 93)	1
+  (12, 26)	1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Banyaknya kosa kata = &quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">((</span><span class="n">cv</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">())))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Banyaknya kosa kata =  111
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;kosa kata = &quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">cv</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>kosa kata =  [&#39;10&#39; &#39;11&#39; &#39;2022&#39; &#39;akan&#39; &#39;ancaman&#39; &#39;as&#39; &#39;asimetris&#39; &#39;bagaimana&#39; &#39;bahaya&#39;
+ &#39;bahwa&#39; &#39;bantuan&#39; &#39;banyak&#39; &#39;barat&#39; &#39;bentrokan&#39; &#39;berbeda&#39; &#39;berita&#39;
+ &#39;berlangsung&#39; &#39;bersifat&#39; &#39;besar&#39; &#39;bukan&#39; &#39;cnbc&#39; &#39;dalam&#39; &#39;dan&#39; &#39;dari&#39;
+ &#39;darurat&#39; &#39;dengan&#39; &#39;di&#39; &#39;dibuat&#39; &#39;dijelaskan&#39; &#39;dikeluarkan&#39; &#39;dikutip&#39;
+ &#39;dipaksa&#39; &#39;elasa&#39; &#39;eskalasi&#39; &#39;g7&#39; &#39;ia&#39; &#39;ibu&#39; &#39;indonesia&#39; &#39;ini&#39; &#39;internat&#39;
+ &#39;international&#39; &#39;ional&#39; &#39;itu&#39; &#39;jakarta&#39; &#39;jika&#39; &#39;juga&#39; &#39;kantor&#39; &#39;kata&#39;
+ &#39;ke&#39; &#39;kepada&#39; &#39;kepentingan&#39; &#39;konfrontasi&#39; &#39;kota&#39; &#39;kyiv&#39; &#39;lagi&#39; &#39;lainnya&#39;
+ &#39;langsung&#39; &#39;lanjut&#39; &#39;lebih&#39; &#39;luar&#39; &#39;memadai&#39; &#39;membahas&#39; &#39;memperingatkan&#39;
+ &#39;mendukung&#39; &#39;mengambil&#39; &#39;mengatakan&#39; &#39;mengharapkan&#39; &#39;menjadi&#39; &#39;menjelang&#39;
+ &#39;menteri&#39; &#39;menyebut&#39; &#39;menyesali&#39; &#39;menyinggung&#39; &#39;meski&#39; &#39;milik&#39; &#39;moskow&#39;
+ &#39;nato&#39; &#39;negara&#39; &#39;negeri&#39; &#39;novosti&#39; &#39;pejabat&#39; &#39;pencegahan&#39; &#39;pernyataan&#39;
+ &#39;pertemuan&#39; &#39;pun&#39; &#39;ria&#39; &#39;rusia&#39; &#39;ryabkov&#39; &#39;sadar&#39; &#39;sedang&#39; &#39;sekutu&#39;
+ &#39;sementara&#39; &#39;seorang&#39; &#39;serangan&#39; &#39;sergei&#39; &#39;skala&#39; &#39;tak&#39; &#39;tambahnya&#39;
+ &#39;tegasnya&#39; &#39;terbaru&#39; &#39;terkendali&#39; &#39;termasuk&#39; &#39;terus&#39; &#39;tidak&#39; &#39;tindakan&#39;
+ &#39;tinggi&#39; &#39;ukraina&#39; &#39;untuk&#39; &#39;wakil&#39; &#39;washington&#39; &#39;yang&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="matriks-similaritas">
+<h2>Matriks Similaritas<a class="headerlink" href="#matriks-similaritas" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">normal_matrix</span> <span class="o">=</span> <span class="n">TfidfTransformer</span><span class="p">()</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">cv_matrix</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">normal_matrix</span><span class="o">.</span><span class="n">toarray</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">normal_matrix</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">toarray</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0.         0.         0.         ... 0.         0.         0.1562289 ]
+ [0.         0.         0.         ... 0.         0.         0.18955945]
+ [0.17554387 0.17554387 0.17554387 ... 0.17554387 0.         0.20178593]
+ ...
+ [0.         0.         0.         ... 0.         0.2737021  0.18241605]
+ [0.         0.         0.         ... 0.         0.         0.        ]
+ [0.         0.         0.         ... 0.         0.         0.        ]]
+&lt;bound method _cs_matrix.toarray of &lt;111x13 sparse matrix of type &#39;&lt;class &#39;numpy.float64&#39;&gt;&#39;
+	with 203 stored elements in Compressed Sparse Column format&gt;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">normal_matrix</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(13, 111)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="graph">
+<h2>Graph<a class="headerlink" href="#graph" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">res_graph</span> <span class="o">=</span> <span class="n">normal_matrix</span> <span class="o">*</span> <span class="n">normal_matrix</span><span class="o">.</span><span class="n">T</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">res_graph</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  (0, 11)	0.04992018207567556
+  (0, 9)	0.02292472501898624
+  (0, 7)	0.04992018207567556
+  (0, 5)	0.02292472501898624
+  (0, 12)	0.07253668752363857
+  (0, 8)	0.07253668752363857
+  (0, 10)	0.25879955185704245
+  (0, 6)	0.25879955185704245
+  (0, 3)	0.05001633813182891
+  (0, 2)	0.08665227988870172
+  (0, 1)	0.04806640083095473
+  (0, 0)	0.9999999999999999
+  (1, 11)	0.023251763370229772
+  (1, 9)	0.027815585783412172
+  (1, 7)	0.023251763370229772
+  (1, 5)	0.027815585783412172
+  (1, 12)	0.15311169806955632
+  (1, 8)	0.15311169806955632
+  (1, 10)	0.03457868588094215
+  (1, 6)	0.03457868588094215
+  (1, 3)	0.1669672553475922
+  (1, 2)	0.062082774740978244
+  (1, 1)	0.9999999999999997
+  (1, 0)	0.04806640083095473
+  (2, 11)	0.05991420849474964
+  :	:
+  (10, 2)	0.06939007393133981
+  (10, 1)	0.03457868588094215
+  (10, 0)	0.25879955185704245
+  (11, 10)	0.03591228519865729
+  (11, 6)	0.03591228519865729
+  (11, 3)	0.03151378218908757
+  (11, 4)	0.10360999828104903
+  (11, 12)	0.07867564186512492
+  (11, 9)	0.08408042917319586
+  (11, 8)	0.07867564186512492
+  (11, 5)	0.08408042917319586
+  (11, 2)	0.05991420849474964
+  (11, 1)	0.023251763370229772
+  (11, 0)	0.04992018207567556
+  (11, 11)	1.0
+  (11, 7)	1.0
+  (12, 11)	0.07867564186512492
+  (12, 7)	0.07867564186512492
+  (12, 1)	0.15311169806955632
+  (12, 0)	0.07253668752363857
+  (12, 12)	1.0000000000000002
+  (12, 9)	0.08285276653049727
+  (12, 8)	1.0000000000000002
+  (12, 5)	0.08285276653049727
+  (12, 2)	0.047689098132627505
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nx_graph</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">from_scipy_sparse_matrix</span><span class="p">(</span><span class="n">res_graph</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Banyaknya sisi </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nx_graph</span><span class="o">.</span><span class="n">number_of_edges</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Banyaknya sisi 78
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="page-rank">
+<h2>Page Rank<a class="headerlink" href="#page-rank" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ranks</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">pagerank</span><span class="p">(</span><span class="n">nx_graph</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ranked_sentences</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(((</span><span class="n">ranks</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">s</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sentences_list</span><span class="p">)),</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="top-10-kalimat">
+<h2>Top 10 Kalimat<a class="headerlink" href="#top-10-kalimat" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Extract top 10 sentences as the summary</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">ranked_sentences</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;Bentrokan langsung dengan AS dan NATO bukan untuk kepentingan Rusia,&quot; tegasnya.
+&quot;Bentrokan langsung dengan AS dan NATO  bukan untuk kepentingan Rusia,&quot; tegasnya.
+&quot;Bahwa Washington dan ibu kota Barat lainnya sadar akan bahaya eskalasi yang tidak 
+terkendali,&quot; tambahnya lagi.
+&quot;Bahwa Washington dan ibu kota Barat lainnya sadar akan  bahaya eskalasi yang tidak 
+terkendali,&quot; tambahnya lagi.
+Sementara itu, dalam pernyataan berbeda, Rusia juga 
+mengatakan mengharapkan lebih banyak &quot;konfrontasi&quot; dengan Barat.
+Sementara itu, dalam pernyataan berbeda, Rusia juga 
+mengatakan mengharapkan lebih banyak &quot;konfrontasi &quot; dengan Barat.
+Pernyataan ini dibuat 
+menjelang pertemuan darurat G7 untuk membahas serangan Rusia terbaru di Ukraina.
+Pernyataan ini dibuat 
+menjelang pertemuan darurat G7 untuk membahas serangan Rusia  terbaru di Ukraina.
+Ia pun 
+menyebut bentrokan langsung dengan AS dan NATO, meski tak dijelaskan lebih lanjut.
+Jakarta, CNBC Indonesia - Seorang pejabat tinggi Rusia memperingatkan bahaya &quot;eskalasi 
+yang tidak terkendali&quot; jika Barat terus mendukung Ukraina.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
