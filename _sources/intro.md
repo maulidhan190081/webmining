@@ -24,5 +24,5 @@
 
 
 ```{admonition} Informasi Mengenai Buku
-Buku atau halaman ini merupakan sarana yang dibuat dengan tujuan sebagai media pembelajaran dan pengumpulan tugas, khusunya terkait mata kuliah Pencarian & Penambangan Web. 
+Buku atau halaman ini berisi tentang bagaimana proses crawling data dari twitter dan web berita sebagai tugas kelas dan tugas UTS Mata Kuliah Pencarian & Penambangan Web (A).
 ```
