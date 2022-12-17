@@ -1,15 +1,4 @@
 Traceback (most recent call last):
-  File "/usr/local/lib/python3.8/dist-packages/nbclient/client.py", line 730, in _async_poll_for_reply
-    msg = await ensure_async(self.kc.shell_channel.get_msg(timeout=new_timeout))
-  File "/usr/local/lib/python3.8/dist-packages/nbclient/util.py", line 96, in ensure_async
-    result = await obj
-  File "/usr/local/lib/python3.8/dist-packages/jupyter_client/asynchronous/channels.py", line 48, in get_msg
-    raise Empty
-_queue.Empty
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
   File "/usr/local/lib/python3.8/dist-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
     executenb(
   File "/usr/local/lib/python3.8/dist-packages/nbclient/client.py", line 1204, in execute
@@ -22,18 +11,83 @@ Traceback (most recent call last):
     return future.result()
   File "/usr/local/lib/python3.8/dist-packages/nbclient/client.py", line 663, in async_execute
     await self.async_execute_cell(
-  File "/usr/local/lib/python3.8/dist-packages/nbclient/client.py", line 949, in async_execute_cell
-    exec_reply = await self.task_poll_for_reply
-  File "/usr/local/lib/python3.8/dist-packages/nbclient/client.py", line 754, in _async_poll_for_reply
-    await self._async_handle_timeout(timeout, cell)
-  File "/usr/local/lib/python3.8/dist-packages/nbclient/client.py", line 801, in _async_handle_timeout
-    raise CellTimeoutError.error_from_timeout_and_cell(
-nbclient.exceptions.CellTimeoutError: A cell timed out while it was being executed, after 30 seconds.
-The message was: Cell execution timed out.
-Here is a preview of the cell contents:
--------------------
-['# import StemmerFactory class', 'from Sastrawi.Stemmer.StemmerFactory import StemmerFactory', '', '# create stemmer', 'factory = StemmerFactory()']
-...
-['  raise KeyboardInterrupt', 'except KeyboardInterrupt:', "  print(df['textDisplay'][2])", 'else :', "  print(df['textDisplay'][2])"]
--------------------
+  File "/usr/local/lib/python3.8/dist-packages/nbclient/client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/usr/local/lib/python3.8/dist-packages/nbclient/client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# isikan dengan api key Anda
+api_key = 'isi API'
+
+# Enter video id
+# contoh url video = https://www.youtube.com/watch?v=Y2UW9EaZKFE
+video_id = "Y2UW9EaZKFE" #isikan dengan kode / ID video
+
+# Call function
+comments = video_comments(video_id)
+
+comments
+------------------
+
+[0;31m[0m
+[0;31mHttpError[0mTraceback (most recent call last)
+[0;32m<ipython-input-3-38c84281944b>[0m in [0;36m<module>[0;34m[0m
+[1;32m      7[0m [0;34m[0m[0m
+[1;32m      8[0m [0;31m# Call function[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 9[0;31m [0mcomments[0m [0;34m=[0m [0mvideo_comments[0m[0;34m([0m[0mvideo_id[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     10[0m [0;34m[0m[0m
+[1;32m     11[0m [0mcomments[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m<ipython-input-2-5d9b93ea49e0>[0m in [0;36mvideo_comments[0;34m(video_id)[0m
+[1;32m      4[0m [0;34m[0m[0m
+[1;32m      5[0m         [0;31m# creating youtube resource object[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 6[0;31m         [0myoutube[0m [0;34m=[0m [0mbuild[0m[0;34m([0m[0;34m'youtube'[0m[0;34m,[0m [0;34m'v3'[0m[0;34m,[0m [0mdeveloperKey[0m[0;34m=[0m[0mapi_key[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      7[0m [0;34m[0m[0m
+[1;32m      8[0m         [0;31m# retrieve youtube video results[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.8/dist-packages/googleapiclient/_helpers.py[0m in [0;36mpositional_wrapper[0;34m(*args, **kwargs)[0m
+[1;32m    132[0m                 [0;32melif[0m [0mpositional_parameters_enforcement[0m [0;34m==[0m [0mPOSITIONAL_WARNING[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    133[0m                     [0mlogger[0m[0;34m.[0m[0mwarning[0m[0;34m([0m[0mmessage[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 134[0;31m             [0;32mreturn[0m [0mwrapped[0m[0;34m([0m[0;34m*[0m[0margs[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    135[0m [0;34m[0m[0m
+[1;32m    136[0m         [0;32mreturn[0m [0mpositional_wrapper[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.8/dist-packages/googleapiclient/discovery.py[0m in [0;36mbuild[0;34m(serviceName, version, http, discoveryServiceUrl, developerKey, model, requestBuilder, credentials, cache_discovery, cache, client_options, adc_cert_path, adc_key_path, num_retries)[0m
+[1;32m    293[0m                 [0;32mcontinue[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    294[0m             [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 295[0;31m                 [0;32mraise[0m [0me[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    296[0m [0;34m[0m[0m
+[1;32m    297[0m     [0;31m# If discovery_http was created by this function, we are done with it[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.8/dist-packages/googleapiclient/discovery.py[0m in [0;36mbuild[0;34m(serviceName, version, http, discoveryServiceUrl, developerKey, model, requestBuilder, credentials, cache_discovery, cache, client_options, adc_cert_path, adc_key_path, num_retries)[0m
+[1;32m    268[0m [0;34m[0m[0m
+[1;32m    269[0m         [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 270[0;31m             content = _retrieve_discovery_doc(
+[0m[1;32m    271[0m                 [0mrequested_url[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    272[0m                 [0mdiscovery_http[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.8/dist-packages/googleapiclient/discovery.py[0m in [0;36m_retrieve_discovery_doc[0;34m(url, http, cache_discovery, cache, developerKey, num_retries)[0m
+[1;32m    374[0m     [0;31m# Note that it will already raise an error if we don't get a 2xx response[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    375[0m     [0mreq[0m [0;34m=[0m [0mHttpRequest[0m[0;34m([0m[0mhttp[0m[0;34m,[0m [0mHttpRequest[0m[0;34m.[0m[0mnull_postproc[0m[0;34m,[0m [0mactual_url[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 376[0;31m     [0mresp[0m[0;34m,[0m [0mcontent[0m [0;34m=[0m [0mreq[0m[0;34m.[0m[0mexecute[0m[0;34m([0m[0mnum_retries[0m[0;34m=[0m[0mnum_retries[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    377[0m [0;34m[0m[0m
+[1;32m    378[0m     [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.8/dist-packages/googleapiclient/_helpers.py[0m in [0;36mpositional_wrapper[0;34m(*args, **kwargs)[0m
+[1;32m    132[0m                 [0;32melif[0m [0mpositional_parameters_enforcement[0m [0;34m==[0m [0mPOSITIONAL_WARNING[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    133[0m                     [0mlogger[0m[0;34m.[0m[0mwarning[0m[0;34m([0m[0mmessage[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 134[0;31m             [0;32mreturn[0m [0mwrapped[0m[0;34m([0m[0;34m*[0m[0margs[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    135[0m [0;34m[0m[0m
+[1;32m    136[0m         [0;32mreturn[0m [0mpositional_wrapper[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.8/dist-packages/googleapiclient/http.py[0m in [0;36mexecute[0;34m(self, http, num_retries)[0m
+[1;32m    913[0m             [0mcallback[0m[0;34m([0m[0mresp[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    914[0m         [0;32mif[0m [0mresp[0m[0;34m.[0m[0mstatus[0m [0;34m>=[0m [0;36m300[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 915[0;31m             [0;32mraise[0m [0mHttpError[0m[0;34m([0m[0mresp[0m[0;34m,[0m [0mcontent[0m[0;34m,[0m [0muri[0m[0;34m=[0m[0mself[0m[0;34m.[0m[0muri[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    916[0m         [0;32mreturn[0m [0mself[0m[0;34m.[0m[0mpostproc[0m[0;34m([0m[0mresp[0m[0;34m,[0m [0mcontent[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    917[0m [0;34m[0m[0m
+
+[0;31mHttpError[0m: <HttpError 400 when requesting https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest?key=isi+API returned "API key not valid. Please pass a valid API key.". Details: "[{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'API_KEY_INVALID', 'domain': 'googleapis.com', 'metadata': {'service': 'youtube.googleapis.com'}}]">
+HttpError: <HttpError 400 when requesting https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest?key=isi+API returned "API key not valid. Please pass a valid API key.". Details: "[{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'API_KEY_INVALID', 'domain': 'googleapis.com', 'metadata': {'service': 'youtube.googleapis.com'}}]">
 
